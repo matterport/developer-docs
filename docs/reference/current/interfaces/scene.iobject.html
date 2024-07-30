@@ -1,0 +1,2092 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Interface: Scene.IObject | Matterport Developers</title>
+<link rel="stylesheet" href="/css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="/css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/customstyles.css">
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="/css/tags2.css">
+
+<link rel="stylesheet" href="/css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="/css/theme-matterport.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="/js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/customscripts.js"></script>
+<script src="/js/mermaid.min.js"></script>
+
+<link rel="shortcut icon" href="/images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="showcase-sdk" href="https://docs.matterport.comfeed.xml">
+
+    <script>
+      $(document).ready(function () {
+        // Initialize navgoco with default options
+        $("#mysidebar").navgoco({
+          caretHtml: '<i class="fa fa-chevron-down"></i>',
+          accordion: true,
+          openClass: "active", // open
+
+          save: false, // leave false or nav highlighting doesn't work right
+          cookie: {
+            name: "navgoco",
+            expires: false,
+            path: "/",
+          },
+          slide: {
+            duration: 400,
+            easing: "swing",
+          },
+        });
+
+        $("#collapseAll").click(function (e) {
+          e.preventDefault();
+          $("#mysidebar").navgoco("toggle", false);
+        });
+
+        $("#expandAll").click(function (e) {
+          e.preventDefault();
+          $("#mysidebar").navgoco("toggle", true);
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#tg-sb-link").change(function () {
+          $("#tg-sb-sidebar").toggle();
+          $("#tg-sb-content").toggleClass("col-md-9");
+          $("#tg-sb-content").toggleClass("col-md-12");
+        });
+      });
+    </script>
+     
+  </head>
+  <body>
+    <!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div>
+    <div class="row">
+      <a class="navbrand col-md-3" href="/"
+        >&nbsp;<img
+          class="navbar-image"
+          src="/images/MP-logo_H_lock-RGB_white.svg"
+        /><span class="projectTitle"> </span></a
+      >
+      <div class="dev-nav-links col-md-6">
+        <div class="dropdown-items">
+          <div class="dropdown ">
+            <a class="dropbtn active" href="index.html">SDK Docs</a>
+            <div class="dropdown-content">
+              <a href="https://docs.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
+              <a href="https://docs.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
+              <a href="https://docs.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a class="dropbtn" href="api_home.html">API Docs</a>
+            <div class="dropdown-content">
+              <a href="https://docs.matterport.com/api_home.html">API Overview</a>
+              <a href="https://api.matterport.com/docs/reference" target="_blank">API Reference</a>
+              <a href="https://api.matterport.com/model/graphiql" target="_blank">Interactive Console</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a class="dropbtn" href="https://matterport.com/legal/platform-subscription-agreement#sdk-terms" target="_blank">Terms</a>
+          </div>
+          <div class="dropdown">
+            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:developer@matterport.com?subject=Showcase SDK feedback&body=I have some feedback about the Interface: Scene.IObject page: ' + window.location.href;">Feedback</a>
+          </div>
+          <div class="dropdown">
+            <a class="dropbtn" href="https://docs.matterport.com/subscribe.html" >
+              Subscribe
+              <sup class="subscribe-sup" style="font-size: 10px; color: #ff3158">New</sup>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="right-content col-md-3">
+        <div class="dev-input-container">
+          <!-- Add roboto font to search bar -->
+          <img src="/images/search_button.png" />
+          <input id="search-input" type="text" placeholder="Search"/>
+          <div id="results-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+</nav>
+ 
+    <!-- Page Content -->
+    <div class="dev-page-wrapper">
+      <div id="main">
+        <!-- Content Row -->
+        <div class="row">
+          <!-- Sidebar Column -->
+          
+          <aside class="col-md-3" id="tg-sb-sidebar">
+            
+<div id="mysidebar" class="nav">
+  
+  
+  
+
+  <li>
+      <a title="Overview" href="#">Overview</a>
+      <ul>
+          
+          
+          
+          <li><a title="Home" href="/index.html">Home</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Change Log" href="/sdk_changelog.html">Change Log</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Vocabulary" href="/sdk_vocabulary.html">Vocabulary</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Concepts" href="/sdk_concepts.html">Concepts</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Reference Docs Summary" href="/sdk_reference_summary.html">Reference Docs Summary</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Reference Documentation" href="/docs\reference\current\index.html">Reference Documentation</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="SDK for Embeds" href="#">SDK for Embeds</a>
+      <ul>
+          
+          
+          
+          <li><a title="Home" href="/sdk_home.html">Home</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="HTML Quick Start" href="/sdk_quickstart.html">HTML Quick Start</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="SDK Embed Package" href="/sdk_tutorials_package.html">SDK Embed Package</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Typescript Declarations" href="/sdk_types.html">Typescript Declarations</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="SDK Bundle" href="#">SDK Bundle</a>
+      <ul>
+          
+          
+          
+          <li><a title="Home" href="/sdkbundle_home.html">Home</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="HTML Quick Start" href="/sdkbundle_quickstart.html">HTML Quick Start</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Setting up Embed.ly" href="/sdkbundle_tutorials_setting_up_embedly.html">Setting up Embed.ly</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Setup a Local Environment" href="/sdkbundle_tutorials_setup.html">Setup a Local Environment</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Architecture" href="/sdkbundle_architecture.html">Architecture</a></li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Components" href="#">Components</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Ambient Light" href="/sdkbundle_components_ambientlight.html">Ambient Light</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Directional Light" href="/sdkbundle_components_directionallight.html">Directional Light</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Point Light" href="/sdkbundle_components_pointlight.html">Point Light</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="GLTF Loader" href="/sdkbundle_components_gltfloader.html">GLTF Loader</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="DAE Loader" href="/sdkbundle_components_daeloader.html">DAE Loader</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="FBX Loader" href="/sdkbundle_components_fbxloader.html">FBX Loader</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="OBJ Loader" href="/sdkbundle_components_objloader.html">OBJ Loader</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Transform Controls" href="/sdkbundle_components_transformcontrols.html">Transform Controls</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Input" href="/sdkbundle_components_input.html">Input</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Camera" href="/sdkbundle_components_camera.html">Camera</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="XR" href="/sdkbundle_components_xr.html">XR</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="Web Component (Beta)" href="#">Web Component (Beta)</a>
+      <ul>
+          
+          
+          
+          <li><a title="Home" href="/sdkbundle_webcomponent.html">Home</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tutorial" href="/sdkbundle_webcomponent_tutorial.html">Tutorial</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Advanced" href="/sdkbundle_webcomponent_advanced.html">Advanced</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Migration from Bundle" href="/sdkbundle_webcomponent_migration.html">Migration from Bundle</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="SDK Early Access" href="#">SDK Early Access</a>
+      <ul>
+          
+          
+          
+          <li><a title="Home" href="/earlyaccess_home.html">Home</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="SDK Tutorials" href="#">SDK Tutorials</a>
+      <ul>
+          
+          
+          
+          <li><a title="SDK Embed Package" href="/sdk_tutorials_package.html">SDK Embed Package</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Using Observables" href="/sdk_tutorials_observables.html">Using Observables</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Using Collections" href="/sdk_tutorials_collections.html">Using Collections</a></li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Using the Scene Namespace" href="#">Using the Scene Namespace</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Intro and Basic Components" href="/sdk_scene_intro.html">Intro and Basic Components</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Connecting Components" href="/sdk_connecting_components.html">Connecting Components</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Creating Tags" href="/sdk_creating_mattertags.html">Creating Tags</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Editing Tags" href="/sdk_editing_mattertags.html">Editing Tags</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tags 2.0 Migration" href="/sdk_tutorials_mattertagtotag.html">Tags 2.0 Migration</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tags Code Sandboxes" href="/sdk_tutorials_htmlsandbox.html">Tags Code Sandboxes</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Pathfinding" href="/sdk_tutorials_pathfinding.html">Pathfinding</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Pointer Reticle" href="/sdk_tutorials_cursor.html">Pointer Reticle</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Working with Models" href="/sdkbundle_tutorials_models.html">Working with Models</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Using xr" href="/sdkbundle_tutorials_using_xr.html">Using xr</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Using Scene Objects" href="/sdkbundle_tutorials_using_scene_objects.html">Using Scene Objects</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="SDK Examples" href="#">SDK Examples</a>
+      <ul>
+          
+          
+          
+          <li><a title="Navigation Controls" href="/sdk_navigation_controls.html">Navigation Controls</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Intersection Inspector" href="/sdk_intersection_inspector.html">Intersection Inspector</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tags Quiz" href="/sdk_tags_quiz.html">Tags Quiz</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tags Quiz - Overlay" href="/sdk_tags_quiz_overlay.html">Tags Quiz - Overlay</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Kitchen Sink" href="/sdk_kitchen_sink.html">Kitchen Sink</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Remote Control" href="/sdk_remote_control.html">Remote Control</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Sensors - Source Areas" href="/sdk_sensors_source_areas.html">Sensors - Source Areas</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Sensors - Tags Level of Detail" href="/sdk_sensors_tags_level_of_detail.html">Sensors - Tags Level of Detail</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Sensors - Sweep Control" href="/sdk_sensors_sweep_control.html">Sensors - Sweep Control</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Virtual Staging" href="/sdkbundle_virtual_staging.html">Virtual Staging</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Local Webcam" href="/sdkbundle_local_webcam.html">Local Webcam</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="HTML Livestream" href="/sdkbundle_html_livestream.html">HTML Livestream</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="IoT Canvas" href="/sdkbundle_iot_canvas.html">IoT Canvas</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Custom Experience" href="/sdkbundle_custom_experience.html">Custom Experience</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Security Camera FOV" href="/sdkbundle_security_camera.html">Security Camera FOV</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Content Attribution" href="/sdkbundle_content_attribution.html">Content Attribution</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="Matterport APIs" href="#">Matterport APIs</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/api_home.html">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Reference Docs" href="https://api.matterport.com/model/docs/reference" target="_blank" rel="noopener">Reference Docs</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Interactive Console" href="https://api.matterport.com/model/graphiql" target="_blank" rel="noopener">Interactive Console</a></li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Model API" href="#">Model API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Changelog" href="/modelapi_changelog.html">Changelog</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Models Queries" href="/modelapi_models_ref.html">Models Queries</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/modelapi_snippets.html">Sample Queries</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Ordering Add-Ons" href="/modelapi_ordering_addons.html">Ordering Add-Ons</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Views and Layers" href="/modelapi_views_and_layers.html">Views and Layers</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Tags Icon Reference" href="/tags_icons_reference.html">Tags Icon Reference</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Postman Collection" href="/modelapi_postman.html">Postman Collection</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Property Intelligence" href="#">Property Intelligence</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Overview" href="/modelapi_property_intelligence.html">Overview</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Dimension Estimates" href="/modelapi_pi_dimension_estimates.html">Dimension Estimates</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Room Names" href="/modelapi_pi_room_names.html">Room Names</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Vector Data" href="/modelapi_pi_vector_data.html">Vector Data</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Mutations" href="/modelapi_pi_mutations.html">Mutations</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Account API" href="#">Account API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="OAuth" href="#">OAuth</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/oauth_home.html">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Implementation" href="/oauth_implementation.html">Implementation</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Model Selector" href="/oauth_model_selector.html">Model Selector</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Use Case - Model API" href="/oauth_model_api.html">Use Case - Model API</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Use Case - Private Models" href="/oauth_sdk_private_model.html">Use Case - Private Models</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="OAuth Sample Application" href="/sdkbundle_tutorials_using_oauth.html">OAuth Sample Application</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="Private Model Embed" href="#">Private Model Embed</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/oauth_private_model_embed.html">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="Webhooks" href="#">Webhooks</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/webhooks_home.html">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="Learn More" href="#">Learn More</a>
+      <ul>
+          
+          
+          
+          <li><a title="Developer Tools Overview" href="https://support.matterport.com/s/article/API-SDK-Developer-Tools-Overview" target="_blank" rel="noopener">Developer Tools Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Pricing and Availability" href="https://support.matterport.com/s/article/Developer-Tools-Pricing-and-Availability" target="_blank" rel="noopener">Pricing and Availability</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</div>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+<script src="/js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+        SimpleJekyllSearch.init({
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container'),
+            dataSource: '/search.json',
+            searchResultTemplate: '<li><a href="{url}" title="Interface: Scene.IObject">{title}</a></li>',
+noResultsText: '<li><div>No results found.<div></li>',
+        limit: 10,
+        fuzzy: true,
+})
+</script>
+
+          </aside>
+           
+          <!-- Content Column -->
+          <div
+            class=" col-md-9" 
+            id="tg-sb-content"
+          >
+            <div class="post-header">
+   <h1 class="post-title-main">Interface: Scene.IObject</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+   <!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>IObject | Matterport SDK</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../index.html">@mpSdk</a>
+				</li>
+				<li>
+					<a href="../modules/scene.html">Scene</a>
+				</li>
+				<li>
+					<a href="scene.iobject.html">IObject</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="note">Usage of the SDK constitutes your agreement with the <a href="https://matterport.com/legal/sdk-agreement/">Matterport SDK Agreement</a>. Email <a href="mailto:developers@matterport.com">developers@matterport.com</a> with any questions.</div>
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="tsd-lead">
+						<p>A factory and container for a collection of scene nodes and components connected via property bindings.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">IObject</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<div class="tsd-panel-group" id="typescript-declarations" style="display: none;">
+					<h2>Typescript Declarations File</h2>
+					<section class="tsd-panel">
+						<div class="tsd-index-content">
+							Typescript declarations for use with the Embed SDK are available here: <a href="https://static.matterport.com/showcase-sdk/types/24.6.4_webgl-245-g7e4b22fe23/sdk.d.ts">24.6.4_webgl-245-g7e4b22fe23</a><br>
+							Declarations are already include in the Bundle SDK distribution.
+						</div>
+					</section>
+				</div>
+				<script>
+  if (window.location.href.endsWith('index.html')) {
+    document.getElementById('typescript-declarations').style = 'display: block;';
+  }
+</script>
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="scene.iobject.html#addemitpath" class="tsd-kind-icon">add<wbr>Emit<wbr>Path</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="scene.iobject.html#addeventpath" class="tsd-kind-icon">add<wbr>Event<wbr>Path</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="scene.iobject.html#addinputpath" class="tsd-kind-icon">add<wbr>Input<wbr>Path</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="scene.iobject.html#addnode" class="tsd-kind-icon">add<wbr>Node</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="scene.iobject.html#addnodes" class="tsd-kind-icon">add<wbr>Nodes</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="scene.iobject.html#addoutputpath" class="tsd-kind-icon">add<wbr>Output<wbr>Path</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="scene.iobject.html#addpath" class="tsd-kind-icon">add<wbr>Path</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="scene.iobject.html#bind" class="tsd-kind-icon">bind</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="scene.iobject.html#bindpath" class="tsd-kind-icon">bind<wbr>Path</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="scene.iobject.html#getvalueatpath" class="tsd-kind-icon">get<wbr>Value<wbr>AtPath</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="scene.iobject.html#nodeiterator" class="tsd-kind-icon">node<wbr>Iterator</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="scene.iobject.html#pathiterator" class="tsd-kind-icon">path<wbr>Iterator</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="scene.iobject.html#setvalueatpath" class="tsd-kind-icon">set<wbr>Value<wbr>AtPath</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="scene.iobject.html#spyonevent" class="tsd-kind-icon">spy<wbr>OnEvent</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="scene.iobject.html#start" class="tsd-kind-icon">start</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="scene.iobject.html#stop" class="tsd-kind-icon">stop</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="addemitpath" class="tsd-anchor"></a>
+					<h3>add<wbr>Emit<wbr>Path</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Emit<wbr>Path<span class="tsd-signature-symbol">(</span>component<span class="tsd-signature-symbol">: </span><a href="scene.icomponent.html" class="tsd-signature-type">Scene.IComponent</a>, property<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="scene.emitpath.html" class="tsd-signature-type">Scene.EmitPath</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<dl class="tsd-comment-tags tsd-typography">
+							</dl>
+							<dl class="tsd-comment-tags tsd-typography">
+							</dl>
+							<h4 class="tsd-introduced-title">Introduced
+								<span class="tsd-introduced-vers">3.1.71.14-0-gaf77add383
+								</span>
+							</h4>
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Add and receive an <a href="scene.emitpath.html">EmitPath</a> for an <a href="scene.icomponent.html">IComponent</a>.
+										It is also possible to spy when an event is emitted by creating an <a href="scene.isceneobjectspy.html">ISceneObjectSpy</a> and calling <a href="scene.iobject.html#spyonevent">spyOnEvent</a>.
+									The path can be bound to an <a href="scene.eventpath.html">EventPath</a> of another (or the same) component to automatically trigger the component&#39;s <a href="scene.icomponent.html#onevent">IComponent.onEvent</a>.</p>
+								</div>
+								<pre><code class="language-typescript"> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Clickable</span> </span>{
+   <span class="hljs-keyword">public</span> events = {
+     <span class="hljs-attr">clicked</span>: <span class="hljs-literal">true</span>,
+   };
+ }
+ <span class="hljs-comment">// create an `IObject`, add an `INode` and an `IComponent` to the node, see the relevant functions (createObject, addNode, addComponent)</span>
+ <span class="hljs-keyword">const</span> [<span class="hljs-built_in">object</span>, node, component];
+
+ <span class="hljs-comment">// create the path</span>
+ <span class="hljs-keyword">const</span> emitPath = <span class="hljs-built_in">object</span>.addEmitPath(component, <span class="hljs-string">&#x27;clicked&#x27;</span>);
+
+ <span class="hljs-comment">// bind the emit path so that it triggers the `emitPath`&#x27;s associated component&#x27;s onEvent when an event is emitted</span>
+ <span class="hljs-built_in">object</span>.bindPath(eventPath, emitPath);
+
+ <span class="hljs-comment">// observe emissions of &#x27;clicked&#x27; events in component</span>
+ <span class="hljs-built_in">object</span>.spyOnEvent({
+   <span class="hljs-attr">path</span>: emitPath,
+   <span class="hljs-function"><span class="hljs-title">onEvent</span>(<span class="hljs-params">eventData</span>)</span> {
+     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`a &#x27;clicked&#x27; event was emitted with the data: <span class="hljs-subst">${eventData}</span>`</span>);
+   },
+ });
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>component: <a href="scene.icomponent.html" class="tsd-signature-type">Scene.IComponent</a></h5>
+								</li>
+								<li>
+									<h5>property: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> id: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="scene.emitpath.html" class="tsd-signature-type">Scene.EmitPath</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="addeventpath" class="tsd-anchor"></a>
+					<h3>add<wbr>Event<wbr>Path</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Event<wbr>Path<span class="tsd-signature-symbol">(</span>component<span class="tsd-signature-symbol">: </span><a href="scene.icomponent.html" class="tsd-signature-type">Scene.IComponent</a>, property<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="scene.eventpath.html" class="tsd-signature-type">Scene.EventPath</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<dl class="tsd-comment-tags tsd-typography">
+							</dl>
+							<dl class="tsd-comment-tags tsd-typography">
+							</dl>
+							<h4 class="tsd-introduced-title">Introduced
+								<span class="tsd-introduced-vers">3.1.71.14-0-gaf77add383
+								</span>
+							</h4>
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Add and receive an <a href="scene.eventpath.html">EventPath</a> for an <a href="scene.icomponent.html">IComponent</a>.
+									The path can be bound to an <a href="scene.emitpath.html">EmitPath</a> of another (or the same) component to automatically trigger the component&#39;s <a href="scene.icomponent.html#onevent">IComponent.onEvent</a>.</p>
+								</div>
+								<pre><code class="language-typescript"> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Renderable</span> </span>{
+   <span class="hljs-keyword">public</span> events = {
+     <span class="hljs-attr">rerender</span>: <span class="hljs-literal">true</span>,
+   };
+ }
+ <span class="hljs-comment">// create an `IObject`, add an `INode` and an `IComponent` to the node, see the relevant functions (createObject, addNode, addComponent)</span>
+ <span class="hljs-keyword">const</span> [<span class="hljs-built_in">object</span>, node, component];
+
+ <span class="hljs-comment">// create the path</span>
+ <span class="hljs-keyword">const</span> eventPath = <span class="hljs-built_in">object</span>.addEventPath(component, <span class="hljs-string">&#x27;rerender&#x27;</span>);
+
+ <span class="hljs-comment">// bind the event path so that it triggers the component&#x27;s onEvent when `emitPath` emits an event</span>
+ <span class="hljs-built_in">object</span>.bindPath(eventPath, emitPath);
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>component: <a href="scene.icomponent.html" class="tsd-signature-type">Scene.IComponent</a></h5>
+								</li>
+								<li>
+									<h5>property: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> id: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="scene.eventpath.html" class="tsd-signature-type">Scene.EventPath</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="addinputpath" class="tsd-anchor"></a>
+					<h3>add<wbr>Input<wbr>Path</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Input<wbr>Path<span class="tsd-signature-symbol">(</span>component<span class="tsd-signature-symbol">: </span><a href="scene.icomponent.html" class="tsd-signature-type">Scene.IComponent</a>, property<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="scene.inputpath.html" class="tsd-signature-type">Scene.InputPath</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<dl class="tsd-comment-tags tsd-typography">
+							</dl>
+							<dl class="tsd-comment-tags tsd-typography">
+							</dl>
+							<h4 class="tsd-introduced-title">Introduced
+								<span class="tsd-introduced-vers">3.1.71.14-0-gaf77add383
+								</span>
+							</h4>
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Add and receive an <a href="scene.inputpath.html">InputPath</a> to the property of an <a href="scene.icomponent.html">IComponent</a>.
+										The returned <a href="scene.inputpath.html">InputPath</a> can be used to read or set the value of <code>property</code> on <code>component</code>&#39;s inputs.
+										Changes to the value can also be observed by creating an <a href="scene.isceneobjectspy.html">ISceneObjectSpy</a> and calling <a href="scene.iobject.html#spyonevent">spyOnEvent</a>.
+									The path can also be bound to an <a href="scene.outputpath.html">OutputPath</a> of another (or the same) component to automatically update a component&#39;s input value.</p>
+								</div>
+								<pre><code class="language-typescript"> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Counter</span> </span>{
+   <span class="hljs-keyword">public</span> inputs = {
+     <span class="hljs-attr">count</span>: <span class="hljs-number">1</span>,
+   };
+ }
+ <span class="hljs-comment">// create an `IObject`, add an `INode` and an `IComponent` to the node, see the relevant functions (createObject, addNode, addComponent)</span>
+ <span class="hljs-keyword">const</span> [<span class="hljs-built_in">object</span>, node, component];
+
+ <span class="hljs-comment">// create the path</span>
+ <span class="hljs-keyword">const</span> inputPath = <span class="hljs-built_in">object</span>.addInputPath(component, <span class="hljs-string">&#x27;count&#x27;</span>);
+
+ <span class="hljs-comment">// observe changes to the value of `inputs.count` in component</span>
+ <span class="hljs-built_in">object</span>.spyOnEvent({
+   <span class="hljs-attr">path</span>: inputPath,
+   <span class="hljs-function"><span class="hljs-title">onEvent</span>(<span class="hljs-params">newValue</span>)</span> {
+     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`component.input.count&#x27;s new value is <span class="hljs-subst">${newValue}</span>`</span>);
+   },
+ });
+ <span class="hljs-comment">// read and change the value of the input in the component</span>
+ <span class="hljs-keyword">const</span> countValue = inputPath.get();
+ inputPath.set(count + <span class="hljs-number">1</span>);
+
+<span class="hljs-comment">// bind the path to the value from another (output) path</span>
+ <span class="hljs-built_in">object</span>.bindPath(inputPath, outputPath);
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>component: <a href="scene.icomponent.html" class="tsd-signature-type">Scene.IComponent</a></h5>
+								</li>
+								<li>
+									<h5>property: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> id: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="scene.inputpath.html" class="tsd-signature-type">Scene.InputPath</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="addnode" class="tsd-anchor"></a>
+					<h3>add<wbr>Node</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Node<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="scene.inode.html" class="tsd-signature-type">Scene.INode</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Adds a scene node to this scene object and returns it. If an id isn&#39;t provided, one will be autogenerated.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> id: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>a optional unique id</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="scene.inode.html" class="tsd-signature-type">Scene.INode</a></h4>
+							<p>The new scene node.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="addnodes" class="tsd-anchor"></a>
+					<h3>add<wbr>Nodes</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Nodes<span class="tsd-signature-symbol">(</span>nodeCount<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="scene.inode.html" class="tsd-signature-type">Scene.INode</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Create an array of scene nodes.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>nodeCount: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the number of nodes to create. This value must be greater than zero.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="scene.inode.html" class="tsd-signature-type">Scene.INode</a><span class="tsd-signature-symbol">[]</span></h4>
+							<p>An array of nodes.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="addoutputpath" class="tsd-anchor"></a>
+					<h3>add<wbr>Output<wbr>Path</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Output<wbr>Path<span class="tsd-signature-symbol">(</span>component<span class="tsd-signature-symbol">: </span><a href="scene.icomponent.html" class="tsd-signature-type">Scene.IComponent</a>, property<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="scene.outputpath.html" class="tsd-signature-type">Scene.OutputPath</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<dl class="tsd-comment-tags tsd-typography">
+							</dl>
+							<dl class="tsd-comment-tags tsd-typography">
+							</dl>
+							<h4 class="tsd-introduced-title">Introduced
+								<span class="tsd-introduced-vers">3.1.71.14-0-gaf77add383
+								</span>
+							</h4>
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Add and receive an <a href="scene.outputpath.html">OutputPath</a> to the property of an <a href="scene.icomponent.html">IComponent</a>.
+										The returned <a href="scene.outputpath.html">OutputPath</a> can be used to read the value of <code>component</code>&#39;s output <code>property</code>.
+										Changes to the value can also be observed by creating an <a href="scene.isceneobjectspy.html">ISceneObjectSpy</a> and calling <a href="scene.iobject.html#spyonevent">spyOnEvent</a>.
+									The path can also be bound to an <a href="scene.inputpath.html">InputPath</a> of another (or the same) component to automatically update a component&#39;s input value.</p>
+								</div>
+								<pre><code class="language-typescript"> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NumberGenerator</span> </span>{
+   <span class="hljs-keyword">public</span> outputs = {
+     <span class="hljs-attr">current</span>: <span class="hljs-number">1</span>,
+   };
+ }
+ <span class="hljs-comment">// create an `IObject`, add an `INode` and an `IComponent` to the node, see the relevant functions (createObject, addNode, addComponent)</span>
+ <span class="hljs-keyword">const</span> [<span class="hljs-built_in">object</span>, node, component];
+
+ <span class="hljs-comment">// create the path</span>
+ <span class="hljs-keyword">const</span> outputPath = <span class="hljs-built_in">object</span>.addOutputPath(component, <span class="hljs-string">&#x27;current&#x27;</span>);
+
+ <span class="hljs-comment">// observe changes to the value of `outputs.current` in component</span>
+ <span class="hljs-built_in">object</span>.spyOnEvent({
+   <span class="hljs-attr">path</span>: outputPath,
+   <span class="hljs-function"><span class="hljs-title">onEvent</span>(<span class="hljs-params">newValue</span>)</span> {
+     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`component.output.current&#x27;s new value is <span class="hljs-subst">${newValue}</span>`</span>);
+   },
+ });
+ <span class="hljs-comment">// read and bind the value of the output to another component&#x27;s input value</span>
+ <span class="hljs-keyword">const</span> currentValue = outputPath.get();
+ <span class="hljs-built_in">object</span>.bindPath(inputPath, outputPath);
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>component: <a href="scene.icomponent.html" class="tsd-signature-type">Scene.IComponent</a></h5>
+								</li>
+								<li>
+									<h5>property: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> id: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="scene.outputpath.html" class="tsd-signature-type">Scene.OutputPath</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="addpath" class="tsd-anchor"></a>
+					<h3>add<wbr>Path</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Path<span class="tsd-signature-symbol">(</span>pathDesc<span class="tsd-signature-symbol">: </span><a href="../modules/scene.html#inputpathdescriptor" class="tsd-signature-type">Scene.InputPathDescriptor</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="scene.inputpath.html" class="tsd-signature-type">Scene.InputPath</a></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Path<span class="tsd-signature-symbol">(</span>pathDesc<span class="tsd-signature-symbol">: </span><a href="../modules/scene.html#outputpathdescriptor" class="tsd-signature-type">Scene.OutputPathDescriptor</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="scene.outputpath.html" class="tsd-signature-type">Scene.OutputPath</a></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Path<span class="tsd-signature-symbol">(</span>pathDesc<span class="tsd-signature-symbol">: </span><a href="../modules/scene.html#eventpathdescriptor" class="tsd-signature-type">Scene.EventPathDescriptor</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="scene.eventpath.html" class="tsd-signature-type">Scene.EventPath</a></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Path<span class="tsd-signature-symbol">(</span>pathDesc<span class="tsd-signature-symbol">: </span><a href="../modules/scene.html#emitpathdescriptor" class="tsd-signature-type">Scene.EmitPathDescriptor</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="scene.emitpath.html" class="tsd-signature-type">Scene.EmitPath</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<dl class="tsd-comment-tags tsd-typography">
+							</dl>
+							<dl class="tsd-comment-tags tsd-typography">
+								<dt class="tsd-comment-tags-deprecated">deprecated</dt>
+								<dd>
+									<p>Use one of <a href="scene.iobject.html#addinputpath">addInputPath</a>, <a href="scene.iobject.html#addoutputpath">addOutputPath</a>, <a href="scene.iobject.html#addeventpath">addEventPath</a>, or <a href="scene.iobject.html#addemitpath">addEmitPath</a></p>
+								</dd>
+							</dl>
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Add a path identified by a unique string.
+									They <code>pathDesc.type</code> will determine which path type is returned.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pathDesc: <a href="../modules/scene.html#inputpathdescriptor" class="tsd-signature-type">Scene.InputPathDescriptor</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The path descriptor to the component property.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="scene.inputpath.html" class="tsd-signature-type">Scene.InputPath</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pathDesc: <a href="../modules/scene.html#outputpathdescriptor" class="tsd-signature-type">Scene.OutputPathDescriptor</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="scene.outputpath.html" class="tsd-signature-type">Scene.OutputPath</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pathDesc: <a href="../modules/scene.html#eventpathdescriptor" class="tsd-signature-type">Scene.EventPathDescriptor</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="scene.eventpath.html" class="tsd-signature-type">Scene.EventPath</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pathDesc: <a href="../modules/scene.html#emitpathdescriptor" class="tsd-signature-type">Scene.EmitPathDescriptor</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="scene.emitpath.html" class="tsd-signature-type">Scene.EmitPath</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="bind" class="tsd-anchor"></a>
+					<h3>bind</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">bind<span class="tsd-signature-symbol">(</span>targetComponent<span class="tsd-signature-symbol">: </span><a href="scene.icomponent.html" class="tsd-signature-type">Scene.IComponent</a>, targetProp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, sourceComponent<span class="tsd-signature-symbol">: </span><a href="scene.icomponent.html" class="tsd-signature-type">Scene.IComponent</a>, sourceProp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<dl class="tsd-comment-tags tsd-typography">
+							</dl>
+							<dl class="tsd-comment-tags tsd-typography">
+								<dt class="tsd-comment-tags-deprecated">deprecated</dt>
+								<dd>
+									<p>Use <a href="scene.iobject.html#bindpath">IObject.bindPath</a> instead.</p>
+								</dd>
+							</dl>
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Call this function to bind an input property of the target component to an output property of the source
+									component between any nodes contained by this scene object.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>targetComponent: <a href="scene.icomponent.html" class="tsd-signature-type">Scene.IComponent</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The component listening to property changes.</p>
+									</div>
+								</li>
+								<li>
+									<h5>targetProp: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The component input property name.</p>
+									</div>
+								</li>
+								<li>
+									<h5>sourceComponent: <a href="scene.icomponent.html" class="tsd-signature-type">Scene.IComponent</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The component broadcasting property changes.</p>
+									</div>
+								</li>
+								<li>
+									<h5>sourceProp: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The component output property name.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="bindpath" class="tsd-anchor"></a>
+					<h3>bind<wbr>Path</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">bind<wbr>Path<span class="tsd-signature-symbol">(</span>inputPath<span class="tsd-signature-symbol">: </span><a href="scene.inputpath.html" class="tsd-signature-type">Scene.InputPath</a>, outputPath<span class="tsd-signature-symbol">: </span><a href="scene.outputpath.html" class="tsd-signature-type">Scene.OutputPath</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">bind<wbr>Path<span class="tsd-signature-symbol">(</span>eventPath<span class="tsd-signature-symbol">: </span><a href="scene.eventpath.html" class="tsd-signature-type">Scene.EventPath</a>, emitPath<span class="tsd-signature-symbol">: </span><a href="scene.emitpath.html" class="tsd-signature-type">Scene.EmitPath</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Bind the value referenced by <code>inputPath</code> to the value of <code>outputPath</code>.
+									As the value at <code>outputPath</code> changes, the value of <code>inputPath</code> will reflect it.</p>
+								</div>
+								<pre><code>const <span class="hljs-literal">[<span class="hljs-identifier">sceneObject</span>]</span> = await sdk.<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Scene</span>.</span></span>create<span class="hljs-constructor">Objects(1)</span>;
+const node = sceneObject.add<span class="hljs-constructor">Node()</span>;
+
+<span class="hljs-comment">// mp.objLoader has an outputs.visible property</span>
+const comp1 = node.add<span class="hljs-constructor">Component(&#x27;<span class="hljs-params">mp</span>.<span class="hljs-params">objLoader</span>&#x27;)</span>;
+const outputPath = sceneObject.add<span class="hljs-constructor">OutputPath(<span class="hljs-params">comp1</span>, &#x27;<span class="hljs-params">visible</span>&#x27;, &#x27;<span class="hljs-params">objLoader</span>-<span class="hljs-params">visible</span>&#x27;)</span>;
+
+<span class="hljs-comment">// myComponent has an inputs.toggleState property</span>
+const comp2 = node.add<span class="hljs-constructor">Component(&#x27;<span class="hljs-params">myComponent</span>&#x27;)</span>;
+const inputPath = sceneObject.add<span class="hljs-constructor">InputPath(<span class="hljs-params">comp2</span>, &#x27;<span class="hljs-params">toggleState</span>&#x27;, &#x27;<span class="hljs-params">myComponent</span>-<span class="hljs-params">toggle</span>&#x27;)</span>;
+sceneObject.bind<span class="hljs-constructor">Path(<span class="hljs-params">inputPath</span>, <span class="hljs-params">outputPath</span>)</span>;
+
+node.start<span class="hljs-literal">()</span>;
+<span class="hljs-comment">// comp1.inputs.visible will now always equal comp2.outputs.toggleState</span>
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>inputPath: <a href="scene.inputpath.html" class="tsd-signature-type">Scene.InputPath</a></h5>
+								</li>
+								<li>
+									<h5>outputPath: <a href="scene.outputpath.html" class="tsd-signature-type">Scene.OutputPath</a></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Bind an event referenced by <code>eventPath</code> to a <a href="scene.icomponent.html#notify">IComponent.notify</a> call at <code>emitPath</code></p>
+								</div>
+								<pre><code>const [sceneObject] = await sdk.Scene.createObject(<span class="hljs-number">1</span>);
+const node = sceneObject.createNode();
+
+// myReceiver has an `onEvent` lifecycle <span class="hljs-keyword">function</span> <span class="hljs-keyword">and</span> an `events[<span class="hljs-string">&#x27;do.update&#x27;</span>]` property
+const receiver = node.addComponent(`myReceiver<span class="hljs-string">&#x27;);
+const eventPath = sceneObject.addEventPath(receiver, &#x27;</span><span class="hljs-keyword">do</span>.updat<span class="hljs-string">e&#x27;, &#x27;</span>my-reciever-updat<span class="hljs-string">e&#x27;);
+
+// myEmitter calls notify with an &#x27;</span>updated<span class="hljs-string">&#x27; event and has an `emits[&#x27;</span>updated<span class="hljs-string">&#x27;]` property
+const emitter = node.addComponent(&#x27;</span>myEmitter<span class="hljs-string">&#x27;);
+const emitPath = sceneObject.addEmitPath(emitter, &#x27;</span>updated<span class="hljs-string">&#x27;, &#x27;</span>my-component-updated<span class="hljs-string">&#x27;);
+sceneObject.bindPath(eventPath, emitPath);
+
+node.start();
+// receiver.onEvent(&#x27;</span><span class="hljs-keyword">do</span>.updat<span class="hljs-string">e&#x27;, ...) will now be called whenever emitter calls notify(&#x27;</span>updated<span class="hljs-string">&#x27;)</span>
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>eventPath: <a href="scene.eventpath.html" class="tsd-signature-type">Scene.EventPath</a></h5>
+								</li>
+								<li>
+									<h5>emitPath: <a href="scene.emitpath.html" class="tsd-signature-type">Scene.EmitPath</a></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getvalueatpath" class="tsd-anchor"></a>
+					<h3>get<wbr>Value<wbr>AtPath</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Value<wbr>AtPath<span class="tsd-signature-symbol">(</span>pathId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<dl class="tsd-comment-tags tsd-typography">
+							</dl>
+							<dl class="tsd-comment-tags tsd-typography">
+								<dt class="tsd-comment-tags-deprecated">deprecated</dt>
+								<dd>
+									<p>Use <a href="scene.inputpath.html#get">InputPath.get</a> or <a href="scene.outputpath.html#get">OutputPath.get</a> instead.</p>
+								</dd>
+							</dl>
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Reads the output property of a path. The path must be added prior to calling this function.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pathId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">unknown</span></h4>
+							<p>the value of the output property.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="nodeiterator" class="tsd-anchor"></a>
+					<h3>node<wbr>Iterator</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">node<wbr>Iterator<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><a href="scene.inode.html" class="tsd-signature-type">Scene.INode</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Returns in iterator iterating over all the nodes contained by this object.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><a href="scene.inode.html" class="tsd-signature-type">Scene.INode</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="pathiterator" class="tsd-anchor"></a>
+					<h3>path<wbr>Iterator</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">path<wbr>Iterator<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><a href="scene.pathinfo.html" class="tsd-signature-type">Scene.PathInfo</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Returns an iterator containing a path and its descriptor. Typically used to access the paths from a deserialized scene object.</p>
+								</div>
+								<pre><code><span class="hljs-comment">// This example sets the values of all input paths provided by deserialized scene object.</span>
+
+<span class="hljs-keyword">const</span> deserialized = await sdk.Scene.deserialize(myString);
+<span class="hljs-keyword">const</span> paths = deserialized.pathIterator();
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> { <span class="hljs-keyword">desc</span>, path } of paths) {
+  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">desc</span>.<span class="hljs-keyword">type</span> === Scene.PathType.<span class="hljs-keyword">INPUT</span>) {
+    <span class="hljs-comment">// we know this path is an input path</span>
+    <span class="hljs-keyword">const</span> inputPath = <span class="hljs-keyword">desc</span>.path <span class="hljs-keyword">as</span> Scene.InputPath;
+
+    <span class="hljs-comment">// Now you can set the value at the path</span>
+    <span class="hljs-comment">// You can cache the returned input path to use it later.</span>
+    inputPath.<span class="hljs-keyword">set</span>(10);
+  }
+}
+</code></pre>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><a href="scene.pathinfo.html" class="tsd-signature-type">Scene.PathInfo</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="setvalueatpath" class="tsd-anchor"></a>
+					<h3>set<wbr>Value<wbr>AtPath</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Value<wbr>AtPath<span class="tsd-signature-symbol">(</span>pathId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<dl class="tsd-comment-tags tsd-typography">
+							</dl>
+							<dl class="tsd-comment-tags tsd-typography">
+								<dt class="tsd-comment-tags-deprecated">deprecated</dt>
+								<dd>
+									<p>Use <a href="scene.inputpath.html#set">InputPath.set</a> instead.</p>
+								</dd>
+							</dl>
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Sets the input property of a path. The path must be added prior to calling this function.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pathId: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The path id.</p>
+									</div>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">unknown</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The value to set.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="spyonevent" class="tsd-anchor"></a>
+					<h3>spy<wbr>OnEvent</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">spy<wbr>OnEvent<span class="tsd-signature-symbol">(</span>spy<span class="tsd-signature-symbol">: </span><a href="scene.isceneobjectspy.html" class="tsd-signature-type">Scene.ISceneObjectSpy</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="isubscription.html" class="tsd-signature-type">ISubscription</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Spy on events or input and output value changes</p>
+								</div>
+								<pre><code>const <span class="hljs-literal">[<span class="hljs-identifier">sceneObject</span>]</span> = await sdk.<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Scene</span>.</span></span>create<span class="hljs-constructor">Objects(1)</span>;
+const node = sceneObject.create<span class="hljs-constructor">Node()</span>;
+
+<span class="hljs-comment">// mp.objLoader has an outputs.visible property</span>
+const comp1 = node.add<span class="hljs-constructor">Component(&#x27;<span class="hljs-params">mp</span>.<span class="hljs-params">objLoader</span>&#x27;)</span>;
+const outputPath = sceneObject.add<span class="hljs-constructor">OutputPath(<span class="hljs-params">comp1</span>, &#x27;<span class="hljs-params">visible</span>&#x27;, &#x27;<span class="hljs-params">objLoader</span>-<span class="hljs-params">visible</span>&#x27;)</span>;
+
+const outputSpy = {
+  path: outputPath,
+  on<span class="hljs-constructor">Event(<span class="hljs-params">type</span>, <span class="hljs-params">data</span>)</span> {
+    console.log(&#x27;outputs updated&#x27;, <span class="hljs-keyword">type</span>, data);
+  }
+};
+
+sceneObject.spy<span class="hljs-constructor">OnEvent(<span class="hljs-params">outputSpy</span>)</span>;
+
+node.start<span class="hljs-literal">()</span>;
+<span class="hljs-comment">// outputSpy.onEvent(&#x27;outputsUpdated&#x27;, comp1.outputs.visible) will now be called whenever comp1.outputs.visible changes</span>
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>spy: <a href="scene.isceneobjectspy.html" class="tsd-signature-type">Scene.ISceneObjectSpy</a></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="isubscription.html" class="tsd-signature-type">ISubscription</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="start" class="tsd-anchor"></a>
+					<h3>start</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">start<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Starts all nodes referenced by this scene object.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="stop" class="tsd-anchor"></a>
+					<h3>stop</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">stop<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Stops all nodes referenced by this scene object. The scene object cannot be restarted after this function has been called.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../index.html"><em>@mpSdk</em></a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/app.html">App</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/asset.html">Asset</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/camera.html">Camera</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/conversion.html">Conversion</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/floor.html">Floor</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/graph.html">Graph</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/label.html">Label</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/link.html">Link</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/mattertag.html">Mattertag</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/measurements.html">Measurements</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/mode.html">Mode</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/model.html">Model</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/oauth.html">OAuth</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/pointer.html">Pointer</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/renderer.html">Renderer</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/room.html">Room</a>
+					</li>
+					<li class="current tsd-kind-namespace">
+						<a href="../modules/scene.html">Scene</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/sensor.html">Sensor</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/settings.html">Settings</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/sweep.html">Sweep</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/tag.html">Tag</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/tour.html">Tour</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/view.html">View</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-enum tsd-parent-kind-namespace">
+						<a href="../enums/scene.component.html" class="tsd-kind-icon">Component</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-namespace">
+						<a href="../enums/scene.interactiontype.html" class="tsd-kind-icon">Interaction<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-namespace">
+						<a href="../enums/scene.pathtype.html" class="tsd-kind-icon">Path<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace tsd-has-type-parameter">
+						<a href="scene.emitpath.html" class="tsd-kind-icon">Emit<wbr>Path</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace tsd-has-type-parameter">
+						<a href="scene.eventpath.html" class="tsd-kind-icon">Event<wbr>Path</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="scene.icomponent.html" class="tsd-kind-icon">IComponent</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="scene.icomponentcontext.html" class="tsd-kind-icon">IComponent<wbr>Context</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="scene.icomponentdesc.html" class="tsd-kind-icon">IComponent<wbr>Desc</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace tsd-has-type-parameter">
+						<a href="scene.icomponenteventspy.html" class="tsd-kind-icon">IComponent<wbr>Event<wbr>Spy</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="scene.inode.html" class="tsd-kind-icon">INode</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="scene.iobject.html" class="tsd-kind-icon">IObject</a>
+						<ul>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="scene.iobject.html#addemitpath" class="tsd-kind-icon">add<wbr>Emit<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="scene.iobject.html#addeventpath" class="tsd-kind-icon">add<wbr>Event<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="scene.iobject.html#addinputpath" class="tsd-kind-icon">add<wbr>Input<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="scene.iobject.html#addnode" class="tsd-kind-icon">add<wbr>Node</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="scene.iobject.html#addnodes" class="tsd-kind-icon">add<wbr>Nodes</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="scene.iobject.html#addoutputpath" class="tsd-kind-icon">add<wbr>Output<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="scene.iobject.html#addpath" class="tsd-kind-icon">add<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="scene.iobject.html#bind" class="tsd-kind-icon">bind</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="scene.iobject.html#bindpath" class="tsd-kind-icon">bind<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="scene.iobject.html#getvalueatpath" class="tsd-kind-icon">get<wbr>Value<wbr>AtPath</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="scene.iobject.html#nodeiterator" class="tsd-kind-icon">node<wbr>Iterator</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="scene.iobject.html#pathiterator" class="tsd-kind-icon">path<wbr>Iterator</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="scene.iobject.html#setvalueatpath" class="tsd-kind-icon">set<wbr>Value<wbr>AtPath</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="scene.iobject.html#spyonevent" class="tsd-kind-icon">spy<wbr>OnEvent</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="scene.iobject.html#start" class="tsd-kind-icon">start</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="scene.iobject.html#stop" class="tsd-kind-icon">stop</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace tsd-has-type-parameter">
+						<a href="scene.isceneobjectspy.html" class="tsd-kind-icon">IScene<wbr>Object<wbr>Spy</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace tsd-has-type-parameter">
+						<a href="scene.inputpath.html" class="tsd-kind-icon">Input<wbr>Path</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace tsd-has-type-parameter">
+						<a href="scene.outputpath.html" class="tsd-kind-icon">Output<wbr>Path</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="scene.pathbase.html" class="tsd-kind-icon">Path<wbr>Base</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="scene.pathinfo.html" class="tsd-kind-icon">Path<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="scene.scenecomponentoptions.html" class="tsd-kind-icon">Scene<wbr>Component<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="../modules/scene.html#emitpathdescriptor" class="tsd-kind-icon">Emit<wbr>Path<wbr>Descriptor</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="../modules/scene.html#eventpathdescriptor" class="tsd-kind-icon">Event<wbr>Path<wbr>Descriptor</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="../modules/scene.html#inputpathdescriptor" class="tsd-kind-icon">Input<wbr>Path<wbr>Descriptor</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="../modules/scene.html#interactionevent" class="tsd-kind-icon">Interaction<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="../modules/scene.html#outputpathdescriptor" class="tsd-kind-icon">Output<wbr>Path<wbr>Descriptor</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="../modules/scene.html#predefinedoutputs" class="tsd-kind-icon">Predefined<wbr>Outputs</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="../modules/scene.html#scenecomponentname" class="tsd-kind-icon">Scene<wbr>Component<wbr>Name</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-namespace">
+						<a href="../modules/scene.html#configure" class="tsd-kind-icon">configure</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-namespace">
+						<a href="../modules/scene.html#createnode" class="tsd-kind-icon">create<wbr>Node</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-namespace">
+						<a href="../modules/scene.html#createnodes" class="tsd-kind-icon">create<wbr>Nodes</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-namespace">
+						<a href="../modules/scene.html#createobjects" class="tsd-kind-icon">create<wbr>Objects</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-namespace">
+						<a href="../modules/scene.html#deserialize" class="tsd-kind-icon">deserialize</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-namespace">
+						<a href="../modules/scene.html#register" class="tsd-kind-icon">register</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-namespace">
+						<a href="../modules/scene.html#registercomponents" class="tsd-kind-icon">register<wbr>Components</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-namespace">
+						<a href="../modules/scene.html#serialize" class="tsd-kind-icon">serialize</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-namespace">
+						<a href="../modules/scene.html#unregistercomponents" class="tsd-kind-icon">unregister<wbr>Components</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
+
+    <div class="tags">
+        
+    </div>
+
+<!-- 
+ -->
+
+</div>
+
+<!-- <hr class="shaded"/> -->
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2024 Matterport, Inc. All rights reserved. <br />
+ Site last generated: Jul 30, 2024 <br />
+<p><img class="footer-logo" src="/images/MP-logo_icon-RGB_black.svg" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /#main -->
+    </div>
+
+    
+  </body>
+   <!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-34880260-5','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+ 
+</html>

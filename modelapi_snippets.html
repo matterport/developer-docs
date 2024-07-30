@@ -1,0 +1,2217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Model API Sample Queries | Matterport Developers</title>
+<link rel="stylesheet" href="/css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="/css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/customstyles.css">
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="/css/tags2.css">
+
+<link rel="stylesheet" href="/css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="/css/theme-matterport.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="/js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/customscripts.js"></script>
+<script src="/js/mermaid.min.js"></script>
+
+<link rel="shortcut icon" href="/images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="showcase-sdk" href="https://docs.matterport.comfeed.xml">
+
+    <script>
+      $(document).ready(function () {
+        // Initialize navgoco with default options
+        $("#mysidebar").navgoco({
+          caretHtml: '<i class="fa fa-chevron-down"></i>',
+          accordion: true,
+          openClass: "active", // open
+
+          save: false, // leave false or nav highlighting doesn't work right
+          cookie: {
+            name: "navgoco",
+            expires: false,
+            path: "/",
+          },
+          slide: {
+            duration: 400,
+            easing: "swing",
+          },
+        });
+
+        $("#collapseAll").click(function (e) {
+          e.preventDefault();
+          $("#mysidebar").navgoco("toggle", false);
+        });
+
+        $("#expandAll").click(function (e) {
+          e.preventDefault();
+          $("#mysidebar").navgoco("toggle", true);
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#tg-sb-link").change(function () {
+          $("#tg-sb-sidebar").toggle();
+          $("#tg-sb-content").toggleClass("col-md-9");
+          $("#tg-sb-content").toggleClass("col-md-12");
+        });
+      });
+    </script>
+     
+  </head>
+  <body>
+    <!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div>
+    <div class="row">
+      <a class="navbrand col-md-3" href="/"
+        >&nbsp;<img
+          class="navbar-image"
+          src="/images/MP-logo_H_lock-RGB_white.svg"
+        /><span class="projectTitle"> </span></a
+      >
+      <div class="dev-nav-links col-md-6">
+        <div class="dropdown-items">
+          <div class="dropdown ">
+            <a class="dropbtn active" href="index.html">SDK Docs</a>
+            <div class="dropdown-content">
+              <a href="https://docs.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
+              <a href="https://docs.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
+              <a href="https://docs.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a class="dropbtn" href="api_home.html">API Docs</a>
+            <div class="dropdown-content">
+              <a href="https://docs.matterport.com/api_home.html">API Overview</a>
+              <a href="https://api.matterport.com/docs/reference" target="_blank">API Reference</a>
+              <a href="https://api.matterport.com/model/graphiql" target="_blank">Interactive Console</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a class="dropbtn" href="https://matterport.com/legal/platform-subscription-agreement#sdk-terms" target="_blank">Terms</a>
+          </div>
+          <div class="dropdown">
+            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:developer@matterport.com?subject=Showcase SDK feedback&body=I have some feedback about the Model API Sample Queries page: ' + window.location.href;">Feedback</a>
+          </div>
+          <div class="dropdown">
+            <a class="dropbtn" href="https://docs.matterport.com/subscribe.html" >
+              Subscribe
+              <sup class="subscribe-sup" style="font-size: 10px; color: #ff3158">New</sup>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="right-content col-md-3">
+        <div class="dev-input-container">
+          <!-- Add roboto font to search bar -->
+          <img src="/images/search_button.png" />
+          <input id="search-input" type="text" placeholder="Search"/>
+          <div id="results-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+</nav>
+ 
+    <!-- Page Content -->
+    <div class="dev-page-wrapper">
+      <div id="main">
+        <!-- Content Row -->
+        <div class="row">
+          <!-- Sidebar Column -->
+          
+          <aside class="col-md-3" id="tg-sb-sidebar">
+            
+<div id="mysidebar" class="nav">
+  
+  
+  
+
+  <li>
+      <a title="Overview" href="#">Overview</a>
+      <ul>
+          
+          
+          
+          <li><a title="Home" href="/index.html">Home</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Change Log" href="/sdk_changelog.html">Change Log</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Vocabulary" href="/sdk_vocabulary.html">Vocabulary</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Concepts" href="/sdk_concepts.html">Concepts</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Reference Docs Summary" href="/sdk_reference_summary.html">Reference Docs Summary</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Reference Documentation" href="/docs\reference\current\index.html">Reference Documentation</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="SDK for Embeds" href="#">SDK for Embeds</a>
+      <ul>
+          
+          
+          
+          <li><a title="Home" href="/sdk_home.html">Home</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="HTML Quick Start" href="/sdk_quickstart.html">HTML Quick Start</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="SDK Embed Package" href="/sdk_tutorials_package.html">SDK Embed Package</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Typescript Declarations" href="/sdk_types.html">Typescript Declarations</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="SDK Bundle" href="#">SDK Bundle</a>
+      <ul>
+          
+          
+          
+          <li><a title="Home" href="/sdkbundle_home.html">Home</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="HTML Quick Start" href="/sdkbundle_quickstart.html">HTML Quick Start</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Setting up Embed.ly" href="/sdkbundle_tutorials_setting_up_embedly.html">Setting up Embed.ly</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Setup a Local Environment" href="/sdkbundle_tutorials_setup.html">Setup a Local Environment</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Architecture" href="/sdkbundle_architecture.html">Architecture</a></li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Components" href="#">Components</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Ambient Light" href="/sdkbundle_components_ambientlight.html">Ambient Light</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Directional Light" href="/sdkbundle_components_directionallight.html">Directional Light</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Point Light" href="/sdkbundle_components_pointlight.html">Point Light</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="GLTF Loader" href="/sdkbundle_components_gltfloader.html">GLTF Loader</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="DAE Loader" href="/sdkbundle_components_daeloader.html">DAE Loader</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="FBX Loader" href="/sdkbundle_components_fbxloader.html">FBX Loader</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="OBJ Loader" href="/sdkbundle_components_objloader.html">OBJ Loader</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Transform Controls" href="/sdkbundle_components_transformcontrols.html">Transform Controls</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Input" href="/sdkbundle_components_input.html">Input</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Camera" href="/sdkbundle_components_camera.html">Camera</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="XR" href="/sdkbundle_components_xr.html">XR</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="Web Component (Beta)" href="#">Web Component (Beta)</a>
+      <ul>
+          
+          
+          
+          <li><a title="Home" href="/sdkbundle_webcomponent.html">Home</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tutorial" href="/sdkbundle_webcomponent_tutorial.html">Tutorial</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Advanced" href="/sdkbundle_webcomponent_advanced.html">Advanced</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Migration from Bundle" href="/sdkbundle_webcomponent_migration.html">Migration from Bundle</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="SDK Early Access" href="#">SDK Early Access</a>
+      <ul>
+          
+          
+          
+          <li><a title="Home" href="/earlyaccess_home.html">Home</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="SDK Tutorials" href="#">SDK Tutorials</a>
+      <ul>
+          
+          
+          
+          <li><a title="SDK Embed Package" href="/sdk_tutorials_package.html">SDK Embed Package</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Using Observables" href="/sdk_tutorials_observables.html">Using Observables</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Using Collections" href="/sdk_tutorials_collections.html">Using Collections</a></li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Using the Scene Namespace" href="#">Using the Scene Namespace</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Intro and Basic Components" href="/sdk_scene_intro.html">Intro and Basic Components</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Connecting Components" href="/sdk_connecting_components.html">Connecting Components</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Creating Tags" href="/sdk_creating_mattertags.html">Creating Tags</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Editing Tags" href="/sdk_editing_mattertags.html">Editing Tags</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tags 2.0 Migration" href="/sdk_tutorials_mattertagtotag.html">Tags 2.0 Migration</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tags Code Sandboxes" href="/sdk_tutorials_htmlsandbox.html">Tags Code Sandboxes</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Pathfinding" href="/sdk_tutorials_pathfinding.html">Pathfinding</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Pointer Reticle" href="/sdk_tutorials_cursor.html">Pointer Reticle</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Working with Models" href="/sdkbundle_tutorials_models.html">Working with Models</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Using xr" href="/sdkbundle_tutorials_using_xr.html">Using xr</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Using Scene Objects" href="/sdkbundle_tutorials_using_scene_objects.html">Using Scene Objects</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="SDK Examples" href="#">SDK Examples</a>
+      <ul>
+          
+          
+          
+          <li><a title="Navigation Controls" href="/sdk_navigation_controls.html">Navigation Controls</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Intersection Inspector" href="/sdk_intersection_inspector.html">Intersection Inspector</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tags Quiz" href="/sdk_tags_quiz.html">Tags Quiz</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tags Quiz - Overlay" href="/sdk_tags_quiz_overlay.html">Tags Quiz - Overlay</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Kitchen Sink" href="/sdk_kitchen_sink.html">Kitchen Sink</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Remote Control" href="/sdk_remote_control.html">Remote Control</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Sensors - Source Areas" href="/sdk_sensors_source_areas.html">Sensors - Source Areas</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Sensors - Tags Level of Detail" href="/sdk_sensors_tags_level_of_detail.html">Sensors - Tags Level of Detail</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Sensors - Sweep Control" href="/sdk_sensors_sweep_control.html">Sensors - Sweep Control</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Virtual Staging" href="/sdkbundle_virtual_staging.html">Virtual Staging</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Local Webcam" href="/sdkbundle_local_webcam.html">Local Webcam</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="HTML Livestream" href="/sdkbundle_html_livestream.html">HTML Livestream</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="IoT Canvas" href="/sdkbundle_iot_canvas.html">IoT Canvas</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Custom Experience" href="/sdkbundle_custom_experience.html">Custom Experience</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Security Camera FOV" href="/sdkbundle_security_camera.html">Security Camera FOV</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Content Attribution" href="/sdkbundle_content_attribution.html">Content Attribution</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="Matterport APIs" href="#">Matterport APIs</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/api_home.html">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Reference Docs" href="https://api.matterport.com/model/docs/reference" target="_blank" rel="noopener">Reference Docs</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Interactive Console" href="https://api.matterport.com/model/graphiql" target="_blank" rel="noopener">Interactive Console</a></li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Model API" href="#">Model API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Changelog" href="/modelapi_changelog.html">Changelog</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Models Queries" href="/modelapi_models_ref.html">Models Queries</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="active"><a title="Sample Queries" href="/modelapi_snippets.html">Sample Queries</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Ordering Add-Ons" href="/modelapi_ordering_addons.html">Ordering Add-Ons</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Views and Layers" href="/modelapi_views_and_layers.html">Views and Layers</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Tags Icon Reference" href="/tags_icons_reference.html">Tags Icon Reference</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Postman Collection" href="/modelapi_postman.html">Postman Collection</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Property Intelligence" href="#">Property Intelligence</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Overview" href="/modelapi_property_intelligence.html">Overview</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Dimension Estimates" href="/modelapi_pi_dimension_estimates.html">Dimension Estimates</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Room Names" href="/modelapi_pi_room_names.html">Room Names</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Vector Data" href="/modelapi_pi_vector_data.html">Vector Data</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Mutations" href="/modelapi_pi_mutations.html">Mutations</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Account API" href="#">Account API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="OAuth" href="#">OAuth</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/oauth_home.html">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Implementation" href="/oauth_implementation.html">Implementation</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Model Selector" href="/oauth_model_selector.html">Model Selector</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Use Case - Model API" href="/oauth_model_api.html">Use Case - Model API</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Use Case - Private Models" href="/oauth_sdk_private_model.html">Use Case - Private Models</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="OAuth Sample Application" href="/sdkbundle_tutorials_using_oauth.html">OAuth Sample Application</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="Private Model Embed" href="#">Private Model Embed</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/oauth_private_model_embed.html">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="Webhooks" href="#">Webhooks</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/webhooks_home.html">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="Learn More" href="#">Learn More</a>
+      <ul>
+          
+          
+          
+          <li><a title="Developer Tools Overview" href="https://support.matterport.com/s/article/API-SDK-Developer-Tools-Overview" target="_blank" rel="noopener">Developer Tools Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Pricing and Availability" href="https://support.matterport.com/s/article/Developer-Tools-Pricing-and-Availability" target="_blank" rel="noopener">Pricing and Availability</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</div>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+<script src="/js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+        SimpleJekyllSearch.init({
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container'),
+            dataSource: '/search.json',
+            searchResultTemplate: '<li><a href="{url}" title="Model API Sample Queries">{title}</a></li>',
+noResultsText: '<li><div>No results found.<div></li>',
+        limit: 10,
+        fuzzy: true,
+})
+</script>
+
+          </aside>
+           
+          <!-- Content Column -->
+          <div
+            class=" col-md-9" 
+            id="tg-sb-content"
+          >
+            <div class="post-header">
+   <h1 class="post-title-main">Model API Sample Queries</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+
+
+    
+
+   <p>This is a library of ready-to-use sample GraphQL queries and mutations for Matterport’s Model API.</p>
+
+<p>Each query and mutation contains a link to try the query in our interactive console. If you are logged into your account at my.matterport.com, you will be able to use the interactive console. If you have a Developer Tools license, the Interactive Console will be able to query all models in your account. If you are in Sandbox mode, it will only be able to query the demo model in your account.</p>
+
+<p>With all queries, be sure to edit the variables, when provided, and insert a valid Model ID and valid data for all variables.</p>
+
+<p>If you would like an application to build collections of API queries for testing and generating code to use in your applications, we recommend using Postman and have these snippets available in <a href="modelapi_postman.html">a sample collection</a>.</p>
+
+<h3 id="helpful-resources">Helpful Resources</h3>
+
+<ul>
+  <li><a href="https://api.matterport.com/model/docs/reference" target="_blank">Matterport Model API Schema</a></li>
+  <li><a href="https://graphql.org/learn/queries/" target="_blank">GraphQL Queries &amp; Mutations Guide</a></li>
+  <li><a href="mailto:developer@matterport.com">Matterport Developer Support</a></li>
+</ul>
+
+<h3 id="testing-in-sandbox-mode">Testing in Sandbox Mode</h3>
+
+<p>API Users in Sandbox mode can test these queries on a demo model in their account. The models() query will only return your demo model. Purchasing a developer license will change this behavior to show the models in your account. You can still find the SID of the demo model in production mode using the provided ‘Search for demo models in your account’ query found below.</p>
+
+<h2 id="models-queries">Models Queries</h2>
+
+<p>models() queries get data from our models search engine. Searchable data can be found here.</p>
+
+<details>
+  <summary>Search for your models</summary>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">query</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">models</span><span class="p">(</span><span class="n">query</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">totalResults</span><span class="w">
+    </span><span class="n">results</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="n">id</span><span class="w">
+      </span><span class="n">name</span><span class="w">
+      </span><span class="n">description</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p>Sample Response:</p>
+
+  <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"models"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"totalResults"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MODEL_ID"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"352 E Java Dr"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/graphiql/?query=query%20%7B%0Amodels(query%3A%20%22*%22)%20%7B%0A%20%20%20%20totalResults%0A%20%20%20%20%20results%20%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%20%20name%0A%20%20%20%20%20%20description%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A" target="_blank">Try this query in our interactive console</a></p>
+
+</details>
+
+<details>
+  <summary>Search for demo models in your account</summary>
+
+  <p>All accounts come with a demo model. This can be queried in sandbox mode for testing purposes. If you wish to find the demo models with a models query, use “demo: true” as your query. You can also include ‘demo’ in your results to verify that this is a demo model.</p>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">query</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">models</span><span class="p">(</span><span class="n">query</span><span class="p">:</span><span class="w"> </span><span class="s2">"demo:true"</span><span class="p">,</span><span class="w"> </span><span class="n">include</span><span class="p">:</span><span class="w"> </span><span class="n">demo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">results</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="n">name</span><span class="w">
+      </span><span class="n">demo</span><span class="w">
+      </span><span class="n">id</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="n">nextOffset</span><span class="w">
+    </span><span class="n">totalResults</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p>Sample Response:</p>
+
+  <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"models"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Get Started"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"demo"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xiyHP9VkT1U"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Get Started"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"demo"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YGYWqVqWDpm"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"totalResults"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/graphiql/?query=query%20%7B%0A%20%20%20models(%0A%20%20%20%20query%3A%20%22demo%3Atrue%22%2C%0A%20%20%20%20include%3A%20demo%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20results%20%7B%0A%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20demo%0A%20%20%20%20%20%20%20id%0A%20%20%20%20%20%7D%0A%20%20%20%20%20nextOffset%0A%20%20%20%20%20totalResults%0A%20%20%20%7D%0A%20%7D" target="_blank">Try this query in our interactive console</a></p>
+
+</details>
+
+<details>
+  <summary>Search for archived models</summary>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">query</span><span class="w"> </span><span class="n">archivedModels</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">models</span><span class="p">(</span><span class="n">query</span><span class="p">:</span><span class="w"> </span><span class="s2">"state:inactive"</span><span class="p">,</span><span class="w"> </span><span class="n">include</span><span class="p">:</span><span class="w"> </span><span class="n">inactive</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">results</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="n">name</span><span class="w">
+      </span><span class="n">state</span><span class="w">
+      </span><span class="n">id</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="n">nextOffset</span><span class="w">
+    </span><span class="n">totalResults</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/graphiql/?query=query%20archivedModels%20%7B%0A%20%20%20models(%0A%20%20%20%20query%3A%20%22state%3Ainactive%22%2C%0A%20%20%20%20include%3A%20inactive%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20results%20%7B%0A%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20state%0A%20%20%20%20%20%20%20id%0A%20%20%20%20%20%7D%0A%20%20%20%20%20nextOffset%0A%20%20%20%20%20totalResults%0A%20%20%20%7D%0A%20%7D&amp;operationName=archivedModels" target="_blank">Try this query in our interactive console</a></p>
+
+</details>
+
+<details>
+  <summary>Search for Models with x # of Floors</summary>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">query</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">models</span><span class="p">(</span><span class="n">query</span><span class="p">:</span><span class="w"> </span><span class="s2">"floors.count: 20"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">results</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="n">id</span><span class="w">
+      </span><span class="n">name</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="n">nextOffset</span><span class="w">
+    </span><span class="n">totalResults</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/graphiql/?query=query%20modelSearch%20%7B%0A%20%20%20models(%0A%20%20%20%20query%3A%20%22floors.count%3A%2020%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20results%20%7B%0A%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20demo%0A%20%20%20%20%20%20%20id%0A%20%20%20%20%20%7D%0A%20%20%20%20%20nextOffset%0A%20%20%20%20%20totalResults%0A%20%20%20%7D%0A%20%7D&amp;operationName=modelSearch" target="_blank">Try this query in our interactive console</a></p>
+
+</details>
+
+<h2 id="model-queries">Model Queries</h2>
+
+<p>model() queries get data from individual models.</p>
+
+<details>
+  <summary>Get all Sweep Locations and Panoramic Images</summary>
+
+  <p>Panoramic images are currently only available as <strong>skyboxes</strong>.</p>
+
+  <p>A skybox is made out of six images - each image individually projected onto the shape of a cube - that is: top, bottom, left, right, front and back sides. Skyboxes are available in 512x512 (resolution: low), 1024x1024 (resolution: high) and 2048 x 2048 (resolution: 2k) resolutions and come bundled with position and rotation data.  4096 x 4096 skyboxes are available for business and Enterprise customers who have purchased the ‘Advanced Imagery Bundle’ add-on.</p>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fragment</span><span class="w"> </span><span class="n">panoFragment</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">PanoramicImageLocation</span><span class="p">{</span><span class="w">
+  </span><span class="n">id</span><span class="w">
+  </span><span class="n">skybox</span><span class="p">(</span><span class="n">resolution</span><span class="p">:</span><span class="w"> </span><span class="s2">"2k"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">id</span><span class="w">
+    </span><span class="n">status</span><span class="w">
+    </span><span class="n">format</span><span class="w">
+    </span><span class="n">children</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="k">query</span><span class="w"> </span><span class="n">getSweeps</span><span class="p">(</span><span class="nv">$modelId</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!){</span><span class="w">
+    </span><span class="n">model</span><span class="p">(</span><span class="n">id</span><span class="p">:</span><span class="w"> </span><span class="nv">$modelId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="n">locations</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="n">id</span><span class="w">
+        </span><span class="n">model</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">}</span><span class="w">
+        </span><span class="n">position</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="p">}</span><span class="w">
+        </span><span class="n">floor</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">}</span><span class="w">
+        </span><span class="n">room</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">}</span><span class="w">
+        </span><span class="n">panos</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="n">panoFragment</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c"># variables</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="err">"</span><span class="n">modelId</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p>Sample Response:</p>
+
+  <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"model"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"locations"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+          </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a0723324-ab3e-4500-bdee-8fec13d3ae9d"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"model"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MODEL_ID"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"position"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"panos"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a0723324-ab3e-4500-bdee-8fec13d3ae9d"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"skybox"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a0723324-ab3e-4500-bdee-8fec13d3ae9d"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"available"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"skybox"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"children"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"https://qa-cdn-1.matterport.com/models/1a56eedeff7d4a7481b961c009ae9236/assets/pan/~/high/a0723324ab3e4500bdee8fec13d3ae9d_skybox0.jpg?t=2-c81c9af53e390d7c5d9946f73a74665f0e06757c-1573701898-1"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"https://qa-cdn-1.matterport.com/models/1a56eedeff7d4a7481b961c009ae9236/assets/pan/~/high/a0723324ab3e4500bdee8fec13d3ae9d_skybox1.jpg?t=2-c81c9af53e390d7c5d9946f73a74665f0e06757c-1573701898-1"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"https://qa-cdn-1.matterport.com/models/1a56eedeff7d4a7481b961c009ae9236/assets/pan/~/high/a0723324ab3e4500bdee8fec13d3ae9d_skybox2.jpg?t=2-c81c9af53e390d7c5d9946f73a74665f0e06757c-1573701898-1"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"https://qa-cdn-1.matterport.com/models/1a56eedeff7d4a7481b961c009ae9236/assets/pan/~/high/a0723324ab3e4500bdee8fec13d3ae9d_skybox3.jpg?t=2-c81c9af53e390d7c5d9946f73a74665f0e06757c-1573701898-1"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"https://qa-cdn-1.matterport.com/models/1a56eedeff7d4a7481b961c009ae9236/assets/pan/~/high/a0723324ab3e4500bdee8fec13d3ae9d_skybox4.jpg?t=2-c81c9af53e390d7c5d9946f73a74665f0e06757c-1573701898-1"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"https://qa-cdn-1.matterport.com/models/1a56eedeff7d4a7481b961c009ae9236/assets/pan/~/high/a0723324ab3e4500bdee8fec13d3ae9d_skybox5.jpg?t=2-c81c9af53e390d7c5d9946f73a74665f0e06757c-1573701898-1"</span><span class="w">
+              </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">}]</span><span class="w">
+        </span><span class="p">},</span><span class="w"> </span><span class="err">...</span><span class="w">
+      </span><span class="err">}</span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/graphiql/?query=fragment%20panoFragment%20on%20PanoramicImageLocation%7B%0A%20%20id%0A%20%20skybox%20%7B%0A%20%20%20%20id%0A%20%20%20%20status%0A%20%20%20%20format%0A%20%20%20%20children%0A%20%20%7D%0A%7D%0A%0Aquery%20getSweeps(%24modelId%3A%20ID!)%7B%0A%20%20%20%20model(id%3A%20%24modelId)%20%7B%0A%20%20%20%20%20%20locations%20%7B%0A%20%20%20%20%20%20%20%20id%0A%20%20%20%20%20%20%20%20label%0A%20%20%20%20%20%20%20%20model%20%7B%20id%20%7D%0A%20%20%20%20%20%20%20%20position%20%7B%20x%2C%20y%2C%20z%20%7D%0A%20%20%20%20%20%20%20%20floor%20%7B%20id%20%7D%0A%20%20%20%20%20%20%20%20room%20%7B%20id%20%7D%0A%20%20%20%20%20%20%20%20panos%20%7B%20...panoFragment%20%7D%20%20%20%20%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&amp;variables=%7B%0A%20%20%22modelId%22%3A%20%22%22%0A%7D&amp;operationName=getSweeps" target="_blank">Try this query in our interactive console</a></p>
+
+</details>
+
+<details>
+  <summary>Get all Tags and Tag Data</summary>
+
+  <p>Users can get all Tags from a model. Presently, attachments are not queryable.</p>
+
+  <p>Tags were previous called ‘mattertags’ and Model API continues to use this naming convention.</p>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">query</span><span class="w"> </span><span class="n">getTags</span><span class="p">(</span><span class="nv">$modelId</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!)</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">model</span><span class="p">(</span><span class="n">id</span><span class="p">:</span><span class="w"> </span><span class="nv">$modelId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">mattertags</span><span class="p">(</span><span class="n">includeDisabled</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="n">id</span><span class="w">
+      </span><span class="n">floor</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">}</span><span class="w">
+      </span><span class="n">created</span><span class="w">
+      </span><span class="n">modified</span><span class="w">
+      </span><span class="n">enabled</span><span class="w">
+      </span><span class="n">color</span><span class="w">
+      </span><span class="n">label</span><span class="w">
+      </span><span class="n">description</span><span class="w">
+      </span><span class="n">icon</span><span class="w">  </span><span class="c"># New!</span><span class="w">
+      </span><span class="n">keywords</span><span class="w">
+      </span><span class="n">media</span><span class="w">
+      </span><span class="n">mediaType</span><span class="w">
+      </span><span class="n">position</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="p">}</span><span class="w">
+      </span><span class="n">anchorPosition</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="p">}</span><span class="w">
+      </span><span class="n">discPosition</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="p">}</span><span class="w">
+      </span><span class="n">stemNormal</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="p">}</span><span class="w">
+      </span><span class="n">stemLength</span><span class="w">
+      </span><span class="n">stemEnabled</span><span class="w">
+      </span><span class="n">stemDirection</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c"># Deprecated, use stemNormal and stemLength</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c"># variables</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="err">"</span><span class="n">modelId</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p>Sample Response:</p>
+
+  <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"model"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"mattertags"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ayi201wkujs"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"floor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pd0i1c4yq9w0y2zsb07ed23sb"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-09-29T19:45:57Z"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-11-18T22:26:42Z"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#03687d"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nest Thermostat"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"public_symbols_video"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"keywords"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="nl">"media"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"mediaType"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"position"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.20415628</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-5.35434341</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.1942153</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"anchorPosition"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.20415628</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-5.35434341</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.1942153</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"discPosition"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.40415628</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-5.35434341</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.1942153</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"stemNormal"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"stemLength"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"stemEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"stemDirection"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w"> </span><span class="err">…</span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/graphiql/?query=query%20getTags(%24modelId%3A%20ID!)%20%7B%0A%20%20model(id%3A%20%24modelId)%20%7B%0A%20%20%20%20mattertags(includeDisabled%3A%20true)%20%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%20%20floor%20%7B%20id%20%7D%0A%20%20%20%20%20%20created%0A%20%20%20%20%20%20modified%0A%20%20%20%20%20%20enabled%0A%20%20%20%20%20%20color%0A%20%20%20%20%20%20label%0A%20%20%20%20%20%20description%0A%20%20%20%20%20%20icon%0A%20%20%20%20%20%20keywords%0A%20%20%20%20%20%20media%0A%20%20%20%20%20%20mediaType%0A%20%20%20%20%20%20position%20%7B%20x%2C%20y%2C%20z%20%7D%0A%20%20%20%20%20%20anchorPosition%20%7B%20x%2C%20y%2C%20z%20%7D%0A%20%20%20%20%20%20discPosition%20%7B%20x%2C%20y%2C%20z%20%7D%0A%20%20%20%20%20%20stemNormal%20%7B%20x%2C%20y%2C%20z%20%7D%0A%20%20%20%20%20%20stemLength%0A%20%20%20%20%20%20stemEnabled%0A%20%20%20%20%20%20stemDirection%20%7B%20x%2C%20y%2C%20z%20%7D%20%23%20Deprecated%2C%20use%20stemNormal%20and%20stemLength%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D&amp;variables=%7B%0A%20%20%22modelId%22%3A%20%22%22%0A%7D&amp;operationName=getTags" target="_blank">Try this query in our interactive console</a></p>
+
+</details>
+
+<details>
+  <summary>Get all Dimensional Data from the Model, Floors and Rooms</summary>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">query</span><span class="w"> </span><span class="n">getDimensions</span><span class="p">(</span><span class="nv">$modelId</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!)</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">model</span><span class="p">(</span><span class="n">id</span><span class="p">:</span><span class="w"> </span><span class="nv">$modelId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="n">name</span><span class="w">
+      </span><span class="n">description</span><span class="w">
+      </span><span class="n">dimensions</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="p">...</span><span class="n">dimensions</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+      </span><span class="n">floors</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="n">label</span><span class="w">
+      </span><span class="n">dimensions</span><span class="p">(</span><span class="n">units</span><span class="p">:</span><span class="w"> </span><span class="n">imperial</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="p">...</span><span class="n">dimensions</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+     </span><span class="n">rooms</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="n">id</span><span class="w">
+      </span><span class="n">label</span><span class="w">
+      </span><span class="n">tags</span><span class="w">
+      </span><span class="n">dimensions</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="p">...</span><span class="n">dimensions</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="k">fragment</span><span class="w"> </span><span class="n">dimensions</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">Dimension</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="n">areaCeiling</span><span class="w">
+</span><span class="n">areaFloor</span><span class="w">
+</span><span class="n">areaFloorIndoor</span><span class="w">
+</span><span class="n">areaWall</span><span class="w">
+</span><span class="n">volume</span><span class="w">
+</span><span class="n">depth</span><span class="w">
+</span><span class="n">height</span><span class="w">
+</span><span class="n">width</span><span class="w">
+</span><span class="n">units</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c"># variables</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+</span><span class="err">"</span><span class="n">modelId</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div>  </div>
+
+  <p>Sample Response:</p>
+
+  <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"model"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Model Name"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Model Description"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dimensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"areaFloor"</span><span class="p">:</span><span class="w"> </span><span class="mf">270.23811626434326</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"areaFloorIndoor"</span><span class="p">:</span><span class="w"> </span><span class="mf">245.12091588974</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">1185.8062753677368</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"units"</span><span class="p">:</span><span class="w"> </span><span class="s2">"metric"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"floors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Floor 1"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dimensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"areaFloor"</span><span class="p">:</span><span class="w"> </span><span class="mf">1811.2674341550348</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaFloorIndoor"</span><span class="p">:</span><span class="w"> </span><span class="mf">1763.751272911024</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaWall"</span><span class="p">:</span><span class="w"> </span><span class="mf">4200.7835074106215</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">30221.99651317749</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"units"</span><span class="p">:</span><span class="w"> </span><span class="s2">"imperial"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Floor 2"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dimensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"areaFloor"</span><span class="p">:</span><span class="w"> </span><span class="mf">1097.5486255027295</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaFloorIndoor"</span><span class="p">:</span><span class="w"> </span><span class="mf">874.7057536345482</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaWall"</span><span class="p">:</span><span class="w"> </span><span class="mf">2896.4391288173674</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">11654.396359551525</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"units"</span><span class="p">:</span><span class="w"> </span><span class="s2">"imperial"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"rooms"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"h26t7ky77ew74yb0pg8qqf5rd"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="s2">"bedroom"</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                    </span><span class="nl">"dimensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"areaFloor"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.459799766540527</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaFloorIndoor"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.459799766540527</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaWall"</span><span class="p">:</span><span class="w"> </span><span class="mf">41.87590026855469</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">37.56352996826172</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.0147781372070312</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"units"</span><span class="p">:</span><span class="w"> </span><span class="s2">"metric"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tt6gm2a0463x9wmnx7rn6gugc"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="s2">"laundry"</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                    </span><span class="nl">"dimensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"areaFloor"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.239500045776367</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaFloorIndoor"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.239500045776367</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaWall"</span><span class="p">:</span><span class="w"> </span><span class="mf">25.518861770629883</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">15.819963455200195</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.019364833831787</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"units"</span><span class="p">:</span><span class="w"> </span><span class="s2">"metric"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kuc0fpmsgqxff63egrxrycfud"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="s2">"bedroom"</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                    </span><span class="nl">"dimensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"areaFloor"</span><span class="p">:</span><span class="w"> </span><span class="mf">19.056400299072266</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaWall"</span><span class="p">:</span><span class="w"> </span><span class="mf">54.98054504394531</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">57.81614303588867</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.0339488983154297</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"units"</span><span class="p">:</span><span class="w"> </span><span class="s2">"metric"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wbpb7dkfuwnikd1kq2a9hz70a"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="s2">"bathroom"</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                    </span><span class="nl">"dimensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"areaFloor"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.646399974822998</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaWall"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.429454803466797</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.219707489013672</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.562990665435791</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"units"</span><span class="p">:</span><span class="w"> </span><span class="s2">"metric"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b4qtykzcazp4iumkamm7y7h2b"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="s2">"bathroom"</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                    </span><span class="nl">"dimensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"areaFloor"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.713900566101074</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaFloorIndoor"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.713900566101074</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaWall"</span><span class="p">:</span><span class="w"> </span><span class="mf">38.93343734741211</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">32.931732177734375</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.590214729309082</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"units"</span><span class="p">:</span><span class="w"> </span><span class="s2">"metric"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3m54yff1z7crxaywd8if9rb0d"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="s2">"bathroom"</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                    </span><span class="nl">"dimensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"areaFloor"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.156899929046631</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaFloorIndoor"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.156899929046631</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaWall"</span><span class="p">:</span><span class="w"> </span><span class="mf">24.900320053100586</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.581944465637207</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.026761531829834</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"units"</span><span class="p">:</span><span class="w"> </span><span class="s2">"metric"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a5f9age4zzxewres6iqux2emc"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="s2">"bathroom"</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                    </span><span class="nl">"dimensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"areaFloor"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.8993000984191895</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaFloorIndoor"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.8993000984191895</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.761096954345703</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.604677438735962</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"units"</span><span class="p">:</span><span class="w"> </span><span class="s2">"metric"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cdz3fkt38kae7tapstpt0eaeb"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="s2">"kitchen"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"living"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"bathroom"</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                    </span><span class="nl">"dimensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"areaFloor"</span><span class="p">:</span><span class="w"> </span><span class="mf">102.59071350097656</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaFloorIndoor"</span><span class="p">:</span><span class="w"> </span><span class="mf">102.59071350097656</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaWall"</span><span class="p">:</span><span class="w"> </span><span class="mf">184.97195434570312</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">657.700927734375</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"units"</span><span class="p">:</span><span class="w"> </span><span class="s2">"metric"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ediidma5zg15dufx3n0qyq21a"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="s2">"bedroom"</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                    </span><span class="nl">"dimensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"areaFloor"</span><span class="p">:</span><span class="w"> </span><span class="mf">24.611000061035156</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaFloorIndoor"</span><span class="p">:</span><span class="w"> </span><span class="mf">24.611000061035156</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaWall"</span><span class="p">:</span><span class="w"> </span><span class="mf">49.6417236328125</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">81.93767547607422</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"units"</span><span class="p">:</span><span class="w"> </span><span class="s2">"metric"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xy2x8mpaaqknp7q2c3nnbw1ma"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="s2">"dining"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"living"</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                    </span><span class="nl">"dimensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"areaFloor"</span><span class="p">:</span><span class="w"> </span><span class="mf">17.3887996673584</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaFloorIndoor"</span><span class="p">:</span><span class="w"> </span><span class="mf">17.3887996673584</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaWall"</span><span class="p">:</span><span class="w"> </span><span class="mf">46.00373458862305</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">52.49049758911133</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.0186383724212646</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"units"</span><span class="p">:</span><span class="w"> </span><span class="s2">"metric"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2qdmc5i9byxi79ry1pxdkqzea"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="s2">"bedroom"</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                    </span><span class="nl">"dimensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"areaFloor"</span><span class="p">:</span><span class="w"> </span><span class="mf">15.340200424194336</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaFloorIndoor"</span><span class="p">:</span><span class="w"> </span><span class="mf">15.340200424194336</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaWall"</span><span class="p">:</span><span class="w"> </span><span class="mf">41.409175872802734</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">57.230098724365234</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"units"</span><span class="p">:</span><span class="w"> </span><span class="s2">"metric"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"m8npxsuk79xy21dd09x9wtped"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="s2">"bathroom"</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                    </span><span class="nl">"dimensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"areaFloor"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.3730998039245605</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaFloorIndoor"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.3730998039245605</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaWall"</span><span class="p">:</span><span class="w"> </span><span class="mf">15.520317077636719</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">11.225411415100098</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.566923141479492</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"units"</span><span class="p">:</span><span class="w"> </span><span class="s2">"metric"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"n81qfe51azs8iexnbqwspye6c"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="s2">"office"</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                    </span><span class="nl">"dimensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"areaFloor"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.414400100708008</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaWall"</span><span class="p">:</span><span class="w"> </span><span class="mf">18.9549503326416</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">13.287762641906738</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.0100948810577393</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"units"</span><span class="p">:</span><span class="w"> </span><span class="s2">"metric"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19ab05tns5h6y4qm42esqqpea"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="s2">"bedroom"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"bathroom"</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                    </span><span class="nl">"dimensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"areaFloor"</span><span class="p">:</span><span class="w"> </span><span class="mf">19.325401306152344</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaFloorIndoor"</span><span class="p">:</span><span class="w"> </span><span class="mf">19.325401306152344</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaWall"</span><span class="p">:</span><span class="w"> </span><span class="mf">64.1736068725586</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">71.8935775756836</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"units"</span><span class="p">:</span><span class="w"> </span><span class="s2">"metric"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"613htqkzf66zz7hf7n8kzszed"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="s2">"living"</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                    </span><span class="nl">"dimensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"areaFloor"</span><span class="p">:</span><span class="w"> </span><span class="mf">22.022300720214844</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaFloorIndoor"</span><span class="p">:</span><span class="w"> </span><span class="mf">22.022300720214844</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"areaWall"</span><span class="p">:</span><span class="w"> </span><span class="mf">48.04021453857422</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">66.34620666503906</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.0126829147338867</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"units"</span><span class="p">:</span><span class="w"> </span><span class="s2">"metric"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/graphiql/?query=query%20getDimensions(%24modelId%3A%20ID!)%20%7B%0A%20%20model(id%3A%20%24modelId)%20%7B%0A%20%20%20%20name%0A%20%20%20%20description%0A%20%20%20%20dimensions%20%7B%0A%20%20%20%20%20%20...dimensions%0A%20%20%20%20%7D%0A%20%20%20%20floors%20%7B%0A%20%20%20%20%20%20label%0A%20%20%20%20%20%20dimensions(units%3A%20imperial)%20%7B%0A%20%20%20%20%20%20%20%20...dimensions%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20rooms%20%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%20%20label%0A%20%20%20%20%20%20tags%0A%20%20%20%20%20%20dimensions%20%7B%0A%20%20%20%20%20%20%20%20...dimensions%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A%0Afragment%20dimensions%20on%20Dimension%20%7B%0A%20%20areaCeiling%0A%20%20areaFloor%0A%20%20areaFloorIndoor%0A%20%20areaWall%0A%20%20volume%0A%20%20depth%0A%20%20height%0A%20%20width%0A%20%20units%0A%7D&amp;variables=%7B%0A%20%20%22modelId%22%3A%20%22FE1FLGnch5h%22%0A%7D&amp;operationName=getDimensions" target="_blank">Try this query in our interactive console</a></p>
+
+</details>
+
+<details>
+  <summary>Get the Colored Rooms Floorplan URL</summary>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">query</span><span class="w"> </span><span class="n">getColoredRooms</span><span class="p">(</span><span class="nv">$modelId</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!){</span><span class="w">
+ </span><span class="n">model</span><span class="p">(</span><span class="n">id</span><span class="p">:</span><span class="w"> </span><span class="nv">$modelId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">assets</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="n">floorplans</span><span class="p">(</span><span class="n">provider</span><span class="p">:</span><span class="w"> </span><span class="s2">"matterport"</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">colored_rooms</span><span class="p">])</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="n">provider</span><span class="w">
+        </span><span class="n">format</span><span class="w">
+        </span><span class="n">flags</span><span class="w">
+        </span><span class="n">id</span><span class="w">
+        </span><span class="n">url</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c"># variables</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="err">"</span><span class="n">modelId</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p>Sample Response:</p>
+
+  <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"model"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"floorplans"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"matterport"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"flags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"photogramy"</span><span class="p">,</span><span class="w"> </span><span class="s2">"colored_rooms"</span><span class="p">],</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn-2.matterport.com/models/58f2a24ec7fb43abaf68c39459cd29d3/assets/render/colorplan_room_000.jpg?t=2-45286ff9b37da4d31d06a13b828c497d00343f7c-1679975423-1&amp;download=colorplan_room_000.jpg&amp;k=models%2F58f2a24ec7fb43abaf68c39459cd29d3%2Fassets%2Frender%2Fcolorplan_room_000.jpg"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"matterport"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"flags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"photogramy"</span><span class="p">,</span><span class="w"> </span><span class="s2">"colored_rooms"</span><span class="p">],</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn-2.matterport.com/models/58f2a24ec7fb43abaf68c39459cd29d3/assets/render/colorplan_room_001.jpg?t=2-3377428ace2fcebeb51b5a24d55aff51ad6b85db-1679975423-1&amp;download=colorplan_room_001.jpg&amp;k=models%2F58f2a24ec7fb43abaf68c39459cd29d3%2Fassets%2Frender%2Fcolorplan_room_001.jpg"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"matterport"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"flags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"photogramy"</span><span class="p">,</span><span class="w"> </span><span class="s2">"colored_rooms"</span><span class="p">],</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn-2.matterport.com/models/58f2a24ec7fb43abaf68c39459cd29d3/assets/render/colorplan_room_002.jpg?t=2-878d69a6f66558f17271e17b4c4f5a03b606368f-1679975423-1&amp;download=colorplan_room_002.jpg&amp;k=models%2F58f2a24ec7fb43abaf68c39459cd29d3%2Fassets%2Frender%2Fcolorplan_room_002.jpg"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"matterport"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"flags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"photogramy"</span><span class="p">,</span><span class="w"> </span><span class="s2">"colored_rooms"</span><span class="p">],</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn-2.matterport.com/models/58f2a24ec7fb43abaf68c39459cd29d3/assets/render/colorplan_room_003.jpg?t=2-0dd57e99aa752e228ef2d85b9aff89f8663b826b-1679975423-1&amp;download=colorplan_room_003.jpg&amp;k=models%2F58f2a24ec7fb43abaf68c39459cd29d3%2Fassets%2Frender%2Fcolorplan_room_003.jpg"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/graphiql/?query=query%20getColoredRooms(%24modelId%3A%20ID!)%7B%0A%20model(id%3A%20%24modelId)%20%7B%0A%20%20%20%20assets%20%7B%0A%20%20%20%20%20%20floorplans(provider%3A%20%22matterport%22%2C%20flags%3A%20%5Bcolored_rooms%5D)%20%7B%0A%20%20%20%20%20%20%20%20provider%0A%20%20%20%20%20%20%20%20format%0A%20%20%20%20%20%20%20%20flags%0A%20%20%20%20%20%20%20%20id%0A%20%20%20%20%20%20%20%20url%0A%20%20%20%20%20%20%7D%0A%20%20%09%7D%0A%09%7D%0A%7D&amp;variables=%7B%0A%20%20%22modelId%22%3A%20%22%22%0A%7D&amp;operationName=getColoredRooms" target="_blank">Try this query in our interactive console</a></p>
+
+</details>
+
+<details>
+  <summary>Get all Notes and Comments</summary>
+
+  <p>Users can query notes that have been created in Matterport Cloud to synchronize information within their internal applications.</p>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">query</span><span class="w"> </span><span class="n">getNotes</span><span class="p">(</span><span class="nv">$modelId</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!){</span><span class="w">
+  </span><span class="n">model</span><span class="p">(</span><span class="n">id</span><span class="p">:</span><span class="nv">$modelId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+
+  </span><span class="n">notes</span><span class="p">(</span><span class="n">includeDisabled</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="c"># resolutionStatus: [resolved],</span><span class="w">
+        </span><span class="c">#ids: ["_____"]</span><span class="w">
+  </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">id</span><span class="w">
+    </span><span class="n">created</span><span class="w">
+    </span><span class="n">modified</span><span class="w">
+    </span><span class="n">label</span><span class="w">
+    </span><span class="n">enabled</span><span class="w">
+    </span><span class="n">createdBy</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="n">id</span><span class="w">
+      </span><span class="n">firstName</span><span class="w">
+       </span><span class="n">lastName</span><span class="w">
+       </span><span class="n">email</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="n">resolution</span><span class="w">
+    </span><span class="n">color</span><span class="w">
+    </span><span class="n">anchorPosition</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="n">discPosition</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="n">stemNormal</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="n">stemLength</span><span class="w">
+    </span><span class="n">stemEnabled</span><span class="w">
+    </span><span class="n">firstCommentAt</span><span class="w">
+    </span><span class="n">lastCommentAt</span><span class="w">
+    </span><span class="n">totalComments</span><span class="w">
+    </span><span class="p">...</span><span class="n">Comments</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="k">fragment</span><span class="w"> </span><span class="n">Comments</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">Note</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">comments</span><span class="p">(</span><span class="n">sortBy</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">field</span><span class="p">:</span><span class="w"> </span><span class="n">created</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="n">pageSize</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">offset</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">nextOffset</span><span class="w">
+    </span><span class="n">results</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="n">id</span><span class="w">
+      </span><span class="n">created</span><span class="w">
+      </span><span class="n">modified</span><span class="w">
+      </span><span class="n">createdBy</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="n">id</span><span class="w">
+        </span><span class="n">firstName</span><span class="w">
+        </span><span class="n">lastName</span><span class="w">
+        </span><span class="n">email</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+      </span><span class="n">edited</span><span class="w">
+      </span><span class="n">text</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c"># variables</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="err">"</span><span class="n">modelId</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/graphiql/?query=query%20getNotes(%24modelId%3A%20ID!)%7B%0A%09model(id%3A%24modelId)%20%7B%0A%20%20%20%20%0A%20%20notes(includeDisabled%3A%20true%2C%0A%20%20%20%20%20%20%20%20%23%20resolutionStatus%3A%20%5Bresolved%5D%2C%20%0A%20%20%20%20%20%20%20%20%23ids%3A%20%5B%22_____%22%5D%0A%20%20)%20%7B%0A%20%20%20%20id%0A%20%20%20%20created%0A%20%20%20%20modified%0A%20%20%20%20label%0A%20%20%20%20enabled%0A%20%20%20%20createdBy%20%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%20%20firstName%0A%20%20%20%20%20%20%20lastName%0A%20%20%20%20%20%20%20email%0A%20%20%20%20%7D%0A%20%20%20%20resolution%0A%20%20%20%20color%0A%20%20%20%20anchorPosition%20%7B%20x%20y%20z%20%7D%20%0A%20%20%20%20discPosition%20%7B%20x%20y%20z%20%7D%0A%20%20%20%20stemNormal%20%7B%20x%20y%20z%20%7D%0A%20%20%20%20stemLength%0A%20%20%20%20stemEnabled%0A%20%20%20%20firstCommentAt%0A%20%20%20%20lastCommentAt%0A%20%20%20%20totalComments%0A%20%20%20%20...Comments%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A%0Afragment%20Comments%20on%20Note%20%7B%0A%20%20comments(sortBy%3A%20%7B%20field%3A%20created%20%7D%2C%20pageSize%3A%201%2C%20offset%3A%20%22string%22)%20%7B%0A%20%20%20%20nextOffset%0A%20%20%20%20results%20%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%20%20created%0A%20%20%20%20%20%20modified%0A%20%20%20%20%20%20createdBy%20%7B%0A%20%20%20%20%20%20%20%20id%0A%20%20%20%20%20%20%20%20firstName%0A%20%20%20%20%20%20%20%20lastName%0A%20%20%20%20%20%20%20%20email%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20edited%0A%20%20%20%20%20%20text%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&amp;variables=%7B%0A%20%20%22modelId%22%3A%20%22%22%0A%7D" target="_blank">Try this query in our interactive console</a></p>
+
+</details>
+
+<h2 id="mutations">Mutations</h2>
+
+<p>Mutations update data via Model API. They can also contain queries that return data after the data has changed. The query can return an ID if new content has been added, or updated information that may have changed due to the patch (update).</p>
+
+<details>
+  <summary>Toggle Model Visibility and Get Embed URL</summary>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mutation</span><span class="w"> </span><span class="n">toggleModelVisibility</span><span class="p">(</span><span class="nv">$modelId</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!,</span><span class="w"> </span><span class="nv">$visibility</span><span class="p">:</span><span class="w"> </span><span class="n">ModelVisibility</span><span class="p">!){</span><span class="w">
+  </span><span class="n">updateModelAccessVisibility</span><span class="p">(</span><span class="n">id</span><span class="p">:</span><span class="w"> </span><span class="nv">$modelId</span><span class="p">,</span><span class="w"> </span><span class="n">visibility</span><span class="p">:</span><span class="w"> </span><span class="nv">$visibility</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">id</span><span class="w">
+    </span><span class="n">accessVisibility</span><span class="w">
+    </span><span class="n">accessVisibilityLastChanged</span><span class="w">
+    </span><span class="n">publication</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="n">published</span><span class="w">
+      </span><span class="n">url</span><span class="w">
+      </span><span class="n">externalUrl</span><span class="w">
+      </span><span class="n">embed</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c"># variables</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="err">"</span><span class="n">modelId</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">""</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">visibility</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">"</span><span class="n">public</span><span class="err">"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p>Sample Response:</p>
+
+  <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"updateModelVisibility"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WeZ1dHwn3ac"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"publication"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"published"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://my.matterport.com/show/?m=WeZ1dHwn3ac"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"externalUrl"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"embed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&amp;lt;frame width='853' height='480' src='https://my.matterport.com/show/?m=WeZ1dHwn3ac' frameborder='0' allowfullscreen allow='xr-spatial-tracking'&gt;&amp;lt;/iframe&gt;"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/graphiql/?query=mutation%20toggleModelVisibility(%24modelId%3A%20ID!%2C%20%24visibility%3A%20ModelVisibility!)%7B%0A%20%20updateModelVisibility(%0A%20%20%20%20id%3A%20%24modelId%2C%0A%20%20%20%20visibility%3A%20%24visibility%20%20%23%20public%20or%20private%0A%20%20)%7B%0A%20%20%20%20id%0A%20%20%20%20publication%20%7B%0A%20%20%20%20%20%20published%0A%20%20%20%20%20%20url%0A%20%20%20%20%20%20externalUrl%0A%20%20%20%20%20%20embed%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&amp;variables=%7B%0A%20%20%22modelId%22%3A%20%22WeZ1dHwn3ac%22%2C%0A%20%20%22visibility%22%20%3A%20%22public%22%0A%7D&amp;operationName=toggleModelVisibility" target="_blank">Try this query in our interactive console</a></p>
+
+</details>
+
+<details>
+  <summary>Toggle Model Activation (archive / activate)</summary>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mutation</span><span class="w"> </span><span class="n">toggleModelActivation</span><span class="p">(</span><span class="nv">$modelId</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!,</span><span class="w"> </span><span class="nv">$state</span><span class="p">:</span><span class="w"> </span><span class="n">ModelStateChange</span><span class="p">!)</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">updateModelState</span><span class="p">(</span><span class="n">id</span><span class="p">:</span><span class="w"> </span><span class="nv">$modelId</span><span class="p">,</span><span class="w"> </span><span class="n">state</span><span class="p">:</span><span class="w"> </span><span class="nv">$state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">id</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/graphiql/?query=mutation%20toggleModelActivation(%24modelId%3A%20ID!%2C%20%24state%3A%20ModelStateChange!)%7B%0A%20%20updateModelState(%0A%20%20%20%20id%3A%20%24modelId%2C%0A%20%20%20%20state%3A%20%24state%0A%20%20)%7B%0A%20%20%20%20id%0A%20%20%7D%0A%7D%0A&amp;variables=%7B%0A%20%20%22modelId%22%3A%20%22%22%2C%0A%20%20%22state%22%3A%20%22inactive%22%0A%7D&amp;operationName=toggleModelActivation" target="_blank">Try this query in our interactive console</a></p>
+
+</details>
+
+<details name="Patch Model Details">
+  <summary>Patch Model Details</summary>
+
+  <p>Model API can be used to change the default settings for a model and all meta information associated with it using the patchModel mutation.</p>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mutation</span><span class="w"> </span><span class="n">toggleModelVisibility</span><span class="p">(</span><span class="nv">$id</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!){</span><span class="w">
+  </span><span class="n">patchModel</span><span class="p">(</span><span class="n">id</span><span class="p">:</span><span class="w"> </span><span class="nv">$id</span><span class="p">,</span><span class="w"> </span><span class="n">patch</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s2">"Model Name"</span><span class="p">,</span><span class="w">
+      </span><span class="n">description</span><span class="p">:</span><span class="w"> </span><span class="s2">"Model Description"</span><span class="p">,</span><span class="w">
+      </span><span class="n">options</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="c"># For all following options:</span><span class="w">
+          </span><span class="c"># default, enabled, disabled</span><span class="w">
+          </span><span class="n">socialSharingOverride</span><span class="p">:</span><span class="w"> </span><span class="n">default</span><span class="p">,</span><span class="w">
+          </span><span class="n">vrOverride</span><span class="p">:</span><span class="w"> </span><span class="n">default</span><span class="p">,</span><span class="w">
+          </span><span class="n">tourButtonsOverride</span><span class="p">:</span><span class="w"> </span><span class="n">default</span><span class="p">,</span><span class="w">
+          </span><span class="n">tourAutoplayOverride</span><span class="p">:</span><span class="w"> </span><span class="n">default</span><span class="p">,</span><span class="w">
+          </span><span class="n">dollhouseOverride</span><span class="p">:</span><span class="w"> </span><span class="n">default</span><span class="p">,</span><span class="w">
+          </span><span class="n">dollhouseLabelsOverride</span><span class="p">:</span><span class="w"> </span><span class="n">default</span><span class="p">,</span><span class="w">
+          </span><span class="n">floorplanOverride</span><span class="p">:</span><span class="w"> </span><span class="n">default</span><span class="p">,</span><span class="w">
+          </span><span class="n">labelsOverride</span><span class="p">:</span><span class="w"> </span><span class="n">default</span><span class="p">,</span><span class="w">
+          </span><span class="n">highlightReelOverride</span><span class="p">:</span><span class="w"> </span><span class="n">default</span><span class="p">,</span><span class="w">
+          </span><span class="n">unitType</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="n">set</span><span class="p">:</span><span class="w"> </span><span class="n">metric</span><span class="p">,</span><span class="w"> </span><span class="c"># or imperial</span><span class="w">
+              </span><span class="n">resetToDefault</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="c"># Special options:</span><span class="w">
+          </span><span class="n">measurements</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="c"># disabled, measure, measureAndView</span><span class="w">
+            </span><span class="n">set</span><span class="p">:</span><span class="w"> </span><span class="n">measureAndView</span><span class="p">,</span><span class="w">
+            </span><span class="n">resetToDefault</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="n">backgroundColor</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="c"># black, grey, white</span><span class="w">
+              </span><span class="n">set</span><span class="p">:</span><span class="w"> </span><span class="n">white</span><span class="p">,</span><span class="w">
+              </span><span class="n">resetToDefault</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+      </span><span class="n">mls</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="n">id</span><span class="p">:</span><span class="w"> </span><span class="s2">"MLS ID"</span><span class="p">,</span><span class="w">
+          </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s2">"Listing Name"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="n">publication</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="n">contact</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s2">"Contact Person"</span><span class="p">,</span><span class="w">
+              </span><span class="n">email</span><span class="p">:</span><span class="w"> </span><span class="s2">"person@domain.com"</span><span class="p">,</span><span class="w">
+              </span><span class="n">phoneNumber</span><span class="p">:</span><span class="w"> </span><span class="s2">"888-888-8888"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+          </span><span class="n">externalUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://linktomoreinfo.com"</span><span class="p">,</span><span class="w">
+          </span><span class="n">presentedBy</span><span class="p">:</span><span class="s2">"Your Company Name"</span><span class="p">,</span><span class="w">
+          </span><span class="n">summary</span><span class="p">:</span><span class="w"> </span><span class="s2">"Summary information about this model."</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+
+  </span><span class="p">})</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">id</span><span class="w">
+    </span><span class="n">name</span><span class="w">
+    </span><span class="n">description</span><span class="w">
+    </span><span class="n">options</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="n">socialSharingOverride</span><span class="p">,</span><span class="w">
+          </span><span class="n">vrOverride</span><span class="p">,</span><span class="w">
+          </span><span class="n">tourButtonsOverride</span><span class="p">,</span><span class="w">
+          </span><span class="n">tourAutoplayOverride</span><span class="p">,</span><span class="w">
+          </span><span class="n">dollhouseOverride</span><span class="p">,</span><span class="w">
+          </span><span class="n">dollhouseLabelsOverride</span><span class="p">,</span><span class="w">
+          </span><span class="n">floorplanOverride</span><span class="p">,</span><span class="w">
+          </span><span class="n">labelsOverride</span><span class="p">:,</span><span class="w">
+          </span><span class="n">highlightReelOverride</span><span class="p">,</span><span class="w">
+          </span><span class="n">unitType</span><span class="p">,</span><span class="w">
+          </span><span class="n">measurements</span><span class="p">,</span><span class="w">
+          </span><span class="n">backgroundColor</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="n">mls</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="n">id</span><span class="w">
+        </span><span class="n">name</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="n">publication</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="n">contact</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="n">name</span><span class="w">
+              </span><span class="n">email</span><span class="w">
+              </span><span class="n">phoneNumber</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+          </span><span class="n">presentedBy</span><span class="w">
+          </span><span class="n">externalUrl</span><span class="w">
+          </span><span class="n">summary</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c"># variables</span><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="err">"</span><span class="n">id</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">"</span><span class="n">FE1FLGnch5h</span><span class="err">"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p>Sample Response:</p>
+
+  <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"patchModel"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FE1FLGnch5h"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Model Name"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Model Description"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"socialSharingOverride"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"vrOverride"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"tourButtonsOverride"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"tourAutoplayOverride"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"dollhouseOverride"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"dollhouseLabelsOverride"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"floorplanOverride"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"labelsOverride"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"unitType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"metric"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"measurements"</span><span class="p">:</span><span class="w"> </span><span class="s2">"measureAndView"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"mls"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MLS ID"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Listing Name"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"publication"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"contact"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Contact Person"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"person@domain.com"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"phoneNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(888) 888-8888"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"presentedBy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Your Company Name"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"externalUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://linktomoreinfo.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Summary information about this model."</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/graphiql/?query=mutation%20patchModelInfo(%24id%3A%20ID!)%7B%0A%20%20patchModel(id%3A%20%24id%2C%20patch%3A%20%7B%20%0A%20%20%20%20%20%20name%3A%20%22Model%20Name%22%2C%0A%20%20%20%20%20%20description%3A%20%22Model%20Description%22%2C%0A%20%20%20%20%20%20options%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%23%20For%20all%20following%20options%3A%0A%20%20%20%20%20%20%20%20%20%20%23%20default%2C%20enabled%2C%20disabled%0A%20%20%20%20%20%20%20%20%20%20socialSharingOverride%3A%20default%2C%0A%20%20%20%20%20%20%20%20%20%20vrOverride%3A%20default%2C%0A%20%20%20%20%20%20%20%20%20%20tourButtonsOverride%3A%20default%2C%0A%20%20%20%20%20%20%20%20%20%20tourAutoplayOverride%3A%20default%2C%0A%20%20%20%20%20%20%20%20%20%20dollhouseOverride%3A%20default%2C%0A%20%20%20%20%20%20%20%20%20%20dollhouseLabelsOverride%3A%20default%2C%0A%20%20%20%20%20%20%20%20%20%20floorplanOverride%3A%20default%2C%0A%20%20%20%20%20%20%20%20%20%20labelsOverride%3A%20default%2C%0A%20%20%20%20%20%20%20%20%20%20highlightReelOverride%3A%20default%2C%0A%20%20%20%20%20%20%20%20%20%20unitType%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%3A%20metric%2C%20%23%20or%20imperial%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20resetToDefault%3A%20false%0A%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%23%20Special%20options%3A%0A%20%20%20%20%20%20%20%20%20%20measurements%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20disabled%2C%20measure%2C%20measureAndView%0A%20%20%20%20%20%20%20%20%20%20%20%20set%3A%20measureAndView%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20resetToDefault%3A%20false%0A%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20backgroundColor%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20black%2C%20grey%2C%20white%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%3A%20white%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20resetToDefault%3A%20false%0A%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20mls%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20id%3A%20%22MLS%20ID%22%2C%0A%20%20%20%20%20%20%20%20%20%20name%3A%20%22Listing%20Name%22%0A%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20publication%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20contact%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20name%3A%20%22Contact%20Person%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20email%3A%20%22person%40domain.com%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20phoneNumber%3A%20%22888-888-8888%22%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20externalUrl%3A%20%22https%3A%2F%2Flinktomoreinfo.com%22%2C%0A%20%20%20%20%20%20%20%20%20%20presentedBy%3A%22Your%20Company%20Name%22%2C%0A%20%20%20%20%20%20%20%20%20%20summary%3A%20%22Summary%20information%20about%20this%20model.%22%0A%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%0A%20%20%7D)%20%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20description%0A%20%20%20%20options%20%7B%0A%20%20%20%20%20%20%20%20%20%20socialSharingOverride%2C%0A%20%20%20%20%20%20%20%20%20%20vrOverride%2C%0A%20%20%20%20%20%20%20%20%20%20tourButtonsOverride%2C%0A%20%20%20%20%20%20%20%20%20%20tourAutoplayOverride%2C%0A%20%20%20%20%20%20%20%20%20%20dollhouseOverride%2C%0A%20%20%20%20%20%20%20%20%20%20dollhouseLabelsOverride%2C%0A%20%20%20%20%20%20%20%20%20%20floorplanOverride%2C%0A%20%20%20%20%20%20%20%20%20%20labelsOverride%3A%2C%0A%20%20%20%20%20%20%20%20%20%20highlightReelOverride%2C%0A%20%20%20%20%20%20%20%20%20%20unitType%2C%0A%20%20%20%20%20%20%20%20%20%20measurements%2C%0A%20%20%20%20%20%20%20%20%20%20backgroundColor%0A%20%20%20%20%7D%0A%20%20%20%20mls%20%7B%0A%20%20%20%20%20%20%20%20id%0A%20%20%20%20%20%20%20%20name%0A%20%20%20%20%7D%0A%20%20%20%20publication%20%7B%0A%20%20%20%20%20%20%20%20%20%20contact%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20email%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20phoneNumber%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20presentedBy%0A%20%20%20%20%20%20%20%20%20%20externalUrl%0A%20%20%20%20%20%20%20%20%20%20summary%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&amp;variables=%7B%0A%20%20%20%20%22id%22%20%3A%20%22FE1FLGnch5h%22%0A%7D&amp;operationName=patchModelInfo" target="_blank">Try this query in our interactive console</a></p>
+
+</details>
+
+<details name="Change Address Visibility">
+  <summary>Change Address Visibility</summary>
+
+  <p>Model API can be used to change the default settings for a model and all meta information associated with it using the patchModel mutation.</p>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mutation</span><span class="w"> </span><span class="n">changeAddressVisibility</span><span class="p">(</span><span class="nv">$id</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!){</span><span class="w">
+    </span><span class="n">updateModelAddress</span><span class="p">(</span><span class="w">
+      </span><span class="n">id</span><span class="p">:</span><span class="w"> </span><span class="nv">$id</span><span class="p">,</span><span class="w">
+      </span><span class="n">addressVisibility</span><span class="p">:</span><span class="w"> </span><span class="n">none</span><span class="w">     </span><span class="c"># full, partial or none</span><span class="w">
+    </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="n">options</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="n">addressVisibility</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span><span class="c"># variables</span><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="err">"</span><span class="n">id</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">"</span><span class="n">FE1FLGnch5h</span><span class="err">"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p>Sample Response:</p>
+
+  <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"updateModelAddress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FE1FLGnch5h"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Model Name"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"addressVisibility"</span><span class="p">:</span><span class="w"> </span><span class="s2">"none"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/graphiql/?operationName=changeAddressVisibility&amp;query=mutation%20changeAddressVisibility(%24id%3A%20ID!)%7B%0A%20%20updateModelAddress(id%3A%20%24id%2C%20addressVisibility%3A%20none)%20%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%20%20name%0A%20%20%20%20%20%20options%20%7B%0A%20%20%20%20%20%20%20%20%20%20addressVisibility%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&amp;variables=%7B%0A%20%20%20%20%22id%22%20%3A%20%22FE1FLGnch5h%22%0A%7D" target="_blank">Try this query in our interactive console</a></p>
+
+</details>
+
+<details name="Add a Tag">
+  <summary>Add a Tag</summary>
+
+  <p>Adding a Tag requires a valid floorId, which you can get by querying floors before performing an addMattertag mutation.</p>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mutation</span><span class="w"> </span><span class="n">addTag</span><span class="p">(</span><span class="w">
+  </span><span class="nv">$modelId</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!,</span><span class="w">
+  </span><span class="nv">$floorId</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!,</span><span class="w">
+  </span><span class="nv">$color</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">,</span><span class="w">
+  </span><span class="nv">$description</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">,</span><span class="w">
+  </span><span class="nv">$label</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">,</span><span class="w">
+  </span><span class="nv">$icon</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">,</span><span class="w">
+  </span><span class="nv">$keywords</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="nb">String</span><span class="p">!],</span><span class="w">
+  </span><span class="nv">$enabled</span><span class="p">:</span><span class="w"> </span><span class="nb">Boolean</span><span class="p">!,</span><span class="w">
+  </span><span class="nv">$anchorPositionX</span><span class="p">:</span><span class="w"> </span><span class="nb">Float</span><span class="p">!,</span><span class="w">
+  </span><span class="nv">$anchorPositionY</span><span class="p">:</span><span class="w"> </span><span class="nb">Float</span><span class="p">!,</span><span class="w">
+  </span><span class="nv">$anchorPositionZ</span><span class="p">:</span><span class="w"> </span><span class="nb">Float</span><span class="p">!,</span><span class="w">
+  </span><span class="nv">$stemEnabled</span><span class="p">:</span><span class="w"> </span><span class="nb">Boolean</span><span class="p">!,</span><span class="w">
+  </span><span class="nv">$stemNormalX</span><span class="p">:</span><span class="w"> </span><span class="nb">Float</span><span class="p">!,</span><span class="w">
+  </span><span class="nv">$stemNormalY</span><span class="p">:</span><span class="w"> </span><span class="nb">Float</span><span class="p">!,</span><span class="w">
+  </span><span class="nv">$stemNormalZ</span><span class="p">:</span><span class="w"> </span><span class="nb">Float</span><span class="p">!,</span><span class="w">
+  </span><span class="nv">$mediaType</span><span class="p">:</span><span class="w"> </span><span class="n">MattertagMediaType</span><span class="p">,</span><span class="w">
+  </span><span class="nv">$mediaUrl</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">,</span><span class="w">
+  </span><span class="nv">$stemLength</span><span class="p">:</span><span class="w"> </span><span class="nb">Float</span><span class="p">!</span><span class="w">
+</span><span class="p">){</span><span class="w">
+  </span><span class="n">addMattertag</span><span class="p">(</span><span class="w">
+    </span><span class="n">modelId</span><span class="p">:</span><span class="w"> </span><span class="nv">$modelId</span><span class="p">,</span><span class="w">
+    </span><span class="n">field</span><span class="p">:</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w">
+    </span><span class="n">mattertag</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="n">floorId</span><span class="p">:</span><span class="w"> </span><span class="nv">$floorId</span><span class="p">,</span><span class="w"> </span><span class="c"># Must be valid</span><span class="w">
+      </span><span class="n">enabled</span><span class="p">:</span><span class="w"> </span><span class="nv">$enabled</span><span class="p">,</span><span class="w"> </span><span class="c"># required and can be true or false</span><span class="w">
+      </span><span class="n">color</span><span class="p">:</span><span class="w"> </span><span class="nv">$color</span><span class="p">,</span><span class="w">
+      </span><span class="n">label</span><span class="p">:</span><span class="w"> </span><span class="nv">$label</span><span class="p">,</span><span class="w">
+      </span><span class="n">icon</span><span class="p">:</span><span class="w"> </span><span class="nv">$icon</span><span class="p">,</span><span class="w">
+      </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="nv">$keywords</span><span class="p">,</span><span class="w">
+      </span><span class="n">description</span><span class="p">:</span><span class="w"> </span><span class="nv">$description</span><span class="p">,</span><span class="w">
+      </span><span class="n">anchorPosition</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="nv">$anchorPositionX</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">:</span><span class="w"> </span><span class="nv">$anchorPositionY</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">:</span><span class="w"> </span><span class="nv">$anchorPositionZ</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="n">mediaType</span><span class="p">:</span><span class="w"> </span><span class="nv">$mediaType</span><span class="p">,</span><span class="w">
+      </span><span class="n">mediaUrl</span><span class="p">:</span><span class="w"> </span><span class="nv">$mediaUrl</span><span class="p">,</span><span class="w">
+      </span><span class="n">stemEnabled</span><span class="p">:</span><span class="w"> </span><span class="nv">$stemEnabled</span><span class="p">,</span><span class="w">
+      </span><span class="n">stemNormal</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nv">$stemNormalX</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">:</span><span class="w"> </span><span class="nv">$stemNormalY</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">:</span><span class="w"> </span><span class="nv">$stemNormalZ</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="n">stemLength</span><span class="p">:</span><span class="w"> </span><span class="nv">$stemLength</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">id</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c"># variables</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="err">"</span><span class="n">modelId</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">""</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">floorId</span><span class="err">":</span><span class="w"> </span><span class="err">"</span><span class="n">pd0i1c4yq9w0y2zsb07ed23sb</span><span class="err">"</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">color</span><span class="err">":</span><span class="w"> </span><span class="err">"</span><span class="c">#03687d",</span><span class="w">
+  </span><span class="err">"</span><span class="n">label</span><span class="err">":</span><span class="w"> </span><span class="err">"</span><span class="n">Updated</span><span class="w"> </span><span class="n">Tag</span><span class="err">"</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">icon</span><span class="err">":</span><span class="w"> </span><span class="err">"</span><span class="n">public_symbols_video</span><span class="err">"</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">keywords</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">["</span><span class="n">API</span><span class="w"> </span><span class="n">Tag</span><span class="err">"</span><span class="p">,</span><span class="w"> </span><span class="err">"</span><span class="n">Test</span><span class="w"> </span><span class="n">Patch</span><span class="w"> </span><span class="n">Tag</span><span class="err">"]</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">description</span><span class="err">":</span><span class="w"> </span><span class="err">"</span><span class="n">This</span><span class="w"> </span><span class="n">Tag</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">updated</span><span class="p">!</span><span class="err">"</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">enabled</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="n">true</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">anchorPositionX</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">1.20415628</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">anchorPositionY</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">-5.3543434</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">anchorPositionZ</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">3.1942153</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">stemNormalX</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">1.0</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">stemNormalY</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">0.0</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">stemNormalZ</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">0.0</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">mediaType</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">"</span><span class="n">video</span><span class="err">"</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">mediaUrl</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">"</span><span class="n">https</span><span class="p">:</span><span class="err">//</span><span class="n">www</span><span class="err">.</span><span class="n">youtube</span><span class="err">.</span><span class="n">com</span><span class="err">/</span><span class="n">watch</span><span class="err">?</span><span class="n">v</span><span class="err">=</span><span class="n">dAdsl9x_Dyw</span><span class="err">"</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">stemEnabled</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w">  </span><span class="n">true</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">stemLength</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w">  </span><span class="err">0.16459</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/graphiql/?query=mutation%20addTag(%0A%20%20%24modelId%3A%20ID!%2C%20%0A%20%20%24floorId%3A%20ID!%2C%0A%20%20%24color%3A%20String%2C%0A%20%20%24description%3A%20String%2C%0A%20%20%24label%3A%20String%2C%0A%20%20%24icon%3A%20String%2C%0A%20%20%24keywords%3A%20%5BString!%5D%2C%0A%20%20%24enabled%3A%20Boolean!%2C%0A%20%20%24anchorPositionX%3A%20Float!%2C%0A%20%20%24anchorPositionY%3A%20Float!%2C%0A%20%20%24anchorPositionZ%3A%20Float!%2C%0A%20%20%24stemEnabled%3A%20Boolean!%2C%0A%20%20%24stemNormalX%3A%20Float!%2C%0A%20%20%24stemNormalY%3A%20Float!%2C%0A%20%20%24stemNormalZ%3A%20Float!%2C%0A%20%20%24mediaType%3A%20MattertagMediaType%2C%0A%20%20%24mediaUrl%3A%20String%2C%0A%20%20%24stemLength%3A%20Float!%20%20%0A)%7B%0A%20%20addMattertag(%0A%20%20%20%20modelId%3A%20%24modelId%2C%0A%20%20%20%20field%3A%20id%2C%20%0A%20%20%20%20mattertag%3A%20%7B%20%0A%20%20%20%20%20%20floorId%3A%20%24floorId%2C%20%23%20Must%20be%20valid%0A%20%20%20%20%20%20enabled%3A%20%24enabled%2C%20%23%20required%20and%20can%20be%20true%20or%20false%0A%20%20%20%20%20%20color%3A%20%24color%2C%0A%20%20%20%20%20%20label%3A%20%24label%2C%0A%20%20%20%20%20%20icon%3A%20%24icon%2C%0A%20%20%20%20%20%20keywords%3A%20%24keywords%2C%0A%20%20%20%20%20%20description%3A%20%24description%2C%0A%20%20%20%20%20%20anchorPosition%3A%20%7B%20x%3A%20%24anchorPositionX%2C%20y%3A%20%24anchorPositionY%2C%20z%3A%20%24anchorPositionZ%20%7D%2C%0A%20%20%20%20%20%20mediaType%3A%20%24mediaType%2C%0A%20%20%20%20%20%20mediaUrl%3A%20%24mediaUrl%2C%0A%20%20%20%20%20%20stemEnabled%3A%20%24stemEnabled%2C%0A%20%20%20%20%20%20stemNormal%3A%20%7B%20x%20%3A%20%24stemNormalX%20%2C%20y%3A%20%24stemNormalY%2C%20z%3A%20%24stemNormalZ%20%7D%2C%20%0A%20%20%20%20%20%20stemLength%3A%20%24stemLength%0A%20%20%20%20%7D%0A%20%20)%20%7B%0A%20%20%20%20id%0A%20%20%7D%0A%7D&amp;operationName=addMattertag&amp;variables=%7B%0A%20%20%22modelId%22%20%3A%20%22%22%2C%0A%20%20%22floorId%22%3A%20%22pd0i1c4yq9w0y2zsb07ed23sb%22%2C%0A%20%20%22color%22%3A%20%22%2303687d%22%2C%0A%20%20%22label%22%3A%20%22Updated%20Tag%22%2C%0A%20%20%22icon%22%3A%20%22public_symbols_video%22%2C%0A%20%20%22keywords%22%20%3A%20%5B%22API%20Tag%22%2C%20%22Test%20Tag%22%5D%2C%0A%20%20%22description%22%3A%20%22This%20Tag%20was%20updated!%22%2C%0A%20%20%22enabled%22%20%3A%20true%2C%0A%20%20%22anchorPositionX%22%20%3A%201.20415628%2C%0A%20%20%22anchorPositionY%22%20%3A%20-5.3543434%2C%0A%20%20%22anchorPositionZ%22%20%3A%203.1942153%2C%20%0A%20%20%22stemNormalX%22%20%3A%201.0%2C%0A%20%20%22stemNormalY%22%20%3A%200.0%2C%0A%20%20%22stemNormalZ%22%20%3A%200.0%2C%20%20%0A%20%20%22mediaType%22%20%3A%20%22video%22%2C%0A%20%20%22mediaUrl%22%20%3A%20%22https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdAdsl9x_Dyw%22%2C%0A%20%20%22stemEnabled%22%20%3A%20%20true%2C%0A%20%20%22stemLength%22%20%3A%20%200.16459%0A%7D%20%20" target="_blank">Try this query in our interactive console</a></p>
+
+</details>
+
+<details name="Patch a Tag">
+  <summary>Patch a Tag</summary>
+
+  <p>Patching a Tag requires providing the tag Id.</p>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mutation</span><span class="w"> </span><span class="n">patchTag</span><span class="p">(</span><span class="w">
+  </span><span class="nv">$modelId</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!,</span><span class="w">
+  </span><span class="nv">$tagId</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!</span><span class="w">
+  </span><span class="nv">$floorId</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!,</span><span class="w">
+  </span><span class="nv">$color</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">,</span><span class="w">
+  </span><span class="nv">$description</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">,</span><span class="w">
+  </span><span class="nv">$label</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">,</span><span class="w">
+  </span><span class="nv">$icon</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">,</span><span class="w">
+  </span><span class="nv">$keywords</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="nb">String</span><span class="p">!],</span><span class="w">
+  </span><span class="nv">$enabled</span><span class="p">:</span><span class="w"> </span><span class="nb">Boolean</span><span class="p">!,</span><span class="w">
+  </span><span class="nv">$anchorPositionX</span><span class="p">:</span><span class="w"> </span><span class="nb">Float</span><span class="p">!,</span><span class="w">
+  </span><span class="nv">$anchorPositionY</span><span class="p">:</span><span class="w"> </span><span class="nb">Float</span><span class="p">!,</span><span class="w">
+  </span><span class="nv">$anchorPositionZ</span><span class="p">:</span><span class="w"> </span><span class="nb">Float</span><span class="p">!,</span><span class="w">
+  </span><span class="nv">$stemEnabled</span><span class="p">:</span><span class="w"> </span><span class="nb">Boolean</span><span class="p">!,</span><span class="w">
+  </span><span class="nv">$stemNormalX</span><span class="p">:</span><span class="w"> </span><span class="nb">Float</span><span class="p">!,</span><span class="w">
+  </span><span class="nv">$stemNormalY</span><span class="p">:</span><span class="w"> </span><span class="nb">Float</span><span class="p">!,</span><span class="w">
+  </span><span class="nv">$stemNormalZ</span><span class="p">:</span><span class="w"> </span><span class="nb">Float</span><span class="p">!,</span><span class="w">
+  </span><span class="nv">$mediaType</span><span class="p">:</span><span class="w"> </span><span class="n">MattertagMediaType</span><span class="p">,</span><span class="w">
+  </span><span class="nv">$mediaUrl</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">,</span><span class="w">
+  </span><span class="nv">$stemLength</span><span class="p">:</span><span class="w"> </span><span class="nb">Float</span><span class="p">!</span><span class="w">
+</span><span class="p">){</span><span class="w">
+  </span><span class="n">patchMattertag</span><span class="p">(</span><span class="w">
+    </span><span class="n">modelId</span><span class="p">:</span><span class="w"> </span><span class="nv">$modelId</span><span class="p">,</span><span class="w">
+    </span><span class="n">field</span><span class="p">:</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w">
+    </span><span class="n">mattertagId</span><span class="p">:</span><span class="w"> </span><span class="nv">$tagId</span><span class="p">,</span><span class="w">
+    </span><span class="n">patch</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="n">floorId</span><span class="p">:</span><span class="w"> </span><span class="nv">$floorId</span><span class="p">,</span><span class="w"> </span><span class="c"># Must be valid</span><span class="w">
+      </span><span class="n">enabled</span><span class="p">:</span><span class="w"> </span><span class="nv">$enabled</span><span class="p">,</span><span class="w"> </span><span class="c"># required and can be true or false</span><span class="w">
+      </span><span class="n">color</span><span class="p">:</span><span class="w"> </span><span class="nv">$color</span><span class="p">,</span><span class="w">
+      </span><span class="n">label</span><span class="p">:</span><span class="w"> </span><span class="nv">$label</span><span class="p">,</span><span class="w">
+      </span><span class="n">icon</span><span class="p">:</span><span class="w"> </span><span class="nv">$icon</span><span class="p">,</span><span class="w">
+      </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="nv">$keywords</span><span class="p">,</span><span class="w">
+      </span><span class="n">description</span><span class="p">:</span><span class="w"> </span><span class="nv">$description</span><span class="p">,</span><span class="w">
+      </span><span class="n">anchorPosition</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="nv">$anchorPositionX</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">:</span><span class="w"> </span><span class="nv">$anchorPositionY</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">:</span><span class="w"> </span><span class="nv">$anchorPositionZ</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="n">mediaType</span><span class="p">:</span><span class="w"> </span><span class="nv">$mediaType</span><span class="p">,</span><span class="w">
+      </span><span class="n">mediaUrl</span><span class="p">:</span><span class="w"> </span><span class="nv">$mediaUrl</span><span class="p">,</span><span class="w">
+      </span><span class="n">stemEnabled</span><span class="p">:</span><span class="w"> </span><span class="nv">$stemEnabled</span><span class="p">,</span><span class="w">
+      </span><span class="n">stemNormal</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nv">$stemNormalX</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">:</span><span class="w"> </span><span class="nv">$stemNormalY</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">:</span><span class="w"> </span><span class="nv">$stemNormalZ</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="n">stemLength</span><span class="p">:</span><span class="w"> </span><span class="nv">$stemLength</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">){</span><span class="w">
+    </span><span class="n">id</span><span class="w"> </span><span class="c"># Returns Tag ID</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c"># variables</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="err">"</span><span class="n">modelId</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">""</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">tagId</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">"</span><span class="n">ayi201wkujs</span><span class="err">"</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">floorId</span><span class="err">":</span><span class="w"> </span><span class="err">"</span><span class="n">pd0i1c4yq9w0y2zsb07ed23sb</span><span class="err">"</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">color</span><span class="err">":</span><span class="w"> </span><span class="err">"</span><span class="c">#03687d",</span><span class="w">
+  </span><span class="err">"</span><span class="n">label</span><span class="err">":</span><span class="w"> </span><span class="err">"</span><span class="n">Updated</span><span class="w"> </span><span class="n">Tag</span><span class="err">"</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">icon</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">"</span><span class="n">public_symbols_video</span><span class="err">"</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">keywords</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">["</span><span class="n">API</span><span class="w"> </span><span class="n">Tag</span><span class="err">"</span><span class="p">,</span><span class="w"> </span><span class="err">"</span><span class="n">Test</span><span class="w"> </span><span class="n">Patch</span><span class="w"> </span><span class="n">Tag</span><span class="err">"]</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">description</span><span class="err">":</span><span class="w"> </span><span class="err">"</span><span class="n">This</span><span class="w"> </span><span class="n">Tag</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">updated</span><span class="p">!</span><span class="err">"</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">enabled</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="n">true</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">anchorPositionX</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">1.20415628</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">anchorPositionY</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">-5.3543434</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">anchorPositionZ</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">3.1942153</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">stemNormalX</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">1.0</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">stemNormalY</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">0.0</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">stemNormalZ</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">0.0</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">mediaType</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">"</span><span class="n">video</span><span class="err">"</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">mediaUrl</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">"</span><span class="n">https</span><span class="p">:</span><span class="err">//</span><span class="n">www</span><span class="err">.</span><span class="n">youtube</span><span class="err">.</span><span class="n">com</span><span class="err">/</span><span class="n">watch</span><span class="err">?</span><span class="n">v</span><span class="err">=</span><span class="n">dAdsl9x_Dyw</span><span class="err">"</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">stemEnabled</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w">  </span><span class="n">true</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">stemLength</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w">  </span><span class="err">0.16459</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/graphiql/?query=mutation%20patchTag(%0A%20%20%24modelId%3A%20ID!%2C%20%0A%20%20%24tagId%3A%20ID!%0A%20%20%24floorId%3A%20ID!%2C%0A%20%20%24color%3A%20String%2C%0A%20%20%24description%3A%20String%2C%0A%20%20%24label%3A%20String%2C%0A%20%20%24icon%3A%20String%2C%0A%20%20%24enabled%3A%20Boolean!%2C%0A%20%20%24anchorPositionX%3A%20Float!%2C%0A%20%20%24anchorPositionY%3A%20Float!%2C%0A%20%20%24anchorPositionZ%3A%20Float!%2C%0A%20%20%24stemEnabled%3A%20Boolean!%2C%0A%20%20%24stemNormalX%3A%20Float!%2C%0A%20%20%24stemNormalY%3A%20Float!%2C%0A%20%20%24stemNormalZ%3A%20Float!%2C%0A%20%20%24mediaType%3A%20MattertagMediaType%2C%0A%20%20%24mediaUrl%3A%20String%2C%0A%20%20%24stemLength%3A%20Float!%20%20%0A)%7B%0A%20%20patchMattertag(%0A%20%20%20%20modelId%3A%20%24modelId%2C%0A%20%20%20%20field%3A%20id%2C%20%0A%20%20%20%20mattertagId%3A%20%24tagId%2C%0A%20%20%20%20patch%3A%20%7B%20%0A%20%20%20%20%20%20floorId%3A%20%24floorId%2C%20%23%20Must%20be%20valid%0A%20%20%20%20%20%20enabled%3A%20%24enabled%2C%20%23%20required%20and%20can%20be%20true%20or%20false%0A%20%20%20%20%20%20color%3A%20%24color%2C%0A%20%20%20%20%20%20label%3A%20%24label%2C%0A%20%20%20%20%20%20icon%3A%20%24icon%2C%20%20%23%20New!%0A%20%20%20%20%20%20description%3A%20%24description%2C%0A%20%20%20%20%20%20anchorPosition%3A%20%7B%20x%3A%20%24anchorPositionX%2C%20y%3A%20%24anchorPositionY%2C%20z%3A%20%24anchorPositionZ%20%7D%2C%0A%20%20%20%20%20%20mediaType%3A%20%24mediaType%2C%0A%20%20%20%20%20%20mediaUrl%3A%20%24mediaUrl%2C%0A%20%20%20%20%20%20stemEnabled%3A%20%24stemEnabled%2C%0A%20%20%20%20%20%20stemNormal%3A%20%7B%20x%20%3A%20%24stemNormalX%20%2C%20y%3A%20%24stemNormalY%2C%20z%3A%20%24stemNormalZ%20%7D%2C%20%0A%20%20%20%20%20%20stemLength%3A%20%24stemLength%0A%20%20%20%20%7D%0A%20%20)%7B%0A%20%20%20%20id%20%23%20Returns%20Tag%20ID%0A%20%20%7D%0A%7D&amp;operationName=patchMatterTag&amp;variables=%7B%0A%20%20%22modelId%22%20%3A%20%22%22%2C%0A%20%20%22tagId%22%20%3A%20%22ayi201wkujs%22%2C%0A%20%20%22floorId%22%3A%20%22pd0i1c4yq9w0y2zsb07ed23sb%22%2C%0A%20%20%22color%22%3A%20%22%2303687d%22%2C%0A%20%20%22label%22%3A%20%22Updated%20Tag%22%2C%0A%20%20%22icon%22%20%3A%20%22public_symbols_video%22%2C%0A%20%20%22description%22%3A%20%22This%20Tag%20was%20updated!%22%2C%0A%20%20%22enabled%22%20%3A%20true%2C%0A%20%20%22anchorPositionX%22%20%3A%201.20415628%2C%0A%20%20%22anchorPositionY%22%20%3A%20-5.3543434%2C%0A%20%20%22anchorPositionZ%22%20%3A%203.1942153%2C%20%0A%20%20%22stemNormalX%22%20%3A%201.0%2C%0A%20%20%22stemNormalY%22%20%3A%200.0%2C%0A%20%20%22stemNormalZ%22%20%3A%200.0%2C%20%20%0A%20%20%22mediaType%22%20%3A%20%22video%22%2C%0A%20%20%22mediaUrl%22%20%3A%20%22https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdAdsl9x_Dyw%22%2C%0A%20%20%22stemEnabled%22%20%3A%20%20true%2C%0A%20%20%22stemLength%22%20%3A%20%200.16459%0A%7D%20%20" target="_blank">Try this query in our interactive console</a></p>
+
+</details>
+
+<h2 id="multiple-mutations-as-a-single-request">Multiple Mutations as a Single Request</h2>
+
+<p>GraphQL mutations send requests to our platform wherein a specific task is performed.  Some tasks include simple changes to database fields, while other requests such as unarchiving a model may involve multiple tasks on our platform.</p>
+
+<p>If an application needs to send multiple mutations, it may be critical that these mutations execute in a specific order to prevent race conditions.  For instance, if an automation is written whereby a model is set to unlisted and then a floorplan is purchased, if two mutations are sent, the floorplan purchase request may trigger first.  If the model state has not changed to ‘unlisted’, the request to purchase the floorplan will fail as models must be set to public or unlisted.</p>
+
+<p>[Learn more about using Multihttps://graphql.org/learn/queries/#multiple-fields-in-mutations</p>
+
+<details>
+  <summary>Activate a Model, Set it to Unlisted, Purchase a Floorplan</summary>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mutation</span><span class="w"> </span><span class="n">activateAndPurchase</span><span class="p">(</span><span class="nv">$modelId</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!)</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">updateModelState</span><span class="p">(</span><span class="n">id</span><span class="p">:</span><span class="w"> </span><span class="nv">$modelId</span><span class="p">,</span><span class="w"> </span><span class="n">state</span><span class="p">:</span><span class="w"> </span><span class="n">active</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">id</span><span class="w">
+    </span><span class="n">state</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="n">updateModelAccessVisibility</span><span class="p">(</span><span class="n">id</span><span class="p">:</span><span class="w"> </span><span class="nv">$modelId</span><span class="p">,</span><span class="w"> </span><span class="n">visibility</span><span class="p">:</span><span class="w"> </span><span class="n">public</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">id</span><span class="w">
+    </span><span class="n">accessVisibility</span><span class="w">
+    </span><span class="n">accessVisibilityLastChanged</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="n">unlockModelBundle</span><span class="p">(</span><span class="n">id</span><span class="p">:</span><span class="w"> </span><span class="nv">$modelId</span><span class="p">,</span><span class="w"> </span><span class="n">bundleId</span><span class="p">:</span><span class="w"> </span><span class="s2">"floorplan:schematic"</span><span class="p">,</span><span class="w">
+    </span><span class="n">options</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">deliverySpeed</span><span class="p">:</span><span class="w"> </span><span class="n">normal</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="p">){</span><span class="w">
+    </span><span class="n">id</span><span class="w">
+    </span><span class="n">name</span><span class="w">
+    </span><span class="n">description</span><span class="w">
+    </span><span class="n">availability</span><span class="w">
+    </span><span class="n">assets</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c"># variables</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="err">"</span><span class="n">modelId</span><span class="err">"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/graphiql/?query=mutation%20activateAndPurchase(%24modelId%3A%20ID!)%20%7B%0A%20%20updateModelState(id%3A%20%24modelId%2C%20state%3A%20active)%20%7B%0A%20%20%20%20id%0A%20%20%20%20state%0A%20%20%7D%0A%20%20updateModelAccessVisibility(id%3A%20%24modelId%2C%20visibility%3A%20public)%20%7B%0A%20%20%20%20id%0A%20%20%20%20accessVisibility%0A%20%20%20%20accessVisibilityLastChanged%0A%20%20%7D%0A%20%20unlockModelBundle(id%3A%20%24modelId%2C%20bundleId%3A%20%22floorplan%3Aschematic%22%2C%0A%20%20%20%20options%3A%20%7B%20deliverySpeed%3A%20normal%20%7D%0A%20%20)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20description%0A%20%20%20%20availability%0A%20%20%20%20assets%20%7B%20url%20%7D%0A%20%20%7D%0A%7D%0A&amp;variables=%7B%0A%20%20%22modelId%22%3A%20%22%22%0A%7D&amp;operationName=activateAndPurchase" target="_blank">Try this query in our interactive console</a></p>
+
+</details>
+
+<h2 id="ordering-add-ons">Ordering Add-Ons</h2>
+
+<p>For code snippets related to purchasing add-ons, please visit the <a href="modelapi_ordering_addons.html">Ordering Assets Page</a>.</p>
+
+
+    <div class="tags">
+        
+    </div>
+
+<!-- 
+ -->
+
+</div>
+
+<!-- <hr class="shaded"/> -->
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2024 Matterport, Inc. All rights reserved. <br />
+ Site last generated: Jul 30, 2024 <br />
+<p><img class="footer-logo" src="/images/MP-logo_icon-RGB_black.svg" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /#main -->
+    </div>
+
+    
+  </body>
+   <!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-34880260-5','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+ 
+</html>

@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Account API Code Snippets | Matterport Developers</title>
+<link rel="stylesheet" href="/css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="/css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/customstyles.css">
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="/css/tags2.css">
+
+<link rel="stylesheet" href="/css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="/css/theme-matterport.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="/js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/customscripts.js"></script>
+<script src="/js/mermaid.min.js"></script>
+
+<link rel="shortcut icon" href="/images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="showcase-sdk" href="https://docs.matterport.comfeed.xml">
+
+    <script>
+      $(document).ready(function () {
+        // Initialize navgoco with default options
+        $("#mysidebar").navgoco({
+          caretHtml: '<i class="fa fa-chevron-down"></i>',
+          accordion: true,
+          openClass: "active", // open
+
+          save: false, // leave false or nav highlighting doesn't work right
+          cookie: {
+            name: "navgoco",
+            expires: false,
+            path: "/",
+          },
+          slide: {
+            duration: 400,
+            easing: "swing",
+          },
+        });
+
+        $("#collapseAll").click(function (e) {
+          e.preventDefault();
+          $("#mysidebar").navgoco("toggle", false);
+        });
+
+        $("#expandAll").click(function (e) {
+          e.preventDefault();
+          $("#mysidebar").navgoco("toggle", true);
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#tg-sb-link").change(function () {
+          $("#tg-sb-sidebar").toggle();
+          $("#tg-sb-content").toggleClass("col-md-9");
+          $("#tg-sb-content").toggleClass("col-md-12");
+        });
+      });
+    </script>
+     
+  </head>
+  <body>
+    <!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div>
+    <div class="row">
+      <a class="navbrand col-md-3" href="/"
+        >&nbsp;<img
+          class="navbar-image"
+          src="/images/MP-logo_H_lock-RGB_white.svg"
+        /><span class="projectTitle"> </span></a
+      >
+      <div class="dev-nav-links col-md-6">
+        <div class="dropdown-items">
+          <div class="dropdown ">
+            <a class="dropbtn active" href="index.html">SDK Docs</a>
+            <div class="dropdown-content">
+              <a href="https://docs.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
+              <a href="https://docs.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
+              <a href="https://docs.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a class="dropbtn" href="api_home.html">API Docs</a>
+            <div class="dropdown-content">
+              <a href="https://docs.matterport.com/api_home.html">API Overview</a>
+              <a href="https://api.matterport.com/docs/reference" target="_blank">API Reference</a>
+              <a href="https://api.matterport.com/model/graphiql" target="_blank">Interactive Console</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a class="dropbtn" href="https://matterport.com/legal/platform-subscription-agreement#sdk-terms" target="_blank">Terms</a>
+          </div>
+          <div class="dropdown">
+            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:developer@matterport.com?subject=Showcase SDK feedback&body=I have some feedback about the Account API Code Snippets page: ' + window.location.href;">Feedback</a>
+          </div>
+          <div class="dropdown">
+            <a class="dropbtn" href="https://docs.matterport.com/subscribe.html" >
+              Subscribe
+              <sup class="subscribe-sup" style="font-size: 10px; color: #ff3158">New</sup>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="right-content col-md-3">
+        <div class="dev-input-container">
+          <!-- Add roboto font to search bar -->
+          <img src="/images/search_button.png" />
+          <input id="search-input" type="text" placeholder="Search"/>
+          <div id="results-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+</nav>
+ 
+    <!-- Page Content -->
+    <div class="dev-page-wrapper">
+      <div id="main">
+        <!-- Content Row -->
+        <div class="row">
+          <!-- Sidebar Column -->
+          
+          <aside class="col-md-3" id="tg-sb-sidebar">
+            
+<div id="mysidebar" class="nav">
+  
+  
+  
+
+  <li>
+      <a title="Overview" href="#">Overview</a>
+      <ul>
+          
+          
+          
+          <li><a title="Home" href="/index.html">Home</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Change Log" href="/sdk_changelog.html">Change Log</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Vocabulary" href="/sdk_vocabulary.html">Vocabulary</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Concepts" href="/sdk_concepts.html">Concepts</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Reference Docs Summary" href="/sdk_reference_summary.html">Reference Docs Summary</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Reference Documentation" href="/docs\reference\current\index.html">Reference Documentation</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="SDK for Embeds" href="#">SDK for Embeds</a>
+      <ul>
+          
+          
+          
+          <li><a title="Home" href="/sdk_home.html">Home</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="HTML Quick Start" href="/sdk_quickstart.html">HTML Quick Start</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="SDK Embed Package" href="/sdk_tutorials_package.html">SDK Embed Package</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Typescript Declarations" href="/sdk_types.html">Typescript Declarations</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="SDK Bundle" href="#">SDK Bundle</a>
+      <ul>
+          
+          
+          
+          <li><a title="Home" href="/sdkbundle_home.html">Home</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="HTML Quick Start" href="/sdkbundle_quickstart.html">HTML Quick Start</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Setting up Embed.ly" href="/sdkbundle_tutorials_setting_up_embedly.html">Setting up Embed.ly</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Setup a Local Environment" href="/sdkbundle_tutorials_setup.html">Setup a Local Environment</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Architecture" href="/sdkbundle_architecture.html">Architecture</a></li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Components" href="#">Components</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Ambient Light" href="/sdkbundle_components_ambientlight.html">Ambient Light</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Directional Light" href="/sdkbundle_components_directionallight.html">Directional Light</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Point Light" href="/sdkbundle_components_pointlight.html">Point Light</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="GLTF Loader" href="/sdkbundle_components_gltfloader.html">GLTF Loader</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="DAE Loader" href="/sdkbundle_components_daeloader.html">DAE Loader</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="FBX Loader" href="/sdkbundle_components_fbxloader.html">FBX Loader</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="OBJ Loader" href="/sdkbundle_components_objloader.html">OBJ Loader</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Transform Controls" href="/sdkbundle_components_transformcontrols.html">Transform Controls</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Input" href="/sdkbundle_components_input.html">Input</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Camera" href="/sdkbundle_components_camera.html">Camera</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="XR" href="/sdkbundle_components_xr.html">XR</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="Web Component (Beta)" href="#">Web Component (Beta)</a>
+      <ul>
+          
+          
+          
+          <li><a title="Home" href="/sdkbundle_webcomponent.html">Home</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tutorial" href="/sdkbundle_webcomponent_tutorial.html">Tutorial</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Advanced" href="/sdkbundle_webcomponent_advanced.html">Advanced</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Migration from Bundle" href="/sdkbundle_webcomponent_migration.html">Migration from Bundle</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="SDK Early Access" href="#">SDK Early Access</a>
+      <ul>
+          
+          
+          
+          <li><a title="Home" href="/earlyaccess_home.html">Home</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="SDK Tutorials" href="#">SDK Tutorials</a>
+      <ul>
+          
+          
+          
+          <li><a title="SDK Embed Package" href="/sdk_tutorials_package.html">SDK Embed Package</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Using Observables" href="/sdk_tutorials_observables.html">Using Observables</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Using Collections" href="/sdk_tutorials_collections.html">Using Collections</a></li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Using the Scene Namespace" href="#">Using the Scene Namespace</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Intro and Basic Components" href="/sdk_scene_intro.html">Intro and Basic Components</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Connecting Components" href="/sdk_connecting_components.html">Connecting Components</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Creating Tags" href="/sdk_creating_mattertags.html">Creating Tags</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Editing Tags" href="/sdk_editing_mattertags.html">Editing Tags</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tags 2.0 Migration" href="/sdk_tutorials_mattertagtotag.html">Tags 2.0 Migration</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tags Code Sandboxes" href="/sdk_tutorials_htmlsandbox.html">Tags Code Sandboxes</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Pathfinding" href="/sdk_tutorials_pathfinding.html">Pathfinding</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Pointer Reticle" href="/sdk_tutorials_cursor.html">Pointer Reticle</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Working with Models" href="/sdkbundle_tutorials_models.html">Working with Models</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Using xr" href="/sdkbundle_tutorials_using_xr.html">Using xr</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Using Scene Objects" href="/sdkbundle_tutorials_using_scene_objects.html">Using Scene Objects</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="SDK Examples" href="#">SDK Examples</a>
+      <ul>
+          
+          
+          
+          <li><a title="Navigation Controls" href="/sdk_navigation_controls.html">Navigation Controls</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Intersection Inspector" href="/sdk_intersection_inspector.html">Intersection Inspector</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tags Quiz" href="/sdk_tags_quiz.html">Tags Quiz</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tags Quiz - Overlay" href="/sdk_tags_quiz_overlay.html">Tags Quiz - Overlay</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Kitchen Sink" href="/sdk_kitchen_sink.html">Kitchen Sink</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Remote Control" href="/sdk_remote_control.html">Remote Control</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Sensors - Source Areas" href="/sdk_sensors_source_areas.html">Sensors - Source Areas</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Sensors - Tags Level of Detail" href="/sdk_sensors_tags_level_of_detail.html">Sensors - Tags Level of Detail</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Sensors - Sweep Control" href="/sdk_sensors_sweep_control.html">Sensors - Sweep Control</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Virtual Staging" href="/sdkbundle_virtual_staging.html">Virtual Staging</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Local Webcam" href="/sdkbundle_local_webcam.html">Local Webcam</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="HTML Livestream" href="/sdkbundle_html_livestream.html">HTML Livestream</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="IoT Canvas" href="/sdkbundle_iot_canvas.html">IoT Canvas</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Custom Experience" href="/sdkbundle_custom_experience.html">Custom Experience</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Security Camera FOV" href="/sdkbundle_security_camera.html">Security Camera FOV</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Content Attribution" href="/sdkbundle_content_attribution.html">Content Attribution</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="Matterport APIs" href="#">Matterport APIs</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/api_home.html">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Reference Docs" href="https://api.matterport.com/model/docs/reference" target="_blank" rel="noopener">Reference Docs</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Interactive Console" href="https://api.matterport.com/model/graphiql" target="_blank" rel="noopener">Interactive Console</a></li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Model API" href="#">Model API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Changelog" href="/modelapi_changelog.html">Changelog</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Models Queries" href="/modelapi_models_ref.html">Models Queries</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/modelapi_snippets.html">Sample Queries</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Ordering Add-Ons" href="/modelapi_ordering_addons.html">Ordering Add-Ons</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Views and Layers" href="/modelapi_views_and_layers.html">Views and Layers</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Tags Icon Reference" href="/tags_icons_reference.html">Tags Icon Reference</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Postman Collection" href="/modelapi_postman.html">Postman Collection</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Property Intelligence" href="#">Property Intelligence</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Overview" href="/modelapi_property_intelligence.html">Overview</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Dimension Estimates" href="/modelapi_pi_dimension_estimates.html">Dimension Estimates</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Room Names" href="/modelapi_pi_room_names.html">Room Names</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Vector Data" href="/modelapi_pi_vector_data.html">Vector Data</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Mutations" href="/modelapi_pi_mutations.html">Mutations</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Account API" href="#">Account API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="active"><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="OAuth" href="#">OAuth</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/oauth_home.html">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Implementation" href="/oauth_implementation.html">Implementation</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Model Selector" href="/oauth_model_selector.html">Model Selector</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Use Case - Model API" href="/oauth_model_api.html">Use Case - Model API</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Use Case - Private Models" href="/oauth_sdk_private_model.html">Use Case - Private Models</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="OAuth Sample Application" href="/sdkbundle_tutorials_using_oauth.html">OAuth Sample Application</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="Private Model Embed" href="#">Private Model Embed</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/oauth_private_model_embed.html">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="Webhooks" href="#">Webhooks</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="/webhooks_home.html">Overview</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+
+  <li>
+      <a title="Learn More" href="#">Learn More</a>
+      <ul>
+          
+          
+          
+          <li><a title="Developer Tools Overview" href="https://support.matterport.com/s/article/API-SDK-Developer-Tools-Overview" target="_blank" rel="noopener">Developer Tools Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Pricing and Availability" href="https://support.matterport.com/s/article/Developer-Tools-Pricing-and-Availability" target="_blank" rel="noopener">Pricing and Availability</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</div>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+<script src="/js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+        SimpleJekyllSearch.init({
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container'),
+            dataSource: '/search.json',
+            searchResultTemplate: '<li><a href="{url}" title="Account API Code Snippets">{title}</a></li>',
+noResultsText: '<li><div>No results found.<div></li>',
+        limit: 10,
+        fuzzy: true,
+})
+</script>
+
+          </aside>
+           
+          <!-- Content Column -->
+          <div
+            class=" col-md-9" 
+            id="tg-sb-content"
+          >
+            <div class="post-header">
+   <h1 class="post-title-main">Account API Code Snippets</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+
+
+    
+
+   <p>This is a library of ready-to-use sample GraphQL queries and mutations for Matterport’s Account API.</p>
+
+<p>Each query and mutation contains a link to try the query in our interactive console.  Be sure to edit the variables, when provided, and insert a valid Model ID and valid data for all variables.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Account API is only available for Enterprise-level Matterport Subscriptions</div>
+
+<p>If you would like an application to build collections of API queries for testing and generating code to use in your applications, we recommend using <a href="https://www.postman.com/" target="_blank">Postman</a></p>
+
+<p>If you are needing assistance with building queries, refer to our <a href="https://api.matterport.com/model/docs/reference&quot;" target="_blank">API schema</a> or contact us at <a href="mailto:developer@matterport.com">developer@matterport.com</a></p>
+
+<h2 id="organization-and-member-management">Organization and Member Management</h2>
+
+<details>
+  <summary>Get organization info</summary>
+
+  <p>Fragments can be mixed and matched depending on which data you want. The organization ID is based on which API tokens are used.</p>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">query</span><span class="w"> </span><span class="n">getOrganizationInfo</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">organization</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">name</span><span class="w">
+    </span><span class="n">created</span><span class="w">
+    </span><span class="n">developer</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="p">...</span><span class="n">developerInfo</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="n">sdkKeys</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="p">...</span><span class="n">sdkKeyInfo</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="n">bundles</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="p">...</span><span class="n">bundleInfo</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="k">fragment</span><span class="w"> </span><span class="n">developerInfo</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">DeveloperAccount</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">mode</span><span class="w">
+  </span><span class="n">license</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">availability</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="k">fragment</span><span class="w"> </span><span class="n">sdkKey</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">SdkKey</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">key</span><span class="w">
+  </span><span class="n">label</span><span class="w">
+  </span><span class="n">domains</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">created</span><span class="w">
+    </span><span class="n">secureOnly</span><span class="w">
+    </span><span class="n">domain</span><span class="w">
+    </span><span class="n">port</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="k">fragment</span><span class="w"> </span><span class="n">sdkKeyInfo</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">SdkKeyDetails</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">used</span><span class="w">
+  </span><span class="n">remaining</span><span class="w">
+  </span><span class="n">quota</span><span class="w">
+  </span><span class="n">keys</span><span class="p">(</span><span class="n">active</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="p">...</span><span class="n">sdkKey</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="k">fragment</span><span class="w"> </span><span class="n">bundleInfo</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">OrganizationBundle</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">id</span><span class="w">
+  </span><span class="n">name</span><span class="w">
+  </span><span class="n">description</span><span class="w">
+  </span><span class="n">enabled</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p>Sample Response:</p>
+
+  <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"organization"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Matterport Organization"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-11-03T21:43:39Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"developer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"production"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"license"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"availability"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unlocked"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"sdkKeys"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"used"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"remaining"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"quota"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"keys"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="nl">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXXXXXXXXXXXXXXXXX"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"domains"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+              </span><span class="nl">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1605138155932"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"secureOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"localhost"</span><span class="w">
+            </span><span class="p">}]</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"bundles"</span><span class="err">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mp:matterpak"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Matterpak"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Order high resolution assets associated with the model."</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cubicasa:floorplan"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cubicasa Schematic Floorplan"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Order an enhanced schematic floorplan"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"trueplan:schematic"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TruePlan™ Schematic"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Order a TruePlan™ Schematic"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gsv:publish"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Google Street View"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Publish to Google Street View"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"homeaway:publish"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vrbo - HomeAway"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Create a 360 Tour for Vrbo and HomeAway"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="err">}</span><span class="w">
+      </span><span class="err">}</span><span class="w">
+    </span><span class="err">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/accounts/graphiql/?operationName=getOrganizationInfo&amp;query=fragment%20developerInfo%20on%20DeveloperAccount%20%7B%0A%20%20mode%0A%20%20license%20%7B%0A%20%20%20%20availability%0A%20%20%7D%0A%7D%0A%0Afragment%20sdkKey%20on%20SdkKey%20%7B%0A%20%20key%0A%20%20label%0A%20%20domains%20%7B%0A%20%20%20%20created%0A%20%20%20%20secureOnly%0A%20%20%20%20domain%0A%20%20%20%20port%0A%20%20%7D%0A%7D%0A%0Afragment%20sdkKeyInfo%20on%20SdkKeyDetails%20%7B%0A%20%20used%0A%20%20remaining%0A%20%20quota%0A%20%20keys(active%3A%20true)%20%7B%0A%20%20%20%20...sdkKey%0A%20%20%7D%0A%7D%0A%0Afragment%20bundleInfo%20on%20OrganizationBundle%20%7B%0A%20%20id%0A%20%20name%0A%20%20description%0A%20%20enabled%0A%7D%0A%0Aquery%20getOrganizationInfo%20%7B%0A%20%20organization%20%7B%0A%20%20%20%20name%0A%20%20%20%20created%0A%20%20%20%20developer%20%7B%0A%20%20%20%20%20%20...developerInfo%0A%20%20%20%20%7D%0A%20%20%20%20sdkKeys%20%7B%0A%20%20%20%20%20%20...sdkKeyInfo%0A%20%20%20%20%7D%0A%20%20%20%20bundles%20%7B%0A%20%20%20%20%20%20...bundleInfo%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A" target="_blank">Try this in our interactive console</a></p>
+
+</details>
+<details name="Get organization members info">
+
+  <summary>Get organization members info</summary>
+
+  <p>Results might need to be <a href="https://graphql.org/learn/pagination/#pagination-and-edges" target="_blank">paginated</a> (offset pagination).</p>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">query</span><span class="w"> </span><span class="n">getOrganizationInfo</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">organization</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">memberships</span><span class="p">(</span><span class="w">
+      </span><span class="n">query</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+      </span><span class="n">pageSize</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+      </span><span class="n">offset</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">){</span><span class="w">
+      </span><span class="n">nextOffset</span><span class="p">,</span><span class="w">
+      </span><span class="n">results</span><span class="p">{</span><span class="w">
+        </span><span class="n">user</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="p">...</span><span class="n">user</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+        </span><span class="n">roles</span><span class="p">{</span><span class="w">
+          </span><span class="n">id</span><span class="w">
+          </span><span class="n">name</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+        </span><span class="n">status</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="k">fragment</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">id</span><span class="w">
+  </span><span class="n">firstName</span><span class="w">
+  </span><span class="n">lastName</span><span class="w">
+  </span><span class="n">email</span><span class="w">
+  </span><span class="n">created</span><span class="w">
+</span><span class="p">}</span><span class="w">  
+</span></code></pre></div>  </div>
+
+  <p>Sample Response:</p>
+
+  <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"organization"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"memberships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="nl">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXXXXXXXXXX"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXX"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXXXXXX"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXXXXX@XXXXXX.com"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-11-03T21:43:39Z"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"roles"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+                </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00000000200"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owner"</span><span class="w">
+              </span><span class="p">},</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00000000080"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"billing-admin"</span><span class="w">
+              </span><span class="p">},</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00000000120"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXXXXXXXXXX"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXX"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXXXXXX"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXXXXXX@XXXXX.com"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-05-03T22:05:00Z"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"roles"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00000000120"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="w">
+            </span><span class="p">}],</span><span class="w">
+            </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXXXXXXXXXX"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXX"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXXXXXX"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXXXXXX@XXXXX.com"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-03-09T20:33:57Z"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"roles"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00000000100"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"collaborator"</span><span class="w">
+            </span><span class="p">}],</span><span class="w">
+            </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/accounts/graphiql/?operationName=getOrganizationInfo&amp;query=fragment%20user%20on%20User%7B%0A%20%20id%0A%20%20firstName%0A%20%20lastName%0A%20%20email%0A%20%20created%0A%7D%0A%0Aquery%20getOrganizationInfo%20%7B%0A%20%20organization%20%7B%0A%09%09memberships(%0A%20%20%20%20%20%20query%3A%20%22*%22%2C%0A%20%20%20%20%20%20pageSize%3A%20100%2C%0A%20%20%20%20%20%20offset%3A%20null%0A%20%20%20%20)%7B%0A%20%20%20%20%20%20nextOffset%2C%0A%20%20%20%20%20%20results%7B%0A%20%20%20%20%20%20%20%20user%20%7B%0A%20%20%20%20%20%20%20%20%20%20...user%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20roles%7B%0A%20%20%20%20%20%20%20%20%20%20id%0A%20%20%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20status%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A" target="_blank">Try this in our interactive console</a></p>
+
+</details>
+<details name="Invite user to organization">
+
+  <summary>Invite user to organization</summary>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mutation</span><span class="w"> </span><span class="n">inviteUser</span><span class="p">(</span><span class="nv">$userEmail</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">!,</span><span class="w"> </span><span class="nv">$roleId</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!,</span><span class="w"> </span><span class="nv">$inviteMessage</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">){</span><span class="w">
+  </span><span class="n">inviteMember</span><span class="p">(</span><span class="w">
+    </span><span class="n">email</span><span class="p">:</span><span class="w"> </span><span class="nv">$userEmail</span><span class="w">
+    </span><span class="n">roleId</span><span class="p">:</span><span class="w"> </span><span class="nv">$roleId</span><span class="w">
+    </span><span class="n">inviteMessage</span><span class="p">:</span><span class="w"> </span><span class="nv">$inviteMessage</span><span class="w">
+  </span><span class="p">){</span><span class="w">
+    </span><span class="n">user</span><span class="p">{</span><span class="n">email</span><span class="p">}</span><span class="w">
+    </span><span class="n">status</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c"># Variables</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="err">"</span><span class="n">userEmail</span><span class="err">":</span><span class="w"> </span><span class="err">""</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">roleId</span><span class="err">":</span><span class="w"> </span><span class="err">""</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">inviteMessage</span><span class="err">":</span><span class="w"> </span><span class="err">"</span><span class="n">Please</span><span class="w"> </span><span class="n">accept</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">invitation</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">organization</span><span class="err">."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c"># Role ID reference:</span><span class="w">
+</span><span class="c"># collaborator = 00000000100</span><span class="w">
+</span><span class="c"># admin = 00000000120</span><span class="w">
+</span><span class="c"># owner = 00000000200</span><span class="w">
+</span><span class="c"># billing-admin = 00000000080</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p>Sample Response:</p>
+
+  <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"inviteMember"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXXXXXX@XXXXX.com"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/accounts/graphiql/?operationName=inviteUser&amp;query=%23%20Role%20ID%20reference%3A%0A%23%20collaborator%20%3D%2000000000100%0A%23%20admin%20%3D%2000000000120%0A%23%20owner%20%3D%2000000000200%0A%23%20billing-admin%20%3D%2000000000080%0A%0A%0Amutation%20inviteUser(%24userEmail%3A%20String!%2C%20%24roleId%3A%20ID!%2C%20%24inviteMessage%3A%20String)%7B%0A%20%20%0A%20%20inviteMember(%0A%20%20%20%20email%3A%20%24userEmail%0A%20%20%20%20roleId%3A%20%24roleId%0A%20%20%20%20inviteMessage%3A%20%24inviteMessage%0A%20%20)%7B%0A%20%20%20%20user%7Bemail%7D%0A%20%20%20%20status%0A%20%20%7D%0A%7D%0A&amp;variables=%7B%0A%20%20%22userEmail%22%3A%20%22%22%2C%0A%20%20%22roleId%22%3A%20%22%22%0A%7D" target="_blank">Try this in our interactive console</a></p>
+</details>
+<details name="Remove user from organization">
+
+  <summary>Remove user from organization</summary>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mutation</span><span class="w"> </span><span class="n">removeMember</span><span class="p">(</span><span class="nv">$email</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">!){</span><span class="w">
+  </span><span class="n">removeMembership</span><span class="p">(</span><span class="n">email</span><span class="p">:</span><span class="w"> </span><span class="nv">$email</span><span class="p">){</span><span class="w">
+    </span><span class="n">user</span><span class="p">{</span><span class="n">email</span><span class="p">}</span><span class="w">
+    </span><span class="n">status</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c"># variables</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="err">"</span><span class="n">email</span><span class="err">":</span><span class="w"> </span><span class="err">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p>Sample Response:</p>
+
+  <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"removeMembership"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXXXXXX@XXXXX.com"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deleted"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/accounts/graphiql/?operationName=removeMember&amp;query=mutation%20removeMember(%24email%3A%20String!)%7B%0A%20%20removeMembership(email%3A%20%24email)%7B%0A%20%20%20%20user%7Bemail%7D%0A%20%20%20%20status%0A%20%20%7D%0A%7D&amp;variables=%7B%0A%20%20%22email%22%3A%20%22%22%0A%7D" target="_blank">Try this in our interactive console</a></p>
+
+</details>
+<details name="Update a user's role">
+  <summary>Update a user's role</summary>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mutation</span><span class="w"> </span><span class="n">updateUserRole</span><span class="p">(</span><span class="nv">$email</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">!,</span><span class="w"> </span><span class="nv">$roleId</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!){</span><span class="w">
+  </span><span class="n">patchMembership</span><span class="p">(</span><span class="n">email</span><span class="p">:</span><span class="w"> </span><span class="nv">$email</span><span class="p">,</span><span class="w"> </span><span class="n">roleId</span><span class="p">:</span><span class="w"> </span><span class="nv">$roleId</span><span class="p">){</span><span class="w">
+    </span><span class="n">user</span><span class="p">{</span><span class="n">email</span><span class="p">}</span><span class="w">
+    </span><span class="n">roles</span><span class="p">{</span><span class="w">
+      </span><span class="n">id</span><span class="w">
+      </span><span class="n">name</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c"># variables</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="err">"</span><span class="n">email</span><span class="err">":</span><span class="w"> </span><span class="err">""</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">roleId</span><span class="err">":</span><span class="w"> </span><span class="err">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c"># Role ID reference:</span><span class="w">
+</span><span class="c"># collaborator = 00000000100</span><span class="w">
+</span><span class="c"># admin = 00000000120</span><span class="w">
+</span><span class="c"># owner = 00000000200</span><span class="w">
+</span><span class="c"># billing-admin = 00000000080</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p>Sample Response:</p>
+
+  <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"patchMembership"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXXXXXX@XXXXX.com"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"roles"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00000000100"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"collaborator"</span><span class="w">
+      </span><span class="p">}]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/accounts/graphiql/?operationName=updateUserRole&amp;query=%23%20Role%20ID%20reference%3A%0A%23%20collaborator%20%3D%2000000000100%0A%23%20admin%20%3D%2000000000120%0A%23%20owner%20%3D%2000000000200%0A%23%20billing-admin%20%3D%2000000000080%0A%0Amutation%20updateUserRole(%24email%3A%20String!%2C%20%24roleId%3A%20ID!)%7B%0A%20%20patchMembership(email%3A%20%24email%2C%20roleId%3A%20%24roleId)%7B%0A%20%20%20%20user%7Bemail%7D%0A%20%20%20%20roles%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%20%20name%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&amp;variables=%7B%0A%20%20%22email%22%3A%20%22%22%2C%0A%20%20%22roleId%22%3A%20%22%22%0A%7D" target="_blank">Try this in our interactive console</a></p>
+
+</details>
+
+<h2 id="developer-key-management">Developer Key Management</h2>
+
+<details name="List SDK Keys">
+
+  <summary>List SDK Keys</summary>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">query</span><span class="w"> </span><span class="n">getSDKKeys</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">organization</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">sdkKeys</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="n">quota</span><span class="w">
+      </span><span class="n">used</span><span class="w">
+      </span><span class="n">remaining</span><span class="w">
+      </span><span class="n">keys</span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="n">keyInfo</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="k">fragment</span><span class="w"> </span><span class="n">keyInfo</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">SdkKey</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">key</span><span class="w">
+  </span><span class="n">domains</span><span class="p">{</span><span class="w">
+    </span><span class="n">secureOnly</span><span class="w">
+    </span><span class="n">domain</span><span class="w">
+    </span><span class="n">port</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p>Sample Response:</p>
+
+  <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"organization"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"sdkKeys"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"quota"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"used"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"remaining"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"keys"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+          </span><span class="nl">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08s53auxt9txz1w6hx2iww1qb"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"domains"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+              </span><span class="nl">"secureOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"127.0.0.1"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"port"</span><span class="p">:</span><span class="w"> </span><span class="mi">8000</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"secureOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my.matterport.com"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"port"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"secureOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"localhost"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"port"</span><span class="p">:</span><span class="w"> </span><span class="mi">8000</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="err">...</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">}]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/accounts/graphiql/?operationName=getSDKKeys&amp;query=fragment%20keyInfo%20on%20SdkKey%7B%0A%20%20key%0A%20%20domains%7B%0A%20%20%20%20secureOnly%0A%20%20%20%20domain%0A%20%20%20%20port%0A%20%20%7D%0A%7D%0A%0Aquery%20getSDKKeys%7B%0A%20%20organization%7B%0A%20%20%20%20sdkKeys%7B%0A%20%20%20%20%20%20quota%0A%20%20%20%20%20%20used%0A%20%20%20%20%20%20remaining%0A%20%20%20%20%20%20keys%7B%20...keyInfo%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D" target="_blank">Try this in our interactive console</a></p>
+
+</details>
+
+<details name="Add SDK Key">
+  <summary>Add SDK Key</summary>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fragment</span><span class="w"> </span><span class="n">sdkKey</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">SdkKey</span><span class="p">{</span><span class="w">
+  </span><span class="n">key</span><span class="w">
+  </span><span class="n">label</span><span class="w">
+  </span><span class="n">domains</span><span class="p">{</span><span class="w">
+    </span><span class="n">secureOnly</span><span class="w">
+    </span><span class="n">domain</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="k">mutation</span><span class="w"> </span><span class="n">addSdkKey</span><span class="p">(</span><span class="nv">$label</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">,</span><span class="w"> </span><span class="nv">$domains</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">AddSdkDomain</span><span class="p">!]){</span><span class="w">
+  </span><span class="n">provisionSdkKey</span><span class="p">(</span><span class="w">
+    </span><span class="n">label</span><span class="p">:</span><span class="w"> </span><span class="nv">$label</span><span class="w">
+    </span><span class="n">domains</span><span class="p">:</span><span class="w"> </span><span class="nv">$domains</span><span class="w">
+  </span><span class="p">){</span><span class="w">
+    </span><span class="p">...</span><span class="n">sdkKey</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c"># variables</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="err">"</span><span class="n">label</span><span class="err">":</span><span class="w"> </span><span class="err">"</span><span class="n">My</span><span class="w"> </span><span class="n">SDK</span><span class="w"> </span><span class="n">Key</span><span class="err">"</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">domains</span><span class="err">":</span><span class="w"> </span><span class="err">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">"</span><span class="n">domain</span><span class="err">":</span><span class="w"> </span><span class="err">"</span><span class="n">http</span><span class="p">:</span><span class="err">//</span><span class="n">localhost</span><span class="err">"</span><span class="p">,</span><span class="w">
+      </span><span class="err">"</span><span class="n">secureOnly</span><span class="err">":</span><span class="w"> </span><span class="n">false</span><span class="p">,</span><span class="w">
+      </span><span class="err">"</span><span class="n">port</span><span class="err">":</span><span class="w"> </span><span class="err">8000</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="err">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/accounts/graphiql/?operationName=addSdkKey&amp;query=fragment%20sdkKey%20on%20SdkKey%7B%0A%20%20key%0A%20%20label%0A%20%20domains%7B%0A%20%20%20%20secureOnly%0A%20%20%20%20domain%0A%20%20%7D%0A%7D%0A%0Amutation%20addSdkKey(%24label%3A%20String%2C%20%24domains%3A%20%5BAddSdkDomain!%5D)%7B%0A%20%20provisionSdkKey(%0A%20%20%20%20label%3A%20%24label%0A%20%20%20%20domains%3A%20%24domains%0A%20%20)%7B%0A%20%20%20%20...sdkKey%0A%20%20%7D%0A%7D&amp;variables=%7B%0A%20%20%22label%22%3A%20%22My%20SDK%20Key%22%2C%0A%20%20%22domains%22%3A%20%5B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%22domain%22%3A%20%22http%3A%2F%2Flocalhost%22%2C%0A%20%20%20%20%20%20%22secureOnly%22%3A%20false%2C%0A%20%20%20%20%20%20%22port%22%3A%208000%0A%20%20%20%20%7D%0A%20%20%5D%0A%7D" target="_blank">Try this in our interactive console</a></p>
+
+</details>
+<details name="Delete SDK Key">
+  <summary>Delete SDK Key</summary>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mutation</span><span class="w"> </span><span class="n">removeSdkKey</span><span class="p">(</span><span class="nv">$key</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!){</span><span class="w">
+  </span><span class="n">removeSdkKey</span><span class="p">(</span><span class="n">key</span><span class="p">:</span><span class="w"> </span><span class="nv">$key</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c"># variables</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="err">"</span><span class="n">key</span><span class="err">":</span><span class="w"> </span><span class="err">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/accounts/graphiql/?operationName=removeSdkKey&amp;query=mutation%20removeSdkKey(%24key%3A%20ID!)%7B%0A%20%20removeSdkKey(key%3A%20%24key)%0A%7D&amp;variables=%7B%0A%20%20%22key%22%3A%20%22%22%0A%7D" target="_blank">Try this in our interactive console</a></p>
+
+</details>
+<details name="Add domain to SDK key">
+  <summary>Add domain to SDK key</summary>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mutation</span><span class="w"> </span><span class="n">addDomain</span><span class="p">(</span><span class="nv">$key</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!,</span><span class="w"> </span><span class="nv">$domainDetails</span><span class="p">:</span><span class="w"> </span><span class="n">AddSdkDomain</span><span class="p">!){</span><span class="w">
+  </span><span class="n">addSdkDomain</span><span class="p">(</span><span class="n">key</span><span class="p">:</span><span class="w"> </span><span class="nv">$key</span><span class="p">,</span><span class="w"> </span><span class="n">details</span><span class="p">:</span><span class="w"> </span><span class="nv">$domainDetails</span><span class="p">){</span><span class="w">
+    </span><span class="n">domain</span><span class="w">
+    </span><span class="n">secureOnly</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c"># variables</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="err">"</span><span class="n">key</span><span class="err">":</span><span class="w"> </span><span class="err">""</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">domainDetails</span><span class="err">":</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">"</span><span class="n">domain</span><span class="err">":</span><span class="w"> </span><span class="err">"</span><span class="n">http</span><span class="p">:</span><span class="err">//</span><span class="n">localhost</span><span class="err">"</span><span class="p">,</span><span class="w">
+    </span><span class="err">"</span><span class="n">secureOnly</span><span class="err">":</span><span class="w"> </span><span class="n">false</span><span class="p">,</span><span class="w">
+    </span><span class="err">"</span><span class="n">port</span><span class="err">":</span><span class="w"> </span><span class="err">8000</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/accounts/graphiql/?operationName=addDomain&amp;query=mutation%20addDomain(%24key%3A%20ID!%2C%20%24domainDetails%3A%20AddSdkDomain!)%7B%0A%20%20addSdkDomain(key%3A%20%24key%2C%20details%3A%20%24domainDetails)%7B%0A%20%20%20%20domain%0A%20%20%20%20secureOnly%0A%20%20%7D%0A%7D&amp;variables=%7B%0A%20%20%22key%22%3A%20%22%22%2C%0A%20%20%22domainDetails%22%3A%20%7B%0A%20%20%20%20%22domain%22%3A%20%22http%3A%2F%2Flocalhost%22%2C%0A%20%20%20%20%22secureOnly%22%3A%20false%2C%0A%20%20%20%20%22port%22%3A%208000%0A%20%20%7D%0A%7D" target="_blank">Try this in our interactive console</a></p>
+
+</details>
+<details name="Remove domain from SDK key">
+  <summary>Remove domain from SDK key</summary>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mutation</span><span class="w"> </span><span class="n">removeDomain</span><span class="p">(</span><span class="nv">$key</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!,</span><span class="w"> </span><span class="nv">$domainId</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!){</span><span class="w">
+  </span><span class="n">removeSdkDomain</span><span class="p">(</span><span class="n">key</span><span class="p">:</span><span class="w"> </span><span class="nv">$key</span><span class="p">,</span><span class="w"> </span><span class="n">domainId</span><span class="p">:</span><span class="w"> </span><span class="nv">$domainId</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c"># variables</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="err">"</span><span class="n">key</span><span class="err">":</span><span class="w"> </span><span class="err">""</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">domainId</span><span class="err">":</span><span class="w"> </span><span class="err">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/accounts/graphiql/?operationName=removeDomain&amp;query=mutation%20removeDomain(%24key%3A%20ID!%2C%20%24domainId%3A%20ID!)%7B%0A%20%20removeSdkDomain(key%3A%20%24key%2C%20domainId%3A%20%24domainId)%0A%7D&amp;variables=%7B%0A%20%20%22key%22%3A%20%22%22%2C%0A%20%20%22domainId%22%3A%20%22%22%0A%7D" target="_blank">Try this in our interactive console</a></p>
+
+</details>
+<details name="Update domain on SDK key">
+  <summary>Update domain on SDK key</summary>
+
+  <div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mutation</span><span class="w"> </span><span class="n">updateDomain</span><span class="p">(</span><span class="nv">$key</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!,</span><span class="w"> </span><span class="nv">$domainId</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!,</span><span class="w"> </span><span class="nv">$newInfo</span><span class="p">:</span><span class="w"> </span><span class="n">PatchSdkDomain</span><span class="p">!){</span><span class="w">
+  </span><span class="n">patchSdkDomain</span><span class="p">(</span><span class="n">key</span><span class="p">:</span><span class="w"> </span><span class="nv">$key</span><span class="p">,</span><span class="w"> </span><span class="n">domainId</span><span class="p">:</span><span class="w"> </span><span class="nv">$domainId</span><span class="p">,</span><span class="w"> </span><span class="n">patch</span><span class="p">:</span><span class="w"> </span><span class="nv">$newInfo</span><span class="p">){</span><span class="w">
+    </span><span class="n">id</span><span class="w">
+    </span><span class="n">secureOnly</span><span class="w">
+    </span><span class="n">domain</span><span class="w">
+    </span><span class="n">port</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c"># variables</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="err">"</span><span class="n">key</span><span class="err">":</span><span class="w"> </span><span class="err">""</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">domainId</span><span class="err">":</span><span class="w"> </span><span class="err">""</span><span class="p">,</span><span class="w">
+  </span><span class="err">"</span><span class="n">newInfo</span><span class="err">":</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">"</span><span class="n">domain</span><span class="err">":</span><span class="w"> </span><span class="err">"</span><span class="n">http</span><span class="p">:</span><span class="err">//</span><span class="n">localhost</span><span class="err">"</span><span class="p">,</span><span class="w">
+    </span><span class="err">"</span><span class="n">secureOnly</span><span class="err">":</span><span class="w"> </span><span class="n">false</span><span class="p">,</span><span class="w">
+    </span><span class="err">"</span><span class="n">port</span><span class="err">":</span><span class="w"> </span><span class="err">6000</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>  </div>
+
+  <p><a href="https://api.matterport.com/api/accounts/graphiql/?operationName=updateDomain&amp;query=mutation%20updateDomain(%24key%3A%20ID!%2C%20%24domainId%3A%20ID!%2C%20%24newInfo%3A%20PatchSdkDomain!)%7B%0A%20%20patchSdkDomain(key%3A%20%24key%2C%20domainId%3A%20%24domainId%2C%20patch%3A%20%24newInfo)%7B%0A%20%20%20%20id%0A%20%20%20%20secureOnly%0A%20%20%20%20domain%0A%20%20%20%20port%0A%20%20%7D%0A%7D&amp;variables=%7B%0A%20%20%22key%22%3A%20%22%22%2C%0A%20%20%22domainId%22%3A%20%22%22%2C%0A%20%20%22newInfo%22%3A%20%7B%0A%20%20%20%20%22domain%22%3A%20%22http%3A%2F%2Flocalhost%22%2C%0A%20%20%20%20%22secureOnly%22%3A%20false%2C%0A%20%20%20%20%22port%22%3A%206000%0A%20%20%7D%0A%7D" target="_blank">Try this in our interactive console</a></p>
+
+</details>
+
+
+    <div class="tags">
+        
+    </div>
+
+<!-- 
+ -->
+
+</div>
+
+<!-- <hr class="shaded"/> -->
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2024 Matterport, Inc. All rights reserved. <br />
+ Site last generated: Jul 30, 2024 <br />
+<p><img class="footer-logo" src="/images/MP-logo_icon-RGB_black.svg" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /#main -->
+    </div>
+
+    
+  </body>
+   <!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-34880260-5','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+ 
+</html>

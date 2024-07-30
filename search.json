@@ -1,0 +1,2141 @@
+[
+
+
+
+
+{
+"title": "Ambient Light",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_components_ambientlight.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Camera",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_components_camera.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "DAE Loader",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_components_daeloader.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Directional Light",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_components_directionallight.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "FBX Loader",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_components_fbxloader.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "GLTF Loader",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_components_gltfloader.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Input",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_components_input.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "OBJ Loader",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_components_objloader.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Point Light",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_components_pointlight.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Transform Controls",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_components_transformcontrols.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "XR (Limited Functionality)",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_components_xr.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Account API Changelog",
+"tags": "",
+"keywords": "",
+"url": "/accountapi_changelog.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Account API Code Snippets",
+"tags": "",
+"keywords": "",
+"url": "/accountapi_snippets.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Matterport APIs Overview",
+"tags": "",
+"keywords": "",
+"url": "/api_home.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: App.Application",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/app.application.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: App.Event",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/app.event.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: App",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/app.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: App.Phase",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/app.phase.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Asset",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/asset.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Camera.Direction",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/camera.direction.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Camera.Event",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/camera.event.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Camera",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/camera.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Change Log",
+"tags": "",
+"keywords": "",
+"url": "/sdk_changelog.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Using Collection Data",
+"tags": "",
+"keywords": "",
+"url": "/sdk_tutorials_collections.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Creating 3D Components",
+"tags": "",
+"keywords": "",
+"url": "/sdk_component_3d.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "SDK Connect",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_connect.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Connecting Components",
+"tags": "",
+"keywords": "",
+"url": "/sdk_connecting_components.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Conversion",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/conversion.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Dictionary",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/dictionary.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Early Access",
+"tags": "",
+"keywords": "",
+"url": "/earlyaccess_home.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Emitter",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/emitter.html",
+"summary": ""
+}
+,
+
+
+
+
+
+{
+"title": "Namespace: Floor.Conversion",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/floor.conversion.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Floor.Event",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/floor.event.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Floor",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/floor.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Graph.AStarStatus",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/graph.astarstatus.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Graph",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/graph.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Graph.IAStarRunner",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/graph.iastarrunner.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Graph.ICollectionAdaptor",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/graph.icollectionadaptor.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Graph.IDirectedGraph",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/graph.idirectedgraph.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Graph.SearchOptions",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/graph.searchoptions.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Using Tag Sandbox for Custom HTML",
+"tags": "",
+"keywords": "",
+"url": "/sdk_tutorials_htmlsandbox.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: ICondition",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/icondition.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: IDisposable",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/idisposable.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: IMapObserver",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/imapobserver.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Reference Documentation",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/index.html",
+"summary": ""
+}
+,
+
+
+
+
+
+{
+"title": "Matterport Developers",
+"tags": "",
+"keywords": "",
+"url": "/index.html",
+"summary": ""
+}
+,
+
+
+
+
+
+{
+"title": "Interface: IObservable",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/iobservable.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: IObservableMap",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/iobservablemap.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: IObserver",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/iobserver.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: ISubscription",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/isubscription.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Label.Event",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/label.event.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Label",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/label.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Link.CreationPolicy",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/link.creationpolicy.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Link.DestinationPolicy",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/link.destinationpolicy.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Link",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/link.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Link.OpenPolicy",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/link.openpolicy.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Mattertag.DescriptionChunk",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/mattertag.descriptionchunk.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Mattertag.DescriptionChunkType",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/mattertag.descriptionchunktype.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Mattertag.Event",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/mattertag.event.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Mattertag",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/mattertag.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Mattertag.IMessenger",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/mattertag.imessenger.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Mattertag.Link",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/mattertag.link.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Mattertag.LinkType",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/mattertag.linktype.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Mattertag.MattertagDescriptor",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/mattertag.mattertagdescriptor.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Mattertag.MediaType",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/mattertag.mediatype.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Mattertag.PositionOptions",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/mattertag.positionoptions.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Mattertag.Transition",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/mattertag.transition.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Migrating from Mattertags to Tags",
+"tags": "",
+"keywords": "",
+"url": "/sdk_tutorials_mattertagtotag.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Measurements",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/measurements.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Mode.Event",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/mode.event.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Mode",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/mode.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Mode.Mode",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/mode.mode-1.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Mode.TransitionType",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/mode.transitiontype.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Model.Event",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/model.event.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Model",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/model.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Model API Changelog",
+"tags": "",
+"keywords": "",
+"url": "/modelapi_changelog.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Model API Models() Reference",
+"tags": "",
+"keywords": "",
+"url": "/modelapi_models_ref.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Model API - Add-Ons",
+"tags": "",
+"keywords": "",
+"url": "/modelapi_ordering_addons.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Model API - Property Intelligence",
+"tags": "",
+"keywords": "",
+"url": "/modelapi_property_intelligence.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Model API - Dimension Estimates",
+"tags": "",
+"keywords": "",
+"url": "/modelapi_pi_dimension_estimates.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Model API - Room Names",
+"tags": "",
+"keywords": "",
+"url": "/modelapi_pi_room_names.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Model API - Vector Data",
+"tags": "",
+"keywords": "",
+"url": "/modelapi_pi_vector_data.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Model API - Property Insights Mutations",
+"tags": "",
+"keywords": "",
+"url": "/modelapi_pi_mutations.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Model API Postman Collection",
+"tags": "",
+"keywords": "",
+"url": "/modelapi_postman.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Model API Sample Queries",
+"tags": "",
+"keywords": "",
+"url": "/modelapi_snippets.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Model API - Views and Layers",
+"tags": "",
+"keywords": "",
+"url": "/modelapi_views_and_layers.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: MP_SDK",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/mp_sdk.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: OAuth",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/oauth.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: OAuth.IRefreshObserver",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/oauth.irefreshobserver.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: OAuth.ITokenFetcher",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/oauth.itokenfetcher.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: OAuth.ITokenRefresher",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/oauth.itokenrefresher.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: OAuth.TokenInfo",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/oauth.tokeninfo.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "OAuth Overview",
+"tags": "",
+"keywords": "",
+"url": "/oauth_home.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Implementing OAuth",
+"tags": "",
+"keywords": "",
+"url": "/oauth_implementation.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "OAuth - Model API Access",
+"tags": "",
+"keywords": "",
+"url": "/oauth_model_api.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "OAuth Model Selector",
+"tags": "",
+"keywords": "",
+"url": "/oauth_model_selector.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Private Model Embed Integration Guide",
+"tags": "",
+"keywords": "",
+"url": "/oauth_private_model_embed.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "OAuth - Private Models with SDK",
+"tags": "",
+"keywords": "",
+"url": "/oauth_sdk_private_model.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Using Observable Data",
+"tags": "",
+"keywords": "",
+"url": "/sdk_tutorials_observables.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Pathfinding",
+"tags": "",
+"keywords": "",
+"url": "/sdk_tutorials_pathfinding.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Pointer.Colliders",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/pointer.colliders.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Pointer",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/pointer.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Renderer",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/renderer.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Pointer Reticle",
+"tags": "",
+"keywords": "",
+"url": "/sdk_tutorials_cursor.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Room.Conversion",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/room.conversion.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Room",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/room.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Scene.Component",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/scene.component.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Scene.EmitPath",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/scene.emitpath.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Scene.EventPath",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/scene.eventpath.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Scene",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/scene.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Scene.IComponent",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/scene.icomponent.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Scene.IComponentContext",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/scene.icomponentcontext.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Scene.IComponentDesc",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/scene.icomponentdesc.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Scene.IComponentEventSpy",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/scene.icomponenteventspy.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Scene.INode",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/scene.inode.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Scene.InputPath",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/scene.inputpath.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Scene.InteractionType",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/scene.interactiontype.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Scene.IObject",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/scene.iobject.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Scene.ISceneObjectSpy",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/scene.isceneobjectspy.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Scene.OutputPath",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/scene.outputpath.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Scene.PathBase",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/scene.pathbase.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Scene.PathInfo",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/scene.pathinfo.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Scene.PathType",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/scene.pathtype.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Scene.SceneComponentOptions",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/scene.scenecomponentoptions.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Scene",
+"tags": "",
+"keywords": "",
+"url": "/sdk_scene_intro.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "SDK Client Release Notes",
+"tags": "",
+"keywords": "",
+"url": "/sdk_client_release_notes.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Concepts",
+"tags": "",
+"keywords": "",
+"url": "/sdk_concepts.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Creating Mattertags",
+"tags": "",
+"keywords": "",
+"url": "/sdk_creating_mattertags.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Editing Mattertags",
+"tags": "",
+"keywords": "",
+"url": "/sdk_editing_mattertags.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Examples Summary",
+"tags": "",
+"keywords": "",
+"url": "/sdk_examples_summary.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "SDK for Embeds",
+"tags": "",
+"keywords": "",
+"url": "/sdk_home.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Intersection Inspector",
+"tags": "",
+"keywords": "",
+"url": "/sdk_intersection_inspector.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Kitchen Sink",
+"tags": "",
+"keywords": "",
+"url": "/sdk_kitchen_sink.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Navigation Controls",
+"tags": "",
+"keywords": "",
+"url": "/sdk_navigation_controls.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "SDK for Embeds Quick Start",
+"tags": "",
+"keywords": "",
+"url": "/sdk_quickstart.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Reference Documentation Summary",
+"tags": "",
+"keywords": "",
+"url": "/sdk_reference_summary.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Remote Control",
+"tags": "",
+"keywords": "",
+"url": "/sdk_remote_control.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Sensors - Source Areas",
+"tags": "",
+"keywords": "",
+"url": "/sdk_sensors_source_areas.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Sensors - Sweep Control",
+"tags": "",
+"keywords": "",
+"url": "/sdk_sensors_sweep_control.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Sensors - Tags Level of Detail",
+"tags": "",
+"keywords": "",
+"url": "/sdk_sensors_tags_level_of_detail.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Tags Quiz",
+"tags": "",
+"keywords": "",
+"url": "/sdk_tags_quiz.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Tags Quiz - Overlay",
+"tags": "",
+"keywords": "",
+"url": "/sdk_tags_quiz_overlay.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "SDK Embed Package Tutorial",
+"tags": "",
+"keywords": "",
+"url": "/sdk_tutorials_package.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Typescript Declarations",
+"tags": "",
+"keywords": "",
+"url": "/sdk_types.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Vocabulary",
+"tags": "",
+"keywords": "",
+"url": "/sdk_vocabulary.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Architecture",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_architecture.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Content Attribution",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_content_attribution.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Custom Experience",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_custom_experience.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Examples Summary",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_examples_summary.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "SDK Bundle",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_home.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "HTML Live Stream",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_html_livestream.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "IoT Canvas",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_iot_canvas.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Local Webcam",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_local_webcam.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Showcase SDK Bundle Quick Start",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_quickstart.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Security Camera FOV",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_security_camera.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Working With Models",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_tutorials_models.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Setting up Embedly",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_tutorials_setting_up_embedly.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Setting up a local environment",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_tutorials_setup.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Using OAuth",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_tutorials_using_oauth.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Using Scene Objects",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_tutorials_using_scene_objects.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Using XR",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_tutorials_using_xr.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Using Typescript Declarations",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_types.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Virtual Staging",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_virtual_staging.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "SDK Web Component",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_webcomponent.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "SDK Web Component Advanced Usage",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_webcomponent_advanced.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "SDK Bundle to Web Component Migration",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_webcomponent_migration.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "SDK Web Component Tutorial",
+"tags": "",
+"keywords": "",
+"url": "/sdkbundle_webcomponent_tutorial.html",
+"summary": ""
+}
+,
+
+
+
+
+
+{
+"title": "Namespace: Sensor",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/sensor.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Sensor.ISensor",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/sensor.isensor.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Sensor.ISensorObserver",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/sensor.isensorobserver.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Sensor.ISource",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/sensor.isource.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Sensor.SensorType",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/sensor.sensortype.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Sensor.SourceType",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/sensor.sourcetype.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Settings",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/settings.html",
+"summary": ""
+}
+,
+
+
+
+
+
+{
+"title": "Mailing List",
+"tags": "",
+"keywords": "",
+"url": "/subscribe.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Sweep.Alignment",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/sweep.alignment.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Sweep.Conversion",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/sweep.conversion.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Sweep.Event",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/sweep.event.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Sweep",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/sweep.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Sweep.Placement",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/sweep.placement.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Sweep.Transition",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/sweep.transition.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Tag.AttachmentType",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/tag.attachmenttype.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Tag",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/tag.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: Tag.IMessenger",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/tag.imessenger.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Tags Icons Reference",
+"tags": "",
+"keywords": "",
+"url": "/tags_icons_reference.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Tour.Event",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/tour.event.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Tour",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/tour.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: Tour.PlayState",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/tour.playstate.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: View",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/view.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: View.Layer",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/view.layer.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Interface: View.View",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/interfaces/view.view-1.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Matterport Webhooks Overview",
+"tags": "",
+"keywords": "",
+"url": "/webhooks_home.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "/assets/css/style.css",
+"summary": ""
+}
+
+
+
+
+
+
+]
