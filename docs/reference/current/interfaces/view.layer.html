@@ -38,7 +38,15 @@
 <script src="/js/customscripts.js"></script>
 <script src="/js/mermaid.min.js"></script>
 
-<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg" />
+<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg?dark" media="(prefers-color-scheme: dark)" />
+<link rel="shortcut icon" href="/images/favicons/favicon.ico" sizes="32x32" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+<link rel="manifest" href="/images/favicons/favicon.webmanifest"/>
+<meta name="msapplication-TileColor" content="#ff3158" />
+<meta name="theme-color" content="#ffffff" />
+
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,7 +55,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<link rel="alternate" type="application/rss+xml" title="showcase-sdk" href="https://docs.matterport.comfeed.xml">
+<link rel="alternate" type="application/rss+xml" title="" href="https://developers.matterport.comfeed.xml">
 
     <script>
       $(document).ready(function () {
@@ -101,10 +109,10 @@
 <nav class="navbar navbar-inverse navbar-static-top">
   <div>
     <div class="row">
-      <a class="navbrand col-md-3" href="/"
-        >&nbsp;<img
+      <a class="navbrand col-md-3" href="https://developers.matterport.com/"
+        ><img
           class="navbar-image"
-          src="/images/MP-logo_H_lock-RGB_white.svg"
+          src="/images/Matterport-Logo-White.svg"
         /><span class="projectTitle"> </span></a
       >
       <div class="dev-nav-links col-md-6">
@@ -112,15 +120,15 @@
           <div class="dropdown ">
             <a class="dropbtn active" href="index.html">SDK Docs</a>
             <div class="dropdown-content">
-              <a href="https://docs.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
-              <a href="https://docs.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
-              <a href="https://docs.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
+              <a href="https://developers.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
+              <a href="https://developers.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
+              <a href="https://developers.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
             </div>
           </div>
           <div class="dropdown">
             <a class="dropbtn" href="api_home.html">API Docs</a>
             <div class="dropdown-content">
-              <a href="https://docs.matterport.com/api_home.html">API Overview</a>
+              <a href="https://developers.matterport.com/api_home.html">API Overview</a>
               <a href="https://api.matterport.com/docs/reference" target="_blank">API Reference</a>
               <a href="https://api.matterport.com/model/graphiql" target="_blank">Interactive Console</a>
             </div>
@@ -129,10 +137,10 @@
             <a class="dropbtn" href="https://matterport.com/legal/platform-subscription-agreement#sdk-terms" target="_blank">Terms</a>
           </div>
           <div class="dropdown">
-            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:developer@matterport.com?subject=Showcase SDK feedback&body=I have some feedback about the Interface: View.Layer page: ' + window.location.href;">Feedback</a>
+            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:MP-developer@costar.com?subject=Showcase SDK feedback&body=I have some feedback about the Interface: View.Layer page: ' + window.location.href;">Feedback</a>
           </div>
           <div class="dropdown">
-            <a class="dropbtn" href="https://docs.matterport.com/subscribe.html" >
+            <a class="dropbtn" href="https://developers.matterport.com/subscribe.html" >
               Subscribe
               <sup class="subscribe-sup" style="font-size: 10px; color: #ff3158">New</sup>
             </a>
@@ -722,6 +730,12 @@
                   
                   
                   
+                  <li><a title="GeoCoordinates" href="/modelapi_geocoordinates.html">GeoCoordinates</a></li>
+                  
+                  
+                  
+                  
+                  
                   <li><a title="Views and Layers" href="/modelapi_views_and_layers.html">Views and Layers</a></li>
                   
                   
@@ -735,6 +749,48 @@
                   
                   
                   <li><a title="Postman Collection" href="/modelapi_postman.html">Postman Collection</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Account API" href="#">Account API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Capture Services API" href="#">Capture Services API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Overview" href="/capture_services_api.html">Overview</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/capture_services_queries.html">Sample Queries</a></li>
                   
                   
                   
@@ -783,18 +839,12 @@
           
           
           <li class="subfolders">
-              <a title="Account API" href="#">Account API</a>
+              <a title="Custom Roles" href="#">Custom Roles</a>
               <ul>
                   
                   
                   
-                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
-                  
-                  
-                  
-                  
-                  
-                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  <li><a title="Overview and Examples" href="/custom_roles_overview.html">Overview and Examples</a></li>
                   
                   
                   
@@ -885,7 +935,14 @@
           
           
           
-          <li><a title="Overview" href="/webhooks_home.html">Overview</a></li>
+          <li><a title="Webhooks v2" href="/webhooks_home.html">Webhooks v2</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Webhooks v1 (Deprecated)" href="/webhooks_v1.html">Webhooks v1 (Deprecated)</a></li>
           
           
           
@@ -1035,7 +1092,7 @@ $('#toc').on('click', 'a', function() {
 					<h2>Typescript Declarations File</h2>
 					<section class="tsd-panel">
 						<div class="tsd-index-content">
-							Typescript declarations for use with the Embed SDK are available here: <a href="https://static.matterport.com/showcase-sdk/types/24.6.4_webgl-245-g7e4b22fe23/sdk.d.ts">24.6.4_webgl-245-g7e4b22fe23</a><br>
+							Typescript declarations for use with the Embed SDK are available here: <a href="https://api.matterport.com/sdk/types/sdk.d.ts?v=25.12.1_webgl-1428-gc091dc50aa">25.12.1_webgl-1428-gc091dc50aa</a><br>
 							Declarations are already include in the Bundle SDK distribution.
 						</div>
 					</section>
@@ -1052,9 +1109,16 @@ $('#toc').on('click', 'a', function() {
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="view.layer.html#tag" class="tsd-kind-icon">Tag</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="view.layer.html#id" class="tsd-kind-icon">id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="view.layer.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="view.layer.html#toggled" class="tsd-kind-icon">toggled</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-interface"><a href="view.layer.html#common" class="tsd-kind-icon">common</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-interface"><a href="view.layer.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-interface"><a href="view.layer.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-interface"><a href="view.layer.html#toggled" class="tsd-kind-icon">toggled</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-interface"><a href="view.layer.html#type" class="tsd-kind-icon">type</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -1073,50 +1137,114 @@ $('#toc').on('click', 'a', function() {
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tag" class="tsd-anchor"></a>
 					<h3>Tag</h3>
-					<div class="tsd-signature tsd-kind-icon">Tag<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/tag.html" class="tsd-signature-type">Tag</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">Tag<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/tag.html" class="tsd-signature-type">Tag</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">"attachments"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"data"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"openTags"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"close"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"dock"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"open"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"registerAttachment"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"registerSandbox"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"toggleDocking"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"toggleNavControls"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"toggleSharing"</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="tsd-lead">
 							<p>A subset of the Tag namespace&#39;s functionality to manipulate Tags on this layer.</p>
 						</div>
+						<p>Provides access to Tag mutations including Tag.add to add directly to a layer.</p>
+						<p>Does not include observables or enums.</p>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-interface">
+					<a name="common" class="tsd-anchor"></a>
+					<h3>common</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> common<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Whether this layer is common (shared across all views)</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-interface">
 					<a name="id" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> id</h3>
-					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="tsd-lead">
-							<p>The unique id of the Layer</p>
-						</div>
-					</div>
+					<h3>id</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> id<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>The unique id of the Layer</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-interface">
 					<a name="name" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="tsd-lead">
-							<p>The human-readable name of the Layer</p>
-						</div>
-					</div>
+					<h3>name</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> name<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>The human-readable name of the Layer</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-interface">
 					<a name="toggled" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> toggled</h3>
-					<div class="tsd-signature tsd-kind-icon">toggled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
-					<aside class="tsd-sources">
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="tsd-lead">
-							<p>Whether this Layer toggled on or off. If toggled off, this Layer&#39;s objects are hidden.</p>
-						</div>
-					</div>
+					<h3>toggled</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> toggled<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Whether this Layer toggled on or off. If toggled off, this Layer&#39;s objects are hidden.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-interface">
+					<a name="type" class="tsd-anchor"></a>
+					<h3>type</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> type<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/view.layertype.html" class="tsd-signature-type">View.LayerType</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>The type of layer</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/view.layertype.html" class="tsd-signature-type">View.LayerType</a></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -1137,6 +1265,18 @@ $('#toc').on('click', 'a', function() {
 									<p>Subscribe to changes on this object.
 									When this observable detects a change, the <code>observer</code> provided will be called with the data associated with this observable.</p>
 								</div>
+								<pre><code class="language-typescript"><span class="hljs-comment">// Example: subscribe to changes in the app state</span>
+sdk.App.state.subscribe(<span class="hljs-function">(<span class="hljs-params">appState</span>) =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`App state changed to: <span class="hljs-subst">${appState.phase}</span>`</span>);
+});
+</code></pre>
+								<p>or:</p>
+								<pre><code class="language-typescript">sdk.App.state.subscribe({
+  <span class="hljs-function"><span class="hljs-title">onChanged</span>(<span class="hljs-params">appState</span>)</span> {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`App state changed to: <span class="hljs-subst">${appState.phase}</span>`</span>);
+  }
+});
+</code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -1169,7 +1309,7 @@ $('#toc').on('click', 'a', function() {
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> active: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Whether this Layer toggled on or off. If <code>active</code> is undefined, the state is flipped.</p>
+										<p>Whether this Layer should be toggled on or off. If <code>active</code> is undefined, the state is flipped.</p>
 									</div>
 								</li>
 							</ul>
@@ -1193,6 +1333,18 @@ $('#toc').on('click', 'a', function() {
 									<p>Wait for a specific condition on this object to be met.
 									When this observable detects a change, the <code>condition</code> provided will be called. When the <code>condition</code> returns true, the returned Promise will be resolved.</p>
 								</div>
+								<pre><code class="language-typescript"> <span class="hljs-comment">// Example: pause execution of code until the app state is in the &quot;playing&quot; phase</span>
+ <span class="hljs-keyword">await</span> sdk.App.state.waitUntil(
+  <span class="hljs-function"><span class="hljs-params">appState</span> =&gt;</span> appState.phase == sdk.App.Phase.PLAYING
+ );
+</code></pre>
+								<p>or:</p>
+								<pre><code class="language-typescript"><span class="hljs-keyword">await</span> sdk.App.state.waitUntil({
+  <span class="hljs-function"><span class="hljs-title">waitUntil</span>(<span class="hljs-params">appState</span>)</span> {
+    <span class="hljs-keyword">return</span> appState.phase == sdk.App.Phase.PLAYING;
+  }
+});
+</code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -1286,6 +1438,12 @@ $('#toc').on('click', 'a', function() {
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-enum tsd-parent-kind-namespace">
+						<a href="../enums/view.layertype.html" class="tsd-kind-icon">Layer<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-namespace">
+						<a href="../enums/view.viewtype.html" class="tsd-kind-icon">View<wbr>Type</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-namespace">
@@ -1294,14 +1452,20 @@ $('#toc').on('click', 'a', function() {
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="view.layer.html#tag" class="tsd-kind-icon">Tag</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
+							<li class=" tsd-kind-get-signature tsd-parent-kind-interface">
+								<a href="view.layer.html#common" class="tsd-kind-icon">common</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-interface">
 								<a href="view.layer.html#id" class="tsd-kind-icon">id</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
+							<li class=" tsd-kind-get-signature tsd-parent-kind-interface">
 								<a href="view.layer.html#name" class="tsd-kind-icon">name</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
+							<li class=" tsd-kind-get-signature tsd-parent-kind-interface">
 								<a href="view.layer.html#toggled" class="tsd-kind-icon">toggled</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-interface">
+								<a href="view.layer.html#type" class="tsd-kind-icon">type</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
 								<a href="view.layer.html#subscribe" class="tsd-kind-icon">subscribe</a>
@@ -1319,6 +1483,9 @@ $('#toc').on('click', 'a', function() {
 					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
 						<a href="view.view-1.html" class="tsd-kind-icon">View</a>
 					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="../modules/view.html#createlayeroptions" class="tsd-kind-icon">Create<wbr>Layer<wbr>Options</a>
+					</li>
 					<li class=" tsd-kind-property tsd-parent-kind-namespace">
 						<a href="../modules/view.html#current" class="tsd-kind-icon">current</a>
 					</li>
@@ -1330,6 +1497,9 @@ $('#toc').on('click', 'a', function() {
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-namespace">
 						<a href="../modules/view.html#createlayer" class="tsd-kind-icon">create<wbr>Layer</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-namespace">
+						<a href="../modules/view.html#deletelayer" class="tsd-kind-icon">delete<wbr>Layer</a>
 					</li>
 				</ul>
 			</nav>
@@ -1356,9 +1526,8 @@ $('#toc').on('click', 'a', function() {
 <footer>
             <div class="row">
                 <div class="col-lg-12 footer">
-               &copy;2024 Matterport, Inc. All rights reserved. <br />
- Site last generated: Jul 30, 2024 <br />
-<p><img class="footer-logo" src="/images/MP-logo_icon-RGB_black.svg" alt="Company logo"/></p>
+               &copy;2025 Matterport, Inc. All rights reserved. <br />
+ Site last generated: Dec 15, 2025
                 </div>
             </div>
 </footer>

@@ -38,7 +38,15 @@
 <script src="/js/customscripts.js"></script>
 <script src="/js/mermaid.min.js"></script>
 
-<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg" />
+<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg?dark" media="(prefers-color-scheme: dark)" />
+<link rel="shortcut icon" href="/images/favicons/favicon.ico" sizes="32x32" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+<link rel="manifest" href="/images/favicons/favicon.webmanifest"/>
+<meta name="msapplication-TileColor" content="#ff3158" />
+<meta name="theme-color" content="#ffffff" />
+
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,7 +55,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<link rel="alternate" type="application/rss+xml" title="showcase-sdk" href="https://docs.matterport.comfeed.xml">
+<link rel="alternate" type="application/rss+xml" title="" href="https://developers.matterport.comfeed.xml">
 
     <script>
       $(document).ready(function () {
@@ -101,10 +109,10 @@
 <nav class="navbar navbar-inverse navbar-static-top">
   <div>
     <div class="row">
-      <a class="navbrand col-md-3" href="/"
-        >&nbsp;<img
+      <a class="navbrand col-md-3" href="https://developers.matterport.com/"
+        ><img
           class="navbar-image"
-          src="/images/MP-logo_H_lock-RGB_white.svg"
+          src="/images/Matterport-Logo-White.svg"
         /><span class="projectTitle"> </span></a
       >
       <div class="dev-nav-links col-md-6">
@@ -112,15 +120,15 @@
           <div class="dropdown ">
             <a class="dropbtn active" href="index.html">SDK Docs</a>
             <div class="dropdown-content">
-              <a href="https://docs.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
-              <a href="https://docs.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
-              <a href="https://docs.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
+              <a href="https://developers.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
+              <a href="https://developers.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
+              <a href="https://developers.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
             </div>
           </div>
           <div class="dropdown">
             <a class="dropbtn" href="api_home.html">API Docs</a>
             <div class="dropdown-content">
-              <a href="https://docs.matterport.com/api_home.html">API Overview</a>
+              <a href="https://developers.matterport.com/api_home.html">API Overview</a>
               <a href="https://api.matterport.com/docs/reference" target="_blank">API Reference</a>
               <a href="https://api.matterport.com/model/graphiql" target="_blank">Interactive Console</a>
             </div>
@@ -129,10 +137,10 @@
             <a class="dropbtn" href="https://matterport.com/legal/platform-subscription-agreement#sdk-terms" target="_blank">Terms</a>
           </div>
           <div class="dropdown">
-            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:developer@matterport.com?subject=Showcase SDK feedback&body=I have some feedback about the Ambient Light page: ' + window.location.href;">Feedback</a>
+            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:MP-developer@costar.com?subject=Showcase SDK feedback&body=I have some feedback about the Ambient Light page: ' + window.location.href;">Feedback</a>
           </div>
           <div class="dropdown">
-            <a class="dropbtn" href="https://docs.matterport.com/subscribe.html" >
+            <a class="dropbtn" href="https://developers.matterport.com/subscribe.html" >
               Subscribe
               <sup class="subscribe-sup" style="font-size: 10px; color: #ff3158">New</sup>
             </a>
@@ -722,6 +730,12 @@
                   
                   
                   
+                  <li><a title="GeoCoordinates" href="/modelapi_geocoordinates.html">GeoCoordinates</a></li>
+                  
+                  
+                  
+                  
+                  
                   <li><a title="Views and Layers" href="/modelapi_views_and_layers.html">Views and Layers</a></li>
                   
                   
@@ -735,6 +749,48 @@
                   
                   
                   <li><a title="Postman Collection" href="/modelapi_postman.html">Postman Collection</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Account API" href="#">Account API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Capture Services API" href="#">Capture Services API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Overview" href="/capture_services_api.html">Overview</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/capture_services_queries.html">Sample Queries</a></li>
                   
                   
                   
@@ -783,18 +839,12 @@
           
           
           <li class="subfolders">
-              <a title="Account API" href="#">Account API</a>
+              <a title="Custom Roles" href="#">Custom Roles</a>
               <ul>
                   
                   
                   
-                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
-                  
-                  
-                  
-                  
-                  
-                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  <li><a title="Overview and Examples" href="/custom_roles_overview.html">Overview and Examples</a></li>
                   
                   
                   
@@ -885,7 +935,14 @@
           
           
           
-          <li><a title="Overview" href="/webhooks_home.html">Overview</a></li>
+          <li><a title="Webhooks v2" href="/webhooks_home.html">Webhooks v2</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Webhooks v1 (Deprecated)" href="/webhooks_v1.html">Webhooks v1 (Deprecated)</a></li>
           
           
           
@@ -1012,8 +1069,8 @@ $('#toc').on('click', 'a', function() {
   </tbody>
 </table>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="p">[</span> <span class="nx">sceneObject</span> <span class="p">]</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">sdk</span><span class="p">.</span><span class="nx">Scene</span><span class="p">.</span><span class="nx">createObjects</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">node</span> <span class="o">=</span> <span class="nx">sceneObject</span><span class="p">.</span><span class="nx">addNode</span><span class="p">();</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="p">[</span> <span class="nx">sceneObject</span> <span class="p">]</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">sdk</span><span class="p">.</span><span class="nx">Scene</span><span class="p">.</span><span class="nf">createObjects</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">node</span> <span class="o">=</span> <span class="nx">sceneObject</span><span class="p">.</span><span class="nf">addNode</span><span class="p">();</span>
 <span class="kd">var</span> <span class="nx">initial</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">enabled</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="na">color</span><span class="p">:</span> <span class="p">{</span>
@@ -1022,8 +1079,8 @@ $('#toc').on('click', 'a', function() {
   <span class="na">intensity</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>
 <span class="p">};</span>
 
-<span class="nx">node</span><span class="p">.</span><span class="nx">addComponent</span><span class="p">(</span><span class="dl">'</span><span class="s1">mp.ambientLight</span><span class="dl">'</span><span class="p">,</span> <span class="nx">initial</span><span class="p">);</span>
-<span class="nx">node</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
+<span class="nx">node</span><span class="p">.</span><span class="nf">addComponent</span><span class="p">(</span><span class="dl">'</span><span class="s1">mp.ambientLight</span><span class="dl">'</span><span class="p">,</span> <span class="nx">initial</span><span class="p">);</span>
+<span class="nx">node</span><span class="p">.</span><span class="nf">start</span><span class="p">();</span>
 </code></pre></div></div>
 
 
@@ -1041,9 +1098,8 @@ $('#toc').on('click', 'a', function() {
 <footer>
             <div class="row">
                 <div class="col-lg-12 footer">
-               &copy;2024 Matterport, Inc. All rights reserved. <br />
- Site last generated: Jul 30, 2024 <br />
-<p><img class="footer-logo" src="/images/MP-logo_icon-RGB_black.svg" alt="Company logo"/></p>
+               &copy;2025 Matterport, Inc. All rights reserved. <br />
+ Site last generated: Dec 15, 2025
                 </div>
             </div>
 </footer>

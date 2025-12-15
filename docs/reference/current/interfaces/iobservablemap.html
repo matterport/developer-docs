@@ -38,7 +38,15 @@
 <script src="/js/customscripts.js"></script>
 <script src="/js/mermaid.min.js"></script>
 
-<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg" />
+<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg?dark" media="(prefers-color-scheme: dark)" />
+<link rel="shortcut icon" href="/images/favicons/favicon.ico" sizes="32x32" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+<link rel="manifest" href="/images/favicons/favicon.webmanifest"/>
+<meta name="msapplication-TileColor" content="#ff3158" />
+<meta name="theme-color" content="#ffffff" />
+
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,7 +55,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<link rel="alternate" type="application/rss+xml" title="showcase-sdk" href="https://docs.matterport.comfeed.xml">
+<link rel="alternate" type="application/rss+xml" title="" href="https://developers.matterport.comfeed.xml">
 
     <script>
       $(document).ready(function () {
@@ -101,10 +109,10 @@
 <nav class="navbar navbar-inverse navbar-static-top">
   <div>
     <div class="row">
-      <a class="navbrand col-md-3" href="/"
-        >&nbsp;<img
+      <a class="navbrand col-md-3" href="https://developers.matterport.com/"
+        ><img
           class="navbar-image"
-          src="/images/MP-logo_H_lock-RGB_white.svg"
+          src="/images/Matterport-Logo-White.svg"
         /><span class="projectTitle"> </span></a
       >
       <div class="dev-nav-links col-md-6">
@@ -112,15 +120,15 @@
           <div class="dropdown ">
             <a class="dropbtn active" href="index.html">SDK Docs</a>
             <div class="dropdown-content">
-              <a href="https://docs.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
-              <a href="https://docs.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
-              <a href="https://docs.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
+              <a href="https://developers.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
+              <a href="https://developers.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
+              <a href="https://developers.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
             </div>
           </div>
           <div class="dropdown">
             <a class="dropbtn" href="api_home.html">API Docs</a>
             <div class="dropdown-content">
-              <a href="https://docs.matterport.com/api_home.html">API Overview</a>
+              <a href="https://developers.matterport.com/api_home.html">API Overview</a>
               <a href="https://api.matterport.com/docs/reference" target="_blank">API Reference</a>
               <a href="https://api.matterport.com/model/graphiql" target="_blank">Interactive Console</a>
             </div>
@@ -129,10 +137,10 @@
             <a class="dropbtn" href="https://matterport.com/legal/platform-subscription-agreement#sdk-terms" target="_blank">Terms</a>
           </div>
           <div class="dropdown">
-            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:developer@matterport.com?subject=Showcase SDK feedback&body=I have some feedback about the Interface: IObservableMap page: ' + window.location.href;">Feedback</a>
+            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:MP-developer@costar.com?subject=Showcase SDK feedback&body=I have some feedback about the Interface: IObservableMap page: ' + window.location.href;">Feedback</a>
           </div>
           <div class="dropdown">
-            <a class="dropbtn" href="https://docs.matterport.com/subscribe.html" >
+            <a class="dropbtn" href="https://developers.matterport.com/subscribe.html" >
               Subscribe
               <sup class="subscribe-sup" style="font-size: 10px; color: #ff3158">New</sup>
             </a>
@@ -722,6 +730,12 @@
                   
                   
                   
+                  <li><a title="GeoCoordinates" href="/modelapi_geocoordinates.html">GeoCoordinates</a></li>
+                  
+                  
+                  
+                  
+                  
                   <li><a title="Views and Layers" href="/modelapi_views_and_layers.html">Views and Layers</a></li>
                   
                   
@@ -735,6 +749,48 @@
                   
                   
                   <li><a title="Postman Collection" href="/modelapi_postman.html">Postman Collection</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Account API" href="#">Account API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Capture Services API" href="#">Capture Services API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Overview" href="/capture_services_api.html">Overview</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/capture_services_queries.html">Sample Queries</a></li>
                   
                   
                   
@@ -783,18 +839,12 @@
           
           
           <li class="subfolders">
-              <a title="Account API" href="#">Account API</a>
+              <a title="Custom Roles" href="#">Custom Roles</a>
               <ul>
                   
                   
                   
-                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
-                  
-                  
-                  
-                  
-                  
-                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  <li><a title="Overview and Examples" href="/custom_roles_overview.html">Overview and Examples</a></li>
                   
                   
                   
@@ -885,7 +935,14 @@
           
           
           
-          <li><a title="Overview" href="/webhooks_home.html">Overview</a></li>
+          <li><a title="Webhooks v2" href="/webhooks_home.html">Webhooks v2</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Webhooks v1 (Deprecated)" href="/webhooks_v1.html">Webhooks v1 (Deprecated)</a></li>
           
           
           
@@ -1017,18 +1074,9 @@ $('#toc').on('click', 'a', function() {
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="tsd-lead">
-						<p>A map that can have its changes observed via subscribing an <a href="imapobserver.html">IMapObserver</a></p>
+						<p>A map that can have its changes observed via subscribing an <a href="imapobserver.html">IMapObserver</a> or that can
+						be waited on for a specific condition to be met.</p>
 					</div>
-					<p>For each observer subscribed to this <code>IObservableMap</code>:</p>
-					<ul>
-						<li><code>observer.onAdded</code> will be called when an item is added to the collection</li>
-						<li><code>observer.onRemoved</code> will be called when an item is removed from the collection</li>
-						<li><code>observer.onUpdated</code> will be called when an item has some of its properties changed</li>
-						<li><code>observer.onCollectionUpdated</code> will be called when some set of the above events have occured (item added/removed/updated)</li>
-					</ul>
-					<p>When first subscribing, the observers&#39; <code>onAdded</code> will be called for each item in the collection, and then again as items are added.
-						Alternatively, the <code>onCollectionUpdated</code> will always give an up-to-date view of the collection.
-					<code>onCollectionUpdated</code>, on first subscription, will be called once with the entire collection, and then again as changes to the collection  occur.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-type-parameters">
@@ -1057,7 +1105,7 @@ $('#toc').on('click', 'a', function() {
 					<h2>Typescript Declarations File</h2>
 					<section class="tsd-panel">
 						<div class="tsd-index-content">
-							Typescript declarations for use with the Embed SDK are available here: <a href="https://static.matterport.com/showcase-sdk/types/24.6.4_webgl-245-g7e4b22fe23/sdk.d.ts">24.6.4_webgl-245-g7e4b22fe23</a><br>
+							Typescript declarations for use with the Embed SDK are available here: <a href="https://api.matterport.com/sdk/types/sdk.d.ts?v=25.12.1_webgl-1428-gc091dc50aa">25.12.1_webgl-1428-gc091dc50aa</a><br>
 							Declarations are already include in the Bundle SDK distribution.
 						</div>
 					</section>
@@ -1074,6 +1122,7 @@ $('#toc').on('click', 'a', function() {
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iobservablemap.html#subscribe" class="tsd-kind-icon">subscribe</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iobservablemap.html#waituntil" class="tsd-kind-icon">wait<wbr>Until</a></li>
 							</ul>
 						</section>
 					</div>
@@ -1093,9 +1142,33 @@ $('#toc').on('click', 'a', function() {
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="tsd-lead">
-									<p>Subscribe to changes in this map.
-									When this observable detects a change, the <code>observer</code> provided will have its <code>onAdded</code>, <code>onRemoved</code>, and/or <code>onUpdated</code> called.</p>
+									<p>Subscribe to changes in this map.</p>
 								</div>
+								<p>When this observable detects a change, the <code>observer</code> provided will have its <code>onAdded</code>, <code>onRemoved</code>, and/or <code>onUpdated</code> called.</p>
+								<ul>
+									<li><code>observer.onAdded</code> will be called when an item is added to the collection</li>
+									<li><code>observer.onRemoved</code> will be called when an item is removed from the collection</li>
+									<li><code>observer.onUpdated</code> will be called when an item has some of its properties changed</li>
+									<li><code>observer.onCollectionUpdated</code> will be called after some set of the above events have occured (item added/removed/updated)</li>
+								</ul>
+								<p>When first subscribing, the observers&#39; <code>onAdded</code> will be called for each item in the collection.
+									The same is true for <code>onCollectionUpdated</code> which provides the latest view of the entire collection
+								<code>onCollectionUpdated</code> and <code>onAdded</code> continue to fire as changes to the collection occur.</p>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> subscription = sdk.Tag.data.subscribe({
+  <span class="hljs-attr">onAdded</span>: <span class="hljs-function">(<span class="hljs-params">index, item, collection</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Tag added at index <span class="hljs-subst">${index}</span>:`</span>, item);
+  },
+  <span class="hljs-attr">onRemoved</span>: <span class="hljs-function">(<span class="hljs-params">index, item, collection</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Tag removed from index <span class="hljs-subst">${index}</span>:`</span>, item);
+  },
+  <span class="hljs-attr">onUpdated</span>: <span class="hljs-function">(<span class="hljs-params">index, item, collection</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Tag updated at index <span class="hljs-subst">${index}</span>:`</span>, item);
+  },
+  <span class="hljs-attr">onCollectionUpdated</span>: <span class="hljs-function">(<span class="hljs-params">collection</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;Current collection of tags:&#x27;</span>, collection);
+  }
+});
+</code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -1105,6 +1178,36 @@ $('#toc').on('click', 'a', function() {
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="isubscription.html" class="tsd-signature-type">ISubscription</a></h4>
 							<p>A subscription that can be used to remove the subscribed observer.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="waituntil" class="tsd-anchor"></a>
+					<h3>wait<wbr>Until</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">wait<wbr>Until<span class="tsd-signature-symbol">(</span>condition<span class="tsd-signature-symbol">: </span><a href="icondition.html" class="tsd-signature-type">ICondition</a><span class="tsd-signature-symbol">&lt;</span><a href="dictionary.html" class="tsd-signature-type">Dictionary</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ItemT</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../index.html#conditioncallback" class="tsd-signature-type">ConditionCallback</a><span class="tsd-signature-symbol">&lt;</span><a href="dictionary.html" class="tsd-signature-type">Dictionary</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ItemT</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="dictionary.html" class="tsd-signature-type">Dictionary</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ItemT</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Wait for a specific condition on this map to be met.
+									When this observable detects a change, the <code>condition</code> provided will be called. When the <code>condition</code> returns true, the returned Promise will be resolved.</p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-comment">// Get the tag collection to use in your application</span>
+<span class="hljs-keyword">const</span> tags: MpSdk.Dictionary&lt;MpSdk.Tag.TagData&gt; = <span class="hljs-keyword">await</span> props.sdk.Tag.data.waitUntil( <span class="hljs-function">() =&gt;</span> <span class="hljs-literal">true</span> );
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>condition: <a href="icondition.html" class="tsd-signature-type">ICondition</a><span class="tsd-signature-symbol">&lt;</span><a href="dictionary.html" class="tsd-signature-type">Dictionary</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ItemT</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../index.html#conditioncallback" class="tsd-signature-type">ConditionCallback</a><span class="tsd-signature-symbol">&lt;</span><a href="dictionary.html" class="tsd-signature-type">Dictionary</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ItemT</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="dictionary.html" class="tsd-signature-type">Dictionary</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ItemT</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A promise that is resolved when <code>condition</code> returns true.</p>
 						</li>
 					</ul>
 				</section>
@@ -1127,6 +1230,9 @@ $('#toc').on('click', 'a', function() {
 						<ul>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iobservablemap.html#subscribe" class="tsd-kind-icon">subscribe</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iobservablemap.html#waituntil" class="tsd-kind-icon">wait<wbr>Until</a>
 							</li>
 						</ul>
 					</li>
@@ -1157,9 +1263,8 @@ $('#toc').on('click', 'a', function() {
 <footer>
             <div class="row">
                 <div class="col-lg-12 footer">
-               &copy;2024 Matterport, Inc. All rights reserved. <br />
- Site last generated: Jul 30, 2024 <br />
-<p><img class="footer-logo" src="/images/MP-logo_icon-RGB_black.svg" alt="Company logo"/></p>
+               &copy;2025 Matterport, Inc. All rights reserved. <br />
+ Site last generated: Dec 15, 2025
                 </div>
             </div>
 </footer>

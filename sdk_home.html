@@ -38,7 +38,15 @@
 <script src="/js/customscripts.js"></script>
 <script src="/js/mermaid.min.js"></script>
 
-<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg" />
+<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg?dark" media="(prefers-color-scheme: dark)" />
+<link rel="shortcut icon" href="/images/favicons/favicon.ico" sizes="32x32" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+<link rel="manifest" href="/images/favicons/favicon.webmanifest"/>
+<meta name="msapplication-TileColor" content="#ff3158" />
+<meta name="theme-color" content="#ffffff" />
+
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,7 +55,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<link rel="alternate" type="application/rss+xml" title="showcase-sdk" href="https://docs.matterport.comfeed.xml">
+<link rel="alternate" type="application/rss+xml" title="" href="https://developers.matterport.comfeed.xml">
 
     <script>
       $(document).ready(function () {
@@ -101,10 +109,10 @@
 <nav class="navbar navbar-inverse navbar-static-top">
   <div>
     <div class="row">
-      <a class="navbrand col-md-3" href="/"
-        >&nbsp;<img
+      <a class="navbrand col-md-3" href="https://developers.matterport.com/"
+        ><img
           class="navbar-image"
-          src="/images/MP-logo_H_lock-RGB_white.svg"
+          src="/images/Matterport-Logo-White.svg"
         /><span class="projectTitle"> </span></a
       >
       <div class="dev-nav-links col-md-6">
@@ -112,15 +120,15 @@
           <div class="dropdown ">
             <a class="dropbtn active" href="index.html">SDK Docs</a>
             <div class="dropdown-content">
-              <a href="https://docs.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
-              <a href="https://docs.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
-              <a href="https://docs.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
+              <a href="https://developers.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
+              <a href="https://developers.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
+              <a href="https://developers.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
             </div>
           </div>
           <div class="dropdown">
             <a class="dropbtn" href="api_home.html">API Docs</a>
             <div class="dropdown-content">
-              <a href="https://docs.matterport.com/api_home.html">API Overview</a>
+              <a href="https://developers.matterport.com/api_home.html">API Overview</a>
               <a href="https://api.matterport.com/docs/reference" target="_blank">API Reference</a>
               <a href="https://api.matterport.com/model/graphiql" target="_blank">Interactive Console</a>
             </div>
@@ -129,10 +137,10 @@
             <a class="dropbtn" href="https://matterport.com/legal/platform-subscription-agreement#sdk-terms" target="_blank">Terms</a>
           </div>
           <div class="dropdown">
-            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:developer@matterport.com?subject=Showcase SDK feedback&body=I have some feedback about the SDK for Embeds page: ' + window.location.href;">Feedback</a>
+            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:MP-developer@costar.com?subject=Showcase SDK feedback&body=I have some feedback about the SDK for Embeds page: ' + window.location.href;">Feedback</a>
           </div>
           <div class="dropdown">
-            <a class="dropbtn" href="https://docs.matterport.com/subscribe.html" >
+            <a class="dropbtn" href="https://developers.matterport.com/subscribe.html" >
               Subscribe
               <sup class="subscribe-sup" style="font-size: 10px; color: #ff3158">New</sup>
             </a>
@@ -722,6 +730,12 @@
                   
                   
                   
+                  <li><a title="GeoCoordinates" href="/modelapi_geocoordinates.html">GeoCoordinates</a></li>
+                  
+                  
+                  
+                  
+                  
                   <li><a title="Views and Layers" href="/modelapi_views_and_layers.html">Views and Layers</a></li>
                   
                   
@@ -735,6 +749,48 @@
                   
                   
                   <li><a title="Postman Collection" href="/modelapi_postman.html">Postman Collection</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Account API" href="#">Account API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Capture Services API" href="#">Capture Services API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Overview" href="/capture_services_api.html">Overview</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/capture_services_queries.html">Sample Queries</a></li>
                   
                   
                   
@@ -783,18 +839,12 @@
           
           
           <li class="subfolders">
-              <a title="Account API" href="#">Account API</a>
+              <a title="Custom Roles" href="#">Custom Roles</a>
               <ul>
                   
                   
                   
-                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
-                  
-                  
-                  
-                  
-                  
-                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  <li><a title="Overview and Examples" href="/custom_roles_overview.html">Overview and Examples</a></li>
                   
                   
                   
@@ -885,7 +935,14 @@
           
           
           
-          <li><a title="Overview" href="/webhooks_home.html">Overview</a></li>
+          <li><a title="Webhooks v2" href="/webhooks_home.html">Webhooks v2</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Webhooks v1 (Deprecated)" href="/webhooks_v1.html">Webhooks v1 (Deprecated)</a></li>
           
           
           
@@ -985,7 +1042,7 @@ $('#toc').on('click', 'a', function() {
 
     
 
-   <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Usage of the SDK constitutes your agreement with the <a href="https://matterport.com/legal/sdk-agreement/">Matterport SDK Agreement</a>. Email <a href="mailto:developer@matterport.com">developer@matterport.com</a> with any questions.</div>
+   <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Usage of the SDK constitutes your agreement with the <a href="https://matterport.com/legal/sdk-agreement/">Matterport SDK Agreement</a>.</div>
 
 <h2 id="installation">Installation</h2>
 
@@ -1004,23 +1061,31 @@ $('#toc').on('click', 'a', function() {
 
 <h2 id="updates">Updates</h2>
 
-<p>Latest Embed SDK update: June 26, 2024<br />
+<p>Latest Embed SDK update: Dec 4, 2025<br />
 See the <a href="sdk_changelog.html">change log</a></p>
 
 <h2 id="script-support"><code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> support</h2>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> These instructions are for including the SDK from <code>static.matterport.com</code> via a <code>&lt;script&gt;</code> tag. There is also an <a href="#npm-sdk-embed-package">NPM package</a> available.</div>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> These instructions are for including the SDK via a <code>&lt;script&gt;</code> tag. There is also an <a href="#npm-sdk-embed-package">NPM package</a> available.</div>
 
 <h3 id="include-the-library-and-add-a-matterport-space">Include the Library and Add a Matterport Space</h3>
 
-<p>First, add the 3D Showcase SDK to your web application by including the Javascript library. This line goes in the <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> tag with your other includes.</p>
+<p>First, download the <a href="https://static.matterport.com/showcase-sdk/bootstrap/3.0.0-0-g0517b8d76c/sdk.es6.js">SDK bootstrap</a> and add it to the project.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">'</span><span class="s1">https://static.matterport.com/showcase-sdk/latest.js</span><span class="dl">'</span><span class="o">&gt;</span>
+<p>Optionally, set up an importmap. This line goes in the <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> tag with your other includes.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"importmap"</span><span class="nt">&gt;</span>
+<span class="p">{</span>
+  <span class="dl">"</span><span class="s2">imports</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">MP_SDK</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">./[path]/[to]/sdk.es6.js?applicationKey=[YOUR_SDK_KEY_HERE]</span><span class="dl">"</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
 </code></pre></div></div>
 
-<p>Next, embed a Matterport Space on your web page with an <code class="language-plaintext highlighter-rouge">&lt;iframe&gt;</code> tag. <a href="https://support.matterport.com/hc/en-us/articles/115004549347-Embed-a-Space-with-an-iframe-">Learn more about embedding</a>.</p>
+<p>Be sure to include the applicationKey when importing the library.</p>
 
-<p>Add the <strong>&amp;play=1</strong> URL parameter to automatically load the <code class="language-plaintext highlighter-rouge">&lt;iframe&gt;</code> when the page loads for a better user experience.</p>
+<p>Next, embed a Matterport Space on your web page with an <code class="language-plaintext highlighter-rouge">&lt;iframe&gt;</code> tag. <a href="https://support.matterport.com/hc/en-us/articles/115004549347-Embed-a-Space-with-an-iframe-">Learn more about embedding</a>.</p>
 
 <p>Add the <strong>applicationKey=[YOUR SDK_KEY]</strong> URL parameter to provide your sdk key as part of the url.</p>
 
@@ -1044,21 +1109,23 @@ See the <a href="sdk_changelog.html">change log</a></p>
 
 <p>Replace the <strong>[YOUR_SDK_KEY_HERE]</strong> string with your sdk key.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">iframe</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">showcase-iframe</span><span class="dl">'</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// if using the importmap</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">connect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">MP_SDK</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="c1">// if importing directly</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">connect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./[path]/[to]/sdk.es6.js</span><span class="dl">'</span>
+
+<span class="kd">const</span> <span class="nx">iframe</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">showcase-iframe</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="c1">// connect the sdk; log an error and stop if there were any connection issues</span>
 <span class="k">try</span> <span class="p">{</span>
-  <span class="kd">const</span> <span class="nx">mpSdk</span> <span class="o">=</span> <span class="k">await</span> <span class="nb">window</span><span class="p">.</span><span class="nx">MP_SDK</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span>
-    <span class="nx">iframe</span><span class="p">,</span> <span class="c1">// Obtained earlier</span>
-    <span class="dl">'</span><span class="s1">[YOUR_SDK_KEY_HERE]</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// Your SDK key</span>
-    <span class="dl">''</span> <span class="c1">// Unused but needs to be a valid string</span>
-  <span class="p">);</span>
-  <span class="nx">onShowcaseConnect</span><span class="p">(</span><span class="nx">mpSdk</span><span class="p">);</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">mpSdk</span> <span class="o">=</span> <span class="k">await</span> <span class="nf">connect</span><span class="p">(</span><span class="nx">iframe</span><span class="p">);</span>
+  <span class="nf">onShowcaseConnect</span><span class="p">(</span><span class="nx">mpSdk</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">catch </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nf">error</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">onShowcaseConnect</span><span class="p">(</span><span class="nx">mpSdk</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">onShowcaseConnect</span><span class="p">(</span><span class="nx">mpSdk</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// start making calls on mpSdk as described in the reference docs</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -1086,20 +1153,31 @@ See the <a href="sdk_changelog.html">change log</a></p>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For local development, you’ll need to run your app off a local web server. We recommend using a NodeJS server.</div>
 
+<h3 id="legacy-windowmp_sdk-support">Legacy window.MP_SDK Support</h3>
+
+<p>Previous versions of the SDK set up a <code class="language-plaintext highlighter-rouge">window.MP_SDK</code> object with a <code class="language-plaintext highlighter-rouge">connect</code> function. To continue using this same connect method, use the non-ES6 version.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://static.matterport.com/showcase-sdk/bootstrap/3.0.0-0-g0517b8d76c/sdk.js&amp;applicationKey=[YOUR_SDK_KEY]"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">MP_SDK</span><span class="p">.</span><span class="nf">connect</span><span class="p">(</span><span class="nx">iframe</span><span class="p">,</span> <span class="dl">'</span><span class="s1">applicationkey</span><span class="dl">'</span><span class="p">)</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<p>However, connecting to a space with OAuth through the SDK is not supported by this version of the bootstrap. If support for OAuth is necessary, you will need to use the aforementioned <code class="language-plaintext highlighter-rouge">sdk.es6.js</code> instead.</p>
+
 <h3 id="control-3d-showcase-with-actions">Control 3D Showcase with Actions</h3>
 
 <p>Now you’ll want to make an action for 3D Showcase to execute. In the code for your web application, add this to a Javascript function where desired. Refer to the <a href="sdk_reference_summary">reference docs</a> for a list of all the actions you can do.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">mpSdk</span><span class="p">.</span><span class="o">&lt;</span><span class="nx">action</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">arguments</span><span class="o">&gt;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">successCallback</span><span class="p">)</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">mpSdk</span><span class="p">.</span><span class="o">&lt;</span><span class="nx">action</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">arguments</span><span class="o">&gt;</span><span class="p">).</span><span class="nf">then</span><span class="p">(</span><span class="nx">successCallback</span><span class="p">)</span>
 <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">errorCallback</span><span class="p">);</span>
 
 <span class="c1">// ...</span>
 
 <span class="c1">// What to do if action was successful</span>
-<span class="kd">function</span> <span class="nx">successCallback</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span> <span class="p">}</span>
+<span class="kd">function</span> <span class="nf">successCallback</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span> <span class="p">}</span>
 
 <span class="c1">// What to do if the action failed</span>
-<span class="kd">function</span> <span class="nx">errorCallback</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span> <span class="p">}</span>
+<span class="kd">function</span> <span class="nf">errorCallback</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nf">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span> <span class="p">}</span>
 </code></pre></div></div>
 
 <table>
@@ -1125,7 +1203,7 @@ See the <a href="sdk_changelog.html">change log</a></p>
 
 <p>Listening for events from 3D Showcase is done in a similar way.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">mpSdk</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">event_name</span><span class="o">&gt;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="o">&lt;</span><span class="nx">state_arguments</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">mpSdk</span><span class="p">.</span><span class="nf">on</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">event_name</span><span class="o">&gt;</span><span class="p">,</span> <span class="nf">function </span><span class="p">(</span><span class="o">&lt;</span><span class="nx">state_arguments</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// what to do when this event happens</span>
 <span class="p">});</span>
 </code></pre></div></div>
@@ -1153,10 +1231,10 @@ See the <a href="sdk_changelog.html">change log</a></p>
 
 <p>Finally, you can grab metadata about the entire Matterport Space by calling <code class="language-plaintext highlighter-rouge">getData()</code> and <code class="language-plaintext highlighter-rouge">getDetails()</code> in your web app. For example:</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">getData</span><span class="p">()</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">model</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nf">getData</span><span class="p">()</span>
+  <span class="p">.</span><span class="nf">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">model</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Model data successfully retrieved</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Model sid:</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">model</span><span class="p">.</span><span class="nx">sid</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Model sid:</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">model</span><span class="p">.</span><span class="nx">sid</span><span class="p">);</span>
   <span class="p">})</span>
   <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Problem retrieving model data</span>
@@ -1166,8 +1244,6 @@ See the <a href="sdk_changelog.html">change log</a></p>
 <p>Metadata is only available <strong>after</strong> you have successfully connected to the Matterport Space.</p>
 
 <h2 id="npm-sdk-embed-package">NPM SDK Embed Package</h2>
-
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> See <a href="#script-support">here</a> for instructions on including the SDK via a <code>&lt;script&gt;</code> tag. The NPM package is in beta - feedback to <a href="mailto:developer@matterport.com">developer@matterport.com</a> is welcome.</div>
 
 <p>The NPM SDK Embed package allows you to use the Embed SDK directly from your NPM or Yarn projects. See <a href="https://www.npmjs.com/package/@matterport/sdk">the docs on NPM</a> for the latest instructions.</p>
 
@@ -1189,9 +1265,8 @@ See the <a href="sdk_changelog.html">change log</a></p>
 <footer>
             <div class="row">
                 <div class="col-lg-12 footer">
-               &copy;2024 Matterport, Inc. All rights reserved. <br />
- Site last generated: Jul 30, 2024 <br />
-<p><img class="footer-logo" src="/images/MP-logo_icon-RGB_black.svg" alt="Company logo"/></p>
+               &copy;2025 Matterport, Inc. All rights reserved. <br />
+ Site last generated: Dec 15, 2025
                 </div>
             </div>
 </footer>

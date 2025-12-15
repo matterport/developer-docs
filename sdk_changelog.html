@@ -38,7 +38,15 @@
 <script src="/js/customscripts.js"></script>
 <script src="/js/mermaid.min.js"></script>
 
-<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg" />
+<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg?dark" media="(prefers-color-scheme: dark)" />
+<link rel="shortcut icon" href="/images/favicons/favicon.ico" sizes="32x32" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+<link rel="manifest" href="/images/favicons/favicon.webmanifest"/>
+<meta name="msapplication-TileColor" content="#ff3158" />
+<meta name="theme-color" content="#ffffff" />
+
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,7 +55,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<link rel="alternate" type="application/rss+xml" title="showcase-sdk" href="https://docs.matterport.comfeed.xml">
+<link rel="alternate" type="application/rss+xml" title="" href="https://developers.matterport.comfeed.xml">
 
     <script>
       $(document).ready(function () {
@@ -101,10 +109,10 @@
 <nav class="navbar navbar-inverse navbar-static-top">
   <div>
     <div class="row">
-      <a class="navbrand col-md-3" href="/"
-        >&nbsp;<img
+      <a class="navbrand col-md-3" href="https://developers.matterport.com/"
+        ><img
           class="navbar-image"
-          src="/images/MP-logo_H_lock-RGB_white.svg"
+          src="/images/Matterport-Logo-White.svg"
         /><span class="projectTitle"> </span></a
       >
       <div class="dev-nav-links col-md-6">
@@ -112,15 +120,15 @@
           <div class="dropdown ">
             <a class="dropbtn active" href="index.html">SDK Docs</a>
             <div class="dropdown-content">
-              <a href="https://docs.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
-              <a href="https://docs.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
-              <a href="https://docs.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
+              <a href="https://developers.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
+              <a href="https://developers.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
+              <a href="https://developers.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
             </div>
           </div>
           <div class="dropdown">
             <a class="dropbtn" href="api_home.html">API Docs</a>
             <div class="dropdown-content">
-              <a href="https://docs.matterport.com/api_home.html">API Overview</a>
+              <a href="https://developers.matterport.com/api_home.html">API Overview</a>
               <a href="https://api.matterport.com/docs/reference" target="_blank">API Reference</a>
               <a href="https://api.matterport.com/model/graphiql" target="_blank">Interactive Console</a>
             </div>
@@ -129,10 +137,10 @@
             <a class="dropbtn" href="https://matterport.com/legal/platform-subscription-agreement#sdk-terms" target="_blank">Terms</a>
           </div>
           <div class="dropdown">
-            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:developer@matterport.com?subject=Showcase SDK feedback&body=I have some feedback about the Change Log page: ' + window.location.href;">Feedback</a>
+            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:MP-developer@costar.com?subject=Showcase SDK feedback&body=I have some feedback about the Change Log page: ' + window.location.href;">Feedback</a>
           </div>
           <div class="dropdown">
-            <a class="dropbtn" href="https://docs.matterport.com/subscribe.html" >
+            <a class="dropbtn" href="https://developers.matterport.com/subscribe.html" >
               Subscribe
               <sup class="subscribe-sup" style="font-size: 10px; color: #ff3158">New</sup>
             </a>
@@ -722,6 +730,12 @@
                   
                   
                   
+                  <li><a title="GeoCoordinates" href="/modelapi_geocoordinates.html">GeoCoordinates</a></li>
+                  
+                  
+                  
+                  
+                  
                   <li><a title="Views and Layers" href="/modelapi_views_and_layers.html">Views and Layers</a></li>
                   
                   
@@ -735,6 +749,48 @@
                   
                   
                   <li><a title="Postman Collection" href="/modelapi_postman.html">Postman Collection</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Account API" href="#">Account API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Capture Services API" href="#">Capture Services API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Overview" href="/capture_services_api.html">Overview</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/capture_services_queries.html">Sample Queries</a></li>
                   
                   
                   
@@ -783,18 +839,12 @@
           
           
           <li class="subfolders">
-              <a title="Account API" href="#">Account API</a>
+              <a title="Custom Roles" href="#">Custom Roles</a>
               <ul>
                   
                   
                   
-                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
-                  
-                  
-                  
-                  
-                  
-                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  <li><a title="Overview and Examples" href="/custom_roles_overview.html">Overview and Examples</a></li>
                   
                   
                   
@@ -885,7 +935,14 @@
           
           
           
-          <li><a title="Overview" href="/webhooks_home.html">Overview</a></li>
+          <li><a title="Webhooks v2" href="/webhooks_home.html">Webhooks v2</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Webhooks v1 (Deprecated)" href="/webhooks_v1.html">Webhooks v1 (Deprecated)</a></li>
           
           
           
@@ -985,10 +1042,297 @@ $('#toc').on('click', 'a', function() {
 
     
 
-   <div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> <br />
-We have deprecated the existing id scheme in favor of one that matches our platform and APIs.<br />
-If you have stored data including ids, we have added several functions to map between ids for <a href="docs/reference/current/modules/sweep.conversion.html">Sweeps</a>, <a href="docs/reference/current/modules/floor.conversion.html">Floors</a>, and <a href="docs/reference/current/modules/room.conversion.html">Rooms</a>. Adding the <code class="language-plaintext highlighter-rouge">&amp;useLegacyIds=0</code> URL parameter will change the id scheme in the aforementioned objects to the new id scheme.
-</div>
+   <div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Attention:</b> <br />
+Support for the <code class="language-plaintext highlighter-rouge">&amp;useLegacyIds</code> has been removed.
+Use <code class="language-plaintext highlighter-rouge">Conversion</code> maps for <a href="docs/reference/current/modules/sweep.conversion.html">Sweeps</a>, <a href="docs/reference/current/modules/floor.conversion.html">Floors</a>, and <a href="docs/reference/current/modules/room.conversion.html">Rooms</a>.</div>
+
+<h2 id="25121">25.12.1</h2>
+
+<h5 id="dec-4-2025">Dec 4, 2025</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Improved performance of <a href="docs/reference/current/modules/sweep.html#data">Sweep.data</a> by avoiding superfluous updates when transitioning between sweeps</li>
+</ul>
+
+<h2 id="25102">25.10.2</h2>
+
+<h5 id="oct-23-2025">Oct 23, 2025</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Improved Graph interface
+    <ul>
+      <li>Added the ability to <a href="docs/reference/current/modules/graph.html#clonegraph">clone</a> graphs</li>
+      <li>Added functions to find cycles: <a href="docs/reference/current/modules/graph.html#findcycle">findCycle</a> and <a href="docs/reference/current/modules/graph.html#findcycles">findCycles</a></li>
+      <li>Added <a href="docs/reference/current/interfaces/graph.idirectedgraph.html#findvertex">findVertex</a> and <a href="docs/reference/current/interfaces/graph.idirectedgraph.html#filtervertices">filterVertices</a></li>
+      <li>Added edge finding functions <a href="docs/reference/current/modules/graph.html#findedgein-function">findEdgeIn</a> and <a href="docs/reference/current/modules/graph.html#findedgeout-function">findEdgeOut</a> to the Vertex type</li>
+      <li>Added <a href="docs/reference/current/interfaces/graph.idirectedgraph.html#vertexcount">vertexCount</a> and <a href="docs/reference/current/interfaces/graph.idirectedgraph.html#edgecount">edgeCount</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="npm-package-160">NPM Package 1.6.0</h2>
+
+<h5 id="sep-26-2025">Sep 26, 2025</h5>
+
+<p><strong>NPM Package</strong></p>
+<ul>
+  <li>Always fetches latest type definitions on install</li>
+  <li>Includes ESM and UMD Modules (supports require or include)</li>
+  <li>Can update types with <code class="language-plaintext highlighter-rouge">yarn update-mpsdk-types</code> or <code class="language-plaintext highlighter-rouge">npm run update-mpsdk-types</code></li>
+  <li>Added authentication to <a href="docs/reference/current/index.html#connectoptions">ConnectOptions</a></li>
+</ul>
+
+<h2 id="2581">25.8.1</h2>
+
+<h5 id="aug-7-2025">Aug 7, 2025</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Updated branding.</li>
+</ul>
+
+<h2 id="2574">25.7.4</h2>
+
+<h5 id="jul-31-2025">Jul 31, 2025</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Fixed an issue where editing a <a href="docs/reference/current/modules/tag.html#tagdata">Tag’s keywords</a>, wouldn’t trigger an update in the <a href="docs/reference/current/modules/tag.html#data">Tag data</a>.</li>
+</ul>
+
+<h2 id="2573">25.7.3</h2>
+
+<h5 id="jul-29-2025">Jul 29, 2025</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Swapped position of <a href="docs/reference/current/modules/tour.html#next">Tour.next()</a> and <a href="docs/reference/current/modules/tour.html#previous">Tour.previous()</a></li>
+  <li>Fixed bug with added <a href="docs/reference/current/modules/sweep.html#puckposition-vector3">puckPosition</a>.</li>
+  <li>Refreshed brand logo</li>
+</ul>
+
+<h2 id="2571">25.7.1</h2>
+
+<h5 id="jul-10-2025">Jul 10, 2025</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Added <code class="language-plaintext highlighter-rouge">puckPosition</code> to <a href="docs/reference/current/modules/sweep.html#observablesweepdata">ObservableSweepData</a>.</li>
+  <li>Defined scope of <a href="docs/reference/current/interfaces/view.layer.html#tag">Tag Namespace</a> on layer object</li>
+</ul>
+
+<h2 id="2563">25.6.3</h2>
+
+<h5 id="jun-26-2025">Jun 26, 2025</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Added more examples of <code class="language-plaintext highlighter-rouge">.waitUntil</code> to <a href="docs/reference/current/interfaces/iobservablemap.html#waituntil">ObservableMap</a> and <a href="docs/reference/current/interfaces/iobservable.html#waituntil">Observable</a>.</li>
+  <li>Added <a href="docs/reference/current/index.html#eulerangle">EulerAngle</a> type to disambiguate</li>
+</ul>
+
+<h2 id="2561">25.6.1</h2>
+
+<h5 id="jun-12-2025">Jun 12, 2025</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Added <code class="language-plaintext highlighter-rouge">.waitUntil</code> to <a href="docs/reference/current/interfaces/iobservablemap.html#waituntil">ObservableMap</a>.</li>
+  <li>Added <a href="docs/reference/current/modules/conversion.html#basischange">Conversion routines</a> to convert coordinates (Vector) and rotations (Quaternion) between SDK and Platform API.</li>
+  <li>Added <code class="language-plaintext highlighter-rouge">iconId</code> to <a href="docs/reference/current/modules/tag.html#tagdata">TagData</a>.</li>
+  <li>Fixed a <a href="docs/reference/current/interfaces/view.layer.html#toggle">Layer toggling</a> bug where the behavior was inverted: <code class="language-plaintext highlighter-rouge">true</code> now shows, <code class="language-plaintext highlighter-rouge">false</code> now hides.</li>
+  <li>Fixed an issue where Tag.attachments wouldn’t provide its initial state.</li>
+</ul>
+
+<h2 id="2544">25.4.4</h2>
+
+<h5 id="april-24-2025">April 24, 2025</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Fixed issues with <a href="docs/reference/current/modules/tag.html#keywords-string">Tag.keywords</a> so it behaves more array-like
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">length</code> now properly returns the length of the array</li>
+      <li>can now get and set values by index</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="2543">25.4.3</h2>
+
+<h5 id="april-17-2025">April 17, 2025</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Improvement: Resolved race condition from early access to Measurements mode</li>
+</ul>
+
+<h2 id="2542">25.4.2</h2>
+
+<h5 id="april-10-2025">April 10, 2025</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Improvement: Updated floor inference algorithm used by Tag.add</li>
+  <li>Fixed an issue where some layers wouldn’t be included in a view’s <code class="language-plaintext highlighter-rouge">layers</code> list.</li>
+</ul>
+
+<h2 id="2541">25.4.1</h2>
+
+<h5 id="april-3-2025">April 3, 2025</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Fixed an issue where SVG Images loaded with loaded via <a href="docs/reference/current/modules/asset.html#registertexture"><code class="language-plaintext highlighter-rouge">Asset.registerTexture</code></a> could have incorrect color profiles.</li>
+  <li>Fixed an issue where removing a layer from a view would require multiple <a href="docs/reference/current/interfaces/view.view-1.html#removelayer"><code class="language-plaintext highlighter-rouge">removeLayer</code></a> calls</li>
+</ul>
+
+<h2 id="2534">25.3.4</h2>
+
+<h5 id="mar-27-2025">Mar 27, 2025</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Added <a href="docs/reference/current/interfaces/view.view-1.html#type"><code class="language-plaintext highlighter-rouge">View.type</code></a> and <a href="docs/reference/current/interfaces/view.layer.html#type"><code class="language-plaintext highlighter-rouge">Layer.type</code></a></li>
+  <li>Automatically exposing Defurnish view when available</li>
+  <li>Added an option to <a href="docs/reference/current/modules/view.html#createlayer"><code class="language-plaintext highlighter-rouge">View.createLayer</code></a> to create common Layers (a Layer in all Views)</li>
+  <li>Added <a href="docs/reference/current/modules/view.html#deletelayer"><code class="language-plaintext highlighter-rouge">View.deleteLayer</code></a> to delete previously created layers</li>
+</ul>
+
+<h2 id="2522">25.2.2</h2>
+
+<h5 id="feb-13-2025">Feb 13, 2025</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Upgraded internal THREE.js version to 0.171.0</li>
+  <li>Added <a href="docs/reference/current/modules/tag.html#tagdata"><code class="language-plaintext highlighter-rouge">Tag.enabled</code></a></li>
+</ul>
+
+<h2 id="2511">25.1.1</h2>
+
+<h5 id="jan-15-2025">Jan 15, 2025</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Added CORS support via the <code class="language-plaintext highlighter-rouge">?applicationKey</code> url parameter on the sdk bootstrap (sdk.es6.js) to support import map</li>
+</ul>
+
+<p>See <a href="sdk_quickstart">the Embed quick start</a> for setup instructions.</p>
+
+<h2 id="24123">24.12.3</h2>
+
+<h5 id="dec-18-2024">Dec 18, 2024</h5>
+
+<p><em>General</em></p>
+<ul>
+  <li>Added: <a href="docs/reference/current/modules/tag.html#add">Tag.Add</a> now supports keywords (<code class="language-plaintext highlighter-rouge">keywords: string[]</code>)
+    <ul>
+      <li><a href="docs/reference/current/modules/tag.html#optional-keywords-string">Keywords</a> on the returned TagData object is a JavaScript array.</li>
+      <li>Directly mutate with standard Array methods - e.g. <code class="language-plaintext highlighter-rouge">tag.keywords.push('bar')</code>, <code class="language-plaintext highlighter-rouge">tag.keywords.splice(0,1)</code></li>
+    </ul>
+  </li>
+  <li>Updated: <a href="docs/reference/current/modules/tour.html#currentstepdata">Tour.CurrentStepData</a> now includes <code class="language-plaintext highlighter-rouge">index</code></li>
+  <li>Improvement: Improved type definitions for <a href="docs/reference/current/interfaces/sensor.isource.html#type">ISource.type</a></li>
+</ul>
+
+<h2 id="24112">24.11.2</h2>
+
+<h5 id="nov-14-2024">Nov 14, 2024</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Made applying an icon to a Tag more consistent when using <a href="docs/reference/current/modules/tag.html#add">Tag.add</a>.</li>
+</ul>
+
+<h2 id="24102">24.10.2</h2>
+
+<h5 id="oct-23-2024">Oct 23, 2024</h5>
+
+<p><strong>Webcomponent</strong></p>
+<ul>
+  <li>Remove extra blue alert bar when there is no alert</li>
+</ul>
+
+<h2 id="24101">24.10.1</h2>
+
+<h5 id="oct-9-2024">Oct 9, 2024</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Removed legacy IDs as a default option
+    <ul>
+      <li>The <code class="language-plaintext highlighter-rouge">&amp;useLegacyIds=1</code> parameter has been removed.</li>
+      <li>Conversion routines under the <a href="docs/reference/current/modules/floor.conversion.html">Floor</a>, <a href="docs/reference/current/modules/room.conversion.html">Room</a>, and <a href="docs/reference/current/modules/sweep.conversion.html">Sweep</a> namespaces are still available if legacy IDs are needed.</li>
+    </ul>
+  </li>
+  <li>Fixed an issue where <a href="docs/reference/current/modules/room.html#current"><code class="language-plaintext highlighter-rouge">Room.current</code></a> and <a href="docs/reference/current/modules/room.html#data"><code class="language-plaintext highlighter-rouge">Room.data</code></a> would never fire updates.</li>
+</ul>
+
+<h2 id="bootstrap-v300">Bootstrap v3.0.0</h2>
+
+<h5 id="sept-20-2024">Sept 20, 2024</h5>
+
+<ul>
+  <li>Support for OAuth and PME using the SDK for Embeds, see the <a href="oauth_sdk_private_model">OAuth guide</a></li>
+</ul>
+
+<p>This bootstrap update comes in two varieties: modern with support for import/export syntax, and legacy supporting class <code class="language-plaintext highlighter-rouge">window.MP_SDK</code> syntax.
+See <a href="sdk_quickstart">the Embed quick start</a> for setup instructions of the modern bootstrap.
+Links:</p>
+<ul>
+  <li><a href="https://static.matterport.com/showcase-sdk/bootstrap/3.0.0-0-g0517b8d76c/sdk.es6.js">modern</a></li>
+  <li><a href="https://static.matterport.com/showcase-sdk/bootstrap/3.0.0-0-g0517b8d76c/sdk.js">legacy</a></li>
+</ul>
+
+<h2 id="2493">24.9.3</h2>
+
+<h5 id="sept-19-2024">Sept 19, 2024</h5>
+
+<p><strong>Embed</strong></p>
+<ul>
+  <li>Added support for Embed SDK bootstrap v3.0.0</li>
+</ul>
+
+<h2 id="2492">24.9.2</h2>
+
+<h5 id="sept-12-2024">Sept 12, 2024</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Updating type file link in documentation site to automatically point to the latest version</li>
+</ul>
+
+<h2 id="2483">24.8.3</h2>
+
+<h5 id="aug-21-2024">Aug 21, 2024</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Added <code class="language-plaintext highlighter-rouge">description</code> to <a href="docs/reference/current/modules/model.html#modeldetails"><code class="language-plaintext highlighter-rouge">Model.getDetails</code></a></li>
+</ul>
+
+<h2 id="2474">24.7.4</h2>
+
+<h5 id="july-31-2024">July 31, 2024</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Added <a href="docs/reference/current/modules/tag.html#editpositions"><code class="language-plaintext highlighter-rouge">Tag.editPositions</code></a> so that numerous Tags can be edited at once.</li>
+  <li>For maintenance, <a href="docs/reference/current/interfaces/scene.icomponent.html">Scene Components</a> are now under another level of hierarchy at the <a href="docs/reference/current/interfaces/scene.iobject.html">Scene Object</a> level, to more logically group them. There should be no noticeable change unless trying to traverse the scene graph through the parents.</li>
+  <li>Fixed an issue where <a href="docs/reference/current/index.html#on"><code class="language-plaintext highlighter-rouge">Label.Event.POSITION_UPDATED</code></a> would not fire</li>
+</ul>
+
+<h2 id="2473">24.7.3</h2>
+
+<h5 id="july-24-2024">July 24, 2024</h5>
+
+<p><strong>General</strong></p>
+<ul>
+  <li>Added <a href="docs/reference/current/modules/room.html#roomdata"><code class="language-plaintext highlighter-rouge">label</code></a> to <a href="docs/reference/current/modules/room.html#roomdata"><code class="language-plaintext highlighter-rouge">RoomData</code></a></li>
+</ul>
 
 <h2 id="2464">24.6.4</h2>
 
@@ -1374,8 +1718,8 @@ If you have stored data including ids, we have added several functions to map be
     <ul>
       <li>Depending on the asset format being deserialized, either an <code class="language-plaintext highlighter-rouge">INode[]</code> or <code class="language-plaintext highlighter-rouge">IObject</code> was being returned. For consistency, we have opted to only return the latter.</li>
       <li>To get references to the nodes after deserialization
-        <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">sceneObject</span> <span class="o">=</span> <span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Scene</span><span class="p">.</span><span class="nx">deserialize</span><span class="p">(</span><span class="cm">/* ... */</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">nodes</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">sceneObject</span><span class="p">.</span><span class="nx">nodeIterator</span><span class="p">()];</span>
+        <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">sceneObject</span> <span class="o">=</span> <span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Scene</span><span class="p">.</span><span class="nf">deserialize</span><span class="p">(</span><span class="cm">/* ... */</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">nodes</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">sceneObject</span><span class="p">.</span><span class="nf">nodeIterator</span><span class="p">()];</span>
 <span class="c1">// from here continue using the nodes as usual</span>
 </code></pre></div>        </div>
       </li>
@@ -1574,7 +1918,7 @@ The previous Early Access is now closed and all features are now available gener
 
 <p><strong>Bundle</strong></p>
 <ul>
-  <li>Added <a href="sdkbundle_tutorials_using_oauth.html">OAuth support</a>. Contact <a href="mailto:developer@matterport.com">Developer Support</a> to enable OAuth for your application.</li>
+  <li>Added <a href="sdkbundle_tutorials_using_oauth.html">OAuth support</a>. Contact <a href="mailto:MP-developer@costar.com">Developer Support</a> to enable OAuth for your application.</li>
 </ul>
 
 <h2 id="2191">21.9.1</h2>
@@ -2015,9 +2359,8 @@ We are adding support for synchronous functions. These functions compute and ret
 <footer>
             <div class="row">
                 <div class="col-lg-12 footer">
-               &copy;2024 Matterport, Inc. All rights reserved. <br />
- Site last generated: Jul 30, 2024 <br />
-<p><img class="footer-logo" src="/images/MP-logo_icon-RGB_black.svg" alt="Company logo"/></p>
+               &copy;2025 Matterport, Inc. All rights reserved. <br />
+ Site last generated: Dec 15, 2025
                 </div>
             </div>
 </footer>

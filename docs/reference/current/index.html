@@ -38,7 +38,15 @@
 <script src="/js/customscripts.js"></script>
 <script src="/js/mermaid.min.js"></script>
 
-<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg" />
+<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg?dark" media="(prefers-color-scheme: dark)" />
+<link rel="shortcut icon" href="/images/favicons/favicon.ico" sizes="32x32" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+<link rel="manifest" href="/images/favicons/favicon.webmanifest"/>
+<meta name="msapplication-TileColor" content="#ff3158" />
+<meta name="theme-color" content="#ffffff" />
+
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,7 +55,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<link rel="alternate" type="application/rss+xml" title="showcase-sdk" href="https://docs.matterport.comfeed.xml">
+<link rel="alternate" type="application/rss+xml" title="" href="https://developers.matterport.comfeed.xml">
 
     <script>
       $(document).ready(function () {
@@ -101,10 +109,10 @@
 <nav class="navbar navbar-inverse navbar-static-top">
   <div>
     <div class="row">
-      <a class="navbrand col-md-3" href="/"
-        >&nbsp;<img
+      <a class="navbrand col-md-3" href="https://developers.matterport.com/"
+        ><img
           class="navbar-image"
-          src="/images/MP-logo_H_lock-RGB_white.svg"
+          src="/images/Matterport-Logo-White.svg"
         /><span class="projectTitle"> </span></a
       >
       <div class="dev-nav-links col-md-6">
@@ -112,15 +120,15 @@
           <div class="dropdown ">
             <a class="dropbtn active" href="index.html">SDK Docs</a>
             <div class="dropdown-content">
-              <a href="https://docs.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
-              <a href="https://docs.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
-              <a href="https://docs.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
+              <a href="https://developers.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
+              <a href="https://developers.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
+              <a href="https://developers.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
             </div>
           </div>
           <div class="dropdown">
             <a class="dropbtn" href="api_home.html">API Docs</a>
             <div class="dropdown-content">
-              <a href="https://docs.matterport.com/api_home.html">API Overview</a>
+              <a href="https://developers.matterport.com/api_home.html">API Overview</a>
               <a href="https://api.matterport.com/docs/reference" target="_blank">API Reference</a>
               <a href="https://api.matterport.com/model/graphiql" target="_blank">Interactive Console</a>
             </div>
@@ -129,10 +137,10 @@
             <a class="dropbtn" href="https://matterport.com/legal/platform-subscription-agreement#sdk-terms" target="_blank">Terms</a>
           </div>
           <div class="dropdown">
-            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:developer@matterport.com?subject=Showcase SDK feedback&body=I have some feedback about the Reference Documentation page: ' + window.location.href;">Feedback</a>
+            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:MP-developer@costar.com?subject=Showcase SDK feedback&body=I have some feedback about the Reference Documentation page: ' + window.location.href;">Feedback</a>
           </div>
           <div class="dropdown">
-            <a class="dropbtn" href="https://docs.matterport.com/subscribe.html" >
+            <a class="dropbtn" href="https://developers.matterport.com/subscribe.html" >
               Subscribe
               <sup class="subscribe-sup" style="font-size: 10px; color: #ff3158">New</sup>
             </a>
@@ -722,6 +730,12 @@
                   
                   
                   
+                  <li><a title="GeoCoordinates" href="/modelapi_geocoordinates.html">GeoCoordinates</a></li>
+                  
+                  
+                  
+                  
+                  
                   <li><a title="Views and Layers" href="/modelapi_views_and_layers.html">Views and Layers</a></li>
                   
                   
@@ -735,6 +749,48 @@
                   
                   
                   <li><a title="Postman Collection" href="/modelapi_postman.html">Postman Collection</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Account API" href="#">Account API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Capture Services API" href="#">Capture Services API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Overview" href="/capture_services_api.html">Overview</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/capture_services_queries.html">Sample Queries</a></li>
                   
                   
                   
@@ -783,18 +839,12 @@
           
           
           <li class="subfolders">
-              <a title="Account API" href="#">Account API</a>
+              <a title="Custom Roles" href="#">Custom Roles</a>
               <ul>
                   
                   
                   
-                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
-                  
-                  
-                  
-                  
-                  
-                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  <li><a title="Overview and Examples" href="/custom_roles_overview.html">Overview and Examples</a></li>
                   
                   
                   
@@ -885,7 +935,14 @@
           
           
           
-          <li><a title="Overview" href="/webhooks_home.html">Overview</a></li>
+          <li><a title="Webhooks v2" href="/webhooks_home.html">Webhooks v2</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Webhooks v1 (Deprecated)" href="/webhooks_v1.html">Webhooks v1 (Deprecated)</a></li>
           
           
           
@@ -1016,7 +1073,7 @@ $('#toc').on('click', 'a', function() {
 					<h2>Typescript Declarations File</h2>
 					<section class="tsd-panel">
 						<div class="tsd-index-content">
-							Typescript declarations for use with the Embed SDK are available here: <a href="https://static.matterport.com/showcase-sdk/types/24.6.4_webgl-245-g7e4b22fe23/sdk.d.ts">24.6.4_webgl-245-g7e4b22fe23</a><br>
+							Typescript declarations for use with the Embed SDK are available here: <a href="https://api.matterport.com/sdk/types/sdk.d.ts?v=25.12.1_webgl-1428-gc091dc50aa">25.12.1_webgl-1428-gc091dc50aa</a><br>
 							Declarations are already include in the Bundle SDK distribution.
 						</div>
 					</section>
@@ -1077,9 +1134,12 @@ $('#toc').on('click', 'a', function() {
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias"><a href="index.html#color" class="tsd-kind-icon">Color</a></li>
 								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="index.html#conditioncallback" class="tsd-kind-icon">Condition<wbr>Callback</a></li>
+								<li class="tsd-kind-type-alias"><a href="index.html#connectoptions" class="tsd-kind-icon">Connect<wbr>Options</a></li>
+								<li class="tsd-kind-type-alias"><a href="index.html#eulerangle" class="tsd-kind-icon">Euler<wbr>Angle</a></li>
 								<li class="tsd-kind-type-alias"><a href="index.html#mpsdk" class="tsd-kind-icon">Mp<wbr>Sdk</a></li>
 								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="index.html#observercallback" class="tsd-kind-icon">Observer<wbr>Callback</a></li>
 								<li class="tsd-kind-type-alias"><a href="index.html#orientation" class="tsd-kind-icon">Orientation</a></li>
+								<li class="tsd-kind-type-alias"><a href="index.html#quaternion" class="tsd-kind-icon">Quaternion</a></li>
 								<li class="tsd-kind-type-alias"><a href="index.html#rotation" class="tsd-kind-icon">Rotation</a></li>
 								<li class="tsd-kind-type-alias"><a href="index.html#showcasebundlewindow" class="tsd-kind-icon">Showcase<wbr>Bundle<wbr>Window</a></li>
 								<li class="tsd-kind-type-alias"><a href="index.html#showcaseembedwindow" class="tsd-kind-icon">Showcase<wbr>Embed<wbr>Window</a></li>
@@ -1159,6 +1219,57 @@ $('#toc').on('click', 'a', function() {
 										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 									</li>
 								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="connectoptions" class="tsd-anchor"></a>
+					<h3>Connect<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">Connect<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="tsd-lead">
+							<p>Options to provide when connecting the sdk</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>auth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="tsd-lead">
+										<p>A token to provide access to a model</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="eulerangle" class="tsd-anchor"></a>
+					<h3>Euler<wbr>Angle</h3>
+					<div class="tsd-signature tsd-kind-icon">Euler<wbr>Angle<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="tsd-lead">
+							<p>An orientation described with Euler-like angles in degrees in YXZ order.</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
 							</li>
 						</ul>
 					</div>
@@ -1317,6 +1428,30 @@ $('#toc').on('click', 'a', function() {
 							</li>
 							<li class="tsd-parameter">
 								<h5>yaw<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="quaternion" class="tsd-anchor"></a>
+					<h3>Quaternion</h3>
+					<div class="tsd-signature tsd-kind-icon">Quaternion<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>w<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
 							</li>
 						</ul>
 					</div>
@@ -1555,7 +1690,7 @@ mpSdk.off(mpSdk.Event.MODEL_LOADED, callback);
 							<dl class="tsd-comment-tags tsd-typography">
 								<dt class="tsd-comment-tags-deprecated">deprecated</dt>
 								<dd>
-									<p>Use <a href="modules/app.html#state-1">App.state</a> observable to get phase change notifications.</p>
+									<p>Use the <a href="modules/app.html#state-1">App.state</a> observable to get phase change notifications.</p>
 								</dd>
 							</dl>
 							<aside class="tsd-sources">
@@ -1592,24 +1727,17 @@ mpSdk.off(mpSdk.Event.MODEL_LOADED, callback);
 							<h4 class="tsd-returns-title">Returns <a href="interfaces/emitter.html" class="tsd-signature-type">Emitter</a></h4>
 						</li>
 						<li class="tsd-description">
+							<dl class="tsd-comment-tags tsd-typography">
+							</dl>
+							<dl class="tsd-comment-tags tsd-typography">
+								<dt class="tsd-comment-tags-deprecated">deprecated</dt>
+								<dd>
+									<p>Use the <a href="modules/camera.html#pose-1">Camera.pose</a> observable to get camera pose change notifications.</p>
+								</dd>
+							</dl>
 							<aside class="tsd-sources">
 							</aside>
 							<div class="tsd-comment tsd-typography">
-								<div class="tsd-lead">
-									<p>This event fires when the camera&#39;s pose has changed via a position or orientation change.</p>
-								</div>
-								<p>The callback is called with the new pose of the camera.</p>
-								<pre><code>mpSdk.on(mpSdk.Camera.Event.MOVE,
-  <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">pose</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Camera moved to position: <span class="hljs-subst">${pose.position}</span>`</span>);
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`with orientation: <span class="hljs-subst">${pose.rotation}</span>`</span>);
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`in mode: <span class="hljs-subst">${pose.mode}</span>`</span>);
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`currently at sweep: <span class="hljs-subst">${pose.sweep}</span>`</span>);
-  }
-);
-
-<span class="hljs-meta">@deprecated</span> Use []
-</code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -2437,6 +2565,12 @@ mpSdk.off(mpSdk.Event.MODEL_LOADED, callback);
 						<a href="index.html#conditioncallback" class="tsd-kind-icon">Condition<wbr>Callback</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
+						<a href="index.html#connectoptions" class="tsd-kind-icon">Connect<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="index.html#eulerangle" class="tsd-kind-icon">Euler<wbr>Angle</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
 						<a href="index.html#mpsdk" class="tsd-kind-icon">Mp<wbr>Sdk</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
@@ -2444,6 +2578,9 @@ mpSdk.off(mpSdk.Event.MODEL_LOADED, callback);
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="index.html#orientation" class="tsd-kind-icon">Orientation</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="index.html#quaternion" class="tsd-kind-icon">Quaternion</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="index.html#rotation" class="tsd-kind-icon">Rotation</a>
@@ -2497,9 +2634,8 @@ mpSdk.off(mpSdk.Event.MODEL_LOADED, callback);
 <footer>
             <div class="row">
                 <div class="col-lg-12 footer">
-               &copy;2024 Matterport, Inc. All rights reserved. <br />
- Site last generated: Jul 30, 2024 <br />
-<p><img class="footer-logo" src="/images/MP-logo_icon-RGB_black.svg" alt="Company logo"/></p>
+               &copy;2025 Matterport, Inc. All rights reserved. <br />
+ Site last generated: Dec 15, 2025
                 </div>
             </div>
 </footer>

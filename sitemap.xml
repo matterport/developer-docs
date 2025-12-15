@@ -8,273 +8,329 @@
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_components_ambientlight.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_components_ambientlight.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_components_camera.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_components_camera.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_components_daeloader.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_components_daeloader.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_components_directionallight.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_components_directionallight.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_components_fbxloader.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_components_fbxloader.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_components_gltfloader.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_components_gltfloader.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_components_input.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_components_input.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_components_objloader.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_components_objloader.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_components_pointlight.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_components_pointlight.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_components_transformcontrols.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_components_transformcontrols.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_components_xr.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_components_xr.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/accountapi_changelog.html</loc>
+    <loc>https://developers.matterport.com/accountapi_changelog.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/accountapi_snippets.html</loc>
+    <loc>https://developers.matterport.com/accountapi_snippets.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/api_home.html</loc>
+    <loc>https://developers.matterport.com/api_home.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/app.application.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/app.application.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/app.event.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/app.event.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/app.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/app.feature.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/app.phase.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/app.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/asset.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/app.phase.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/camera.direction.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/asset.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/camera.event.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/camera.direction.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/camera.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/camera.event.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_changelog.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/camera.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_tutorials_collections.html</loc>
+    <loc>https://developers.matterport.com/capture_services_api.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_component_3d.html</loc>
+    <loc>https://developers.matterport.com/capture_services_queries.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_connect.html</loc>
+    <loc>https://developers.matterport.com/sdk_changelog.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_connecting_components.html</loc>
+    <loc>https://developers.matterport.com/sdk_tutorials_collections.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/conversion.html</loc>
+    <loc>https://developers.matterport.com/sdk_component_3d.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/dictionary.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_connect.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/earlyaccess_home.html</loc>
+    <loc>https://developers.matterport.com/sdk_connecting_components.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/emitter.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/conversion.html</loc>
   </url>
   
   
   
+  <url>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/conversion.transformtype.camerarotation.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/conversion.transformtype.coordinates.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/conversion.transformtype.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/conversion.transformtype.sweeprotation.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://developers.matterport.com/custom_roles_overview.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/dictionary.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://developers.matterport.com/earlyaccess_home.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/emitter.html</loc>
+  </url>
+  
+  
+  
+  
+  
+  <url>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/floor.conversion.html</loc>
+  </url>
+  
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/floor.conversion.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/floor.event.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/floor.event.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/floor.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/floor.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/graph.astarstatus.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/graph.astarstatus.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/graph.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/graph.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/graph.iastarrunner.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/graph.iastarrunner.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/graph.icollectionadaptor.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/graph.icollectionadaptor.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/graph.idirectedgraph.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/graph.idirectedgraph.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/graph.searchoptions.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/graph.searchoptions.html</loc>
+    <loc>https://developers.matterport.com/sdk_tutorials_htmlsandbox.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_tutorials_htmlsandbox.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/icondition.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/icondition.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/idisposable.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/idisposable.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/imapobserver.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/imapobserver.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/index.html</loc>
   </url>
   
   
   
+  
+  
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/index.html</loc>
+    <loc>https://developers.matterport.com/index.html</loc>
   </url>
   
   
@@ -282,895 +338,911 @@
   
   
   <url>
-    <loc>https://docs.matterport.com/index.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/iobservable.html</loc>
   </url>
+  
   
   
+  <url>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/iobservablemap.html</loc>
+  </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/iobservable.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/iobserver.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/iobservablemap.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/isubscription.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/iobserver.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/label.event.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/isubscription.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/label.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/label.event.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/link.creationpolicy.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/label.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/link.destinationpolicy.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/link.creationpolicy.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/link.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/link.destinationpolicy.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/link.openpolicy.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/link.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/mattertag.descriptionchunk.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/link.openpolicy.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/mattertag.descriptionchunktype.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/mattertag.descriptionchunk.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/mattertag.event.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/mattertag.descriptionchunktype.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/mattertag.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/mattertag.event.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/mattertag.imessenger.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/mattertag.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/mattertag.link.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/mattertag.imessenger.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/mattertag.linktype.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/mattertag.link.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/mattertag.mattertagdescriptor.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/mattertag.linktype.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/mattertag.mediatype.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/mattertag.mattertagdescriptor.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/mattertag.positionoptions.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/mattertag.mediatype.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/mattertag.transition.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/mattertag.positionoptions.html</loc>
+    <loc>https://developers.matterport.com/sdk_tutorials_mattertagtotag.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/mattertag.transition.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/measurements.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_tutorials_mattertagtotag.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/mode.event.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/measurements.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/mode.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/mode.event.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/mode.mode-1.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/mode.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/mode.transitiontype.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/mode.mode-1.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/model.event.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/mode.transitiontype.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/model.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/model.event.html</loc>
+    <loc>https://developers.matterport.com/modelapi_changelog.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/model.html</loc>
+    <loc>https://developers.matterport.com/modelapi_geocoordinates.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/modelapi_changelog.html</loc>
+    <loc>https://developers.matterport.com/modelapi_geolocation.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/modelapi_models_ref.html</loc>
+    <loc>https://developers.matterport.com/modelapi_models_ref.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/modelapi_ordering_addons.html</loc>
+    <loc>https://developers.matterport.com/modelapi_ordering_addons.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/modelapi_property_intelligence.html</loc>
+    <loc>https://developers.matterport.com/modelapi_property_intelligence.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/modelapi_pi_dimension_estimates.html</loc>
+    <loc>https://developers.matterport.com/modelapi_pi_dimension_estimates.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/modelapi_pi_room_names.html</loc>
+    <loc>https://developers.matterport.com/modelapi_pi_room_names.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/modelapi_pi_vector_data.html</loc>
+    <loc>https://developers.matterport.com/modelapi_pi_vector_data.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/modelapi_pi_mutations.html</loc>
+    <loc>https://developers.matterport.com/modelapi_pi_mutations.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/modelapi_postman.html</loc>
+    <loc>https://developers.matterport.com/modelapi_postman.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/modelapi_snippets.html</loc>
+    <loc>https://developers.matterport.com/modelapi_snippets.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/modelapi_views_and_layers.html</loc>
+    <loc>https://developers.matterport.com/modelapi_views_and_layers.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/mp_sdk.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/mp_sdk.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/oauth.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/oauth.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/oauth.irefreshobserver.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/oauth.irefreshobserver.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/oauth.itokenfetcher.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/oauth.itokenfetcher.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/oauth.itokenrefresher.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/oauth.itokenrefresher.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/oauth.tokeninfo.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/oauth.tokeninfo.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/oauth_home.html</loc>
+    <loc>https://developers.matterport.com/oauth_home.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/oauth_implementation.html</loc>
+    <loc>https://developers.matterport.com/oauth_implementation.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/oauth_model_api.html</loc>
+    <loc>https://developers.matterport.com/oauth_model_api.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/oauth_model_selector.html</loc>
+    <loc>https://developers.matterport.com/oauth_model_selector.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/oauth_private_model_embed.html</loc>
+    <loc>https://developers.matterport.com/oauth_private_model_embed.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/oauth_sdk_private_model.html</loc>
+    <loc>https://developers.matterport.com/oauth_sdk_private_model.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_tutorials_observables.html</loc>
+    <loc>https://developers.matterport.com/sdk_tutorials_observables.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_tutorials_pathfinding.html</loc>
+    <loc>https://developers.matterport.com/sdk_tutorials_pathfinding.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/pointer.colliders.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/pointer.colliders.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/pointer.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/pointer.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/renderer.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/renderer.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_tutorials_cursor.html</loc>
+    <loc>https://developers.matterport.com/sdk_tutorials_cursor.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/room.conversion.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/room.conversion.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/room.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/room.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/scene.component.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/scene.component.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/scene.emitpath.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/scene.emitpath.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/scene.eventpath.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/scene.eventpath.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/scene.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/scene.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/scene.icomponent.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/scene.icomponent.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/scene.icomponentcontext.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/scene.icomponentcontext.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/scene.icomponentdesc.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/scene.icomponentdesc.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/scene.icomponenteventspy.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/scene.icomponenteventspy.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/scene.inode.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/scene.inode.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/scene.inputpath.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/scene.inputpath.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/scene.interactiontype.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/scene.interactiontype.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/scene.iobject.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/scene.iobject.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/scene.isceneobjectspy.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/scene.isceneobjectspy.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/scene.outputpath.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/scene.outputpath.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/scene.pathbase.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/scene.pathbase.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/scene.pathinfo.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/scene.pathinfo.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/scene.pathtype.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/scene.pathtype.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/scene.scenecomponentoptions.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/scene.scenecomponentoptions.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_scene_intro.html</loc>
+    <loc>https://developers.matterport.com/sdk_scene_intro.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_client_release_notes.html</loc>
+    <loc>https://developers.matterport.com/sdk_client_release_notes.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_concepts.html</loc>
+    <loc>https://developers.matterport.com/sdk_concepts.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_creating_mattertags.html</loc>
+    <loc>https://developers.matterport.com/sdk_creating_mattertags.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_editing_mattertags.html</loc>
+    <loc>https://developers.matterport.com/sdk_editing_mattertags.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_examples_summary.html</loc>
+    <loc>https://developers.matterport.com/sdk_examples_summary.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_home.html</loc>
+    <loc>https://developers.matterport.com/sdk_home.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_intersection_inspector.html</loc>
+    <loc>https://developers.matterport.com/sdk_intersection_inspector.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_kitchen_sink.html</loc>
+    <loc>https://developers.matterport.com/sdk_kitchen_sink.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_navigation_controls.html</loc>
+    <loc>https://developers.matterport.com/sdk_navigation_controls.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_quickstart.html</loc>
+    <loc>https://developers.matterport.com/sdk_quickstart.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_reference_summary.html</loc>
+    <loc>https://developers.matterport.com/sdk_reference_summary.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_remote_control.html</loc>
+    <loc>https://developers.matterport.com/sdk_remote_control.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_sensors_source_areas.html</loc>
+    <loc>https://developers.matterport.com/sdk_sensors_source_areas.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_sensors_sweep_control.html</loc>
+    <loc>https://developers.matterport.com/sdk_sensors_sweep_control.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_sensors_tags_level_of_detail.html</loc>
+    <loc>https://developers.matterport.com/sdk_sensors_tags_level_of_detail.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_tags_quiz.html</loc>
+    <loc>https://developers.matterport.com/sdk_tags_quiz.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_tags_quiz_overlay.html</loc>
+    <loc>https://developers.matterport.com/sdk_tags_quiz_overlay.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_tutorials_package.html</loc>
+    <loc>https://developers.matterport.com/sdk_tutorials_package.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_types.html</loc>
+    <loc>https://developers.matterport.com/sdk_types.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdk_vocabulary.html</loc>
+    <loc>https://developers.matterport.com/sdk_vocabulary.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_architecture.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_architecture.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_content_attribution.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_content_attribution.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_custom_experience.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_custom_experience.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_examples_summary.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_examples_summary.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_home.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_home.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_html_livestream.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_html_livestream.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_iot_canvas.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_iot_canvas.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_local_webcam.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_local_webcam.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_quickstart.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_quickstart.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_security_camera.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_security_camera.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_tutorials_models.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_tutorials_models.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_tutorials_setting_up_embedly.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_tutorials_setting_up_embedly.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_tutorials_setup.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_tutorials_setup.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_tutorials_using_oauth.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_tutorials_using_oauth.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_tutorials_using_scene_objects.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_tutorials_using_scene_objects.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_tutorials_using_xr.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_tutorials_using_xr.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_types.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_types.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_virtual_staging.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_virtual_staging.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_webcomponent.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_webcomponent.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_webcomponent_advanced.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_webcomponent_advanced.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_webcomponent_migration.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_webcomponent_migration.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/sdkbundle_webcomponent_tutorial.html</loc>
+    <loc>https://developers.matterport.com/sdkbundle_webcomponent_tutorial.html</loc>
   </url>
+  
+  
   
   
   
+  <url>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/sensor.html</loc>
+  </url>
   
   
+  
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/sensor.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/sensor.isensor.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/sensor.isensor.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/sensor.isensorobserver.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/sensor.isensorobserver.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/sensor.isource.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/sensor.isource.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/sensor.sensortype.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/sensor.sensortype.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/sensor.sourcetype.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/sensor.sourcetype.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/settings.html</loc>
   </url>
+  
   
   
   
+  
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/settings.html</loc>
+    <loc>https://developers.matterport.com/subscribe.html</loc>
   </url>
+  
   
   
+  <url>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/sweep.alignment.html</loc>
+  </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/subscribe.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/sweep.conversion.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/sweep.alignment.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/sweep.event.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/sweep.conversion.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/sweep.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/sweep.event.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/sweep.placement.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/sweep.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/sweep.transition.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/sweep.placement.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/tag.attachmenttype.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/sweep.transition.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/tag.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/tag.attachmenttype.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/tag.imessenger.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/tag.html</loc>
+    <loc>https://developers.matterport.com/tags_icons_reference.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/tag.imessenger.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/tour.event.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/tags_icons_reference.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/tour.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/tour.event.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/tour.playstate.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/tour.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/modules/view.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/enums/tour.playstate.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/view.layer.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/modules/view.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/view.layertype.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/view.layer.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/interfaces/view.view-1.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/docs/reference/current/interfaces/view.view-1.html</loc>
+    <loc>https://developers.matterport.com/docs/reference/current/enums/view.viewtype.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/webhooks_home.html</loc>
+    <loc>https://developers.matterport.com/webhooks_home.html</loc>
   </url>
   
   
   
   <url>
-    <loc>https://docs.matterport.com/assets/css/style.css</loc>
+    <loc>https://developers.matterport.com/webhooks_v1.html</loc>
   </url>
   
   

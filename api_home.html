@@ -38,7 +38,15 @@
 <script src="/js/customscripts.js"></script>
 <script src="/js/mermaid.min.js"></script>
 
-<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg" />
+<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg?dark" media="(prefers-color-scheme: dark)" />
+<link rel="shortcut icon" href="/images/favicons/favicon.ico" sizes="32x32" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+<link rel="manifest" href="/images/favicons/favicon.webmanifest"/>
+<meta name="msapplication-TileColor" content="#ff3158" />
+<meta name="theme-color" content="#ffffff" />
+
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,7 +55,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<link rel="alternate" type="application/rss+xml" title="showcase-sdk" href="https://docs.matterport.comfeed.xml">
+<link rel="alternate" type="application/rss+xml" title="" href="https://developers.matterport.comfeed.xml">
 
     <script>
       $(document).ready(function () {
@@ -101,10 +109,10 @@
 <nav class="navbar navbar-inverse navbar-static-top">
   <div>
     <div class="row">
-      <a class="navbrand col-md-3" href="/"
-        >&nbsp;<img
+      <a class="navbrand col-md-3" href="https://developers.matterport.com/"
+        ><img
           class="navbar-image"
-          src="/images/MP-logo_H_lock-RGB_white.svg"
+          src="/images/Matterport-Logo-White.svg"
         /><span class="projectTitle"> </span></a
       >
       <div class="dev-nav-links col-md-6">
@@ -112,15 +120,15 @@
           <div class="dropdown ">
             <a class="dropbtn active" href="index.html">SDK Docs</a>
             <div class="dropdown-content">
-              <a href="https://docs.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
-              <a href="https://docs.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
-              <a href="https://docs.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
+              <a href="https://developers.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
+              <a href="https://developers.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
+              <a href="https://developers.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
             </div>
           </div>
           <div class="dropdown">
             <a class="dropbtn" href="api_home.html">API Docs</a>
             <div class="dropdown-content">
-              <a href="https://docs.matterport.com/api_home.html">API Overview</a>
+              <a href="https://developers.matterport.com/api_home.html">API Overview</a>
               <a href="https://api.matterport.com/docs/reference" target="_blank">API Reference</a>
               <a href="https://api.matterport.com/model/graphiql" target="_blank">Interactive Console</a>
             </div>
@@ -129,10 +137,10 @@
             <a class="dropbtn" href="https://matterport.com/legal/platform-subscription-agreement#sdk-terms" target="_blank">Terms</a>
           </div>
           <div class="dropdown">
-            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:developer@matterport.com?subject=Showcase SDK feedback&body=I have some feedback about the Matterport APIs Overview page: ' + window.location.href;">Feedback</a>
+            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:MP-developer@costar.com?subject=Showcase SDK feedback&body=I have some feedback about the Matterport APIs Overview page: ' + window.location.href;">Feedback</a>
           </div>
           <div class="dropdown">
-            <a class="dropbtn" href="https://docs.matterport.com/subscribe.html" >
+            <a class="dropbtn" href="https://developers.matterport.com/subscribe.html" >
               Subscribe
               <sup class="subscribe-sup" style="font-size: 10px; color: #ff3158">New</sup>
             </a>
@@ -722,6 +730,12 @@
                   
                   
                   
+                  <li><a title="GeoCoordinates" href="/modelapi_geocoordinates.html">GeoCoordinates</a></li>
+                  
+                  
+                  
+                  
+                  
                   <li><a title="Views and Layers" href="/modelapi_views_and_layers.html">Views and Layers</a></li>
                   
                   
@@ -735,6 +749,48 @@
                   
                   
                   <li><a title="Postman Collection" href="/modelapi_postman.html">Postman Collection</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Account API" href="#">Account API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Capture Services API" href="#">Capture Services API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Overview" href="/capture_services_api.html">Overview</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/capture_services_queries.html">Sample Queries</a></li>
                   
                   
                   
@@ -783,18 +839,12 @@
           
           
           <li class="subfolders">
-              <a title="Account API" href="#">Account API</a>
+              <a title="Custom Roles" href="#">Custom Roles</a>
               <ul>
                   
                   
                   
-                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
-                  
-                  
-                  
-                  
-                  
-                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  <li><a title="Overview and Examples" href="/custom_roles_overview.html">Overview and Examples</a></li>
                   
                   
                   
@@ -885,7 +935,14 @@
           
           
           
-          <li><a title="Overview" href="/webhooks_home.html">Overview</a></li>
+          <li><a title="Webhooks v2" href="/webhooks_home.html">Webhooks v2</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Webhooks v1 (Deprecated)" href="/webhooks_v1.html">Webhooks v1 (Deprecated)</a></li>
           
           
           
@@ -970,13 +1027,34 @@ noResultsText: '<li><div>No results found.<div></li>',
 
 <p>From directly accessing data, to modifying content, to managing a model’s status, to purchasing value-added services, we want our developers to have full control.</p>
 
-<h2 id="documentation">Documentation</h2>
+<h2 id="graphql">GraphQL</h2>
 
-<p>You can learn more about our current GraphQL API capabilities in our <a href="https://api.matterport.com/docs/reference" target="_blank">reference guide</a>. This also grants you access to our interactive console, where you can experiment with the GraphQL API on a limited basis. </p>
+<p>Matterport’s APIs are provided with a GraphQL API interface.  GraphQL allows developers to make declarative queries to fetch the exact data needed using a single endpoint.  Compared to a REST API, which may require round-trip requests to many endpoints, GraphQL can get all of the data that your application needs with a single request.</p>
 
-<p>To access the interactive console, you need to be logged into Matterport Cloud (my.matterport.com) with administrator credentials.</p>
+<p>In addition to queries that fetch data, our APIs also provide mutations, which are requests to modify data.  A mutation may be used to update data related to a model or may trigger an action such as purchasing an add-on or scheduling a Capture Services job.</p>
 
 <p><a href="https://graphql.org/learn/queries/" target="_blank">Learn more about constructing GraphQL queries and mutations</a>.</p>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>Each of our GraphQL APIs contain a schema that contains a complete set of definitions for all queries and mutations that a user can perform.</p>
+
+<p>We provide an online schema reference for each of our public APIs that you can access at: 
+ <a href="https://api.matterport.com/docs/reference" target="_blank">https://api.matterport.com/docs/reference</a>.</p>
+
+<p>If you are logged into your Matterport Account with administrator access, you will be able to select each API that you have access to.</p>
+
+<p>Our Model API is available to users at all account levels.  Enterprise customers also have access to Account API.  We also provide access to the Capture Services API by request for customers that leverage our on-demand at an Enterprise level.</p>
+
+<p>You can also explore the schema and perform queries with each API via GraphiQL, an online GraphQL client that we provide customers access to.</p>
+
+<ul>
+  <li><a href="https://api.matterport.com/model/graphiql">Model API GraphiQL</a></li>
+  <li><a href="https://api.matterport.com/account/graphiql">Account API GraphiQL</a></li>
+  <li><a href="https://api.matterport.com/capturesvcs/graphiql">Capture Services API GraphiQL</a></li>
+</ul>
+
+<p>You can also explore our APIs and build and test queries with popular GraphQL clients such as [Postman](https://www.postman.com/]{:target=”_blank”}, [Altair][https://altairgraphql.dev/]{:target=”_blank”} or <a href="https://insomnia.rest/" taget="_blank">Insomnia</a>.  These clients leverage the provided schema to provide query completion through introspection along with an interactive reference guide, similar to what you will find in the GraphiQL Console.  Certain clients will also generate ready-to-use code that you can use within your applications.</p>
 
 <h2 id="generate-api-keys">Generate API Keys</h2>
 
@@ -995,7 +1073,7 @@ noResultsText: '<li><div>No results found.<div></li>',
   <li><strong>Token Secret</strong> - This is presented only once, so make sure to copy and save it securely.</li>
 </ul>
 
-<p>API keys are “admin” or “all-access” keys. This means they grant users administrative credentials to the customer account. Using the API with the generated API key, developers can perform all administrative functions using the API, including archiving models and purchasing floorplans and MatterPaks.</p>
+<p>API keys are “admin” or “all-access” keys. This means they grant users administrative credentials to the customer account. Using the API with the generated API key, developers can perform all administrative functions using the API, including archiving models, purchasing floorplans and Matterpaks.</p>
 
 <p>It’s important to remember this when sharing your API keys. We strongly advise that you don’t share your API keys with third-party companies or developers.</p>
 
@@ -1010,6 +1088,7 @@ noResultsText: '<li><div>No results found.<div></li>',
     <ul>
       <li><strong>Model API:</strong> https://api.matterport.com/api/models/graph</li>
       <li><strong>Account API:</strong> https://api.matterport.com/api/accounts/graph (Enterprise Only)</li>
+      <li><strong>Capture Services API</strong> https://api.matterport.com/api/capturesvcs/graph (Enterprise Only)</li>
     </ul>
   </li>
   <li>Use the Token ID as the username.</li>
@@ -1018,10 +1097,6 @@ noResultsText: '<li><div>No results found.<div></li>',
 </ul>
 
 <p>All standard http libraries should support this process, but make sure to set your preemptive authorization to “true”.</p>
-
-<h2 id="code-snippet-examples">Code Snippet Examples</h2>
-
-<p>To get started, refer to <a href="modelapi_snippets.html">these code snippet examples</a></p>
 
 <h2 id="error-codes">Error Codes</h2>
 
@@ -1148,7 +1223,7 @@ curl \
 
   <p>This is a bit confusing, but is expected behavior. The Showcase SDK is designed to work from the perspective of the camera, so its coordinate system rotates to determine the Y axis (height) and Z axis (depth). If you were to download a MatterPak, you would find all of the coordinate information with Z-up. The SDK hides this by only exposing certain pieces of information.</p>
 
-  <p><img src="https://docs.matterport.com//images/xyz-coordinate-system.png" alt="Model API vs Showcase Coordinate System" /></p>
+  <p><img src="https://developers.matterport.com//images/xyz-coordinate-system.png" alt="Model API vs Showcase Coordinate System" /></p>
 
   <p>The pseudo-code for doing the translation is as follows:</p>
 
@@ -1178,41 +1253,41 @@ def fromApiToSdk(x, y, z) = [ x, z, -y ]
 
   <p>Use the query below:</p>
 
-  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span> 
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">requests</span> 
 
-<span class="n">token</span> <span class="o">=</span> <span class="s">'Your API token'</span> 
-<span class="n">secret</span> <span class="o">=</span> <span class="s">'Your secret API token'</span> 
-<span class="n">endpoint</span> <span class="o">=</span> <span class="s">'https://api.matterport.com/api/models/graph'</span>
-<span class="n">query</span> <span class="o">=</span> <span class="p">{</span> <span class="s">'query'</span> <span class="p">:</span>
-    <span class="s">'''
+<span class="n">token</span> <span class="o">=</span> <span class="sh">'</span><span class="s">Your API token</span><span class="sh">'</span> 
+<span class="n">secret</span> <span class="o">=</span> <span class="sh">'</span><span class="s">Your secret API token</span><span class="sh">'</span> 
+<span class="n">endpoint</span> <span class="o">=</span> <span class="sh">'</span><span class="s">https://api.matterport.com/api/models/graph</span><span class="sh">'</span>
+<span class="n">query</span> <span class="o">=</span> <span class="p">{</span> <span class="sh">'</span><span class="s">query</span><span class="sh">'</span> <span class="p">:</span>
+    <span class="sh">'''</span><span class="s">
     query {
-      models(query: "*"){
+      models(query: </span><span class="sh">"</span><span class="s">*</span><span class="sh">"</span><span class="s">){
         totalResults
         results{ id }
       }
     }
-    '''</span>
+    </span><span class="sh">'''</span>
 <span class="p">}</span>
 <span class="n">auth</span> <span class="o">=</span> <span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">secret</span><span class="p">)</span>
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">,</span> <span class="s">'accept'</span><span class="p">:</span><span class="s">'gzip'</span><span class="p">}</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="n">endpoint</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="n">auth</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span> 
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="sh">'</span><span class="s">content-type</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">application/json</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">accept</span><span class="sh">'</span><span class="p">:</span><span class="sh">'</span><span class="s">gzip</span><span class="sh">'</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="n">endpoint</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="n">auth</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span> 
 
-<span class="k">if</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">ok</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">json</span><span class="p">())</span>
+<span class="nf">if</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">ok</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="nf">json</span><span class="p">())</span>
 <span class="k">else</span><span class="p">:</span> 
-    <span class="k">print</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">status_code</span><span class="p">)</span>
 </code></pre></div>  </div>
 </details>
 
 <details>
   <summary>How do I query all models with Node.js using fetch?</summary>
 
-  <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">{</span> <span class="na">default</span><span class="p">:</span> <span class="nx">fetch</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">node-fetch</span><span class="dl">"</span><span class="p">);</span>
+  <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">{</span> <span class="na">default</span><span class="p">:</span> <span class="nx">fetch</span> <span class="p">}</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">node-fetch</span><span class="dl">"</span><span class="p">);</span>
 <span class="kd">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Your API token</span><span class="dl">"</span><span class="p">;</span>
 <span class="kd">const</span> <span class="nx">secret</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Your secret API token</span><span class="dl">"</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">auth</span> <span class="o">=</span> <span class="nx">Buffer</span><span class="p">.</span><span class="k">from</span><span class="p">(</span><span class="nx">token</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">:</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">secret</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="dl">'</span><span class="s1">base64</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">auth</span> <span class="o">=</span> <span class="nx">Buffer</span><span class="p">.</span><span class="k">from</span><span class="p">(</span><span class="nx">token</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">:</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">secret</span><span class="p">).</span><span class="nf">toString</span><span class="p">(</span><span class="dl">'</span><span class="s1">base64</span><span class="dl">'</span><span class="p">);</span>
 <span class="kd">const</span> <span class="nx">endpoint</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">https://api.matterport.com/api/models/graph</span><span class="dl">"</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">body</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+<span class="kd">const</span> <span class="nx">body</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nf">stringify</span><span class="p">({</span>
   <span class="na">query</span><span class="p">:</span> <span class="s2">`
     query {
       models(query: "*"){
@@ -1223,7 +1298,7 @@ def fromApiToSdk(x, y, z) = [ x, z, -y ]
   `</span>
 <span class="p">});</span>
 
-<span class="nx">fetch</span><span class="p">(</span><span class="nx">endpoint</span><span class="p">,</span> <span class="p">{</span>
+<span class="nf">fetch</span><span class="p">(</span><span class="nx">endpoint</span><span class="p">,</span> <span class="p">{</span>
     <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">,</span>
     <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
       <span class="dl">'</span><span class="s1">Authorization</span><span class="dl">'</span><span class="p">:</span> <span class="s2">`Basic </span><span class="p">${</span><span class="nx">auth</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
@@ -1231,8 +1306,8 @@ def fromApiToSdk(x, y, z) = [ x, z, -y ]
     <span class="p">},</span>
     <span class="na">body</span><span class="p">:</span> <span class="nx">body</span><span class="p">,</span>
   <span class="p">})</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
+  <span class="p">.</span><span class="nf">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nf">json</span><span class="p">())</span>
+  <span class="p">.</span><span class="nf">then</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
 </code></pre></div>  </div>
 </details>
 
@@ -1281,9 +1356,8 @@ def fromApiToSdk(x, y, z) = [ x, z, -y ]
 <footer>
             <div class="row">
                 <div class="col-lg-12 footer">
-               &copy;2024 Matterport, Inc. All rights reserved. <br />
- Site last generated: Jul 30, 2024 <br />
-<p><img class="footer-logo" src="/images/MP-logo_icon-RGB_black.svg" alt="Company logo"/></p>
+               &copy;2025 Matterport, Inc. All rights reserved. <br />
+ Site last generated: Dec 15, 2025
                 </div>
             </div>
 </footer>

@@ -38,7 +38,15 @@
 <script src="/js/customscripts.js"></script>
 <script src="/js/mermaid.min.js"></script>
 
-<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg" />
+<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg?dark" media="(prefers-color-scheme: dark)" />
+<link rel="shortcut icon" href="/images/favicons/favicon.ico" sizes="32x32" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+<link rel="manifest" href="/images/favicons/favicon.webmanifest"/>
+<meta name="msapplication-TileColor" content="#ff3158" />
+<meta name="theme-color" content="#ffffff" />
+
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,7 +55,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<link rel="alternate" type="application/rss+xml" title="showcase-sdk" href="https://docs.matterport.comfeed.xml">
+<link rel="alternate" type="application/rss+xml" title="" href="https://developers.matterport.comfeed.xml">
 
     <script>
       $(document).ready(function () {
@@ -101,10 +109,10 @@
 <nav class="navbar navbar-inverse navbar-static-top">
   <div>
     <div class="row">
-      <a class="navbrand col-md-3" href="/"
-        >&nbsp;<img
+      <a class="navbrand col-md-3" href="https://developers.matterport.com/"
+        ><img
           class="navbar-image"
-          src="/images/MP-logo_H_lock-RGB_white.svg"
+          src="/images/Matterport-Logo-White.svg"
         /><span class="projectTitle"> </span></a
       >
       <div class="dev-nav-links col-md-6">
@@ -112,15 +120,15 @@
           <div class="dropdown ">
             <a class="dropbtn active" href="index.html">SDK Docs</a>
             <div class="dropdown-content">
-              <a href="https://docs.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
-              <a href="https://docs.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
-              <a href="https://docs.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
+              <a href="https://developers.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
+              <a href="https://developers.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
+              <a href="https://developers.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
             </div>
           </div>
           <div class="dropdown">
             <a class="dropbtn" href="api_home.html">API Docs</a>
             <div class="dropdown-content">
-              <a href="https://docs.matterport.com/api_home.html">API Overview</a>
+              <a href="https://developers.matterport.com/api_home.html">API Overview</a>
               <a href="https://api.matterport.com/docs/reference" target="_blank">API Reference</a>
               <a href="https://api.matterport.com/model/graphiql" target="_blank">Interactive Console</a>
             </div>
@@ -129,10 +137,10 @@
             <a class="dropbtn" href="https://matterport.com/legal/platform-subscription-agreement#sdk-terms" target="_blank">Terms</a>
           </div>
           <div class="dropdown">
-            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:developer@matterport.com?subject=Showcase SDK feedback&body=I have some feedback about the Typescript Declarations page: ' + window.location.href;">Feedback</a>
+            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:MP-developer@costar.com?subject=Showcase SDK feedback&body=I have some feedback about the Typescript Declarations page: ' + window.location.href;">Feedback</a>
           </div>
           <div class="dropdown">
-            <a class="dropbtn" href="https://docs.matterport.com/subscribe.html" >
+            <a class="dropbtn" href="https://developers.matterport.com/subscribe.html" >
               Subscribe
               <sup class="subscribe-sup" style="font-size: 10px; color: #ff3158">New</sup>
             </a>
@@ -722,6 +730,12 @@
                   
                   
                   
+                  <li><a title="GeoCoordinates" href="/modelapi_geocoordinates.html">GeoCoordinates</a></li>
+                  
+                  
+                  
+                  
+                  
                   <li><a title="Views and Layers" href="/modelapi_views_and_layers.html">Views and Layers</a></li>
                   
                   
@@ -735,6 +749,48 @@
                   
                   
                   <li><a title="Postman Collection" href="/modelapi_postman.html">Postman Collection</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Account API" href="#">Account API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Capture Services API" href="#">Capture Services API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Overview" href="/capture_services_api.html">Overview</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/capture_services_queries.html">Sample Queries</a></li>
                   
                   
                   
@@ -783,18 +839,12 @@
           
           
           <li class="subfolders">
-              <a title="Account API" href="#">Account API</a>
+              <a title="Custom Roles" href="#">Custom Roles</a>
               <ul>
                   
                   
                   
-                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
-                  
-                  
-                  
-                  
-                  
-                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  <li><a title="Overview and Examples" href="/custom_roles_overview.html">Overview and Examples</a></li>
                   
                   
                   
@@ -885,7 +935,14 @@
           
           
           
-          <li><a title="Overview" href="/webhooks_home.html">Overview</a></li>
+          <li><a title="Webhooks v2" href="/webhooks_home.html">Webhooks v2</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Webhooks v1 (Deprecated)" href="/webhooks_v1.html">Webhooks v1 (Deprecated)</a></li>
           
           
           
@@ -985,10 +1042,12 @@ $('#toc').on('click', 'a', function() {
 
     
 
-   <h2 id="acquiring-the-type-declarations">Acquiring the Type Declarations</h2>
-<p>Our current types are located <a href="https://static.matterport.com/showcase-sdk/types/24.6.4_webgl-245-g7e4b22fe23/sdk.d.ts">here</a></p>
+   <p>The latest types are included with each SDK Bundle distribution and are automatically downloaded when installing the <a href="https://www.npmjs.com/package/@matterport/sdk" target="_blank">SDK for Embeds NPM Package</a>.</p>
+
+<p><a href="https://api.matterport.com/sdk/types/sdk.d.ts">Download the latest type definitions</a>.</p>
 
 <h2 id="why-use-types">Why Use Types?</h2>
+
 <h3 id="code-completion-or-intellisense">Code completion or Intellisense</h3>
 <p>Make fewer mistakes by using your IDE to suggest the available properties on the sdk.<br />
 <img src="images/types-autocomplete.png" /><br />
@@ -1004,12 +1063,12 @@ $('#toc').on('click', 'a', function() {
 
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">ShowcaseEmbedWindow</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./mp/sdk</span><span class="dl">'</span><span class="p">;</span>
 
-<span class="kd">const</span> <span class="nx">showcaseIframe</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">showcase-iframe</span><span class="dl">'</span><span class="p">)</span> <span class="k">as</span> <span class="nx">HTMLIFrameElement</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">embeddingWindow</span> <span class="o">=</span> <span class="nb">window</span> <span class="k">as</span> <span class="nx">ShowcaseEmbedWindow</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">mpSdk</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">embeddingWindow</span><span class="p">.</span><span class="nx">MP_SDK</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="nx">showcaseIframe</span><span class="p">,</span> <span class="dl">'</span><span class="s1">{YOUR SDK KEY}</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">showcaseIframe</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">showcase-iframe</span><span class="dl">'</span><span class="p">)</span> <span class="kd">as </span><span class="nx">HTMLIFrameElement</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">embeddingWindow</span> <span class="o">=</span> <span class="nb">window</span> <span class="kd">as </span><span class="nx">ShowcaseEmbedWindow</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">mpSdk</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">embeddingWindow</span><span class="p">.</span><span class="nx">MP_SDK</span><span class="p">.</span><span class="nf">connect</span><span class="p">(</span><span class="nx">showcaseIframe</span><span class="p">,</span> <span class="dl">'</span><span class="s1">{YOUR SDK KEY}</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="c1">// start using mpSdk</span>
-<span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Sweep</span><span class="p">.</span><span class="nx">moveTo</span><span class="p">(</span><span class="dl">'</span><span class="s1">sweep1234</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">transition</span><span class="p">:</span> <span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Sweep</span><span class="p">.</span><span class="nx">TransitionType</span><span class="p">.</span><span class="nx">FADEOUT</span> <span class="p">});</span>
+<span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Sweep</span><span class="p">.</span><span class="nf">moveTo</span><span class="p">(</span><span class="dl">'</span><span class="s1">sweep1234</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">transition</span><span class="p">:</span> <span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Sweep</span><span class="p">.</span><span class="nx">TransitionType</span><span class="p">.</span><span class="nx">FADEOUT</span> <span class="p">});</span>
 </code></pre></div></div>
 
 <h2 id="using-individual-namespaces">Using Individual Namespaces</h2>
@@ -1018,23 +1077,23 @@ All namespaces and their types are also available through the root <code class="
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// tourControls.ts</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">Tour</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./mp/sdk</span><span class="dl">'</span>
 
-<span class="k">export</span> <span class="kd">function</span> <span class="nx">startTour</span><span class="p">(</span><span class="nx">tour</span><span class="p">:</span> <span class="nx">Tour</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">tour</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
+<span class="k">export</span> <span class="kd">function</span> <span class="nf">startTour</span><span class="p">(</span><span class="nx">tour</span><span class="p">:</span> <span class="nx">Tour</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">tour</span><span class="p">.</span><span class="nf">start</span><span class="p">();</span>
 <span class="p">}</span>
 
 <span class="c1">// use the Snapshot type through the Tour type</span>
-<span class="k">export</span> <span class="kd">function</span> <span class="nx">getTourSnapshots</span><span class="p">(</span><span class="nx">tour</span><span class="p">:</span> <span class="nx">Tour</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">Tour</span><span class="p">.</span><span class="nx">Snapshot</span><span class="p">[]</span><span class="o">&gt;</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">tour</span><span class="p">.</span><span class="nx">getData</span><span class="p">();</span>
+<span class="k">export</span> <span class="kd">function</span> <span class="nf">getTourSnapshots</span><span class="p">(</span><span class="nx">tour</span><span class="p">:</span> <span class="nx">Tour</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">Tour</span><span class="p">.</span><span class="nx">Snapshot</span><span class="p">[]</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">tour</span><span class="p">.</span><span class="nf">getData</span><span class="p">();</span>
 <span class="p">}</span>
 
 <span class="c1">// index.ts</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">MpSdk</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./mp/sdk</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">startTour</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./tourControls.ts</span><span class="dl">'</span>
 
-<span class="k">async</span> <span class="kd">function</span> <span class="nx">useTourControls</span><span class="p">(</span><span class="nx">mpSdk</span><span class="p">:</span> <span class="nx">MpSdk</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">startTour</span><span class="p">(</span><span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Tour</span><span class="p">);</span>
+<span class="k">async</span> <span class="kd">function</span> <span class="nf">useTourControls</span><span class="p">(</span><span class="nx">mpSdk</span><span class="p">:</span> <span class="nx">MpSdk</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nf">startTour</span><span class="p">(</span><span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Tour</span><span class="p">);</span>
   <span class="c1">// use the Snapshot type through the MpSdk type</span>
-  <span class="kd">const</span> <span class="nx">tourSnapshots</span><span class="p">:</span> <span class="nx">MpSdk</span><span class="p">.</span><span class="nx">Tour</span><span class="p">.</span><span class="nx">Snapshot</span><span class="p">[]</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">getTourSnapshots</span><span class="p">(</span><span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Tour</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">tourSnapshots</span><span class="p">:</span> <span class="nx">MpSdk</span><span class="p">.</span><span class="nx">Tour</span><span class="p">.</span><span class="nx">Snapshot</span><span class="p">[]</span> <span class="o">=</span> <span class="k">await</span> <span class="nf">getTourSnapshots</span><span class="p">(</span><span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Tour</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -1053,9 +1112,8 @@ All namespaces and their types are also available through the root <code class="
 <footer>
             <div class="row">
                 <div class="col-lg-12 footer">
-               &copy;2024 Matterport, Inc. All rights reserved. <br />
- Site last generated: Jul 30, 2024 <br />
-<p><img class="footer-logo" src="/images/MP-logo_icon-RGB_black.svg" alt="Company logo"/></p>
+               &copy;2025 Matterport, Inc. All rights reserved. <br />
+ Site last generated: Dec 15, 2025
                 </div>
             </div>
 </footer>

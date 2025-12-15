@@ -297,7 +297,7 @@ aside div#mysidebar > li ul li.subfolders > a {
   flex-direction: row-reverse;
 }
 aside div#mysidebar > li ul li ul li a {
-  padding-left: 80px;
+  padding-left: 60px;
 }
 aside div#mysidebar > li:first-of-type {
   margin-top: 20px;
@@ -325,7 +325,6 @@ aside div#mysidebar > li:first-of-type {
 .navbar > div:first-child > div:first-child .navbrand .navbar-image {
   height: 35px;
   margin: 0;
-  margin-left: -7px;
 }
 .navbar > div:first-child > div:first-child .dev-nav-links .dropdown-items {
   position: relative;

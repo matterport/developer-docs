@@ -180,6 +180,17 @@
 
 
 {
+"title": "Enumeration: App.Feature",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/app.feature.html",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "Namespace: App",
 "tags": "",
 "keywords": "",
@@ -246,6 +257,28 @@
 
 
 {
+"title": "Capture Services APIs Overview",
+"tags": "",
+"keywords": "",
+"url": "/capture_services_api.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Capture Services Sample Queries",
+"tags": "",
+"keywords": "",
+"url": "/capture_services_queries.html",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "Change Log",
 "tags": "",
 "keywords": "",
@@ -305,6 +338,61 @@
 "tags": "",
 "keywords": "",
 "url": "/docs/reference/current/modules/conversion.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: TransformType.TransformType.CameraRotation",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/conversion.transformtype.camerarotation.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: TransformType.TransformType.Coordinates",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/conversion.transformtype.coordinates.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Namespace: Conversion.TransformType",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/modules/conversion.transformtype.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: TransformType.TransformType.SweepRotation",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/conversion.transformtype.sweeprotation.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Custom Roles",
+"tags": "",
+"keywords": "",
+"url": "/custom_roles_overview.html",
 "summary": ""
 }
 ,
@@ -839,6 +927,28 @@
 "tags": "",
 "keywords": "",
 "url": "/modelapi_changelog.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Model API - Geo Coordinates",
+"tags": "",
+"keywords": "",
+"url": "/modelapi_geocoordinates.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Model API - Geo Coordinates",
+"tags": "",
+"keywords": "",
+"url": "/modelapi_geolocation.html",
 "summary": ""
 }
 ,
@@ -2104,10 +2214,32 @@
 
 
 {
+"title": "Enumeration: View.LayerType",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/view.layertype.html",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "Interface: View.View",
 "tags": "",
 "keywords": "",
 "url": "/docs/reference/current/interfaces/view.view-1.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Enumeration: View.ViewType",
+"tags": "",
+"keywords": "",
+"url": "/docs/reference/current/enums/view.viewtype.html",
 "summary": ""
 }
 ,
@@ -2126,10 +2258,10 @@
 
 
 {
-"title": "",
+"title": "Matterport Webhooks v1 (Deprecated)",
 "tags": "",
 "keywords": "",
-"url": "/assets/css/style.css",
+"url": "/webhooks_v1.html",
 "summary": ""
 }
 

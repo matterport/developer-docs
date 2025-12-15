@@ -38,7 +38,15 @@
 <script src="/js/customscripts.js"></script>
 <script src="/js/mermaid.min.js"></script>
 
-<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg" />
+<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg?dark" media="(prefers-color-scheme: dark)" />
+<link rel="shortcut icon" href="/images/favicons/favicon.ico" sizes="32x32" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+<link rel="manifest" href="/images/favicons/favicon.webmanifest"/>
+<meta name="msapplication-TileColor" content="#ff3158" />
+<meta name="theme-color" content="#ffffff" />
+
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,7 +55,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<link rel="alternate" type="application/rss+xml" title="showcase-sdk" href="https://docs.matterport.comfeed.xml">
+<link rel="alternate" type="application/rss+xml" title="" href="https://developers.matterport.comfeed.xml">
 
     <script>
       $(document).ready(function () {
@@ -101,10 +109,10 @@
 <nav class="navbar navbar-inverse navbar-static-top">
   <div>
     <div class="row">
-      <a class="navbrand col-md-3" href="/"
-        >&nbsp;<img
+      <a class="navbrand col-md-3" href="https://developers.matterport.com/"
+        ><img
           class="navbar-image"
-          src="/images/MP-logo_H_lock-RGB_white.svg"
+          src="/images/Matterport-Logo-White.svg"
         /><span class="projectTitle"> </span></a
       >
       <div class="dev-nav-links col-md-6">
@@ -112,15 +120,15 @@
           <div class="dropdown ">
             <a class="dropbtn active" href="index.html">SDK Docs</a>
             <div class="dropdown-content">
-              <a href="https://docs.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
-              <a href="https://docs.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
-              <a href="https://docs.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
+              <a href="https://developers.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
+              <a href="https://developers.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
+              <a href="https://developers.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
             </div>
           </div>
           <div class="dropdown">
             <a class="dropbtn" href="api_home.html">API Docs</a>
             <div class="dropdown-content">
-              <a href="https://docs.matterport.com/api_home.html">API Overview</a>
+              <a href="https://developers.matterport.com/api_home.html">API Overview</a>
               <a href="https://api.matterport.com/docs/reference" target="_blank">API Reference</a>
               <a href="https://api.matterport.com/model/graphiql" target="_blank">Interactive Console</a>
             </div>
@@ -129,10 +137,10 @@
             <a class="dropbtn" href="https://matterport.com/legal/platform-subscription-agreement#sdk-terms" target="_blank">Terms</a>
           </div>
           <div class="dropdown">
-            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:developer@matterport.com?subject=Showcase SDK feedback&body=I have some feedback about the Pathfinding page: ' + window.location.href;">Feedback</a>
+            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:MP-developer@costar.com?subject=Showcase SDK feedback&body=I have some feedback about the Pathfinding page: ' + window.location.href;">Feedback</a>
           </div>
           <div class="dropdown">
-            <a class="dropbtn" href="https://docs.matterport.com/subscribe.html" >
+            <a class="dropbtn" href="https://developers.matterport.com/subscribe.html" >
               Subscribe
               <sup class="subscribe-sup" style="font-size: 10px; color: #ff3158">New</sup>
             </a>
@@ -722,6 +730,12 @@
                   
                   
                   
+                  <li><a title="GeoCoordinates" href="/modelapi_geocoordinates.html">GeoCoordinates</a></li>
+                  
+                  
+                  
+                  
+                  
                   <li><a title="Views and Layers" href="/modelapi_views_and_layers.html">Views and Layers</a></li>
                   
                   
@@ -735,6 +749,48 @@
                   
                   
                   <li><a title="Postman Collection" href="/modelapi_postman.html">Postman Collection</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Account API" href="#">Account API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Capture Services API" href="#">Capture Services API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Overview" href="/capture_services_api.html">Overview</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/capture_services_queries.html">Sample Queries</a></li>
                   
                   
                   
@@ -783,18 +839,12 @@
           
           
           <li class="subfolders">
-              <a title="Account API" href="#">Account API</a>
+              <a title="Custom Roles" href="#">Custom Roles</a>
               <ul>
                   
                   
                   
-                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
-                  
-                  
-                  
-                  
-                  
-                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  <li><a title="Overview and Examples" href="/custom_roles_overview.html">Overview and Examples</a></li>
                   
                   
                   
@@ -885,7 +935,14 @@
           
           
           
-          <li><a title="Overview" href="/webhooks_home.html">Overview</a></li>
+          <li><a title="Webhooks v2" href="/webhooks_home.html">Webhooks v2</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Webhooks v1 (Deprecated)" href="/webhooks_v1.html">Webhooks v1 (Deprecated)</a></li>
           
           
           
@@ -1024,7 +1081,7 @@ graph LR
 <h4 id="creating-the-graph">Creating the Graph</h4>
 <p>To get started, we create an empty graph using the <a href="docs/reference/current/modules/graph.html#createdirectedgraph"><code class="language-plaintext highlighter-rouge">Graph.createDirectedGraph()</code></a> function.</p>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">graph</span> <span class="o">=</span> <span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Graph</span><span class="p">.</span><span class="nx">createDirectedGraph</span><span class="p">();</span>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">graph</span> <span class="o">=</span> <span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Graph</span><span class="p">.</span><span class="nf">createDirectedGraph</span><span class="p">();</span>
 </code></pre></div></div>
 <p>With an empty graph, we can start adding the vertices.</p>
 
@@ -1033,10 +1090,10 @@ graph LR
 
 <p>Let’s add vertices <code class="language-plaintext highlighter-rouge">'A' - 'D'</code></p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// add a single vertex</span>
-<span class="nx">graph</span><span class="p">.</span><span class="nx">addVertex</span><span class="p">({</span> <span class="na">id</span><span class="p">:</span> <span class="dl">'</span><span class="s1">A</span><span class="dl">'</span><span class="p">,</span> <span class="na">data</span><span class="p">:</span> <span class="mi">0</span> <span class="p">});</span>
+<span class="nx">graph</span><span class="p">.</span><span class="nf">addVertex</span><span class="p">({</span> <span class="na">id</span><span class="p">:</span> <span class="dl">'</span><span class="s1">A</span><span class="dl">'</span><span class="p">,</span> <span class="na">data</span><span class="p">:</span> <span class="mi">0</span> <span class="p">});</span>
 
 <span class="c1">// add multiple vertices</span>
-<span class="nx">graph</span><span class="p">.</span><span class="nx">addVertex</span><span class="p">(</span>
+<span class="nx">graph</span><span class="p">.</span><span class="nf">addVertex</span><span class="p">(</span>
   <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="dl">'</span><span class="s1">B</span><span class="dl">'</span><span class="p">,</span> <span class="na">data</span><span class="p">:</span> <span class="mi">1</span> <span class="p">},</span>
   <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="dl">'</span><span class="s1">C</span><span class="dl">'</span><span class="p">,</span> <span class="na">data</span><span class="p">:</span> <span class="mi">2</span> <span class="p">},</span>
   <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="dl">'</span><span class="s1">D</span><span class="dl">'</span><span class="p">,</span> <span class="na">data</span><span class="p">:</span> <span class="mi">3</span> <span class="p">},</span>
@@ -1052,19 +1109,19 @@ graph LR
 
 <p>Let’s add edges as described in the diagram.</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// first get references to the vertices</span>
-<span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">graph</span><span class="p">.</span><span class="nx">vertex</span><span class="p">(</span><span class="dl">'</span><span class="s1">A</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">graph</span><span class="p">.</span><span class="nx">vertex</span><span class="p">(</span><span class="dl">'</span><span class="s1">B</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">graph</span><span class="p">.</span><span class="nx">vertex</span><span class="p">(</span><span class="dl">'</span><span class="s1">C</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">d</span> <span class="o">=</span> <span class="nx">graph</span><span class="p">.</span><span class="nx">vertex</span><span class="p">(</span><span class="dl">'</span><span class="s1">D</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">graph</span><span class="p">.</span><span class="nf">vertex</span><span class="p">(</span><span class="dl">'</span><span class="s1">A</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">graph</span><span class="p">.</span><span class="nf">vertex</span><span class="p">(</span><span class="dl">'</span><span class="s1">B</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">graph</span><span class="p">.</span><span class="nf">vertex</span><span class="p">(</span><span class="dl">'</span><span class="s1">C</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">d</span> <span class="o">=</span> <span class="nx">graph</span><span class="p">.</span><span class="nf">vertex</span><span class="p">(</span><span class="dl">'</span><span class="s1">D</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="c1">// check that the vertices were found</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">a</span> <span class="o">||</span> <span class="o">!</span><span class="nx">b</span> <span class="o">||</span> <span class="o">!</span><span class="nx">c</span> <span class="o">||</span> <span class="o">!</span><span class="nx">d</span><span class="p">)</span> <span class="k">throw</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">`one of vertices 'A', 'B', 'C', or 'D' was not in the graph`</span><span class="p">);</span>
+<span class="k">if </span><span class="p">(</span><span class="o">!</span><span class="nx">a</span> <span class="o">||</span> <span class="o">!</span><span class="nx">b</span> <span class="o">||</span> <span class="o">!</span><span class="nx">c</span> <span class="o">||</span> <span class="o">!</span><span class="nx">d</span><span class="p">)</span> <span class="k">throw</span> <span class="nc">Error</span><span class="p">(</span><span class="s2">`one of vertices 'A', 'B', 'C', or 'D' was not in the graph`</span><span class="p">);</span>
 
 <span class="c1">// setting a single edge</span>
-<span class="nx">graph</span><span class="p">.</span><span class="nx">setEdge</span><span class="p">({</span> <span class="na">src</span><span class="p">:</span> <span class="nx">a</span><span class="p">,</span> <span class="na">dst</span><span class="p">:</span> <span class="nx">b</span><span class="p">,</span> <span class="na">weight</span><span class="p">:</span> <span class="mi">1</span> <span class="p">});</span>
+<span class="nx">graph</span><span class="p">.</span><span class="nf">setEdge</span><span class="p">({</span> <span class="na">src</span><span class="p">:</span> <span class="nx">a</span><span class="p">,</span> <span class="na">dst</span><span class="p">:</span> <span class="nx">b</span><span class="p">,</span> <span class="na">weight</span><span class="p">:</span> <span class="mi">1</span> <span class="p">});</span>
 
 <span class="c1">// setting multiple edges</span>
-<span class="nx">graph</span><span class="p">.</span><span class="nx">setEdge</span><span class="p">(</span>
+<span class="nx">graph</span><span class="p">.</span><span class="nf">setEdge</span><span class="p">(</span>
   <span class="p">{</span> <span class="na">src</span><span class="p">:</span> <span class="nx">a</span><span class="p">,</span> <span class="na">dst</span><span class="p">:</span> <span class="nx">b</span><span class="p">,</span> <span class="na">weight</span><span class="p">:</span> <span class="mi">5</span> <span class="p">},</span>
   <span class="p">{</span> <span class="na">src</span><span class="p">:</span> <span class="nx">b</span><span class="p">,</span> <span class="na">dst</span><span class="p">:</span> <span class="nx">c</span><span class="p">,</span> <span class="na">weight</span><span class="p">:</span> <span class="mi">3</span> <span class="p">},</span>
   <span class="p">{</span> <span class="na">src</span><span class="p">:</span> <span class="nx">b</span><span class="p">,</span> <span class="na">dst</span><span class="p">:</span> <span class="nx">d</span><span class="p">,</span> <span class="na">weight</span><span class="p">:</span> <span class="mi">6</span> <span class="p">},</span>
@@ -1077,8 +1134,8 @@ graph LR
 <p>Finding a path in a graph is done using an “A* Runner”, created by <a href="docs/reference/current/modules/graph.html#createastarrunner"><code class="language-plaintext highlighter-rouge">Graph.createAStarRunner</code></a> and calling its <a href="docs/reference/current/interfaces/graph.iastarrunner.html#exec"><code class="language-plaintext highlighter-rouge">IAStarRunner.exec</code></a>. The result of <code class="language-plaintext highlighter-rouge">exec</code> is cached so multiple calls will not recompute the path and will return the same object (until there are changes to the graph – see <a href="sdk_tutorials_pathfinding.html#observing-changes">Observing Changes</a>).</p>
 
 <p>Let’s compute a path from <code class="language-plaintext highlighter-rouge">'A'</code> to <code class="language-plaintext highlighter-rouge">'D'</code>.</p>
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">aStarRunner</span> <span class="o">=</span> <span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Graph</span><span class="p">.</span><span class="nx">createAStarRunner</span><span class="p">(</span><span class="nx">graph</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">d</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">aStarRunner</span><span class="p">.</span><span class="nx">exec</span><span class="p">();</span>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">aStarRunner</span> <span class="o">=</span> <span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Graph</span><span class="p">.</span><span class="nf">createAStarRunner</span><span class="p">(</span><span class="nx">graph</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">d</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">aStarRunner</span><span class="p">.</span><span class="nf">exec</span><span class="p">();</span>
 </code></pre></div></div>
 
 <p><code class="language-plaintext highlighter-rouge">result</code> should now have a <code class="language-plaintext highlighter-rouge">.status</code> of <code class="language-plaintext highlighter-rouge">mpSdk.Graph.AStarStatus.SUCCESS</code> and a <code class="language-plaintext highlighter-rouge">.path</code> of <code class="language-plaintext highlighter-rouge">[a, b, c, d]</code> like we predicted in our diagram.</p>
@@ -1096,46 +1153,46 @@ graph LR
 <p>Let’s subscribe to a graph and make some changes to it.</p>
 
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// subscribe to vertex changes</span>
-<span class="nx">graph</span><span class="p">.</span><span class="nx">onVerticesChanged</span><span class="p">({</span>
-  <span class="nx">onChanged</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">vertices in the graph have changed</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">graph</span><span class="p">.</span><span class="nf">onVerticesChanged</span><span class="p">({</span>
+  <span class="nf">onChanged</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">vertices in the graph have changed</span><span class="dl">'</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">});</span>
 <span class="c1">// subscribe to edge changes</span>
-<span class="nx">graph</span><span class="p">.</span><span class="nx">onEdgesChanged</span><span class="p">({</span>
-  <span class="nx">onChanged</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">edges in the graph have changed</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">graph</span><span class="p">.</span><span class="nf">onEdgesChanged</span><span class="p">({</span>
+  <span class="nf">onChanged</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">edges in the graph have changed</span><span class="dl">'</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">graph</span><span class="p">.</span><span class="nx">addVertex</span><span class="p">({</span> <span class="na">id</span><span class="p">:</span> <span class="dl">'</span><span class="s1">E</span><span class="dl">'</span><span class="p">,</span> <span class="na">data</span><span class="p">:</span> <span class="mi">4</span> <span class="p">});</span>
+<span class="nx">graph</span><span class="p">.</span><span class="nf">addVertex</span><span class="p">({</span> <span class="na">id</span><span class="p">:</span> <span class="dl">'</span><span class="s1">E</span><span class="dl">'</span><span class="p">,</span> <span class="na">data</span><span class="p">:</span> <span class="mi">4</span> <span class="p">});</span>
 <span class="c1">// we can call `graph.commit()` here to trigger the `onVerticesChanged` observer, but ...</span>
 <span class="c1">// ... if we know we'll be making more changes, we should hold off on calling `commit` until then</span>
 
-<span class="kd">const</span> <span class="nx">e</span> <span class="o">=</span> <span class="nx">graph</span><span class="p">.</span><span class="nx">vertex</span><span class="p">(</span><span class="dl">'</span><span class="s1">E</span><span class="dl">'</span><span class="p">);</span>
-<span class="nx">graph</span><span class="p">.</span><span class="nx">setEdge</span><span class="p">({</span> <span class="na">src</span><span class="p">:</span> <span class="nx">a</span><span class="p">,</span> <span class="na">dst</span><span class="p">:</span> <span class="nx">e</span><span class="p">,</span> <span class="na">weight</span><span class="p">:</span> <span class="mi">10</span> <span class="p">});</span>
-<span class="nx">graph</span><span class="p">.</span><span class="nx">commit</span><span class="p">();</span> <span class="c1">// &lt;-- will trigger the attached observer in `onVerticesChanged` and `onEdgesChanged`</span>
-<span class="nx">graph</span><span class="p">.</span><span class="nx">commit</span><span class="p">();</span> <span class="c1">// &lt;-- will no-op since the graph has not changed since the last `commit`</span>
+<span class="kd">const</span> <span class="nx">e</span> <span class="o">=</span> <span class="nx">graph</span><span class="p">.</span><span class="nf">vertex</span><span class="p">(</span><span class="dl">'</span><span class="s1">E</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">graph</span><span class="p">.</span><span class="nf">setEdge</span><span class="p">({</span> <span class="na">src</span><span class="p">:</span> <span class="nx">a</span><span class="p">,</span> <span class="na">dst</span><span class="p">:</span> <span class="nx">e</span><span class="p">,</span> <span class="na">weight</span><span class="p">:</span> <span class="mi">10</span> <span class="p">});</span>
+<span class="nx">graph</span><span class="p">.</span><span class="nf">commit</span><span class="p">();</span> <span class="c1">// &lt;-- will trigger the attached observer in `onVerticesChanged` and `onEdgesChanged`</span>
+<span class="nx">graph</span><span class="p">.</span><span class="nf">commit</span><span class="p">();</span> <span class="c1">// &lt;-- will no-op since the graph has not changed since the last `commit`</span>
 </code></pre></div></div>
 
 <p>A* Runners are observable through <a href="docs/reference/current/interfaces/graph.iastarrunner.html#subscribe"><code class="language-plaintext highlighter-rouge">IAStarRunner.subscribe</code></a>. The instance of the runner is provided in the callback.</p>
 
 <p>Let’s subscribe to an A* Runner.</p>
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">aStarRunner</span><span class="p">.</span><span class="nx">exec</span><span class="p">();</span>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">aStarRunner</span><span class="p">.</span><span class="nf">exec</span><span class="p">();</span>
 <span class="c1">// we can subscribe with an object ...</span>
-<span class="nx">aStarRunner</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">({</span>
-  <span class="nx">onChanged</span><span class="p">(</span><span class="nx">runner</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">result</span> <span class="o">=</span> <span class="nx">runner</span><span class="p">.</span><span class="nx">exec</span><span class="p">()</span>
+<span class="nx">aStarRunner</span><span class="p">.</span><span class="nf">subscribe</span><span class="p">({</span>
+  <span class="nf">onChanged</span><span class="p">(</span><span class="nx">runner</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">result</span> <span class="o">=</span> <span class="nx">runner</span><span class="p">.</span><span class="nf">exec</span><span class="p">()</span>
   <span class="p">}</span>
 <span class="p">});</span>
 <span class="c1">// or a function</span>
-<span class="nx">aStarRunner</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">((</span><span class="nx">runner</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="nx">result</span> <span class="o">=</span> <span class="nx">runner</span><span class="p">.</span><span class="nx">exec</span><span class="p">();</span>
+<span class="nx">aStarRunner</span><span class="p">.</span><span class="nf">subscribe</span><span class="p">((</span><span class="nx">runner</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">result</span> <span class="o">=</span> <span class="nx">runner</span><span class="p">.</span><span class="nf">exec</span><span class="p">();</span>
 <span class="p">});</span>
 
 <span class="c1">// reduce the weight of edge AC to make it a more viable option</span>
-<span class="nx">graph</span><span class="p">.</span><span class="nx">setEdge</span><span class="p">({</span> <span class="na">src</span><span class="p">:</span> <span class="nx">a</span><span class="p">,</span> <span class="na">dst</span><span class="p">:</span> <span class="nx">c</span><span class="p">,</span> <span class="na">weight</span><span class="p">:</span> <span class="mi">2</span> <span class="p">});</span>
-<span class="nx">graph</span><span class="p">.</span><span class="nx">commit</span><span class="p">();</span> <span class="c1">// &lt;-- will trigger the A* Runner's observers which will recompute the path.</span>
+<span class="nx">graph</span><span class="p">.</span><span class="nf">setEdge</span><span class="p">({</span> <span class="na">src</span><span class="p">:</span> <span class="nx">a</span><span class="p">,</span> <span class="na">dst</span><span class="p">:</span> <span class="nx">c</span><span class="p">,</span> <span class="na">weight</span><span class="p">:</span> <span class="mi">2</span> <span class="p">});</span>
+<span class="nx">graph</span><span class="p">.</span><span class="nf">commit</span><span class="p">();</span> <span class="c1">// &lt;-- will trigger the A* Runner's observers which will recompute the path.</span>
 </code></pre></div></div>
 
 <p><code class="language-plaintext highlighter-rouge">result</code> should have a new <code class="language-plaintext highlighter-rouge">.path</code> of <code class="language-plaintext highlighter-rouge">[a, c, d]</code> since we made the sub-path <code class="language-plaintext highlighter-rouge">[a, c]</code> a better (lighter) option than the previous <code class="language-plaintext highlighter-rouge">[a, b, c]</code>.</p>
@@ -1158,25 +1215,25 @@ Some features of this sweep graph:</p>
   <li>Each edge’s <code class="language-plaintext highlighter-rouge">weight</code> is the Euclidean distance between neighboring sweeps</li>
 </ul>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">sweepGraph</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Sweep</span><span class="p">.</span><span class="nx">createGraph</span><span class="p">();</span>
-<span class="kd">const</span> <span class="nx">startSweep</span> <span class="o">=</span> <span class="nx">sweepGraph</span><span class="p">.</span><span class="nx">vertex</span><span class="p">(</span><span class="dl">'</span><span class="s1">[start sweep id]</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">endSweep</span> <span class="o">=</span> <span class="nx">sweepGraph</span><span class="p">.</span><span class="nx">vertex</span><span class="p">(</span><span class="dl">'</span><span class="s1">[end sweep id]</span><span class="dl">'</span><span class="p">);</span>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">sweepGraph</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Sweep</span><span class="p">.</span><span class="nf">createGraph</span><span class="p">();</span>
+<span class="kd">const</span> <span class="nx">startSweep</span> <span class="o">=</span> <span class="nx">sweepGraph</span><span class="p">.</span><span class="nf">vertex</span><span class="p">(</span><span class="dl">'</span><span class="s1">[start sweep id]</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">endSweep</span> <span class="o">=</span> <span class="nx">sweepGraph</span><span class="p">.</span><span class="nf">vertex</span><span class="p">(</span><span class="dl">'</span><span class="s1">[end sweep id]</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="c1">// do standard path finding</span>
-<span class="kd">const</span> <span class="nx">aStarRunner</span> <span class="o">=</span> <span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Graph</span><span class="p">.</span><span class="nx">createAStarRunner</span><span class="p">(</span><span class="nx">sweepGraph</span><span class="p">,</span> <span class="nx">startSweep</span><span class="p">,</span> <span class="nx">endSweep</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">aStarRunner</span><span class="p">.</span><span class="nx">exec</span><span class="p">().</span><span class="nx">path</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">aStarRunner</span> <span class="o">=</span> <span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Graph</span><span class="p">.</span><span class="nf">createAStarRunner</span><span class="p">(</span><span class="nx">sweepGraph</span><span class="p">,</span> <span class="nx">startSweep</span><span class="p">,</span> <span class="nx">endSweep</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">aStarRunner</span><span class="p">.</span><span class="nf">exec</span><span class="p">().</span><span class="nx">path</span><span class="p">;</span>
 
 <span class="c1">// the runner will be subscribed to the graph, which is subscribed to sweep data</span>
-<span class="nx">aStarRunner</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">({</span>
-  <span class="nx">onChanged</span><span class="p">(</span><span class="nx">runner</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">sweep graph has changed</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">aStarRunner</span><span class="p">.</span><span class="nf">subscribe</span><span class="p">({</span>
+  <span class="nf">onChanged</span><span class="p">(</span><span class="nx">runner</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">sweep graph has changed</span><span class="dl">'</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Sweep</span><span class="p">.</span><span class="nx">disable</span><span class="p">(</span><span class="dl">'</span><span class="s1">[intermediate sweep]</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// &lt;-- will trigger the above `onChanged` if the sweep was previously enabled</span>
+<span class="nx">mpSdk</span><span class="p">.</span><span class="nx">Sweep</span><span class="p">.</span><span class="nf">disable</span><span class="p">(</span><span class="dl">'</span><span class="s1">[intermediate sweep]</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// &lt;-- will trigger the above `onChanged` if the sweep was previously enabled</span>
 
 <span class="c1">// finally, clean up the graph when no longer needed</span>
-<span class="nx">sweepGraph</span><span class="p">.</span><span class="nx">dispose</span><span class="p">();</span>
+<span class="nx">sweepGraph</span><span class="p">.</span><span class="nf">dispose</span><span class="p">();</span>
 </code></pre></div></div>
 
 <h4 id="modifying-the-sweep-graph">Modifying the Sweep Graph</h4>
@@ -1184,8 +1241,8 @@ Some features of this sweep graph:</p>
 
 <p>We can iterate all of the edges of the graph using <a href="docs/reference/current/interfaces/graph.idirectedgraph.html#edges"><code class="language-plaintext highlighter-rouge">IDirectedGraph.edges</code></a> and then set each edge’s weight to the square of its current weight.</p>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="p">{</span> <span class="nx">src</span><span class="p">,</span> <span class="nx">dst</span><span class="p">,</span> <span class="nx">weight</span> <span class="p">}</span> <span class="k">of</span> <span class="nx">sweepGraph</span><span class="p">.</span><span class="nx">edges</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">sweepGraph</span><span class="p">.</span><span class="nx">setEdge</span><span class="p">({</span> <span class="nx">src</span><span class="p">,</span> <span class="nx">dst</span><span class="p">,</span> <span class="na">weight</span><span class="p">:</span> <span class="nx">weight</span> <span class="o">**</span> <span class="mi">2</span> <span class="p">});</span>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span><span class="p">(</span><span class="kd">const</span> <span class="p">{</span> <span class="nx">src</span><span class="p">,</span> <span class="nx">dst</span><span class="p">,</span> <span class="nx">weight</span> <span class="p">}</span> <span class="k">of</span> <span class="nx">sweepGraph</span><span class="p">.</span><span class="nx">edges</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">sweepGraph</span><span class="p">.</span><span class="nf">setEdge</span><span class="p">({</span> <span class="nx">src</span><span class="p">,</span> <span class="nx">dst</span><span class="p">,</span> <span class="na">weight</span><span class="p">:</span> <span class="nx">weight</span> <span class="o">**</span> <span class="mi">2</span> <span class="p">});</span>
 <span class="p">}</span>
 </code></pre></div></div>
 <p>Now that we’ve changed the edges’ weights in our graph, we’ve turned a graph like this …</p>
@@ -1223,9 +1280,8 @@ graph LR
 <footer>
             <div class="row">
                 <div class="col-lg-12 footer">
-               &copy;2024 Matterport, Inc. All rights reserved. <br />
- Site last generated: Jul 30, 2024 <br />
-<p><img class="footer-logo" src="/images/MP-logo_icon-RGB_black.svg" alt="Company logo"/></p>
+               &copy;2025 Matterport, Inc. All rights reserved. <br />
+ Site last generated: Dec 15, 2025
                 </div>
             </div>
 </footer>

@@ -38,7 +38,15 @@
 <script src="/js/customscripts.js"></script>
 <script src="/js/mermaid.min.js"></script>
 
-<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg" />
+<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg?dark" media="(prefers-color-scheme: dark)" />
+<link rel="shortcut icon" href="/images/favicons/favicon.ico" sizes="32x32" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+<link rel="manifest" href="/images/favicons/favicon.webmanifest"/>
+<meta name="msapplication-TileColor" content="#ff3158" />
+<meta name="theme-color" content="#ffffff" />
+
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,7 +55,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<link rel="alternate" type="application/rss+xml" title="showcase-sdk" href="https://docs.matterport.comfeed.xml">
+<link rel="alternate" type="application/rss+xml" title="" href="https://developers.matterport.comfeed.xml">
 
     <script>
       $(document).ready(function () {
@@ -101,10 +109,10 @@
 <nav class="navbar navbar-inverse navbar-static-top">
   <div>
     <div class="row">
-      <a class="navbrand col-md-3" href="/"
-        >&nbsp;<img
+      <a class="navbrand col-md-3" href="https://developers.matterport.com/"
+        ><img
           class="navbar-image"
-          src="/images/MP-logo_H_lock-RGB_white.svg"
+          src="/images/Matterport-Logo-White.svg"
         /><span class="projectTitle"> </span></a
       >
       <div class="dev-nav-links col-md-6">
@@ -112,15 +120,15 @@
           <div class="dropdown ">
             <a class="dropbtn active" href="index.html">SDK Docs</a>
             <div class="dropdown-content">
-              <a href="https://docs.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
-              <a href="https://docs.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
-              <a href="https://docs.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
+              <a href="https://developers.matterport.com/sdk_home.html" class="">SDK for Embeds</a>
+              <a href="https://developers.matterport.com/sdkbundle_home.html" class="" href="#">SDK Bundle</a>
+              <a href="https://developers.matterport.com/earlyaccess_home.html" class="" href="#">SDK Early Access</a>
             </div>
           </div>
           <div class="dropdown">
             <a class="dropbtn" href="api_home.html">API Docs</a>
             <div class="dropdown-content">
-              <a href="https://docs.matterport.com/api_home.html">API Overview</a>
+              <a href="https://developers.matterport.com/api_home.html">API Overview</a>
               <a href="https://api.matterport.com/docs/reference" target="_blank">API Reference</a>
               <a href="https://api.matterport.com/model/graphiql" target="_blank">Interactive Console</a>
             </div>
@@ -129,10 +137,10 @@
             <a class="dropbtn" href="https://matterport.com/legal/platform-subscription-agreement#sdk-terms" target="_blank">Terms</a>
           </div>
           <div class="dropdown">
-            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:developer@matterport.com?subject=Showcase SDK feedback&body=I have some feedback about the Namespace: Graph page: ' + window.location.href;">Feedback</a>
+            <a class="dropbtn" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:MP-developer@costar.com?subject=Showcase SDK feedback&body=I have some feedback about the Namespace: Graph page: ' + window.location.href;">Feedback</a>
           </div>
           <div class="dropdown">
-            <a class="dropbtn" href="https://docs.matterport.com/subscribe.html" >
+            <a class="dropbtn" href="https://developers.matterport.com/subscribe.html" >
               Subscribe
               <sup class="subscribe-sup" style="font-size: 10px; color: #ff3158">New</sup>
             </a>
@@ -722,6 +730,12 @@
                   
                   
                   
+                  <li><a title="GeoCoordinates" href="/modelapi_geocoordinates.html">GeoCoordinates</a></li>
+                  
+                  
+                  
+                  
+                  
                   <li><a title="Views and Layers" href="/modelapi_views_and_layers.html">Views and Layers</a></li>
                   
                   
@@ -735,6 +749,48 @@
                   
                   
                   <li><a title="Postman Collection" href="/modelapi_postman.html">Postman Collection</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Account API" href="#">Account API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Capture Services API" href="#">Capture Services API</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Overview" href="/capture_services_api.html">Overview</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Sample Queries" href="/capture_services_queries.html">Sample Queries</a></li>
                   
                   
                   
@@ -783,18 +839,12 @@
           
           
           <li class="subfolders">
-              <a title="Account API" href="#">Account API</a>
+              <a title="Custom Roles" href="#">Custom Roles</a>
               <ul>
                   
                   
                   
-                  <li><a title="Account API Changelog" href="/accountapi_changelog.html">Account API Changelog</a></li>
-                  
-                  
-                  
-                  
-                  
-                  <li><a title="Sample Queries" href="/accountapi_snippets.html">Sample Queries</a></li>
+                  <li><a title="Overview and Examples" href="/custom_roles_overview.html">Overview and Examples</a></li>
                   
                   
                   
@@ -885,7 +935,14 @@
           
           
           
-          <li><a title="Overview" href="/webhooks_home.html">Overview</a></li>
+          <li><a title="Webhooks v2" href="/webhooks_home.html">Webhooks v2</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Webhooks v1 (Deprecated)" href="/webhooks_v1.html">Webhooks v1 (Deprecated)</a></li>
           
           
           
@@ -1019,7 +1076,7 @@ $('#toc').on('click', 'a', function() {
 					<h2>Typescript Declarations File</h2>
 					<section class="tsd-panel">
 						<div class="tsd-index-content">
-							Typescript declarations for use with the Embed SDK are available here: <a href="https://static.matterport.com/showcase-sdk/types/24.6.4_webgl-245-g7e4b22fe23/sdk.d.ts">24.6.4_webgl-245-g7e4b22fe23</a><br>
+							Typescript declarations for use with the Embed SDK are available here: <a href="https://api.matterport.com/sdk/types/sdk.d.ts?v=25.12.1_webgl-1428-gc091dc50aa">25.12.1_webgl-1428-gc091dc50aa</a><br>
 							Declarations are already include in the Bundle SDK distribution.
 						</div>
 					</section>
@@ -1061,8 +1118,11 @@ $('#toc').on('click', 'a', function() {
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-namespace tsd-has-type-parameter"><a href="graph.html#clonegraph" class="tsd-kind-icon">clone<wbr>Graph</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-namespace tsd-has-type-parameter"><a href="graph.html#createastarrunner" class="tsd-kind-icon">createAStar<wbr>Runner</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-namespace tsd-has-type-parameter"><a href="graph.html#createdirectedgraph" class="tsd-kind-icon">create<wbr>Directed<wbr>Graph</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-namespace tsd-has-type-parameter"><a href="graph.html#findcycle" class="tsd-kind-icon">find<wbr>Cycle</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-namespace tsd-has-type-parameter"><a href="graph.html#findcycles" class="tsd-kind-icon">find<wbr>Cycles</a></li>
 							</ul>
 						</section>
 					</div>
@@ -1229,6 +1289,17 @@ $('#toc').on('click', 'a', function() {
 								</div>
 							</li>
 							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> edges<wbr>InCount<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="tsd-lead">
+										<p>The nubmer of edges that have this vertex as its destination endpoint.</p>
+									</div>
+									<pre><code class="language-typescript"><span class="hljs-keyword">const</span> vertex = graph.vertex(<span class="hljs-string">&#x27;a&#x27;</span>);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`vertex &quot;<span class="hljs-subst">${vertex.id}</span>&quot; has <span class="hljs-subst">${vertex.edgesInCount}</span> edges out&quot;);</span>
+</code></pre>
+								</div>
+							</li>
+							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> edges<wbr>Out<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><a href="graph.html#edge" class="tsd-signature-type">Graph.Edge</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="tsd-lead">
@@ -1238,6 +1309,17 @@ $('#toc').on('click', 'a', function() {
 <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> edgeOut <span class="hljs-keyword">of</span> vertex.edgesOut) {
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`vertex &quot;<span class="hljs-subst">${edgeOut.src.id}</span>&quot; has an edge going to a vertex &quot;<span class="hljs-subst">${edgeOut.dst.id}</span>&quot;`</span>);
 }
+</code></pre>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> edges<wbr>Out<wbr>Count<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="tsd-lead">
+										<p>The nubmer of edges that have this vertex as its source endpoint.</p>
+									</div>
+									<pre><code class="language-typescript"><span class="hljs-keyword">const</span> vertex = graph.vertex(<span class="hljs-string">&#x27;a&#x27;</span>);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`vertex &quot;<span class="hljs-subst">${vertex.id}</span>&quot; has <span class="hljs-subst">${vertex.edgeOutCount}</span> edges out&quot;);</span>
 </code></pre>
 								</div>
 							</li>
@@ -1261,6 +1343,122 @@ $('#toc').on('click', 'a', function() {
 }</span>
 </code></pre>
 								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>find<wbr>Edge<wbr>In<span class="tsd-signature-symbol">: </span>function</h5>
+								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal">
+									<li class="tsd-signature tsd-kind-icon">find<wbr>Edge<wbr>In<span class="tsd-signature-symbol">(</span>predicate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, thisArg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="graph.html#edge" class="tsd-signature-type">Graph.Edge</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<aside class="tsd-sources">
+										</aside>
+										<div class="tsd-comment tsd-typography">
+											<div class="tsd-lead">
+												<p>Find an edge into this vertex.</p>
+											</div>
+											<pre><code class="language-ts"><span class="hljs-keyword">const</span> vertex = graph.vertex(<span class="hljs-string">&#x27;a&#x27;</span>);
+<span class="hljs-comment">// find an edge into &#x27;a&#x27; and out from &#x27;b&#x27;</span>
+vertex.findEdgeIn(<span class="hljs-function"><span class="hljs-params">edge</span> =&gt;</span> edge.src.id === <span class="hljs-string">&#x27;b&#x27;</span>);
+</code></pre>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>predicate: <span class="tsd-signature-type">function</span></h5>
+												<div class="tsd-comment tsd-typography">
+													<p>The callback to run against each inward edge until one is found (by returning true.)</p>
+												</div>
+												<ul class="tsd-parameters">
+													<li class="tsd-parameter-siganture">
+														<ul class="tsd-signatures tsd-kind-type-literal">
+															<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>edgeIn<span class="tsd-signature-symbol">: </span><a href="graph.html#edge" class="tsd-signature-type">Graph.Edge</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+														</ul>
+														<ul class="tsd-descriptions">
+															<li class="tsd-description">
+																<h4 class="tsd-parameters-title">Parameters</h4>
+																<ul class="tsd-parameters">
+																	<li>
+																		<h5>edgeIn: <a href="graph.html#edge" class="tsd-signature-type">Graph.Edge</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+																	</li>
+																</ul>
+																<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArg: <span class="tsd-signature-type">any</span></h5>
+												<div class="tsd-comment tsd-typography">
+													<p>The &quot;this&quot; argument to use in <code>predicate</code></p>
+												</div>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <a href="graph.html#edge" class="tsd-signature-type">Graph.Edge</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>
+											<span class="tsd-signature-symbol"> | </span>
+											<span class="tsd-signature-type">undefined</span>
+										</h4>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>find<wbr>Edge<wbr>Out<span class="tsd-signature-symbol">: </span>function</h5>
+								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal">
+									<li class="tsd-signature tsd-kind-icon">find<wbr>Edge<wbr>Out<span class="tsd-signature-symbol">(</span>predicate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, thisArg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="graph.html#edge" class="tsd-signature-type">Graph.Edge</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<aside class="tsd-sources">
+										</aside>
+										<div class="tsd-comment tsd-typography">
+											<div class="tsd-lead">
+												<p>Find an edge out of this vertex.</p>
+											</div>
+											<pre><code class="language-ts"><span class="hljs-keyword">const</span> vertex = graph.vertex(<span class="hljs-string">&#x27;a&#x27;</span>);
+<span class="hljs-comment">// find an edge out from &#x27;a&#x27; and into &#x27;b&#x27;</span>
+vertex.findEdgeIn(<span class="hljs-function"><span class="hljs-params">edge</span> =&gt;</span> edge.src.id === <span class="hljs-string">&#x27;b&#x27;</span>);
+</code></pre>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>predicate: <span class="tsd-signature-type">function</span></h5>
+												<div class="tsd-comment tsd-typography">
+													<p>The callback to run against each outward edge until one is found (by returning true.)</p>
+												</div>
+												<ul class="tsd-parameters">
+													<li class="tsd-parameter-siganture">
+														<ul class="tsd-signatures tsd-kind-type-literal">
+															<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>edgeOut<span class="tsd-signature-symbol">: </span><a href="graph.html#edge" class="tsd-signature-type">Graph.Edge</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+														</ul>
+														<ul class="tsd-descriptions">
+															<li class="tsd-description">
+																<h4 class="tsd-parameters-title">Parameters</h4>
+																<ul class="tsd-parameters">
+																	<li>
+																		<h5>edgeOut: <a href="graph.html#edge" class="tsd-signature-type">Graph.Edge</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+																	</li>
+																</ul>
+																<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArg: <span class="tsd-signature-type">any</span></h5>
+												<div class="tsd-comment tsd-typography">
+													<p>The &quot;this&quot; argument to use in <code>predicate</code></p>
+												</div>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <a href="graph.html#edge" class="tsd-signature-type">Graph.Edge</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>
+											<span class="tsd-signature-symbol"> | </span>
+											<span class="tsd-signature-type">undefined</span>
+										</h4>
+									</li>
+								</ul>
 							</li>
 						</ul>
 					</div>
@@ -1326,6 +1524,50 @@ $('#toc').on('click', 'a', function() {
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-namespace tsd-has-type-parameter">
+					<a name="clonegraph" class="tsd-anchor"></a>
+					<h3>clone<wbr>Graph</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-namespace tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">clone<wbr>Graph&lt;T&gt;<span class="tsd-signature-symbol">(</span>graph<span class="tsd-signature-symbol">: </span><a href="../interfaces/graph.idirectedgraph.html" class="tsd-signature-type">Graph.IDirectedGraph</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/graph.idirectedgraph.html" class="tsd-signature-type">Graph.IDirectedGraph</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<dl class="tsd-comment-tags tsd-typography">
+							</dl>
+							<dl class="tsd-comment-tags tsd-typography">
+							</dl>
+							<h4 class="tsd-introduced-title">Introduced
+								<span class="tsd-introduced-vers">25.6.1
+								</span>
+							</h4>
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Clone a graph, creating new vertices and edges.
+									Doesnt clone any of the vertices&#39; <code>.data</code>.</p>
+								</div>
+								<pre><code class="language-ts"><span class="hljs-keyword">const</span> graph = mpSdk.Graph.createDirectedGraph();
+<span class="hljs-comment">// ... setup graph vertices and edges</span>
+<span class="hljs-keyword">const</span> clone = sdk.Graph.cloneGraph(graph);
+</code></pre>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>graph: <a href="../interfaces/graph.idirectedgraph.html" class="tsd-signature-type">Graph.IDirectedGraph</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/graph.idirectedgraph.html" class="tsd-signature-type">Graph.IDirectedGraph</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-namespace tsd-has-type-parameter">
 					<a name="createastarrunner" class="tsd-anchor"></a>
 					<h3>createAStar<wbr>Runner</h3>
@@ -1422,7 +1664,7 @@ $('#toc').on('click', 'a', function() {
 								<div class="tsd-lead">
 									<p>Create an empty graph data structure.</p>
 								</div>
-								<pre><code>const graph = mpSdk.<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Graph</span>.</span></span>create<span class="hljs-constructor">DirectedGraph()</span>;
+								<pre><code class="language-ts"><span class="hljs-keyword">const</span> graph = mpSdk.Graph.createDirectedGraph();
 </code></pre>
 							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -1444,6 +1686,101 @@ $('#toc').on('click', 'a', function() {
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/graph.idirectedgraph.html" class="tsd-signature-type">Graph.IDirectedGraph</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-namespace tsd-has-type-parameter">
+					<a name="findcycle" class="tsd-anchor"></a>
+					<h3>find<wbr>Cycle</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-namespace tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Cycle&lt;T&gt;<span class="tsd-signature-symbol">(</span>graph<span class="tsd-signature-symbol">: </span><a href="../interfaces/graph.idirectedgraph.html" class="tsd-signature-type">Graph.IDirectedGraph</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><a href="graph.html#vertex" class="tsd-signature-type">Graph.Vertex</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<dl class="tsd-comment-tags tsd-typography">
+								<dt class="tsd-comment-tags-embed tsd-tag-sdk-type">embed</dt>
+								<dt class="tsd-comment-tags-bundle tsd-tag-sdk-type">bundle</dt>
+							</dl>
+							<dl class="tsd-comment-tags tsd-typography">
+							</dl>
+							<h4 class="tsd-introduced-title">Introduced
+								<span class="tsd-introduced-vers">25.6.1
+								</span>
+							</h4>
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Find a cycle in a graph.</p>
+								</div>
+								<pre><code class="language-ts"><span class="hljs-keyword">const</span> graph = mpSdk.Graph.createDirectedGraph();
+<span class="hljs-comment">// assuming graph has edges A -&gt; B, B -&gt; C, C -&gt; D, D -&gt; B</span>
+<span class="hljs-comment">// should find the cycle [B, C, D]</span>
+<span class="hljs-keyword">const</span> cycle = sdk.Graph.findCyle(graph);
+</code></pre>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>graph: <a href="../interfaces/graph.idirectedgraph.html" class="tsd-signature-type">Graph.IDirectedGraph</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><a href="graph.html#vertex" class="tsd-signature-type">Graph.Vertex</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>an Iterable of vertices that represent a found cycle or <code>[]</code> if none were found</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-namespace tsd-has-type-parameter">
+					<a name="findcycles" class="tsd-anchor"></a>
+					<h3>find<wbr>Cycles</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-namespace tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Cycles&lt;T&gt;<span class="tsd-signature-symbol">(</span>graph<span class="tsd-signature-symbol">: </span><a href="../interfaces/graph.idirectedgraph.html" class="tsd-signature-type">Graph.IDirectedGraph</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><a href="graph.html#vertex" class="tsd-signature-type">Graph.Vertex</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<dl class="tsd-comment-tags tsd-typography">
+								<dt class="tsd-comment-tags-embed tsd-tag-sdk-type">embed</dt>
+								<dt class="tsd-comment-tags-bundle tsd-tag-sdk-type">bundle</dt>
+							</dl>
+							<dl class="tsd-comment-tags tsd-typography">
+							</dl>
+							<h4 class="tsd-introduced-title">Introduced
+								<span class="tsd-introduced-vers">25.6.1
+								</span>
+							</h4>
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="tsd-lead">
+									<p>Find multiple cycles in a graph.
+									Note: If a vertex is in multiple cycles, only one will be reported.</p>
+								</div>
+								<pre><code class="language-ts"><span class="hljs-keyword">const</span> graph = mpSdk.Graph.createDirectedGraph();
+<span class="hljs-comment">// assuming graph has edges A -&gt; B, B -&gt; C, C -&gt; A, D -&gt; E, E -&gt; D</span>
+<span class="hljs-comment">// should find cycles [A, B, C], and [D, E]</span>
+<span class="hljs-keyword">const</span> cycle = sdk.Graph.findCyle(graph);
+</code></pre>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>graph: <a href="../interfaces/graph.idirectedgraph.html" class="tsd-signature-type">Graph.IDirectedGraph</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><a href="graph.html#vertex" class="tsd-signature-type">Graph.Vertex</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>an iterbale of iterables (like an array of arrays) of vertices</p>
 						</li>
 					</ul>
 				</section>
@@ -1562,10 +1899,19 @@ $('#toc').on('click', 'a', function() {
 						<a href="graph.html#vertexiddescriptor" class="tsd-kind-icon">Vertex<wbr>IdDescriptor</a>
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-namespace tsd-has-type-parameter">
+						<a href="graph.html#clonegraph" class="tsd-kind-icon">clone<wbr>Graph</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-namespace tsd-has-type-parameter">
 						<a href="graph.html#createastarrunner" class="tsd-kind-icon">createAStar<wbr>Runner</a>
 					</li>
 					<li class=" tsd-kind-method tsd-parent-kind-namespace tsd-has-type-parameter">
 						<a href="graph.html#createdirectedgraph" class="tsd-kind-icon">create<wbr>Directed<wbr>Graph</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-namespace tsd-has-type-parameter">
+						<a href="graph.html#findcycle" class="tsd-kind-icon">find<wbr>Cycle</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-namespace tsd-has-type-parameter">
+						<a href="graph.html#findcycles" class="tsd-kind-icon">find<wbr>Cycles</a>
 					</li>
 				</ul>
 			</nav>
@@ -1592,9 +1938,8 @@ $('#toc').on('click', 'a', function() {
 <footer>
             <div class="row">
                 <div class="col-lg-12 footer">
-               &copy;2024 Matterport, Inc. All rights reserved. <br />
- Site last generated: Jul 30, 2024 <br />
-<p><img class="footer-logo" src="/images/MP-logo_icon-RGB_black.svg" alt="Company logo"/></p>
+               &copy;2025 Matterport, Inc. All rights reserved. <br />
+ Site last generated: Dec 15, 2025
                 </div>
             </div>
 </footer>
