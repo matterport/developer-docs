@@ -1,0 +1,363 @@
+<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-reference/mattertag/index" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.0"><title data-rh=true>Mattertag | Matterport SDK</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:image content=https://matterport.github.io/developer-docs/img/matterport-social-card.jpg /><meta data-rh=true name=twitter:image content=https://matterport.github.io/developer-docs/img/matterport-social-card.jpg /><meta data-rh=true property=og:url content=https://matterport.github.io/developer-docs/reference/mattertag/ /><meta data-rh=true property=og:locale content=en /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="Mattertag | Matterport SDK"/><link data-rh=true rel=icon href=/developer-docs/img/favicon.svg /><link data-rh=true rel=canonical href=https://matterport.github.io/developer-docs/reference/mattertag/ /><link data-rh=true rel=alternate href=https://matterport.github.io/developer-docs/reference/mattertag/ hreflang=en /><link data-rh=true rel=alternate href=https://matterport.github.io/developer-docs/reference/mattertag/ hreflang=x-default /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://matterport.github.io/developer-docs/overview/reference-summary","name":"SDK Reference","position":1},{"@type":"ListItem","item":"https://matterport.github.io/developer-docs/reference/mattertag/","name":"Mattertag","position":2}]}</script><link rel=stylesheet href=/developer-docs/assets/css/styles.5d7b2e2f.css /><script src=/developer-docs/assets/js/runtime~main.49d06ea7.js defer></script><script src=/developer-docs/assets/js/main.d90f413b.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme-dc4")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/developer-docs/img/matterport-logo-white.svg /><div role=region aria-label="Skip to main content"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Skip to main content</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/developer-docs/><div class=navbar__logo><img src=/developer-docs/img/matterport-logo-white.svg alt="Matterport Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/developer-docs/img/matterport-logo-white.svg alt="Matterport Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate"></b></a><a aria-current=page class="navbar__item navbar__link navbar__link--active" href=/developer-docs/overview/>SDK Docs</a><a class="navbar__item navbar__link" href=/developer-docs/api/>API Docs</a><div class="navbar__item dropdown dropdown--hoverable"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>What's New</a><ul class=dropdown__menu><li><a class=dropdown__link href=/developer-docs/sdk-changelog/>SDK Changelog</a><li><a class=dropdown__link href=/developer-docs/api-changelog/>API Changelog</a></ul></div></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_Bca1><div class="navbar__search searchBarContainer_NW3z" dir=ltr><input placeholder=Search aria-label=Search class="navbar__search-input searchInput_YFbd" value="" /><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class=sidebar_njMd><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/developer-docs/overview/><span title=Overview class=categoryLinkLabel_W154>Overview</span></a><button aria-label="Expand sidebar category 'Overview'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/developer-docs/sdk-changelog/><span title="What's New" class=categoryLinkLabel_W154>What's New</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/developer-docs/embed-sdk/><span title="Showcase Embed SDK" class=categoryLinkLabel_W154>Showcase Embed SDK</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/developer-docs/bundle-sdk/><span title="Showcase Bundle SDK" class=categoryLinkLabel_W154>Showcase Bundle SDK</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/developer-docs/webcomponent/><span title="Web Component (Beta)" class=categoryLinkLabel_W154>Web Component (Beta)</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" href=/developer-docs/overview/reference-summary/><span title="SDK Reference" class=categoryLinkLabel_W154>SDK Reference</span></a><button aria-label="Collapse sidebar category 'SDK Reference'" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/developer-docs/reference/><span title=MpSdk class=linkLabel_WmDU>MpSdk</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/app/><span title=App class=linkLabel_WmDU>App</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/asset/><span title=Asset class=linkLabel_WmDU>Asset</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/camera/><span title=Camera class=linkLabel_WmDU>Camera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/conversion/><span title=Conversion class=linkLabel_WmDU>Conversion</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/floor/><span title=Floor class=linkLabel_WmDU>Floor</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/graph/><span title=Graph class=linkLabel_WmDU>Graph</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/label/><span title=Label class=linkLabel_WmDU>Label</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/link/><span title=Link class=linkLabel_WmDU>Link</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/developer-docs/reference/mattertag/><span title=Mattertag class=linkLabel_WmDU>Mattertag</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/measurements/><span title=Measurements class=linkLabel_WmDU>Measurements</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/mode/><span title=Mode class=linkLabel_WmDU>Mode</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/model/><span title=Model class=linkLabel_WmDU>Model</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/oauth/><span title=OAuth class=linkLabel_WmDU>OAuth</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/pointer/><span title=Pointer class=linkLabel_WmDU>Pointer</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/renderer/><span title=Renderer class=linkLabel_WmDU>Renderer</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/room/><span title=Room class=linkLabel_WmDU>Room</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/scene/><span title=Scene class=linkLabel_WmDU>Scene</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/sensor/><span title=Sensor class=linkLabel_WmDU>Sensor</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/settings/><span title=Settings class=linkLabel_WmDU>Settings</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/sweep/><span title=Sweep class=linkLabel_WmDU>Sweep</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/tag/><span title=Tag class=linkLabel_WmDU>Tag</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/tour/><span title=Tour class=linkLabel_WmDU>Tour</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/developer-docs/reference/view/><span title=View class=linkLabel_WmDU>View</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/developer-docs/tutorials/observables/><span title=Tutorials class=categoryLinkLabel_W154>Tutorials</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/developer-docs/bundle-sdk/architecture/><span title="Scene Framework" class=categoryLinkLabel_W154>Scene Framework</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/developer-docs/examples/><span title=Examples class=categoryLinkLabel_W154>Examples</span></a><button aria-label="Expand sidebar category 'Examples'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/developer-docs/api/><span title="Matterport APIs" class=categoryLinkLabel_W154>Matterport APIs</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/developer-docs/oauth/><span title=OAuth class=categoryLinkLabel_W154>OAuth</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/developer-docs/oauth/private-model-embed/><span title="Private Model Embed" class=categoryLinkLabel_W154>Private Model Embed</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/developer-docs/webhooks/><span title=Webhooks class=categoryLinkLabel_W154>Webhooks</span></a></div></ul></nav></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label=Breadcrumbs><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label="Home page" class=breadcrumbs__link href=/developer-docs/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><a class=breadcrumbs__link href=/developer-docs/overview/reference-summary/><span>SDK Reference</span></a><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>Mattertag</span></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Mattertag</h1></header><div class=sdk-api-page-marker></div>
+<div class=sdk-index-box>
+<div class=sdk-index-section>
+<div class=sdk-index-header>Interfaces</div>
+<ul class=sdk-index-grid>
+<li class=""><a class="" href=/developer-docs/reference/mattertag/descriptionchunk/>DescriptionChunk</a></li>
+<li class=""><a class="" href=/developer-docs/reference/mattertag/imessenger/>IMessenger</a></li>
+<li class=""><a class="" href=/developer-docs/reference/mattertag/link/>Link</a></li>
+<li class=""><a class="" href=/developer-docs/reference/mattertag/mattertagdescriptor/>MattertagDescriptor</a></li>
+<li class=""><a class="" href=/developer-docs/reference/mattertag/positionoptions/>PositionOptions</a></li>
+</ul>
+</div>
+<div class=sdk-index-section>
+<div class=sdk-index-header>Types</div>
+<ul class=sdk-index-grid>
+<li class=""><a href=#type-EditableProperties class="">EditableProperties</a></li>
+<li class=""><a href=#type-GlobalVariableMap class="">GlobalVariableMap</a></li>
+<li class=""><a href=#type-InjectionOptions class="">InjectionOptions</a></li>
+<li class=""><a href=#type-MattertagData class="">MattertagData</a></li>
+<li class=""><a href=#type-ObservableMattertagData class="">ObservableMattertagData</a></li>
+<li class=""><a href=#type-PreventableActions class="">PreventableActions</a></li>
+</ul>
+</div>
+<div class=sdk-index-section>
+<div class=sdk-index-header>Enumerations</div>
+<ul class=sdk-index-grid>
+<li class=""><a href=#enum-DescriptionChunkType class="">DescriptionChunkType</a></li>
+<li class=""><a href=#enum-Event class="">Event</a></li>
+<li class=""><a href=#enum-LinkType class="">LinkType</a></li>
+<li class=""><a href=#enum-MediaType class="">MediaType</a></li>
+<li class=""><a href=#enum-Transition class="">Transition</a></li>
+</ul>
+</div>
+<div class=sdk-index-section>
+<div class=sdk-index-header>Observables</div>
+<ul class=sdk-index-grid>
+<li class=""><a href=#data class="">data</a></li>
+</ul>
+</div>
+<div class=sdk-index-section>
+<div class=sdk-index-header>Methods</div>
+<ul class=sdk-index-grid>
+<li class=""><a href=#add class="">add</a></li>
+<li class=""><a href=#editBillboard class="">editBillboard</a></li>
+<li class=""><a href=#editColor class="">editColor</a></li>
+<li class=""><a href=#editIcon class="">editIcon</a></li>
+<li class=""><a href=#editOpacity class="">editOpacity</a></li>
+<li class=""><a href=#editPosition class="">editPosition</a></li>
+<li class=""><a href=#editStem class="">editStem</a></li>
+<li class=""><a href=#getData class="">getData</a></li>
+<li class=""><a href=#getDiscPosition class="">getDiscPosition</a></li>
+<li class=""><a href=#injectHTML class="">injectHTML</a></li>
+<li class=""><a href=#navigateToTag class="">navigateToTag</a></li>
+<li class=""><a href=#preventAction class="">preventAction</a></li>
+<li class=""><a href=#registerIcon class="">registerIcon</a></li>
+<li class=""><a href=#remove class="">remove</a></li>
+<li class=""><a href=#resetIcon class="">resetIcon</a></li>
+</ul>
+</div>
+</div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=types>Types<a href=#types class=hash-link aria-label="Direct link to Types" title="Direct link to Types" translate=no>​</a></h2>
+<div class=sdk-member-card>
+<p><a id=type-EditableProperties class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=editableproperties>EditableProperties<a href=#editableproperties class=hash-link aria-label="Direct link to EditableProperties" title="Direct link to EditableProperties" translate=no>​</a></h3>
+<div class=sdk-signature>EditableProperties: <em>object</em></div>
+<table><thead><tr><th>Property<th>Type<tbody><tr><td>description<td>string<tr><td>label<td>string<tr><td>media<td>{ type: <a href=#enum-MediaType class="">Mattertag.MediaType</a>; src: string; }</table>
+</div>
+<div class=sdk-member-card>
+<p><a id=type-GlobalVariableMap class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=globalvariablemap>GlobalVariableMap<a href=#globalvariablemap class=hash-link aria-label="Direct link to GlobalVariableMap" title="Direct link to GlobalVariableMap" translate=no>​</a></h3>
+<div class=sdk-signature>GlobalVariableMap: <em>object</em></div>
+<p>Map the globals we provide in your sandbox to other names.</p>
+<table><thead><tr><th>Property<th>Type<tbody><tr><td>off?<td>string | undefined<tr><td>on?<td>string | undefined<tr><td>send?<td>string | undefined<tr><td>tag?<td>string | undefined</table>
+</div>
+<div class=sdk-member-card>
+<p><a id=type-InjectionOptions class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=injectionoptions>InjectionOptions<a href=#injectionoptions class=hash-link aria-label="Direct link to InjectionOptions" title="Direct link to InjectionOptions" translate=no>​</a></h3>
+<div class=sdk-signature>InjectionOptions: <em>object</em></div>
+<p>Options that can be specified when injection custom HTML into a Mattertag.</p>
+<table><thead><tr><th>Property<th>Type<tbody><tr><td>globalVariableMap?<td><a href=#type-GlobalVariableMap class="">Mattertag.GlobalVariableMap</a> | undefined<br/><span class=sdk-table-desc>A map for the global functions and variables we provide in your iframe sandbox.
+Only needs to be used if scripts you are importing also have a global send, on, off, or tag.</span><tr><td>size?<td><a class="" href=/developer-docs/reference/#type-Size>Size</a> | undefined<br/><span class=sdk-table-desc>The size of the frame to create</span><tr><td>windowPath?<td>string | undefined</table>
+</div>
+<div class=sdk-member-card>
+<p><a id=type-MattertagData class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=mattertagdata>MattertagData<a href=#mattertagdata class=hash-link aria-label="Direct link to MattertagData" title="Direct link to MattertagData" translate=no>​</a></h3>
+<div class=sdk-signature>MattertagData: <em>object</em></div>
+<table><thead><tr><th>Property<th>Type<tbody><tr><td>anchorNormal<td><a class="" href=/developer-docs/reference/#type-Vector3>Vector3</a><tr><td>anchorPosition<td><a class="" href=/developer-docs/reference/#type-Vector3>Vector3</a><br/><span class=sdk-table-desc>The world space position of the mattertag anchor within the model</span><tr><td>color<td><a class="" href=/developer-docs/reference/#type-Color>Color</a><tr><td>description<td>string<tr><td>enabled<td>boolean<tr><td>floorId<td>number<tr><td>floorIndex<td>number<tr><td>floorInfo<td>{ id: string; sequence: number; }<tr><td>label<td>string<tr><td>media<td>{ type: <a href=#enum-MediaType class="">Mattertag.MediaType</a>; src: string; }<tr><td>mediaSrc<td>string<tr><td>mediaType<td><a href=#enum-MediaType class="">Mattertag.MediaType</a><tr><td>parsedDescription<td><a class="" href=/developer-docs/reference/mattertag/descriptionchunk/>Mattertag.DescriptionChunk</a>[]<tr><td>sid<td>string<tr><td>stemHeight<td>number<tr><td>stemVector<td><a class="" href=/developer-docs/reference/#type-Vector3>Vector3</a><br/><span class=sdk-table-desc>The world space (non-normal) direction of the mattertag's stem</span><tr><td>stemVisible<td>boolean</table>
+</div>
+<div class=sdk-member-card>
+<p><a id=type-ObservableMattertagData class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=observablemattertagdata>ObservableMattertagData<a href=#observablemattertagdata class=hash-link aria-label="Direct link to ObservableMattertagData" title="Direct link to ObservableMattertagData" translate=no>​</a></h3>
+<div class=sdk-signature>ObservableMattertagData: <em>object</em></div>
+<table><thead><tr><th>Property<th>Type<tbody><tr><td>anchorPosition<td><a class="" href=/developer-docs/reference/#type-Vector3>Vector3</a><br/><span class=sdk-table-desc>The world space position of the mattertag anchor within the model</span><tr><td>color<td><a class="" href=/developer-docs/reference/#type-Color>Color</a><tr><td>description<td>string<tr><td>enabled<td>boolean<tr><td>floorIndex<td>number<tr><td>floorInfo<td>{ id: string; sequence: number; }<tr><td>label<td>string<tr><td>media<td>{ type: <a href=#enum-MediaType class="">Mattertag.MediaType</a>; src: string; }<tr><td>sid<td>string<tr><td>stemVector<td><a class="" href=/developer-docs/reference/#type-Vector3>Vector3</a><br/><span class=sdk-table-desc>The world space (non-normal) direction of the mattertag's stem</span><tr><td>stemVisible<td>boolean</table>
+</div>
+<div class=sdk-member-card>
+<p><a id=type-PreventableActions class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=preventableactions>PreventableActions<a href=#preventableactions class=hash-link aria-label="Direct link to PreventableActions" title="Direct link to PreventableActions" translate=no>​</a></h3>
+<div class=sdk-signature>PreventableActions: <em>object</em></div>
+<table><thead><tr><th>Property<th>Type<tbody><tr><td>navigating<td>boolean<tr><td>opening<td>boolean</table>
+</div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=enumerations>Enumerations<a href=#enumerations class=hash-link aria-label="Direct link to Enumerations" title="Direct link to Enumerations" translate=no>​</a></h2>
+<div class=sdk-member-card>
+<p><a id=enum-DescriptionChunkType class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=descriptionchunktype>DescriptionChunkType<a href=#descriptionchunktype class=hash-link aria-label="Direct link to DescriptionChunkType" title="Direct link to DescriptionChunkType" translate=no>​</a></h3>
+<div class=sdk-signature>DescriptionChunkType: <em>enum</em></div>
+<table><thead><tr><th>Member<th>Value<tbody><tr><td>LINK<td>"tag.chunk.link"<tr><td>NONE<td>"tag.chunk.none"<tr><td>TEXT<td>"tag.chunk.text"</table>
+</div>
+<div class=sdk-member-card>
+<p><a id=enum-Event class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=event>Event<a href=#event class=hash-link aria-label="Direct link to Event" title="Direct link to Event" translate=no>​</a></h3>
+<div class=sdk-signature>Event: <em>enum</em></div>
+<table><thead><tr><th>Member<th>Value<tbody><tr><td>CLICK<td>"tag.click"<tr><td>HOVER<td>"tag.hover"<tr><td>LINK_OPEN<td>"tag.linkopen"</table>
+</div>
+<div class=sdk-member-card>
+<p><a id=enum-LinkType class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=linktype>LinkType<a href=#linktype class=hash-link aria-label="Direct link to LinkType" title="Direct link to LinkType" translate=no>​</a></h3>
+<div class=sdk-signature>LinkType: <em>enum</em></div>
+<table><thead><tr><th>Member<th>Value<tbody><tr><td>EXT_LINK<td>"tag.link.ext"<br/><span class=sdk-table-desc>An external link</span><tr><td>MODEL<td>"tag.link.model"<br/><span class=sdk-table-desc>A link to a different Matterport model</span><tr><td>NAVIGATION<td>"tag.link.nav"<br/><span class=sdk-table-desc>A link to another position in the current model</span></table>
+</div>
+<div class=sdk-member-card>
+<p><a id=enum-MediaType class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=mediatype>MediaType<a href=#mediatype class=hash-link aria-label="Direct link to MediaType" title="Direct link to MediaType" translate=no>​</a></h3>
+<div class=sdk-signature>MediaType: <em>enum</em></div>
+<table><thead><tr><th>Member<th>Value<tbody><tr><td>NONE<td>"mattertag.media.none"<tr><td>PHOTO<td>"mattertag.media.photo"<tr><td>RICH<td>"mattertag.media.rich"<tr><td>VIDEO<td>"mattertag.media.video"</table>
+</div>
+<div class=sdk-member-card>
+<p><a id=enum-TransitionType class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=transitiontype>TransitionType<a href=#transitiontype class=hash-link aria-label="Direct link to TransitionType" title="Direct link to TransitionType" translate=no>​</a></h3>
+<div class=sdk-signature>TransitionType: <em>enum</em></div>
+<p>Transition types for camera movements. This is the canonical transition type enum.
+Used for <a class="" href=/developer-docs/reference/mode/#moveTo><code>Mode.moveTo</code></a>, <a class="" href=/developer-docs/reference/sweep/#moveTo><code>Sweep.moveTo</code></a>, <a href=#navigateToTag class=""><code>Mattertag.navigateToTag</code></a>, and other camera movement methods.
+Note: not all values are supported, refer to per-method documentation for details.</p>
+<p>See <a class="" href=/developer-docs/reference/camera/#enum-TransitionType>Camera.TransitionType</a></p>
+<table><thead><tr><th>Member<th>Value<tbody><tr><td>FADEOUT<td>"transition.fade"<br/><span class=sdk-table-desc>Fade to black transition</span><tr><td>FLY<td>"transition.fly"<br/><span class=sdk-table-desc>Fly transition</span><tr><td>INSTANT<td>"transition.instant"<br/><span class=sdk-table-desc>Instant transition</span><tr><td>MOVEFADE<td>"transition.movefade"<br/><span class=sdk-table-desc><span class="sdk-badge sdk-badge-experimental">experimental</span> Move with fade transition</span><tr><td>ORBIT<td>"transition.orbit"<br/><span class=sdk-table-desc><span class="sdk-badge sdk-badge-experimental">experimental</span> Orbit transition</span></table>
+</div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=observables>Observables<a href=#observables class=hash-link aria-label="Direct link to Observables" title="Direct link to Observables" translate=no>​</a></h2>
+<div class=sdk-member-card>
+<p><a id=data class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=data>data<a href=#data class=hash-link aria-label="Direct link to data" title="Direct link to data" translate=no>​</a></h3>
+<div class=sdk-signature>data: <a class="" href=/developer-docs/reference/iobservablemap/>IObservableMap</a>&lt;<a href=#type-ObservableMattertagData class="">Mattertag.ObservableMattertagData</a>></div>
+<div class=sdk-deprecated-notice><span class="sdk-badge sdk-badge-deprecated">deprecated</span> Use <a class="" href=/developer-docs/reference/tag/#data><code>Tag.data</code></a> instead</div>
+<p>An observable collection of Mattertag data that can be subscribed to.</p>
+</div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=methods>Methods<a href=#methods class=hash-link aria-label="Direct link to Methods" title="Direct link to Methods" translate=no>​</a></h2>
+<div class=sdk-member-card>
+<p><a id=add class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=add>add<a href=#add class=hash-link aria-label="Direct link to add" title="Direct link to add" translate=no>​</a></h3>
+<div class=sdk-signature>add(newTagData: <a class="" href=/developer-docs/reference/mattertag/mattertagdescriptor/>Mattertag.MattertagDescriptor</a> | <a class="" href=/developer-docs/reference/mattertag/mattertagdescriptor/>Mattertag.MattertagDescriptor</a>[]): Promise&lt;string[]></div>
+<div class=sdk-deprecated-notice><span class="sdk-badge sdk-badge-deprecated">deprecated</span> Use <a class="" href=/developer-docs/reference/tag/#add><code>Tag.add</code></a> instead</div>
+<p>Add one or more Mattertags to Showcase.
+Each input Mattertag supports setting the label, description, color, anchorPosition, and stemVector.</p>
+<p>Two properties are required:</p>
+<ul>
+<li class=""><code>anchorPosition</code>, the point where the tag connects to the model</li>
+<li class=""><code>stemVector</code>, the direction, aka normal, and height that the Mattertag stem points</li>
+</ul>
+<p>See <a class="" href=/developer-docs/reference/pointer/#intersection><code>Pointer.intersection</code></a> for a way to retrive a new <code>anchorPosition</code> and <code>stemVector</code>.</p>
+<p><strong>Note</strong>: these changes are not persisted between refreshes of Showcase. They are only valid for the current browser session.</p>
+<table><thead><tr><th>Parameter<th>Type<tbody><tr><td>newTagData<td><a class="" href=/developer-docs/reference/mattertag/mattertagdescriptor/>Mattertag.MattertagDescriptor</a> | <a class="" href=/developer-docs/reference/mattertag/mattertagdescriptor/>Mattertag.MattertagDescriptor</a>[]<br/><span class=sdk-table-desc>A single or array of Mattertag templates to add.</span></table>
+<p><strong>Returns:</strong> <code>Promise</code>&lt;string[]></p>
+<p>A promise that resolves with the sids for the newly added Mattertags.</p>
+</div>
+<div class=sdk-member-card>
+<p><a id=editBillboard class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=editbillboard>editBillboard<a href=#editbillboard class=hash-link aria-label="Direct link to editBillboard" title="Direct link to editBillboard" translate=no>​</a></h3>
+<div class=sdk-signature>editBillboard(tagSid: string, properties: Partial&lt;<a href=#type-EditableProperties class="">Mattertag.EditableProperties</a>>): Promise&lt;void></div>
+<div class=sdk-deprecated-notice><span class="sdk-badge sdk-badge-deprecated">deprecated</span> Use <a class="" href=/developer-docs/reference/tag/#editBillboard><code>Tag.editBillboard</code></a> or <a class="" href=/developer-docs/reference/tag/#registerAttachment><code>Tag.registerAttachment</code></a> and/or <a class="" href=/developer-docs/reference/tag/#attach><code>Tag.attach</code></a> to manage media</div>
+<p>Edit the data in a Mattertag billboard.</p>
+<p><strong>Note</strong>: these changes are not persisted between refreshes of Showcase. They are only valid for the current browser session.</p>
+<table><thead><tr><th>Parameter<th>Type<tbody><tr><td>tagSid<td>string<br/><span class=sdk-table-desc>the sid of the Mattertag to edit</span><tr><td>properties<td>Partial&lt;<a href=#type-EditableProperties class="">Mattertag.EditableProperties</a>><br/><span class=sdk-table-desc>A dictionary of properties to set</span></table>
+<p><strong>Returns:</strong> <code>Promise</code>&lt;void></p>
+</div>
+<div class=sdk-member-card>
+<p><a id=editColor class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=editcolor>editColor<a href=#editcolor class=hash-link aria-label="Direct link to editColor" title="Direct link to editColor" translate=no>​</a></h3>
+<div class=sdk-signature>editColor(tagSid: string, color: <a class="" href=/developer-docs/reference/#type-Color>Color</a>): Promise&lt;void></div>
+<div class=sdk-deprecated-notice><span class="sdk-badge sdk-badge-deprecated">deprecated</span> Use <a class="" href=/developer-docs/reference/tag/#editColor><code>Tag.editColor</code></a> instead</div>
+<p>Edit the color of a Mattertag</p>
+<table><thead><tr><th>Parameter<th>Type<tbody><tr><td>tagSid<td>string<br/><span class=sdk-table-desc>The sid of the Mattertag to edit</span><tr><td>color<td><a class="" href=/developer-docs/reference/#type-Color>Color</a><br/><span class=sdk-table-desc>The new color to be applied to the Mattertag disc</span></table>
+<p><strong>Returns:</strong> <code>Promise</code>&lt;void></p>
+</div>
+<div class=sdk-member-card>
+<p><a id=editIcon class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=editicon>editIcon<a href=#editicon class=hash-link aria-label="Direct link to editIcon" title="Direct link to editIcon" translate=no>​</a></h3>
+<div class=sdk-signature>editIcon(tagSid: string, iconId: string): Promise&lt;void></div>
+<div class=sdk-deprecated-notice><span class="sdk-badge sdk-badge-deprecated">deprecated</span> Use <a class="" href=/developer-docs/reference/tag/#editIcon><code>Tag.editIcon</code></a> instead</div>
+<p>Change the icon of the Mattertag disc</p>
+<p><strong>Note</strong>: these changes are not persisted between refreshes of Showcase. They are only valid for the current browser session.</p>
+<table><thead><tr><th>Parameter<th>Type<tbody><tr><td>tagSid<td>string<br/><span class=sdk-table-desc>The sid of the Mattertag to edit</span><tr><td>iconId<td>string<br/><span class=sdk-table-desc>The id of the icon to apply</span></table>
+<p><strong>Returns:</strong> <code>Promise</code>&lt;void></p>
+<p><strong>Errors</strong>
+Warns if the provided <code>iconSrc</code> is an .svg file which doesn't have a <code>'width'</code> or <code>'height'</code> attribute.
+Defaults to a resolution of 128x128 if neither exist.</p>
+</div>
+<div class=sdk-member-card>
+<p><a id=editOpacity class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=editopacity>editOpacity<a href=#editopacity class=hash-link aria-label="Direct link to editOpacity" title="Direct link to editOpacity" translate=no>​</a></h3>
+<div class=sdk-signature>editOpacity(tagSid: string, opacity: number): Promise&lt;void></div>
+<div class=sdk-deprecated-notice><span class="sdk-badge sdk-badge-deprecated">deprecated</span> Use <a class="" href=/developer-docs/reference/tag/#editOpacity><code>Tag.editOpacity</code></a> instead</div>
+<p>Edit the opacity of a Mattertag</p>
+<table><thead><tr><th>Parameter<th>Type<tbody><tr><td>tagSid<td>string<br/><span class=sdk-table-desc>The sid of the Mattertag to edit</span><tr><td>opacity<td>number<br/><span class=sdk-table-desc>The target opacity for the Mattertag in the range of [0, 1]</span></table>
+<p><strong>Returns:</strong> <code>Promise</code>&lt;void></p>
+</div>
+<div class=sdk-member-card>
+<p><a id=editPosition class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=editposition>editPosition<a href=#editposition class=hash-link aria-label="Direct link to editPosition" title="Direct link to editPosition" translate=no>​</a></h3>
+<div class=sdk-signature>editPosition(tagSid: string, moveOptions: Partial&lt;<a class="" href=/developer-docs/reference/mattertag/positionoptions/>Mattertag.PositionOptions</a>>): Promise&lt;void></div>
+<div class=sdk-deprecated-notice><span class="sdk-badge sdk-badge-deprecated">deprecated</span> Use <a class="" href=/developer-docs/reference/tag/#editPosition><code>Tag.editPosition</code></a> instead</div>
+<p>Move and reorient a Mattertag.</p>
+<p>See <a class="" href=/developer-docs/reference/pointer/#intersection><code>Pointer.intersection</code></a> for a way to retrieve a new <code>anchorPosition</code> and <code>stemVector</code>.</p>
+<p><strong>Note</strong>: these changes are not persisted between refreshes of Showcase. They are only valid for the current browser session.</p>
+<table><thead><tr><th>Parameter<th>Type<tbody><tr><td>tagSid<td>string<br/><span class=sdk-table-desc>The sid of the Mattertag to reposition</span><tr><td>moveOptions<td>Partial&lt;<a class="" href=/developer-docs/reference/mattertag/positionoptions/>Mattertag.PositionOptions</a>><br/><span class=sdk-table-desc>The new anchorPosition, stemVector and/or floorId.</span></table>
+<p><strong>Returns:</strong> <code>Promise</code>&lt;void></p>
+</div>
+<div class=sdk-member-card>
+<p><a id=editStem class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=editstem>editStem<a href=#editstem class=hash-link aria-label="Direct link to editStem" title="Direct link to editStem" translate=no>​</a></h3>
+<div class=sdk-signature>editStem(tagSid: string, options: { stemHeight?: number; stemVisible?: boolean; }): Promise&lt;void></div>
+<div class=sdk-deprecated-notice><span class="sdk-badge sdk-badge-deprecated">deprecated</span> Use <a class="" href=/developer-docs/reference/tag/#editStem><code>Tag.editStem</code></a> instead</div>
+<div class=sdk-introduced><em>Introduced 3.1.70.10-0-ge9cb83b28c</em></div>
+<p>Edit the stem of a Mattertag</p>
+<table><thead><tr><th>Parameter<th>Type<tbody><tr><td>tagSid<td>string<br/><span class=sdk-table-desc>The sid of the Mattertag to edit</span><tr><td>options<td>{ stemHeight?: number; stemVisible?: boolean; }<br/><span class=sdk-table-desc>What to change about the Mattertag's stem - can include stemHeight and stemVisible</span></table>
+<p><strong>Returns:</strong> <code>Promise</code>&lt;void></p>
+</div>
+<div class=sdk-member-card>
+<p><a id=getData class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=getdata>getData<a href=#getdata class=hash-link aria-label="Direct link to getData" title="Direct link to getData" translate=no>​</a></h3>
+<div class=sdk-signature>getData(): Promise&lt;<a href=#type-MattertagData class="">Mattertag.MattertagData</a>[]></div>
+<div class=sdk-deprecated-notice><span class="sdk-badge sdk-badge-deprecated">deprecated</span> Use <a class="" href=/developer-docs/reference/tag/#data><code>Tag.data</code></a> instead</div>
+<p>This function returns metadata on the collection of Mattertags.</p>
+<p><strong>Returns:</strong> <code>Promise</code>&lt;<a href=#type-MattertagData class="">Mattertag.MattertagData</a>[]></p>
+</div>
+<div class=sdk-member-card>
+<p><a id=getDiscPosition class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=getdiscposition>getDiscPosition<a href=#getdiscposition class=hash-link aria-label="Direct link to getDiscPosition" title="Direct link to getDiscPosition" translate=no>​</a></h3>
+<div class=sdk-signature>getDiscPosition(tag: <a href=#type-MattertagData class="">Mattertag.MattertagData</a> | <a href=#type-ObservableMattertagData class="">Mattertag.ObservableMattertagData</a>, result?: <a class="" href=/developer-docs/reference/#type-Vector3>Vector3</a>): <a class="" href=/developer-docs/reference/#type-Vector3>Vector3</a></div>
+<div class=sdk-deprecated-notice><span class="sdk-badge sdk-badge-deprecated">deprecated</span> Disc position is automatially included in <a class="" href=/developer-docs/reference/tag/#data><code>Tag.data</code></a></div>
+<p>Get the disc's (3d) position of a Mattertag.</p>
+<table><thead><tr><th>Parameter<th>Type<tbody><tr><td>tag<td><a href=#type-MattertagData class="">Mattertag.MattertagData</a> | <a href=#type-ObservableMattertagData class="">Mattertag.ObservableMattertagData</a><tr><td>result?<td><a class="" href=/developer-docs/reference/#type-Vector3>Vector3</a></table>
+<p><strong>Returns:</strong> <a class="" href=/developer-docs/reference/#type-Vector3>Vector3</a></p>
+</div>
+<div class=sdk-member-card>
+<p><a id=injectHTML class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=injecthtml>injectHTML<a href=#injecthtml class=hash-link aria-label="Direct link to injectHTML" title="Direct link to injectHTML" translate=no>​</a></h3>
+<div class=sdk-signature>injectHTML(tagSid: string, html: string, options: <a href=#type-InjectionOptions class="">Mattertag.InjectionOptions</a>): Promise&lt;<a class="" href=/developer-docs/reference/mattertag/imessenger/>Mattertag.IMessenger</a>></div>
+<div class=sdk-deprecated-notice><span class="sdk-badge sdk-badge-deprecated">deprecated</span> Use <a class="" href=/developer-docs/reference/tag/#registerSandbox><code>Tag.registerSandbox</code></a> and <a class="" href=/developer-docs/reference/tag/#attach><code>Tag.attach</code></a> instead</div>
+<p>Add a custom frame that can host custom HTML and JavaScript, and communicate bi-directionally with your page.</p>
+<p>The frame that contains your custom code will have certain limitations due to being sandboxed by the <code>sandbox='allow-scripts</code> attribute.
+Attempting to access properties of other windows will also be blocked by the browser.
+(<a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe target=_blank rel="noopener noreferrer" class="">see the MDN pages about iframe sandbox</a>)</p>
+<p>Currently, the HTML CAN ONLY BE SET ONCE by a call to <code>injectHTML</code>. This includes removing or clearing the HTML.</p>
+<table><thead><tr><th>Parameter<th>Type<tbody><tr><td>tagSid<td>string<tr><td>html<td>string<tr><td>options<td><a href=#type-InjectionOptions class="">Mattertag.InjectionOptions</a></table>
+<p><strong>Returns:</strong> <code>Promise</code>&lt;<a class="" href=/developer-docs/reference/mattertag/imessenger/>Mattertag.IMessenger</a>></p>
+</div>
+<div class=sdk-member-card>
+<p><a id=navigateToTag class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=navigatetotag>navigateToTag<a href=#navigatetotag class=hash-link aria-label="Direct link to navigateToTag" title="Direct link to navigateToTag" translate=no>​</a></h3>
+<div class=sdk-signature>navigateToTag(tagSid: string, transition: <a href=#Transition class="">Mattertag.Transition</a>, force?: boolean): Promise&lt;string></div>
+<p>This function navigates to the Mattertag disc with the provided sid, opening the billboard on arrival.</p>
+<div class="language-typescript codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#000000;--prism-background-color:#f6f6f6><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-typescript codeBlock_bY9V thin-scrollbar" style=color:#000000;background-color:#f6f6f6><code class=codeBlockLines_e6Vv><div class=token-line style=color:#000000><span class="token plain">mpSdk</span><span class="token punctuation" style="color:rgb(4, 81, 165)">.</span><span class="token property-access maybe-class-name">Mattertag</span><span class="token punctuation" style="color:rgb(4, 81, 165)">.</span><span class="token method function property-access" style="color:rgb(0, 0, 255)">navigateToTag</span><span class="token punctuation" style="color:rgb(4, 81, 165)">(</span><span class="token plain">sid</span><span class="token punctuation" style="color:rgb(4, 81, 165)">,</span><span class="token plain"> mpSdk</span><span class="token punctuation" style="color:rgb(4, 81, 165)">.</span><span class="token property-access maybe-class-name">Camera</span><span class="token punctuation" style="color:rgb(4, 81, 165)">.</span><span class="token property-access maybe-class-name">Transition</span><span class="token punctuation" style="color:rgb(4, 81, 165)">.</span><span class="token constant" style="color:rgb(129, 31, 63)">FLY</span><span class="token punctuation" style="color:rgb(4, 81, 165)">)</span><span class="token punctuation" style="color:rgb(4, 81, 165)">;</span><br/></div></code></pre></div></div>
+<table><thead><tr><th>Parameter<th>Type<tbody><tr><td>tagSid<td>string<br/><span class=sdk-table-desc>The sid of the Mattertag to navigate to</span><tr><td>transition<td><a href=#Transition class="">Mattertag.Transition</a><br/><span class=sdk-table-desc>The type of transition to navigate to a sweep where the Mattertag disc is visible</span><tr><td>force?<td>boolean<br/><span class=sdk-table-desc>If navigating to the tag is disabled, passing force === true will force the transition to occur</span></table>
+<p><strong>Returns:</strong> <code>Promise</code>&lt;string></p>
+</div>
+<div class=sdk-member-card>
+<p><a id=preventAction class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=preventaction>preventAction<a href=#preventaction class=hash-link aria-label="Direct link to preventAction" title="Direct link to preventAction" translate=no>​</a></h3>
+<div class=sdk-signature>preventAction(tagSid: string, actions: Partial&lt;<a href=#type-PreventableActions class="">Mattertag.PreventableActions</a>>): Promise&lt;void></div>
+<div class=sdk-deprecated-notice><span class="sdk-badge sdk-badge-deprecated">deprecated</span> Use <a class="" href=/developer-docs/reference/tag/#allowAction><code>Tag.allowAction</code></a> instead</div>
+<p>Prevents the "default" Showcase action on a Mattertag from occurring: hover to open billboard, click to navigate to view.</p>
+<table><thead><tr><th>Parameter<th>Type<tbody><tr><td>tagSid<td>string<br/><span class=sdk-table-desc>The sid of the Mattertag to remove actions from</span><tr><td>actions<td>Partial&lt;<a href=#type-PreventableActions class="">Mattertag.PreventableActions</a>><br/><span class=sdk-table-desc>The set of actions to prevent</span></table>
+<p><strong>Returns:</strong> <code>Promise</code>&lt;void></p>
+</div>
+<div class=sdk-member-card>
+<p><a id=registerIcon class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=registericon>registerIcon<a href=#registericon class=hash-link aria-label="Direct link to registerIcon" title="Direct link to registerIcon" translate=no>​</a></h3>
+<div class=sdk-signature>registerIcon(iconId: string, iconSrc: string): Promise&lt;void></div>
+<div class=sdk-deprecated-notice><span class="sdk-badge sdk-badge-deprecated">deprecated</span> Use <a class="" href=/developer-docs/reference/asset/#registerTexture><code>Asset.registerTexture</code></a> instead</div>
+<p>Register an icon to use with subsequent <a href=#editIcon class=""><code>Mattertag.editIcon</code></a> calls.</p>
+<p><strong>Note</strong>: It is recommended to host your own images to mitigate cross origin limitations.</p>
+<table><thead><tr><th>Parameter<th>Type<tbody><tr><td>iconId<td>string<br/><span class=sdk-table-desc>A user specified string to use as a lookup of this icon</span><tr><td>iconSrc<td>string<br/><span class=sdk-table-desc>The src of the icon, like the src of an &lt;img></span></table>
+<p><strong>Returns:</strong> <code>Promise</code>&lt;void></p>
+</div>
+<div class=sdk-member-card>
+<p><a id=remove class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=remove>remove<a href=#remove class=hash-link aria-label="Direct link to remove" title="Direct link to remove" translate=no>​</a></h3>
+<div class=sdk-signature>remove(tagSids: string | string[]): Promise&lt;string[]></div>
+<div class=sdk-deprecated-notice><span class="sdk-badge sdk-badge-deprecated">deprecated</span> Use <a class="" href=/developer-docs/reference/tag/#remove><code>Tag.remove</code></a> instead</div>
+<p>Removes one or more Mattertags from Showcase.</p>
+<p><strong>Note</strong>: these changes are not persisted between refreshes of Showcase. They are only valid for the current browser session.</p>
+<table><thead><tr><th>Parameter<th>Type<tbody><tr><td>tagSids<td>string | string[]<br/><span class=sdk-table-desc>A single Mattertag sid or array of Mattertag sids to remove.</span></table>
+<p><strong>Returns:</strong> <code>Promise</code>&lt;string[]></p>
+<p>A promise with an array of Mattertag sids that were actually removed.</p>
+</div>
+<div class=sdk-member-card>
+<p><a id=resetIcon class=anchorTargetStickyNavbar_Vzrq></a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=reseticon>resetIcon<a href=#reseticon class=hash-link aria-label="Direct link to resetIcon" title="Direct link to resetIcon" translate=no>​</a></h3>
+<div class=sdk-signature>resetIcon(tagSid: string): Promise&lt;void></div>
+<div class=sdk-deprecated-notice><span class="sdk-badge sdk-badge-deprecated">deprecated</span> Use <a class="" href=/developer-docs/reference/tag/#resetIcon><code>Tag.resetIcon</code></a> instead</div>
+<p>Resets the icon of the Mattertag disc back to its original icon.</p>
+<table><thead><tr><th>Parameter<th>Type<tbody><tr><td>tagSid<td>string<br/><span class=sdk-table-desc>The sid of the Mattertag to reset</span></table>
+<p><strong>Returns:</strong> <code>Promise</code>&lt;void></p>
+</div>
+<div class="col col--3 sdk-custom-toc-col">
+<div class="thin-scrollbar theme-doc-toc-desktop sdk-custom-toc">
+<ul class="table-of-contents table-of-contents__left-border">
+<li class=""><span class=sdk-toc-header>Interfaces</span>
+<ul>
+<li class=""><a class=table-of-contents__link href=/developer-docs/reference/mattertag/descriptionchunk/>DescriptionChunk</a></li>
+<li class=""><a class=table-of-contents__link href=/developer-docs/reference/mattertag/imessenger/>IMessenger</a></li>
+<li class=""><a class=table-of-contents__link href=/developer-docs/reference/mattertag/link/>Link</a></li>
+<li class=""><a class=table-of-contents__link href=/developer-docs/reference/mattertag/mattertagdescriptor/>MattertagDescriptor</a></li>
+<li class=""><a class=table-of-contents__link href=/developer-docs/reference/mattertag/positionoptions/>PositionOptions</a></li>
+</ul>
+</li>
+<li class=""><span class=sdk-toc-header>Types</span>
+<ul>
+<li class=""><a href=#type-EditableProperties class="table-of-contents__link toc-highlight">EditableProperties</a></li>
+<li class=""><a href=#type-GlobalVariableMap class="table-of-contents__link toc-highlight">GlobalVariableMap</a></li>
+<li class=""><a href=#type-InjectionOptions class="table-of-contents__link toc-highlight">InjectionOptions</a></li>
+<li class=""><a href=#type-MattertagData class="table-of-contents__link toc-highlight">MattertagData</a></li>
+<li class=""><a href=#type-ObservableMattertagData class="table-of-contents__link toc-highlight">ObservableMattertagData</a></li>
+<li class=""><a href=#type-PreventableActions class="table-of-contents__link toc-highlight">PreventableActions</a></li>
+</ul>
+</li>
+<li class=""><span class=sdk-toc-header>Enumerations</span>
+<ul>
+<li class=""><a href=#enum-DescriptionChunkType class="table-of-contents__link toc-highlight">DescriptionChunkType</a></li>
+<li class=""><a href=#enum-Event class="table-of-contents__link toc-highlight">Event</a></li>
+<li class=""><a href=#enum-LinkType class="table-of-contents__link toc-highlight">LinkType</a></li>
+<li class=""><a href=#enum-MediaType class="table-of-contents__link toc-highlight">MediaType</a></li>
+<li class=""><a href=#enum-Transition class="table-of-contents__link toc-highlight">Transition</a></li>
+</ul>
+</li>
+<li class=""><span class=sdk-toc-header>Observables</span>
+<ul>
+<li class=""><a href=#data class="table-of-contents__link toc-highlight">data</a></li>
+</ul>
+</li>
+<li class=""><span class=sdk-toc-header>Methods</span>
+<ul>
+<li class=""><a href=#add class="table-of-contents__link toc-highlight">add</a></li>
+<li class=""><a href=#editBillboard class="table-of-contents__link toc-highlight">editBillboard</a></li>
+<li class=""><a href=#editColor class="table-of-contents__link toc-highlight">editColor</a></li>
+<li class=""><a href=#editIcon class="table-of-contents__link toc-highlight">editIcon</a></li>
+<li class=""><a href=#editOpacity class="table-of-contents__link toc-highlight">editOpacity</a></li>
+<li class=""><a href=#editPosition class="table-of-contents__link toc-highlight">editPosition</a></li>
+<li class=""><a href=#editStem class="table-of-contents__link toc-highlight">editStem</a></li>
+<li class=""><a href=#getData class="table-of-contents__link toc-highlight">getData</a></li>
+<li class=""><a href=#getDiscPosition class="table-of-contents__link toc-highlight">getDiscPosition</a></li>
+<li class=""><a href=#injectHTML class="table-of-contents__link toc-highlight">injectHTML</a></li>
+<li class=""><a href=#navigateToTag class="table-of-contents__link toc-highlight">navigateToTag</a></li>
+<li class=""><a href=#preventAction class="table-of-contents__link toc-highlight">preventAction</a></li>
+<li class=""><a href=#registerIcon class="table-of-contents__link toc-highlight">registerIcon</a></li>
+<li class=""><a href=#remove class="table-of-contents__link toc-highlight">remove</a></li>
+<li class=""><a href=#resetIcon class="table-of-contents__link toc-highlight">resetIcon</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href=/developer-docs/reference/link/><div class=pagination-nav__sublabel>Previous</div><div class=pagination-nav__label>Link</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/developer-docs/reference/measurements/><div class=pagination-nav__sublabel>Next</div><div class=pagination-nav__label>Measurements</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#types class="table-of-contents__link toc-highlight">Types</a><ul><li><a href=#editableproperties class="table-of-contents__link toc-highlight">EditableProperties</a><li><a href=#globalvariablemap class="table-of-contents__link toc-highlight">GlobalVariableMap</a><li><a href=#injectionoptions class="table-of-contents__link toc-highlight">InjectionOptions</a><li><a href=#mattertagdata class="table-of-contents__link toc-highlight">MattertagData</a><li><a href=#observablemattertagdata class="table-of-contents__link toc-highlight">ObservableMattertagData</a><li><a href=#preventableactions class="table-of-contents__link toc-highlight">PreventableActions</a></ul><li><a href=#enumerations class="table-of-contents__link toc-highlight">Enumerations</a><ul><li><a href=#descriptionchunktype class="table-of-contents__link toc-highlight">DescriptionChunkType</a><li><a href=#event class="table-of-contents__link toc-highlight">Event</a><li><a href=#linktype class="table-of-contents__link toc-highlight">LinkType</a><li><a href=#mediatype class="table-of-contents__link toc-highlight">MediaType</a><li><a href=#transitiontype class="table-of-contents__link toc-highlight">TransitionType</a></ul><li><a href=#observables class="table-of-contents__link toc-highlight">Observables</a><ul><li><a href=#data class="table-of-contents__link toc-highlight">data</a></ul><li><a href=#methods class="table-of-contents__link toc-highlight">Methods</a><ul><li><a href=#add class="table-of-contents__link toc-highlight">add</a><li><a href=#editbillboard class="table-of-contents__link toc-highlight">editBillboard</a><li><a href=#editcolor class="table-of-contents__link toc-highlight">editColor</a><li><a href=#editicon class="table-of-contents__link toc-highlight">editIcon</a><li><a href=#editopacity class="table-of-contents__link toc-highlight">editOpacity</a><li><a href=#editposition class="table-of-contents__link toc-highlight">editPosition</a><li><a href=#editstem class="table-of-contents__link toc-highlight">editStem</a><li><a href=#getdata class="table-of-contents__link toc-highlight">getData</a><li><a href=#getdiscposition class="table-of-contents__link toc-highlight">getDiscPosition</a><li><a href=#injecthtml class="table-of-contents__link toc-highlight">injectHTML</a><li><a href=#navigatetotag class="table-of-contents__link toc-highlight">navigateToTag</a><li><a href=#preventaction class="table-of-contents__link toc-highlight">preventAction</a><li><a href=#registericon class="table-of-contents__link toc-highlight">registerIcon</a><li><a href=#remove class="table-of-contents__link toc-highlight">remove</a><li><a href=#reseticon class="table-of-contents__link toc-highlight">resetIcon</a></ul></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Documentation</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/developer-docs/>Home</a><li class=footer__item><a class=footer__link-item href=/developer-docs/embed-sdk/>Showcase Embed SDK</a><li class=footer__item><a class=footer__link-item href=/developer-docs/bundle-sdk/>SDK Bundle</a><li class=footer__item><a class=footer__link-item href=/developer-docs/api/>API Reference</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Resources</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://matterport.com/developers target=_blank rel="noopener noreferrer" class=footer__link-item>Developer Portal<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://support.matterport.com target=_blank rel="noopener noreferrer" class=footer__link-item>Support<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://status.matterport.com target=_blank rel="noopener noreferrer" class=footer__link-item>Status<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Legal</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://matterport.com/terms-of-use target=_blank rel="noopener noreferrer" class=footer__link-item>Terms of Use<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://matterport.com/privacy-policy target=_blank rel="noopener noreferrer" class=footer__link-item>Privacy Policy<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright><div class=footer__sdk-agreement>Usage of the SDK constitutes your agreement with the <a href=https://matterport.com/legal/sdk-agreement/ target=_blank rel="noopener noreferrer">Matterport SDK Agreement</a>.</div>Copyright © 2026 Matterport, Inc. All rights reserved.</div></div></div></footer></div></body>
